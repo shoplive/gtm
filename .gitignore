@@ -9,20 +9,12 @@
 .AppleDouble
 .LSOverride
 Icon
-
-# Thumbnails
 ._*
-
-# Files that might appear in the root of a volume
 .DocumentRevisions-V100
 .fseventsd
-.Spotlight-V100
 .TemporaryItems
-.Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-
-# Directories potentially created on remote AFP share, Samba, or SMB share
 .AppleDB
 .AppleDesktop
 Network Trash Folder
@@ -49,16 +41,8 @@ $RECYCLE.BIN/
 # ===========================
 # IDE / Editor
 # ===========================
-
-# JetBrains (IntelliJ, WebStorm, PyCharm, etc.)
 .idea/
 *.iml
-*.iws
-*.ipr
-out/
-.idea_modules/
-
-# Visual Studio Code
 .vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
@@ -66,29 +50,6 @@ out/
 !.vscode/extensions.json
 *.code-workspace
 .history/
-
-# Visual Studio
-.vs/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
-*.userprefs
-
-# Vim / Neovim
-*.swp
-*.swo
-*~
-.netrwhist
-
-# Emacs
-*~
-\#*\#
-.\#*
-
-# Sublime Text
-*.sublime-workspace
-*.sublime-project
 
 # ===========================
 # Logs & Temp files
@@ -101,9 +62,9 @@ out/
 *.rej
 
 # ===========================
-# OS-generated
+# Project-specific
 # ===========================
-.cache/
-.env
-.env.local
-.env.*.local
+.claude/
+/assets/
+/studio-gtm-guide.html
+studio/app/v1/kr/assets/screenshots/상품 관리.png
