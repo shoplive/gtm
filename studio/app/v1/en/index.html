@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoplive Studio App v3.0 GTM Guide</title>
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --red: #E8192C;
+  --red-light: #fff1f2;
+  --red-mid: #fde8ea;
+  --bg: #F7F7F8;
+  --surface: #FFFFFF;
+  --border: #E4E4E7;
+  --border-light: #F0F0F2;
+  --text: #18181B;
+  --text-2: #52525B;
+  --text-3: #A1A1AA;
+  --blue: #2563EB;
+  --blue-light: #EFF6FF;
+  --blue-border: #BFDBFE;
+  --green: #16A34A;
+  --green-light: #F0FDF4;
+  --orange: #EA580C;
+  --orange-light: #FFF7ED;
+  --orange-border: #FED7AA;
+  --max-w: 960px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: clip;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  position: sticky; top: 0; z-index: 200;
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+}
+.top-nav-inner {
+  max-width: var(--max-w);
+  margin: 0 auto; height: 52px;
+  display: flex; align-items: center; padding: 0 32px; gap: 14px;
+}
+.nav-logo svg { height: 17px; display: block; }
+.top-nav-divider { width: 1px; height: 18px; background: var(--border); flex-shrink: 0; }
+.top-nav-title { font-size: 13px; font-weight: 500; color: var(--text-2); white-space: nowrap; }
+.top-nav-tabs { display: flex; align-items: center; margin-left: auto; }
+.top-nav-tab {
+  padding: 0 16px; height: 52px;
+  font-size: 13px; font-weight: 500; color: var(--text-3);
+  border: none; background: none; cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: color .2s, border-color .2s; white-space: nowrap;
+  font-family: var(--font-sans);
+}
+.top-nav-tab:hover { color: var(--text-2); }
+.top-nav-tab.active { color: var(--text); font-weight: 700; border-bottom-color: var(--text); }
+
+/* ── SECTIONS ── */
+.page-section { width: 100%; }
+.page-section-inner {
+  padding: 72px 32px;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+/* ── SECTION HEADER ── */
+.sec-eyebrow {
+  display: inline-block;
+  font-size: 11px; font-weight: 700; letter-spacing: .5px;
+  color: #fff; background: var(--red);
+  padding: 3px 10px; border-radius: 4px; margin-bottom: 12px;
+}
+.sec-h2 { font-size: 24px; font-weight: 800; letter-spacing: -.5px; margin-bottom: 8px; }
+.sec-lead { font-size: 15px; color: var(--text-2); line-height: 1.8; max-width: 600px; margin-bottom: 40px; }
+
+/* ── HERO ── */
+.hero-section { background: #fff; border-bottom: 1px solid var(--border); }
+.hero-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  padding: 80px 32px 72px;
+  display: grid; grid-template-columns: 1fr 280px;
+  gap: 72px; align-items: center;
+}
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 12px; font-weight: 700; letter-spacing: .5px;
+  color: var(--red); margin-bottom: 20px;
+}
+.hero-eyebrow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--red); animation: blink 1.4s infinite; }
+.hero-h1 { font-size: 36px; font-weight: 900; letter-spacing: -1px; line-height: 1.2; margin-bottom: 16px; }
+.hero-lead { font-size: 16px; color: var(--text-2); line-height: 1.8; margin-bottom: 32px; max-width: 480px; }
+.hero-badges { display: flex; flex-wrap: wrap; gap: 8px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 5px 12px; border-radius: 20px;
+  font-size: 12px; font-weight: 600; border: 1.5px solid;
+}
+.hero-badge.ios { color: var(--blue); border-color: var(--blue-border); background: var(--blue-light); }
+.hero-badge.beta { color: var(--orange); border-color: var(--orange-border); background: var(--orange-light); }
+.hero-badge.ver { color: var(--text-2); border-color: var(--border); background: var(--bg); }
+
+/* ── PHONE SHELL ── */
+.phone-shell {
+  position: relative; width: 280px; margin: 0 auto;
+  animation: float 5s ease-in-out infinite;
+}
+.phone-shell::before {
+  content: ''; position: absolute; inset: -28px;
+  border-radius: 60px;
+  background: radial-gradient(ellipse at 55% 45%, rgba(232,25,44,.09) 0%, transparent 70%);
+}
+.phone-frame {
+  position: absolute; inset: 0;
+  border: 2.5px solid #2a2a2a; border-radius: 40px;
+  pointer-events: none; z-index: 20;
+  box-shadow: 0 0 0 1px #111, 0 24px 64px rgba(0,0,0,.28), inset 0 0 0 1px #444;
+}
+.phone-screen { width: 100%; border-radius: 38px; overflow: hidden; background: #fff; position: relative; z-index: 1; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-8px)} }
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+
+/* ── HERO PHONE SLIDE ANIMATION ── */
+.phone-slide-wrap { position: relative; width: 100%; }
+.phone-slide { width: 100%; }
+.phone-slide-2,.phone-slide-3,.phone-slide-4,.phone-slide-5 {
+  position: absolute; top: 0; left: 0; width: 100%; opacity: 0;
+}
+.phone-slide-1 { animation: ps1 10s ease-in-out infinite; }
+.phone-slide-2 { animation: ps2 10s ease-in-out infinite; }
+.phone-slide-3 { animation: ps3 10s ease-in-out infinite; }
+.phone-slide-4 { animation: ps4 10s ease-in-out infinite; }
+.phone-slide-5 { animation: ps5 10s ease-in-out infinite; }
+@keyframes ps1 { 0%,18%{opacity:1} 20%,96%{opacity:0} 98%,100%{opacity:1} }
+@keyframes ps2 { 0%,18%{opacity:0} 20%,38%{opacity:1} 40%,100%{opacity:0} }
+@keyframes ps3 { 0%,38%{opacity:0} 40%,58%{opacity:1} 60%,100%{opacity:0} }
+@keyframes ps4 { 0%,58%{opacity:0} 60%,78%{opacity:1} 80%,100%{opacity:0} }
+@keyframes ps5 { 0%,78%{opacity:0} 80%,96%{opacity:1} 98%,100%{opacity:0} }
+.phone-dots {
+  position: absolute; bottom: 14px; left: 50%; transform: translateX(-50%);
+  display: flex; gap: 4px; z-index: 30;
+}
+.phone-dot { width: 5px; height: 5px; border-radius: 50%; background: rgba(255,255,255,.35); }
+.pd1 { animation: pd1a 10s ease-in-out infinite; background: rgba(255,255,255,.9); }
+.pd2 { animation: pd2a 10s ease-in-out infinite; }
+.pd3 { animation: pd3a 10s ease-in-out infinite; }
+.pd4 { animation: pd4a 10s ease-in-out infinite; }
+.pd5 { animation: pd5a 10s ease-in-out infinite; }
+@keyframes pd1a { 0%,19%{background:rgba(255,255,255,.9)} 21%,97%{background:rgba(255,255,255,.35)} 99%,100%{background:rgba(255,255,255,.9)} }
+@keyframes pd2a { 0%,19%{background:rgba(255,255,255,.35)} 21%,39%{background:rgba(255,255,255,.9)} 41%,100%{background:rgba(255,255,255,.35)} }
+@keyframes pd3a { 0%,39%{background:rgba(255,255,255,.35)} 41%,59%{background:rgba(255,255,255,.9)} 61%,100%{background:rgba(255,255,255,.35)} }
+@keyframes pd4a { 0%,59%{background:rgba(255,255,255,.35)} 61%,79%{background:rgba(255,255,255,.9)} 81%,100%{background:rgba(255,255,255,.35)} }
+@keyframes pd5a { 0%,79%{background:rgba(255,255,255,.35)} 81%,97%{background:rgba(255,255,255,.9)} 99%,100%{background:rgba(255,255,255,.35)} }
+
+/* ── IMPROVED GRID ── */
+.improved-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 40px; }
+.improved-card { border: 1.5px solid var(--blue-border); border-radius: 20px; overflow: hidden; background: #F8FBFF; }
+.improved-illust { height: 200px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%); }
+.improved-illust svg { width: 120px; height: 120px; }
+.improved-card-body { padding: 22px 22px 24px; }
+.improved-card-body .feature-badge { margin-bottom: 10px; }
+.improved-card-body h3 { font-size: 16px; font-weight: 800; letter-spacing: -.3px; margin-bottom: 8px; line-height: 1.35; color: #1e3a5f; }
+.improved-card-body p { font-size: 13px; color: var(--text-2); line-height: 1.7; margin-bottom: 14px; }
+@media(max-width:768px) { .improved-grid { grid-template-columns: 1fr; } }
+
+/* ── SCREENSHOT PHONE FRAME ── */
+.ss-phone {
+  position: relative; width: 220px; flex-shrink: 0;
+  filter: drop-shadow(0 24px 48px rgba(0,0,0,.22));
+}
+.ss-phone::before {
+  content: ''; position: absolute; inset: 0;
+  border: 2.5px solid #2a2a2a; border-radius: 32px;
+  pointer-events: none; z-index: 10;
+  box-shadow: 0 0 0 1px #111, inset 0 0 0 1px #444;
+}
+.ss-phone img { width: 100%; display: block; border-radius: 30px; }
+
+/* ── FEATURE SECTION ── */
+.feature-row {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 64px 72px; align-items: center;
+  padding: 64px 0; border-bottom: 1px solid var(--border-light);
+}
+.feature-row:last-child { border-bottom: none; }
+.feature-row.reverse { direction: rtl; }
+.feature-row.reverse > * { direction: ltr; }
+.feature-badge {
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: .4px;
+  padding: 3px 10px; border-radius: 4px; margin-bottom: 12px;
+}
+.feature-badge.new { background: var(--red); color: #fff; }
+.feature-badge.improved { background: var(--blue-light); color: var(--blue); border: 1px solid var(--blue-border); }
+.feature-h3 { font-size: 22px; font-weight: 800; letter-spacing: -.4px; margin-bottom: 10px; }
+.feature-desc { font-size: 15px; color: var(--text-2); line-height: 1.8; margin-bottom: 24px; }
+.feature-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.feature-chip {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 14px; border-radius: 20px;
+  font-size: 12px; font-weight: 600;
+  background: var(--bg); border: 1px solid var(--border);
+  color: var(--text-2);
+}
+.feature-chip::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--red); flex-shrink: 0; }
+
+/* ── SEGMENT CARDS ── */
+.seg-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 32px; }
+.seg-card {
+  background: #fff; border: 1px solid var(--border); border-radius: 14px;
+  padding: 24px 26px; transition: box-shadow .2s;
+}
+.seg-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,.07); }
+.seg-icon { font-size: 28px; margin-bottom: 12px; }
+.seg-title { font-size: 15px; font-weight: 800; margin-bottom: 4px; }
+.seg-sub { font-size: 12px; color: var(--text-3); font-weight: 600; margin-bottom: 10px; }
+.seg-desc { font-size: 13px; color: var(--text-2); line-height: 1.7; }
+.seg-benefit {
+  margin-top: 14px; padding: 9px 14px; border-radius: 8px;
+  background: var(--green-light); border: 1px solid #bbf7d0;
+  font-size: 12px; font-weight: 700; color: #14532d;
+}
+.seg-benefit::before { content: '✓  '; }
+
+/* ── CTA BANNER ── */
+.cta-section { background: #18181B; color: #fff; }
+.cta-inner {
+  max-width: var(--max-w); margin: 0 auto;
+  padding: 72px 32px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;
+}
+.cta-eyebrow { font-size: 12px; font-weight: 700; letter-spacing: .6px; color: var(--red); margin-bottom: 16px; }
+.cta-h2 { font-size: 28px; font-weight: 900; letter-spacing: -.6px; line-height: 1.25; margin-bottom: 16px; }
+.cta-lead { font-size: 15px; color: rgba(255,255,255,.7); line-height: 1.8; margin-bottom: 32px; }
+.cta-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 12px;
+  background: var(--red); color: #fff;
+  font-size: 14px; font-weight: 700; text-decoration: none;
+  transition: opacity .2s;
+}
+.cta-btn:hover { opacity: .88; }
+
+/* ── INSTALL STEPS ── */
+.step-list { display: flex; flex-direction: column; }
+.step-item { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--border-light); }
+.step-item:last-child { border-bottom: none; }
+.step-num-wrap { flex-shrink: 0; display: flex; flex-direction: column; align-items: center; }
+.step-num { width: 32px; height: 32px; border-radius: 50%; background: var(--red); color: #fff; font-size: 14px; font-weight: 800; display: flex; align-items: center; justify-content: center; }
+.step-line { width: 1px; flex: 1; background: var(--border-light); margin-top: 8px; }
+.step-item:last-child .step-line { display: none; }
+.step-body { flex: 1; padding-top: 4px; }
+.step-h3 { font-size: 16px; font-weight: 700; margin-bottom: 6px; }
+.step-p { font-size: 14px; color: var(--text-2); line-height: 1.8; }
+.step-p strong { color: var(--text); }
+
+/* ── FAQ ── */
+.faq-item { border-bottom: 1px solid var(--border-light); }
+.faq-item:first-child { border-top: 1px solid var(--border-light); }
+.faq-q {
+  width: 100%; padding: 18px 0; text-align: left; background: none; border: none; cursor: pointer;
+  font-size: 14px; font-weight: 700; color: var(--text);
+  display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  font-family: var(--font-sans);
+}
+.faq-q-icon { font-size: 18px; color: var(--text-3); transition: transform .2s; flex-shrink: 0; }
+.faq-item.open .faq-q-icon { transform: rotate(45deg); }
+.faq-a { font-size: 14px; color: var(--text-2); line-height: 1.8; padding: 0 0 18px; display: none; }
+.faq-item.open .faq-a { display: block; }
+
+/* ── FOOTER ── */
+.page-footer {
+  background: #fff; border-top: 1px solid var(--border);
+  padding: 32px; text-align: center;
+  font-size: 12px; color: var(--text-3);
+}
+.page-footer a { color: var(--text-3); text-decoration: none; }
+.page-footer a:hover { color: var(--text-2); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 48px; padding: 48px 20px; }
+  .phone-shell { width: 240px; }
+  .page-section-inner { padding: 48px 20px; }
+  .seg-grid { grid-template-columns: 1fr; }
+  .top-nav-inner { padding: 0 20px; gap: 10px; }
+  .feature-row { grid-template-columns: 1fr; gap: 32px; padding: 48px 0; }
+  .feature-row.reverse { direction: ltr; }
+  .cta-inner { grid-template-columns: 1fr; gap: 40px; padding: 48px 20px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <div class="top-nav-inner">
+    <div class="nav-logo">
+      <svg viewBox="0 0 1000 250" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#18181B" fill-rule="evenodd" d="M511.964 56.194a71.859 71.859 0 0 1 31.298 7.162 70.932 70.932 0 0 1 24.908 20.032 69.776 69.776 0 0 1 13.431 28.81 69.313 69.313 0 0 1-.787 31.706 69.888 69.888 0 0 1-14.844 28.126 71.066 71.066 0 0 1-25.872 18.803 71.911 71.911 0 0 1-31.616 5.64 71.779 71.779 0 0 1-30.902-8.675v62.2h-36.71V126.376c0-18.613 7.49-36.464 20.823-49.626 13.332-13.162 31.416-20.556 50.271-20.556Zm13.172 38.79a34.84 34.84 0 0 0-19.888-1.933 34.56 34.56 0 0 0-17.623 9.299 33.842 33.842 0 0 0-9.42 17.397 33.577 33.577 0 0 0 1.959 19.632 34.08 34.08 0 0 0 12.678 15.249 34.734 34.734 0 0 0 19.122 5.726c9.129 0 17.884-3.579 24.339-9.952 6.455-6.372 10.081-15.014 10.081-24.026 0-6.72-2.02-13.29-5.802-18.877a34.325 34.325 0 0 0-15.446-12.515Z" clip-rule="evenodd"/>
+        <path fill="#18181B" d="M57.964 55.701c35.314 0 60.824 18.791 60.824 44.999H84.584c0-10.667-11.593-18.049-27.049-18.049-11.664 0-21.468 6.075-21.468 14.729 0 8.653 11.593 11.196 26.548 13.492 26.834 3.567 60.538 8.901 60.538 39.418 0 27.232-25.26 46.799-62.076 46.799-35.564 0-61.326-20.486-61.075-49.095h32.737c0 12.998 12.094 22.146 28.839 22.146 14.168 0 24.473-6.605 24.473-15.259 0-10.949-14.956-13.987-30.913-15.541-29.375-3.532-53.848-8.123-53.848-39.912C1.29 74.174 25.763 55.7 57.964 55.7Z"/>
+        <path fill="#18181B" fill-rule="evenodd" d="M928.868 56.053a71.857 71.857 0 0 1 30.526 6.782 70.97 70.97 0 0 1 24.622 19.062 69.855 69.855 0 0 1 13.946 27.653 69.273 69.273 0 0 1 .567 30.884h-104.94a37.537 37.537 0 0 0 10.472 14.47 38.192 38.192 0 0 0 16.048 8.081 38.48 38.48 0 0 0 18.015-.123 38.167 38.167 0 0 0 15.932-8.3h39.859c-5.142 11.599-13.367 21.61-23.801 28.973a71.705 71.705 0 0 1-35.473 12.853 71.94 71.94 0 0 1-37.134-6.896c-11.522-5.562-21.307-14.096-28.318-24.698a69.593 69.593 0 0 1-11.508-35.53 69.484 69.484 0 0 1 8.548-36.334c6.115-11.13 15.167-20.42 26.193-26.886a71.837 71.837 0 0 1 36.446-9.85v-.141Zm0 32.736a38.444 38.444 0 0 0-22.311 7.122c-6.493 4.63-11.345 11.162-13.863 18.668h72.347c-2.519-7.506-7.369-14.038-13.863-18.668a38.443 38.443 0 0 0-22.31-7.122Zm-569.93-32.595c18.852.01 36.929 7.407 50.26 20.567 13.33 13.16 20.824 31.005 20.833 49.615.007 13.891-4.159 27.471-11.972 39.024s-18.922 20.558-31.92 25.877a71.99 71.99 0 0 1-41.105 4.004c-13.801-2.708-26.478-9.397-36.428-19.219-9.95-9.822-16.724-22.337-19.467-35.961a69.374 69.374 0 0 1 4.055-40.577c5.388-12.831 14.511-23.797 26.213-31.51 11.703-7.713 25.46-11.827 39.531-11.82Zm13.128 38.787a34.834 34.834 0 0 0-19.891-1.927 34.561 34.561 0 0 0-17.623 9.308 33.857 33.857 0 0 0-9.413 17.407 33.574 33.574 0 0 0 1.974 19.635 34.078 34.078 0 0 0 12.693 15.241 34.741 34.741 0 0 0 19.132 5.709c9.122-.009 17.869-3.593 24.316-9.964 6.447-6.371 10.068-15.008 10.068-24.014 0-6.722-2.02-13.292-5.804-18.881a34.328 34.328 0 0 0-15.452-12.514Z" clip-rule="evenodd"/>
+        <path fill="#18181B" d="M638.233 191.508h-38.641V2.791h38.641v188.717Zm62.9 0h-38.641V61.281h38.641v130.227Zm87.123-28.998 32.202-101.229h41.468l-46.12 130.227h-55.135l-46.12-130.227h41.254l32.451 101.229ZM172.958 1.871v73.467c8.659-10.3 20.816-17.142 34.205-19.25h1.109a49.074 49.074 0 0 1 6.476-.389c22.577 0 42.399 13.564 53.132 33.837a76.136 76.136 0 0 1 5.403 12.822 72.114 72.114 0 0 1 2.862 13.846c.144 1.059.358 2.154.358 3.249.215 2.826.322 5.687.465 8.477v63.577h-36.709v-66.014c0-9.006-3.622-17.643-10.069-24.014-6.447-6.371-15.193-9.955-24.315-9.964a32.55 32.55 0 0 0-14.181 3.157 32.128 32.128 0 0 0-11.33 8.993 35.032 35.032 0 0 0-7.442 21.828v66.014h-36.709V1.871h36.745Z"/>
+        <path fill="#E7000B" d="M681.813 0c12.587 0 22.791 10.073 22.791 22.499 0 12.426-10.204 22.499-22.791 22.499-12.588 0-22.792-10.073-22.792-22.499C659.022 10.073 669.226 0 681.813 0Z"/>
+      </svg>
+    </div>
+    <div class="top-nav-divider"></div>
+    <span class="top-nav-title">Studio App GTM Guide</span>
+    <div class="top-nav-tabs">
+      <button class="top-nav-tab active" onclick="goTo('intro')">Overview</button>
+      <button class="top-nav-tab" onclick="goTo('features')">Features</button>
+      <button class="top-nav-tab" onclick="goTo('segments')">Who It's For</button>
+      <button class="top-nav-tab" onclick="goTo('install')">Join Beta</button>
+    </div>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero-section" id="intro">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-eyebrow">
+        <span class="hero-eyebrow-dot"></span>
+        SHOPLIVE STUDIO APP v3.0 — BETA
+      </div>
+      <h1 class="hero-h1">Live commerce.<br>Completely in your pocket.</h1>
+      <p class="hero-lead">Plan it. Set it up. Go live.<br>All without leaving the app.</p>
+      <div class="hero-badges">
+        <span class="hero-badge ios">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/></svg>
+          iOS 15.0 or later
+        </span>
+        <span class="hero-badge beta">● TestFlight Beta</span>
+        <span class="hero-badge ver">v3.0.0</span>
+      </div>
+    </div>
+
+    <!-- Hero Phone: 5-slide auto animation -->
+    <div class="phone-shell">
+      <div class="phone-frame"></div>
+      <div class="phone-screen">
+        <div class="phone-slide-wrap">
+          <div class="phone-slide phone-slide-1">
+            <img src="assets/screenshots/slide1.png" alt="Campaign list" style="width:100%;display:block;">
+          </div>
+          <div class="phone-slide phone-slide-2">
+            <img src="assets/screenshots/slide2.png" alt="Add broadcast" style="width:100%;display:block;">
+          </div>
+          <div class="phone-slide phone-slide-3">
+            <img src="assets/screenshots/slide3.png" alt="Broadcast detail" style="width:100%;display:block;">
+          </div>
+          <div class="phone-slide phone-slide-4">
+            <img src="assets/screenshots/slide4.png" alt="Broadcast management" style="width:100%;display:block;">
+          </div>
+          <div class="phone-slide phone-slide-5">
+            <img src="assets/screenshots/slide5.png" alt="Rehearsal broadcast" style="width:100%;display:block;">
+          </div>
+          <div class="phone-dots">
+            <div class="phone-dot pd1"></div>
+            <div class="phone-dot pd2"></div>
+            <div class="phone-dot pd3"></div>
+            <div class="phone-dot pd4"></div>
+            <div class="phone-dot pd5"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── VALUE PROP ── -->
+<section class="page-section" style="background:#fff;">
+  <div class="page-section-inner" style="text-align:center;max-width:720px;margin:0 auto;">
+    <span class="sec-eyebrow">Shoplive Studio App v3.0</span>
+    <h2 class="sec-h2" style="font-size:28px;line-height:1.35;">The complete live commerce workflow.<br>Entirely on your phone.</h2>
+    <p class="sec-lead" style="max-width:520px;margin:0 auto;">Wherever you are, your entire live commerce operation fits in one app.</p>
+  </div>
+</section>
+
+<!-- ── FEATURES ── -->
+<section class="page-section" id="features">
+  <div class="page-section-inner">
+
+    <!-- Feature 1 -->
+    <div class="feature-row">
+      <div>
+        <span class="feature-badge new">NEW</span>
+        <h3 class="feature-h3">Your show, set up<br>and ready. Right here.</h3>
+        <p class="feature-desc">Campaign name, time, details — configure everything from your phone. On the commute, backstage, or mid-prep. You're always ready to go live.</p>
+        <div class="feature-chips">
+          <span class="feature-chip">In-app campaign creation</span>
+          <span class="feature-chip">List · Search · Filter</span>
+          <span class="feature-chip">Full setup in-app</span>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;">
+        <div class="ss-phone">
+          <img src="assets/screenshots/slide1.png" alt="Campaign list">
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature-row reverse">
+      <div>
+        <span class="feature-badge new">NEW</span>
+        <h3 class="feature-h3">The broadcast doesn't stop.<br>Neither do your product updates.</h3>
+        <p class="feature-desc">Add a last-minute item. Reorder the lineup. Push it live instantly. Your audience sees every change the moment it happens.</p>
+        <div class="feature-chips">
+          <span class="feature-chip">Add · Remove during live</span>
+          <span class="feature-chip">Drag to reorder</span>
+          <span class="feature-chip">Instant viewer update</span>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;">
+        <div class="ss-phone">
+          <img src="assets/screenshots/slide4.png" alt="Product management">
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-row">
+      <div>
+        <span class="feature-badge new">NEW</span>
+        <h3 class="feature-h3">Built for one.<br>Ready for a team.</h3>
+        <p class="feature-desc">Go solo with full control, or split broadcast and management across roles. Whatever fits your operation — the app handles both.</p>
+        <div class="feature-chips">
+          <span class="feature-chip">Host mode (broadcast)</span>
+          <span class="feature-chip">Moderator mode (management)</span>
+          <span class="feature-chip">Solo &amp; team support</span>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:center;">
+        <div class="ss-phone">
+          <img src="assets/screenshots/slide5.png" alt="Broadcast management">
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── IMPROVED ── -->
+<section class="page-section" style="background:#fff;">
+  <div class="page-section-inner">
+    <span class="sec-eyebrow">What's Improved</span>
+    <h2 class="sec-h2">Refined. Reimagined.</h2>
+    <p class="sec-lead">Every core feature, rethought from the ground up.</p>
+
+    <div class="improved-grid">
+
+      <!-- Card 1: PC Sync -->
+      <div class="improved-card">
+        <div class="improved-illust">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="8" y="28" width="56" height="38" rx="4" stroke="#2563EB" stroke-width="2.5" fill="#EFF6FF"/>
+            <rect x="2" y="66" width="68" height="5" rx="2.5" fill="#BFDBFE"/>
+            <rect x="14" y="34" width="30" height="3" rx="1.5" fill="#BFDBFE"/>
+            <rect x="14" y="41" width="20" height="2.5" rx="1.25" fill="#DBEAFE"/>
+            <rect x="14" y="47" width="25" height="2.5" rx="1.25" fill="#DBEAFE"/>
+            <rect x="82" y="32" width="30" height="52" rx="6" stroke="#2563EB" stroke-width="2.5" fill="#EFF6FF"/>
+            <rect x="88" y="40" width="18" height="2.5" rx="1.25" fill="#BFDBFE"/>
+            <rect x="88" y="46" width="12" height="2.5" rx="1.25" fill="#DBEAFE"/>
+            <rect x="88" y="52" width="15" height="2.5" rx="1.25" fill="#DBEAFE"/>
+            <path d="M74 50 C77 46 79 46 82 50" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#ah)"/>
+            <path d="M82 58 C79 62 77 62 74 58" stroke="#2563EB" stroke-width="2" stroke-linecap="round" marker-end="url(#ah2)"/>
+            <defs>
+              <marker id="ah" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#2563EB" stroke-width="1.5"/></marker>
+              <marker id="ah2" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto"><path d="M6,0 L0,3 L6,6" fill="none" stroke="#2563EB" stroke-width="1.5"/></marker>
+            </defs>
+          </svg>
+        </div>
+        <div class="improved-card-body">
+          <span class="feature-badge improved">IMPROVED</span>
+          <h3>One source of truth. Everywhere.</h3>
+          <p>Edit from the app or from PC — it's always the same data. Your team stays perfectly in sync, no matter where they are.</p>
+          <div class="feature-chips">
+            <span class="feature-chip">Real-time sync</span>
+            <span class="feature-chip">No config conflicts</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Camera -->
+      <div class="improved-card">
+        <div class="improved-illust" style="background:linear-gradient(135deg,#0F172A 0%,#1E3A5F 100%);">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="38" width="80" height="54" rx="8" fill="#1E40AF" stroke="#3B82F6" stroke-width="2"/>
+            <circle cx="60" cy="65" r="20" stroke="#60A5FA" stroke-width="2"/>
+            <circle cx="60" cy="65" r="13" stroke="#93C5FD" stroke-width="1.5"/>
+            <circle cx="60" cy="65" r="6" fill="#BFDBFE"/>
+            <rect x="46" y="30" width="18" height="10" rx="4" fill="#1E40AF" stroke="#3B82F6" stroke-width="2"/>
+            <text x="24" y="56" font-size="7" fill="#60A5FA" font-family="system-ui" font-weight="600">0.5×</text>
+            <text x="87" y="56" font-size="7" fill="#60A5FA" font-family="system-ui" font-weight="600">2×</text>
+            <path d="M24 78 L24 86 M20 82 L28 82" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M32 80 L38 84 L32 88" stroke="#60A5FA" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="improved-card-body">
+          <span class="feature-badge improved">IMPROVED</span>
+          <h3>Your camera. Your frame.</h3>
+          <p>Zoom in tight, pull back wide, or flip to mirror. All while you're live.</p>
+          <div class="feature-chips">
+            <span class="feature-chip">Zoom in · Zoom out</span>
+            <span class="feature-chip">Wide angle</span>
+            <span class="feature-chip">Mirror mode</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: UI/UX -->
+      <div class="improved-card">
+        <div class="improved-illust">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="30" y="10" width="60" height="100" rx="10" stroke="#2563EB" stroke-width="2.5" fill="#EFF6FF"/>
+            <rect x="38" y="18" width="44" height="4" rx="2" fill="#DBEAFE"/>
+            <rect x="36" y="26" width="20" height="8" rx="3" fill="#BFDBFE"/>
+            <rect x="36" y="40" width="48" height="7" rx="3" fill="#DBEAFE"/>
+            <rect x="36" y="51" width="32" height="7" rx="3" fill="#DBEAFE"/>
+            <rect x="36" y="70" width="48" height="14" rx="5" fill="#2563EB"/>
+            <rect x="44" y="75" width="32" height="4" rx="2" fill="#fff" opacity="0.9"/>
+            <path d="M96 22 L98 17 L100 22 L105 24 L100 26 L98 31 L96 26 L91 24 Z" fill="#2563EB" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="improved-card-body">
+          <span class="feature-badge improved">IMPROVED</span>
+          <h3>Designed to keep you focused.</h3>
+          <p>The interface is rebuilt around what matters most. Fewer distractions. Fewer mistakes on air.</p>
+          <div class="feature-chips">
+            <span class="feature-chip">UI/UX Renewal</span>
+            <span class="feature-chip">Action-first layout</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── SEGMENTS ── -->
+<section class="page-section" id="segments" style="background:#fff;">
+  <div class="page-section-inner">
+    <span class="sec-eyebrow">Who It's For</span>
+    <h2 class="sec-h2">Made for every kind<br>of live seller.</h2>
+    <p class="sec-lead">Solo creator or enterprise team — the app works the way you do.</p>
+    <div class="seg-grid">
+      <div class="seg-card">
+        <div class="seg-icon">🧑‍💻</div>
+        <div class="seg-title">Solo Operators</div>
+        <div class="seg-sub">SMB · D2C Brand</div>
+        <div class="seg-desc">From setup to broadcast, you do it all. One phone is everything you need.</div>
+        <div class="seg-benefit">Go live without a PC setup</div>
+      </div>
+      <div class="seg-card">
+        <div class="seg-icon">📈</div>
+        <div class="seg-title">Scaling Teams</div>
+        <div class="seg-sub">Mid-market growing brand</div>
+        <div class="seg-desc">More broadcasts, same team. Remove the setup friction and watch your frequency grow.</div>
+        <div class="seg-benefit">More broadcasts, same team</div>
+      </div>
+      <div class="seg-card">
+        <div class="seg-icon">🎙️</div>
+        <div class="seg-title">Influencers · Creators</div>
+        <div class="seg-sub">Individual · Small team</div>
+        <div class="seg-desc">You're hosting, directing, and configuring all at once. One lightweight app keeps up with you.</div>
+        <div class="seg-benefit">Complete workflow in one app</div>
+      </div>
+      <div class="seg-card">
+        <div class="seg-icon">🏢</div>
+        <div class="seg-title">Enterprise Field Teams</div>
+        <div class="seg-sub">Large e-commerce · Home shopping</div>
+        <div class="seg-desc">Deploy on-site, instantly. No waiting on HQ. In live commerce, speed is how you win.</div>
+        <div class="seg-benefit">On-site independence, faster execution</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div>
+      <div class="cta-eyebrow">● BETA NOW OPEN</div>
+      <h2 class="cta-h2">Try it free.<br>Go live today.</h2>
+      <p class="cta-lead">Installs separately. No impact on your current broadcasts.</p>
+      <a class="cta-btn" href="#install">
+        Join the Beta
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+    </div>
+    <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:28px;">
+      <div style="font-size:18px;font-weight:900;line-height:1.5;margin-bottom:16px;">"Broadcast prep time<br>cut in half."</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.7;margin-bottom:20px;">We used to spend an hour getting set up. Now it's a few taps on a phone. The way we go live has completely changed.</div>
+      <div style="font-size:12px;color:rgba(255,255,255,.4);font-weight:600;">— Live operations team, fashion brand — Beta participant</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── INSTALL ── -->
+<section class="page-section" id="install">
+  <div class="page-section-inner">
+    <span class="sec-eyebrow">Join the Beta</span>
+    <h2 class="sec-h2">Up and running in 5 minutes.</h2>
+    <p class="sec-lead">Free to join. Any iPhone running iOS 15.0 or later is all you need.</p>
+
+    <div class="step-list">
+      <div class="step-item">
+        <div class="step-num-wrap"><div class="step-num">1</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-h3">Tell your CSM you'd like to join</div>
+          <p class="step-p">Let your assigned CSM know you want to participate. You'll receive an invitation email and install link. If the email doesn't arrive, check your spam folder first.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap"><div class="step-num">2</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-h3">Open the install link on your iPhone</div>
+          <p class="step-p">Open the link on your <strong>iPhone</strong> — PC, Android, and iPad won't work. A <strong>Wi-Fi connection</strong> is recommended for the initial download.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap"><div class="step-num">3</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-h3">Install TestFlight (if not already installed)</div>
+          <p class="step-p">Tap <strong>[Install TestFlight]</strong> on the link page and install it for free from the App Store. Skip this step if TestFlight is already on your device.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap"><div class="step-num">4</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-h3">Install Shoplive Studio Beta</div>
+          <p class="step-p">After installing TestFlight, you'll be redirected to the Studio page automatically. Tap <strong>[Install]</strong>. When you see the <strong>orange dot (beta badge)</strong> on the app icon, installation is complete.</p>
+        </div>
+      </div>
+      <div class="step-item">
+        <div class="step-num-wrap"><div class="step-num">5</div><div class="step-line"></div></div>
+        <div class="step-body">
+          <div class="step-h3">Share feedback and discuss full adoption</div>
+          <p class="step-p">Send feedback via the in-app button or your CSM channel. We'll use your beta experience to plan a full rollout together.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr style="border:none;border-top:1px solid var(--border);margin:48px 0;">
+
+    <h3 style="font-size:18px;font-weight:800;margin-bottom:24px;">Frequently Asked Questions</h3>
+    <div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Can I install this alongside the current Shoplive app?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">Yes. Studio installs as a separate build and runs independently from the main app. Both can be used simultaneously without any interference.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is there any cost during the beta?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">TestFlight and the Shoplive Studio beta are both free. No charges apply.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">I didn't receive my invitation email.<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">Check your spam folder first. If it's not there, confirm the email address tied to your Apple ID is correct, then ask your CSM to resend the invitation.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Does it work on Android or iPad?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">The current beta is iPhone-only (iOS 15.0 or later). iPad is not supported during beta. Android support is planned for a future release.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">What happens after 90 days?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">TestFlight builds expire after 90 days. Contact your CSM to receive a new build invitation and reinstall to continue.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I stay on the latest version?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">Open TestFlight, go to Shoplive Studio v3, and enable <strong>Automatic Updates</strong>. New builds will install automatically — no manual reinstall needed.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">How do I stop beta testing?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">Open TestFlight, go to Shoplive Studio v3, and select <strong>Stop Testing</strong>. You can then delete the app or keep it — your choice.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">Is it secure?<span class="faq-q-icon">+</span></button>
+        <div class="faq-a">TestFlight is official Apple software, and the beta build has passed Apple's review process. Privacy and data handling follow the same standards as Shoplive's production service.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="page-footer">
+  <p>© Shoplive Inc. · <a href="https://docs.shoplive.cloud" target="_blank" rel="noopener">docs.shoplive.cloud</a></p>
+</footer>
+
+<script>
+const SECTIONS = ['intro', 'features', 'segments', 'install'];
+const tabs = document.querySelectorAll('.top-nav-tab');
+
+function toggleFaq(btn) {
+  const item = btn.closest('.faq-item');
+  const wasOpen = item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+  if (!wasOpen) item.classList.add('open');
+}
+
+function goTo(id) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY - 60, behavior: 'smooth' });
+}
+
+function updateTabs() {
+  const y = window.scrollY + 90;
+  let cur = 0;
+  SECTIONS.forEach((id, i) => {
+    const el = document.getElementById(id);
+    if (el && el.offsetTop <= y) cur = i;
+  });
+  tabs.forEach((t, i) => t.classList.toggle('active', i === cur));
+}
+
+window.addEventListener('scroll', updateTabs, { passive: true });
+</script>
+</body>
+</html>
