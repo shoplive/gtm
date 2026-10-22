@@ -59,6 +59,14 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 .step{gap:28px;padding:36px 0}
 .nav-title{display:none}
 }
+html:lang(ja) body{word-break:normal;line-break:strict}
+#clips div,#clips span{overflow-wrap:anywhere}
+.navtabs{min-width:0}
+.langsel{position:relative;display:flex;align-items:center;flex-shrink:0;margin-left:4px}
+.langsel svg{position:absolute;left:10px;pointer-events:none}
+.langsel select{-webkit-appearance:none;appearance:none;height:34px;padding:0 28px 0 31px;border:1px solid #E0E5EB;border-radius:8px;background:#FFFFFF url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23525B66' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center;font-family:inherit;font-size:13px;font-weight:500;color:#22262A;cursor:pointer}
+.langsel select:hover{border-color:#979FAA}
+.langsel select:focus-visible{outline:2px solid #2077F8;outline-offset:2px}
 </style>
 </head>
 <body>
@@ -78,6 +86,7 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 <a class="navtab" href="#background">이렇게 써보세요</a>
 <a class="navtab" href="#how">사용 방법</a>
 </div>
+<label class="langsel"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></svg><select id="langSelect" aria-label="언어 선택"><option value="ko" lang="ko">한국어</option><option value="en" lang="en">English</option><option value="ja" lang="ja">日本語</option></select></label>
 </div>
 </nav>
 
@@ -531,19 +540,350 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 
 </div>
 <script>
+var I18N = {
+"en": {
+"섹션 이동": "Jump to section",
+"AI 비디오 에디터 가이드": "AI Video Editor Guide",
+"AI 비디오 에디터 소개": "Overview",
+"이런 게 좋아져요": "Benefits",
+"이렇게 써보세요": "Use cases",
+"사용 방법": "How to use",
+"SHOPLIVE AI 비디오 에디터 가이드": "SHOPLIVE AI VIDEO EDITOR GUIDE",
+"라이브 방송 속<0/>고객의 구매를 이끈 결정적 장면,<1/>AI가 찾아 숏폼으로 만들어요": "AI finds the moments<0/>in your live streams that drove purchases<1/>and turns them into shortforms",
+"AI 비디오 에디터는 라이브 방송 중 수집된 시청 반응 데이터와 상품 정보, 방송 발화 내용을 분석해 숏폼으로 만들 만한 구간을 찾아줍니다. 담당자는 <0>상품별, AI 추천, 클릭순, 좋아요순, 채팅순, 시청자순, 유입순</0> 중 원하는 기준을 선택해 구간을 확인하고, 방송을 처음부터 다시 보지 않아도 바로 숏폼으로 보내거나 mp4·srt 파일로 내려받을 수 있습니다.": "AI Video Editor analyzes viewer engagement data, product information, and what was said during a live stream to find segments worth turning into shortforms. Choose a criterion, <0>By product, AI picks, Clicks, Likes, Chats, Viewers, or Traffic</0>, to review segments, then send them straight to a shortform or download them as mp4 and srt files, without rewatching the whole stream.",
+"상품별": "By product",
+"AI 추천": "AI picks",
+"클릭순": "Clicks",
+"좋아요순": "Likes",
+"채팅순": "Chats",
+"시청자순": "Viewers",
+"유입순": "Traffic",
+"AI 장면 검색": "AI scene search",
+"현재는 라이브 방송이 종료된 캠페인에서 이용할 수 있습니다.": "Currently available for campaigns whose live stream has ended.",
+"Shoplive 어드민 · AI 비디오 에디터": "Shoplive Admin · AI Video Editor",
+"AI 비디오 에디터 화면 예시: 가운데 추천 구간 목록과 오른쪽 9:16 플레이어": "AI Video Editor screen example: recommended segments in the center and a 9:16 player on the right",
+"화면 예시 · 데모 데이터": "Screen example · Demo data",
+"숏폼 만들기는 쉬워지고,<0/>구매로 이어지는 영상은 많아져요": "Shortforms get easier to make,<0/>and more of them lead to purchases",
+"AI 비디오 에디터를 쓰면 숏폼을 만드는 속도와 양, 그리고 성과가 함께 달라집니다.": "With AI Video Editor, the speed, volume, and results of your shortform production all improve together.",
+"더 빠르게": "Faster",
+"방송을 처음부터 다시 볼 필요가 없어요": "No need to rewatch the stream from the start",
+"1~2시간 방송을 처음부터 돌려보며 구간을 찾던 일을 AI가 대신합니다. 방송이 끝나면 분석이 자동으로 시작되고, 담당자는 추천된 구간을 확인하고 고르는 일에만 집중하면 됩니다.": "AI takes over the job of scrubbing through a 1–2 hour stream to find segments. Analysis starts automatically when the stream ends, so you can focus on reviewing and picking the recommended segments.",
+"방송 종료 후 자동 분석, 완료 메일로 알림": "Automatic analysis after the stream, with an email when it's done",
+"추천에 없는 장면도 재생 위치에서 바로 추가": "Add any scene directly from the playhead, even if it wasn't recommended",
+"기준만 고르면 정렬된 구간을 바로 확인": "Pick a criterion and see sorted segments instantly",
+"샵라이브 어드민 안에서 숏폼 등록까지 완료": "Publish shortforms without leaving the Shoplive admin",
+"더 많이": "More",
+"방송 한 번으로 여러 편의 숏폼을 만들어요": "Make multiple shortforms from a single stream",
+"상품별·반응별로 구간이 나뉘어 있어, 한 번의 방송에서 상품 수만큼 숏폼을 만들 수 있습니다. 한 번 송출되고 끝나던 라이브 방송이 계속 쓰이는 콘텐츠가 됩니다.": "Segments are organized by product and by engagement, so one stream can yield as many shortforms as there are products. A live stream that used to air once becomes content you keep using.",
+"상품마다 대표 구간으로 숏폼 제작": "Create a shortform from the best segment of each product",
+"영상이 없던 상품 상세페이지까지 채움": "Fill product pages that had no video",
+"기획전, 홈 피드, 외부 광고에 계속 활용": "Reuse them in promotions, home feeds, and external ads",
+"더 많은 구매로 이어지게": "More purchases",
+"구매로 이어지는 장면을 골라요": "Pick the scenes that lead to purchases",
+"클릭·채팅·좋아요가 실제로 집중된 장면과, 상품의 기획 의도·스타일링을 설명한 장면을 근거로 숏폼을 만듭니다. 라이브를 보지 못한 고객도 \"어떻게 입을지\"를 이해하고 구매를 결정할 수 있습니다.": "Build shortforms from scenes where clicks, chats, and likes actually peaked, and from scenes that explain a product's concept and styling. Even customers who missed the live stream can see \"how to wear it\" and decide to buy.",
+"실제 시청자 반응이 검증된 장면 선택": "Choose scenes proven by real viewer engagement",
+"상세페이지에 설명·스타일링 숏폼 배치": "Place explainer and styling shortforms on product pages",
+"광고·SNS에 반응 좋은 소재로 활용": "Use high-performing scenes in ads and on social media",
+"숏폼 제작 효율부터 구매 전환까지,<0/>목적에 맞게 써보세요": "From production efficiency to conversions,<0/>use it to fit your goal",
+"숏폼이 이미지보다 구매 전환에 효과적이라는 것을 확인했지만, 숏폼을 꾸준히 만드는 과정에서 같은 벽에 부딪혔습니다. 숏폼의 원재료인 라이브 방송은 충분히 쌓여 있는데, 그 안에서 활용할 장면을 찾는 일이 사람의 눈과 시간에 의존하고 있었기 때문입니다.": "Shortforms have proven to convert better than images, but producing them consistently kept hitting the same wall. There was plenty of live stream footage to work from, yet finding usable scenes in it depended on people's eyes and time.",
+"CASE 01 · 숏폼 제작 효율": "CASE 01 · Production efficiency",
+"숏폼 제작 시간을 줄이고 싶다면": "If you want to cut shortform production time",
+"1~2시간 방송을 처음부터 돌려보며 구간을 찾느라, 숏폼 한 편에도 시간이 오래 걸렸습니다.": "Scrubbing through a 1–2 hour stream to find segments made even a single shortform take a long time.",
+"<0>AI 추천</0>으로 시작하세요. AI가 제안한 구간을 확인하고 고르기만 하면 되므로, 방송을 다시 보지 않고 바로 숏폼 제작을 시작할 수 있습니다.": "Start with <0>AI picks</0>. Just review and choose the segments AI suggests, and you can start making shortforms right away without rewatching the stream.",
+"CASE 02 · 상세페이지 구매 전환": "CASE 02 · Product page conversion",
+"상세페이지에서 구매 전환을 높이고 싶다면": "If you want to raise conversions on product pages",
+"숏폼이 구매 결정을 돕는다는 건 알지만, 상품마다 설명 영상을 만들 여력이 없었습니다.": "You know shortforms help purchase decisions, but there was no capacity to make an explainer video for every product.",
+"<0>상품별</0>로 상품을 고르고 <1>AI 장면 검색</1>으로 'A 상품 등장 구간 찾아줘'와 같은 자연어로 클립을 찾으세요. 상품의 기획 의도와 스타일링을 보여주는 숏폼으로, \"어떻게 입을지\" 고민하는 고객의 구매 결정을 도울 수 있습니다.": "Pick a product in <0>By product</0>, then use <1>AI scene search</1> to find clips in plain language, like 'Find where product A appears.' Shortforms that show a product's concept and styling help customers who are wondering \"how to wear it\" decide to buy.",
+"CASE 03 · 광고 소재 확보": "CASE 03 · Ad creatives",
+"광고 소재가 꾸준히 필요하다면": "If you constantly need ad creatives",
+"광고·SNS 소재는 계속 필요한데, 어떤 장면이 반응이 좋을지 감으로 골라야 했습니다.": "Ads and social media always need new creatives, but choosing which scenes would perform well came down to gut feeling.",
+"<0>클릭순 · 채팅순 · 좋아요순</0>으로 정렬하세요. 실제 시청자 반응이 높았던 장면을 근거로 고를 수 있어, 반응이 검증된 소재를 꾸준히 확보할 수 있습니다.": "Sort by <0>Clicks · Chats · Likes</0>. You can choose scenes backed by real viewer engagement and build a steady supply of proven creatives.",
+"CASE 04 · 라이브 콘텐츠 효율 극대화": "CASE 04 · Getting more from live content",
+"끝난 라이브 방송을 계속 활용하고 싶다면": "If you want to keep using past live streams",
+"공들여 만든 방송이 한 번 송출되고 나면, 다시보기 말고는 쓰이지 않았습니다.": "Once a carefully produced stream aired, it went unused except as a replay.",
+"<0>상품별</0>로 상품마다 대표 구간을 하나씩 고르세요. 방송 한 번에서 상품 수만큼 숏폼이 만들어져 기획전, 홈 피드, 외부 광고에 계속 활용할 수 있습니다.": "Use <0>By product</0> to pick one key segment per product. A single stream yields as many shortforms as there are products, ready to reuse in promotions, home feeds, and external ads.",
+"AI가 방송 데이터를 근거로 후보 구간을 제안하고, 최종 선택은 사람이 합니다. 기준별 사용 방법은 아래 사용 방법에서 확인해 보세요.": "AI suggests candidate segments based on stream data, and you make the final choice. See How to use below for how each criterion works.",
+"방송이 끝나면 이렇게 숏폼을 만들 수 있어요": "Here's how to make shortforms after a stream ends",
+"비디오 에디터를 열고, 기준을 골라 후보 구간을 찾고, 원하는 구간을 담아 확인한 뒤 숏폼으로 보내거나 다운로드하면 됩니다.": "Open the Video Editor, choose a criterion to find candidate segments, add the ones you want and review them, then send them to a shortform or download them.",
+"방송이 끝나면 비디오 에디터를 열어요": "Open the Video Editor after the stream ends",
+"비디오 에디터 열기": "Open the Video Editor",
+"어드민의 <0>캠페인 목록</0>에서 종료된 라이브 캠페인을 선택한 뒤, 캠페인 상세 화면 상단의 <1>'비디오 에디터'</1> 버튼을 누르면 됩니다. 방송 분석 결과와 영상이 한 화면에 함께 열립니다. <2>현재는 라이브 방송이 종료된 캠페인에서 이용할 수 있습니다.</2>": "In the admin's <0>campaign list</0>, select an ended live campaign, then click the <1>'Video Editor'</1> button at the top of the campaign details page. The stream analysis and the video open together on one screen. <2>Currently available for campaigns whose live stream has ended.</2>",
+"저장": "Save",
+"F/W 스타일링 라이브": "F/W Styling Live",
+"종료": "Ended",
+"방송 콘솔": "Broadcast console",
+"비디오 에디터": "Video Editor",
+"여기를 눌러 진입": "Click here to open",
+"다시보기 ▾": "Replay ▾",
+"프롬프터 ▾": "Prompter ▾",
+"데이터 인사이트": "Data insights",
+"종료된 캠페인 상세 화면 상단 · 화면 예시": "Top of an ended campaign's details page · Screen example",
+"화면 구성 살펴보기": "Get to know the layout",
+"비디오 에디터는 네 영역으로 나뉩니다. 왼쪽에서 찾고, 가운데에서 고르고, 타임라인에서 위치를 확인한 뒤, 오른쪽에서 확인하고 내보내는 순서입니다.": "The Video Editor has four areas. Find on the left, choose in the center, check positions on the timeline, then review and export on the right.",
+"비디오 에디터 전체 화면: ① 왼쪽 패널, ② 가운데 영역, ③ 타임라인, ④ 오른쪽 영역": "Full Video Editor screen: ① left panel, ② center area, ③ timeline, ④ right area",
+"상품별 탭이 기본으로 선택된 초기 화면 · 화면 예시 · 데모 데이터": "Initial screen with the By product tab selected · Screen example · Demo data",
+"<0>①</0> <1>왼쪽 패널</1> · AI 장면 검색과 정렬 탭으로 후보 구간을 찾습니다.": "<0>①</0> <1>Left panel</1> · Find candidate segments with AI scene search and the sort tabs.",
+"<0>②</0> <1>가운데 영역</1> · 추천 구간 카드를 보고 선택합니다.": "<0>②</0> <1>Center area</1> · Browse and select recommended segment cards.",
+"<0>③</0> <1>타임라인</1> · 방송 전체 썸네일과 데이터 그래프를 보여줍니다.": "<0>③</0> <1>Timeline</1> · Shows thumbnails of the whole stream and a data graph.",
+"<0>④</0> <1>오른쪽 영역</1> · 미리보기로 확인하고 내보냅니다.": "<0>④</0> <1>Right area</1> · Preview and export.",
+"참고 · 분석 완료 알림": "Note · Analysis complete notification",
+"라이브 방송이 끝나면 AI가 방송을 자동으로 분석합니다. 분석이 완료되면 <0>라이브 방송 캠페인을 생성한 계정</0>으로 알림 메일이 발송되며, 메일의 버튼을 눌러 비디오 에디터로 바로 이동할 수 있습니다. 수신 계정 추가를 원할 경우 <1>ask@shoplive.cloud</1>로 신청해 주세요.": "When a live stream ends, AI analyzes it automatically. Once the analysis is complete, a notification email is sent to <0>the account that created the live campaign</0>, and you can jump straight to the Video Editor from the button in the email. To add more recipients, contact <1>ask@shoplive.cloud</1>.",
+"기준을 골라 후보 구간을 찾아요": "Choose a criterion to find candidate segments",
+"왼쪽 패널에서 <0>상품별, AI 추천, 클릭순, 좋아요순, 채팅순, 시청자순, 유입순</0> 중 기준을 고르면 가운데에 구간 카드가 정렬됩니다. 원하는 장면이 분명할 때는 상단 <1>AI 장면 검색</1>으로 찾을 수 있습니다. 아래 탭을 눌러 방식별로 어떤 구간을 찾아주는지 확인해 보세요.": "Choose a criterion in the left panel, <0>By product, AI picks, Clicks, Likes, Chats, Viewers, or Traffic</0>, and segment cards are sorted in the center. When you know exactly which scene you want, use <1>AI scene search</1> at the top. Click the tabs below to see what each method finds.",
+"← 뒤로": "← Back",
+"찾고 싶은 장면을 문장으로 설명해 보세요": "Describe the scene you want in a sentence",
+"검색": "Search",
+"후디 스타일링 보여주는 장면": "Scenes showing hoodie styling",
+"슬릿 스커트 핏": "Slit skirt fit",
+"소재 클로즈업": "Fabric close-up",
+"최근 검색": "Recent searches",
+"지우기": "Clear",
+"뒷모습 보여주는 장면": "Scenes showing the back",
+"12개 · 25분 전": "12 · 25 min ago",
+"상품 6 · 추천 구간 있는 상품 4": "6 products · 4 with recommended segments",
+"브이넥 오버핏 후디": "V-neck oversized hoodie",
+"구간 8": "8 segments",
+"클릭 4,150": "Clicks 4,150",
+"슬릿 새틴 롱스커트": "Slit satin long skirt",
+"구간 6": "6 segments",
+"클릭 3,777": "Clicks 3,777",
+"→ 추천 구간 없는 상품 2": "→ 2 products without recommended segments",
+"편한 트레이닝 룩은 물론<0/>클래식한 옷차림에도 잘 어울려요": "Works with comfy athleisure looks<0/>and classic outfits alike",
+"영상 다운로드": "Download video",
+"숏폼으로 보내기": "Send to shortform",
+"상품 클릭이 집중된 구간": "Segments where product clicks peaked",
+"좋아요 반응이 몰린 구간": "Segments where likes surged",
+"채팅이 활발했던 구간": "Segments with the most active chat",
+"동시 시청자가 급증한 구간": "Segments where concurrent viewers spiked",
+"신규 유입이 많았던 구간": "Segments with the most new visitors",
+"참고 · 타임라인 데이터 그래프": "Note · Timeline data graph",
+"하단 타임라인의 데이터 그래프는 지금 고른 탭의 지표(클릭 등) 변화를 보여줍니다. 그래프의 피크를 보고 해당 위치로 바로 이동할 수 있고, 썸네일 스트립을 클릭해도 그 장면으로 이동합니다.": "The data graph on the timeline at the bottom shows how the metric for the selected tab (such as clicks) changes over time. You can jump straight to a peak in the graph, and clicking the thumbnail strip also takes you to that scene.",
+"구간을 골라 순서를 정하고 미리 확인해요": "Select segments, arrange them, and preview",
+"미리보기": "Preview",
+"카드를 클릭하면 오른쪽 플레이어에서 재생됩니다.": "Click a card to play it in the player on the right.",
+"구간 담기": "Add segments",
+"카드 왼쪽 위 <0>원형 버튼</0>을 누릅니다. 탭과 검색 결과를 오가며 섞어 담을 수 있습니다.": "Click the <0>circle button</0> at the top left of a card. You can mix segments from different tabs and search results.",
+"순서 정리": "Reorder",
+"드래그로 순서를 바꾸고, <0>Delete</0> 키로 뺍니다.": "Drag to change the order, and press <0>Delete</0> to remove one.",
+"직접 추가": "Add manually",
+"<0>재생 위치에서 구간 추가</0>로 현재 위치부터 10초를 담습니다.": "Use <0>Add segment from playhead</0> to add 10 seconds starting from the current position.",
+"완성본 확인": "Review the final cut",
+"<0>선택 구간만</0>을 체크하면 담은 구간만 이어서 재생됩니다. 비율 · 배속 · 자막도 여기서 조절합니다.": "Check <0>Selected only</0> to play just the segments you added, back to back. Aspect ratio, playback speed, and subtitles are also adjusted here.",
+"20초": "20s",
+"선택한 구간": "Selected segments",
+"드래그하여 순서를 변경할 수 있습니다": "Drag to reorder",
+"2개 · 40초": "2 · 40s",
+"선택 구간만": "Selected only",
+"타임라인 · 선택한 구간이 마커로 표시됩니다": "Timeline · Selected segments appear as markers",
+"구간 2개 선택 · 2배속 · 자막 켜짐 · 선택 구간만 재생 중": "2 segments selected · 2x speed · Subtitles on · Playing selected only",
+"참고 · 타임라인 마커와 줌": "Note · Timeline markers and zoom",
+"선택한 구간은 타임라인에 위치와 길이가 마커로 표시됩니다. 오른쪽 위 − / + 버튼과 슬라이더로 확대하면 마커와 데이터 그래프를 더 세밀하게 볼 수 있고, 확대한 상태에서는 가로로 스크롤해 이동합니다.": "Selected segments appear on the timeline as markers showing their position and length. Zoom in with the − / + buttons and slider at the top right to see markers and the data graph in more detail, and scroll horizontally to move around while zoomed in.",
+"숏폼으로 보내거나 영상을 다운로드해요": "Send to a shortform or download the video",
+"구성한 구간은 오른쪽 영역 아래의 두 버튼으로 내보냅니다. 샵라이브에 바로 등록할 때는 <0>숏폼으로 보내기</0>를, 파일로 받아 다른 곳에 쓸 때는 <1>영상 다운로드</1>를 누르세요.": "Export your segments with the two buttons at the bottom of the right area. Click <0>Send to shortform</0> to publish directly on Shoplive, or <1>Download video</1> to get files for use elsewhere.",
+"☑ 선택 구간만": "☑ Selected only",
+"자막 다운로드": "Download subtitles",
+"확인 모달 → 새 탭에서<0/>숏폼 작성 화면 열림": "Confirmation dialog → shortform editor<0/>opens in a new tab",
+"오른쪽 영역 하단 · 내보내기 버튼과 영상 다운로드 메뉴": "Bottom of the right area · Export buttons and download menu",
+"샵라이브 숏폼으로 바로 등록할 때. 상품 상세페이지와 피드에 올릴 숏폼에 적합합니다.": "For publishing directly as a Shoplive shortform. Best for shortforms on product pages and feeds.",
+"파일이 필요할 때. 누르면 영상(mp4)과 자막(srt) 두 가지 선택지가 나오며, 광고·SNS 채널이나 외부 편집에 사용합니다.": "For when you need files. Choose video (mp4) or subtitles (srt) to use in ads, on social channels, or in external editing.",
+"도입 문의": "Get started",
+"AI 비디오 에디터,<0/>바로 사용해 보세요": "Start using<0/>AI Video Editor today",
+"닫기": "Close",
+"사용하고 싶다면 <0>ask@shoplive.cloud</0> 또는 연락받으신 담당자에게 문의해 주세요. 아래 버튼을 누르면 이메일 주소가 복사됩니다.": "To get started, contact <0>ask@shoplive.cloud</0> or your Shoplive representative. Click the button below to copy the email address.",
+"AI 비디오 에디터 도입 문의": "Get AI Video Editor"
+},
+"ja": {
+"섹션 이동": "セクション移動",
+"AI 비디오 에디터 가이드": "AIビデオエディターガイド",
+"AI 비디오 에디터 소개": "機能紹介",
+"이런 게 좋아져요": "導入メリット",
+"이렇게 써보세요": "活用シーン",
+"사용 방법": "使い方",
+"SHOPLIVE AI 비디오 에디터 가이드": "SHOPLIVE AIビデオエディターガイド",
+"라이브 방송 속<0/>고객의 구매를 이끈 결정적 장면,<1/>AI가 찾아 숏폼으로 만들어요": "ライブ配信の中で<0/>購入につながった決定的なシーンを、<1/>AIが見つけてショートフォームに",
+"AI 비디오 에디터는 라이브 방송 중 수집된 시청 반응 데이터와 상품 정보, 방송 발화 내용을 분석해 숏폼으로 만들 만한 구간을 찾아줍니다. 담당자는 <0>상품별, AI 추천, 클릭순, 좋아요순, 채팅순, 시청자순, 유입순</0> 중 원하는 기준을 선택해 구간을 확인하고, 방송을 처음부터 다시 보지 않아도 바로 숏폼으로 보내거나 mp4·srt 파일로 내려받을 수 있습니다.": "AIビデオエディターは、ライブ配信中に収集した視聴者の反応データ、商品情報、配信中の発話内容を分析し、ショートフォームにできる区間を見つけます。担当者は<0>商品別、AIおすすめ、クリック順、いいね順、チャット順、視聴者順、流入順</0>から基準を選んで区間を確認し、配信を最初から見直さなくても、すぐにショートフォームへ送信したり、mp4・srtファイルでダウンロードしたりできます。",
+"상품별": "商品別",
+"AI 추천": "AIおすすめ",
+"클릭순": "クリック順",
+"좋아요순": "いいね順",
+"채팅순": "チャット順",
+"시청자순": "視聴者順",
+"유입순": "流入順",
+"AI 장면 검색": "AIシーン検索",
+"현재는 라이브 방송이 종료된 캠페인에서 이용할 수 있습니다.": "現在は、ライブ配信が終了したキャンペーンで利用できます。",
+"Shoplive 어드민 · AI 비디오 에디터": "Shoplive管理画面 · AIビデオエディター",
+"AI 비디오 에디터 화면 예시: 가운데 추천 구간 목록과 오른쪽 9:16 플레이어": "AIビデオエディターの画面例：中央におすすめ区間の一覧、右に9:16プレイヤー",
+"화면 예시 · 데모 데이터": "画面例 · デモデータ",
+"숏폼 만들기는 쉬워지고,<0/>구매로 이어지는 영상은 많아져요": "ショートフォーム制作はより簡単に、<0/>購入につながる動画はより多く",
+"AI 비디오 에디터를 쓰면 숏폼을 만드는 속도와 양, 그리고 성과가 함께 달라집니다.": "AIビデオエディターを使うと、ショートフォーム制作のスピード、本数、そして成果がまとめて変わります。",
+"더 빠르게": "より速く",
+"방송을 처음부터 다시 볼 필요가 없어요": "配信を最初から見直す必要はありません",
+"1~2시간 방송을 처음부터 돌려보며 구간을 찾던 일을 AI가 대신합니다. 방송이 끝나면 분석이 자동으로 시작되고, 담당자는 추천된 구간을 확인하고 고르는 일에만 집중하면 됩니다.": "1〜2時間の配信を最初から見直して区間を探していた作業を、AIが代わりに行います。配信が終わると分析が自動で始まり、担当者はおすすめされた区間を確認して選ぶことに集中できます。",
+"방송 종료 후 자동 분석, 완료 메일로 알림": "配信終了後に自動分析、完了をメールでお知らせ",
+"추천에 없는 장면도 재생 위치에서 바로 추가": "おすすめにないシーンも再生位置からすぐに追加",
+"기준만 고르면 정렬된 구간을 바로 확인": "基準を選ぶだけで並べ替えた区間をすぐに確認",
+"샵라이브 어드민 안에서 숏폼 등록까지 완료": "Shoplive管理画面の中でショートフォーム登録まで完了",
+"더 많이": "より多く",
+"방송 한 번으로 여러 편의 숏폼을 만들어요": "1回の配信から複数のショートフォームを制作",
+"상품별·반응별로 구간이 나뉘어 있어, 한 번의 방송에서 상품 수만큼 숏폼을 만들 수 있습니다. 한 번 송출되고 끝나던 라이브 방송이 계속 쓰이는 콘텐츠가 됩니다.": "区間が商品別・反応別に分かれているため、1回の配信から商品の数だけショートフォームを作れます。一度配信して終わりだったライブ配信が、繰り返し使えるコンテンツになります。",
+"상품마다 대표 구간으로 숏폼 제작": "商品ごとの代表区間でショートフォームを制作",
+"영상이 없던 상품 상세페이지까지 채움": "動画がなかった商品詳細ページも充実",
+"기획전, 홈 피드, 외부 광고에 계속 활용": "特集ページ、ホームフィード、外部広告に継続して活用",
+"더 많은 구매로 이어지게": "より多くの購入へ",
+"구매로 이어지는 장면을 골라요": "購入につながるシーンを選べます",
+"클릭·채팅·좋아요가 실제로 집중된 장면과, 상품의 기획 의도·스타일링을 설명한 장면을 근거로 숏폼을 만듭니다. 라이브를 보지 못한 고객도 \"어떻게 입을지\"를 이해하고 구매를 결정할 수 있습니다.": "クリック・チャット・いいねが実際に集中したシーンや、商品の企画意図・スタイリングを説明したシーンをもとにショートフォームを作ります。ライブを見逃したお客様も「どう着こなすか」を理解して購入を決められます。",
+"실제 시청자 반응이 검증된 장면 선택": "実際の視聴者の反応で裏付けられたシーンを選択",
+"상세페이지에 설명·스타일링 숏폼 배치": "商品詳細ページに説明・スタイリングのショートフォームを配置",
+"광고·SNS에 반응 좋은 소재로 활용": "広告・SNSで反応の良い素材として活用",
+"숏폼 제작 효율부터 구매 전환까지,<0/>목적에 맞게 써보세요": "ショートフォーム制作の効率化から購入転換まで、<0/>目的に合わせて活用できます",
+"숏폼이 이미지보다 구매 전환에 효과적이라는 것을 확인했지만, 숏폼을 꾸준히 만드는 과정에서 같은 벽에 부딪혔습니다. 숏폼의 원재료인 라이브 방송은 충분히 쌓여 있는데, 그 안에서 활용할 장면을 찾는 일이 사람의 눈과 시간에 의존하고 있었기 때문입니다.": "ショートフォームが画像よりも購入転換に効果的だとわかっていても、継続して制作する中で同じ壁にぶつかっていました。素材となるライブ配信は十分にたまっているのに、その中から使えるシーンを探す作業が人の目と時間に頼っていたからです。",
+"CASE 01 · 숏폼 제작 효율": "CASE 01 · ショートフォーム制作の効率化",
+"숏폼 제작 시간을 줄이고 싶다면": "ショートフォームの制作時間を短縮したいなら",
+"1~2시간 방송을 처음부터 돌려보며 구간을 찾느라, 숏폼 한 편에도 시간이 오래 걸렸습니다.": "1〜2時間の配信を最初から見直して区間を探すため、ショートフォーム1本にも長い時間がかかっていました。",
+"<0>AI 추천</0>으로 시작하세요. AI가 제안한 구간을 확인하고 고르기만 하면 되므로, 방송을 다시 보지 않고 바로 숏폼 제작을 시작할 수 있습니다.": "<0>AIおすすめ</0>から始めましょう。AIが提案した区間を確認して選ぶだけなので、配信を見直さずにすぐショートフォーム制作を始められます。",
+"CASE 02 · 상세페이지 구매 전환": "CASE 02 · 商品詳細ページの購入転換",
+"상세페이지에서 구매 전환을 높이고 싶다면": "商品詳細ページで購入転換率を高めたいなら",
+"숏폼이 구매 결정을 돕는다는 건 알지만, 상품마다 설명 영상을 만들 여력이 없었습니다.": "ショートフォームが購入の決め手になるとわかっていても、商品ごとに説明動画を作る余力がありませんでした。",
+"<0>상품별</0>로 상품을 고르고 <1>AI 장면 검색</1>으로 'A 상품 등장 구간 찾아줘'와 같은 자연어로 클립을 찾으세요. 상품의 기획 의도와 스타일링을 보여주는 숏폼으로, \"어떻게 입을지\" 고민하는 고객의 구매 결정을 도울 수 있습니다.": "<0>商品別</0>で商品を選び、<1>AIシーン検索</1>で「商品Aが登場する区間を探して」のような自然な文章でクリップを探しましょう。商品の企画意図やスタイリングを伝えるショートフォームで、「どう着こなすか」迷っているお客様の購入判断を後押しできます。",
+"CASE 03 · 광고 소재 확보": "CASE 03 · 広告素材の確保",
+"광고 소재가 꾸준히 필요하다면": "広告素材が継続的に必要なら",
+"광고·SNS 소재는 계속 필요한데, 어떤 장면이 반응이 좋을지 감으로 골라야 했습니다.": "広告・SNS用の素材は常に必要なのに、どのシーンが反応を得られるかは勘で選ぶしかありませんでした。",
+"<0>클릭순 · 채팅순 · 좋아요순</0>으로 정렬하세요. 실제 시청자 반응이 높았던 장면을 근거로 고를 수 있어, 반응이 검증된 소재를 꾸준히 확보할 수 있습니다.": "<0>クリック順・チャット順・いいね順</0>で並べ替えましょう。実際に視聴者の反応が高かったシーンを根拠に選べるため、反応が裏付けられた素材を継続して確保できます。",
+"CASE 04 · 라이브 콘텐츠 효율 극대화": "CASE 04 · ライブコンテンツの効果を最大化",
+"끝난 라이브 방송을 계속 활용하고 싶다면": "終了したライブ配信を活用し続けたいなら",
+"공들여 만든 방송이 한 번 송출되고 나면, 다시보기 말고는 쓰이지 않았습니다.": "手間をかけて作った配信も、一度配信されたあとはアーカイブ以外に使われていませんでした。",
+"<0>상품별</0>로 상품마다 대표 구간을 하나씩 고르세요. 방송 한 번에서 상품 수만큼 숏폼이 만들어져 기획전, 홈 피드, 외부 광고에 계속 활용할 수 있습니다.": "<0>商品別</0>で商品ごとに代表区間をひとつずつ選びましょう。1回の配信から商品の数だけショートフォームができ、特集ページ、ホームフィード、外部広告に継続して活用できます。",
+"AI가 방송 데이터를 근거로 후보 구간을 제안하고, 최종 선택은 사람이 합니다. 기준별 사용 방법은 아래 사용 방법에서 확인해 보세요.": "AIが配信データをもとに候補区間を提案し、最終的な選択は担当者が行います。基準ごとの使い方は、下の「使い方」でご確認ください。",
+"방송이 끝나면 이렇게 숏폼을 만들 수 있어요": "配信が終わったら、こうしてショートフォームを作れます",
+"비디오 에디터를 열고, 기준을 골라 후보 구간을 찾고, 원하는 구간을 담아 확인한 뒤 숏폼으로 보내거나 다운로드하면 됩니다.": "ビデオエディターを開き、基準を選んで候補区間を探し、使いたい区間を追加して確認したら、ショートフォームへ送信するかダウンロードするだけです。",
+"방송이 끝나면 비디오 에디터를 열어요": "配信が終わったらビデオエディターを開きます",
+"비디오 에디터 열기": "ビデオエディターを開く",
+"어드민의 <0>캠페인 목록</0>에서 종료된 라이브 캠페인을 선택한 뒤, 캠페인 상세 화면 상단의 <1>'비디오 에디터'</1> 버튼을 누르면 됩니다. 방송 분석 결과와 영상이 한 화면에 함께 열립니다. <2>현재는 라이브 방송이 종료된 캠페인에서 이용할 수 있습니다.</2>": "管理画面の<0>キャンペーン一覧</0>で終了したライブキャンペーンを選び、キャンペーン詳細画面上部の<1>「ビデオエディター」</1>ボタンを押します。配信の分析結果と動画がひとつの画面で開きます。<2>現在は、ライブ配信が終了したキャンペーンで利用できます。</2>",
+"저장": "保存",
+"F/W 스타일링 라이브": "F/Wスタイリングライブ",
+"종료": "終了",
+"방송 콘솔": "配信コンソール",
+"비디오 에디터": "ビデオエディター",
+"여기를 눌러 진입": "ここを押して開く",
+"다시보기 ▾": "アーカイブ ▾",
+"프롬프터 ▾": "プロンプター ▾",
+"데이터 인사이트": "データインサイト",
+"종료된 캠페인 상세 화면 상단 · 화면 예시": "終了したキャンペーンの詳細画面上部 · 画面例",
+"화면 구성 살펴보기": "画面構成を確認する",
+"비디오 에디터는 네 영역으로 나뉩니다. 왼쪽에서 찾고, 가운데에서 고르고, 타임라인에서 위치를 확인한 뒤, 오른쪽에서 확인하고 내보내는 순서입니다.": "ビデオエディターは4つのエリアに分かれています。左で探し、中央で選び、タイムラインで位置を確認したら、右で確認して書き出す流れです。",
+"비디오 에디터 전체 화면: ① 왼쪽 패널, ② 가운데 영역, ③ 타임라인, ④ 오른쪽 영역": "ビデオエディターの全体画面：① 左パネル、② 中央エリア、③ タイムライン、④ 右エリア",
+"상품별 탭이 기본으로 선택된 초기 화면 · 화면 예시 · 데모 데이터": "商品別タブが選択された初期画面 · 画面例 · デモデータ",
+"<0>①</0> <1>왼쪽 패널</1> · AI 장면 검색과 정렬 탭으로 후보 구간을 찾습니다.": "<0>①</0> <1>左パネル</1> · AIシーン検索と並べ替えタブで候補区間を探します。",
+"<0>②</0> <1>가운데 영역</1> · 추천 구간 카드를 보고 선택합니다.": "<0>②</0> <1>中央エリア</1> · おすすめ区間のカードを見て選びます。",
+"<0>③</0> <1>타임라인</1> · 방송 전체 썸네일과 데이터 그래프를 보여줍니다.": "<0>③</0> <1>タイムライン</1> · 配信全体のサムネイルとデータグラフを表示します。",
+"<0>④</0> <1>오른쪽 영역</1> · 미리보기로 확인하고 내보냅니다.": "<0>④</0> <1>右エリア</1> · プレビューで確認して書き出します。",
+"참고 · 분석 완료 알림": "参考 · 分析完了のお知らせ",
+"라이브 방송이 끝나면 AI가 방송을 자동으로 분석합니다. 분석이 완료되면 <0>라이브 방송 캠페인을 생성한 계정</0>으로 알림 메일이 발송되며, 메일의 버튼을 눌러 비디오 에디터로 바로 이동할 수 있습니다. 수신 계정 추가를 원할 경우 <1>ask@shoplive.cloud</1>로 신청해 주세요.": "ライブ配信が終わると、AIが配信を自動で分析します。分析が完了すると<0>ライブキャンペーンを作成したアカウント</0>にお知らせメールが届き、メール内のボタンからビデオエディターへ直接移動できます。受信アカウントを追加したい場合は、<1>ask@shoplive.cloud</1>までお申し込みください。",
+"기준을 골라 후보 구간을 찾아요": "基準を選んで候補区間を探します",
+"왼쪽 패널에서 <0>상품별, AI 추천, 클릭순, 좋아요순, 채팅순, 시청자순, 유입순</0> 중 기준을 고르면 가운데에 구간 카드가 정렬됩니다. 원하는 장면이 분명할 때는 상단 <1>AI 장면 검색</1>으로 찾을 수 있습니다. 아래 탭을 눌러 방식별로 어떤 구간을 찾아주는지 확인해 보세요.": "左パネルで<0>商品別、AIおすすめ、クリック順、いいね順、チャット順、視聴者順、流入順</0>から基準を選ぶと、中央に区間カードが並びます。探したいシーンが決まっているときは、上部の<1>AIシーン検索</1>で探せます。下のタブを押して、方法ごとにどんな区間が見つかるか確認してみましょう。",
+"← 뒤로": "← 戻る",
+"찾고 싶은 장면을 문장으로 설명해 보세요": "探したいシーンを文章で説明してください",
+"검색": "検索",
+"후디 스타일링 보여주는 장면": "パーカーのスタイリングを見せるシーン",
+"슬릿 스커트 핏": "スリットスカートのシルエット",
+"소재 클로즈업": "素材のクローズアップ",
+"최근 검색": "最近の検索",
+"지우기": "クリア",
+"뒷모습 보여주는 장면": "後ろ姿を見せるシーン",
+"12개 · 25분 전": "12件 · 25分前",
+"상품 6 · 추천 구간 있는 상품 4": "商品6 · おすすめ区間のある商品4",
+"브이넥 오버핏 후디": "Vネック オーバーサイズパーカー",
+"구간 8": "区間 8",
+"클릭 4,150": "クリック 4,150",
+"슬릿 새틴 롱스커트": "スリット サテンロングスカート",
+"구간 6": "区間 6",
+"클릭 3,777": "クリック 3,777",
+"→ 추천 구간 없는 상품 2": "→ おすすめ区間のない商品 2",
+"편한 트레이닝 룩은 물론<0/>클래식한 옷차림에도 잘 어울려요": "楽なジャージスタイルはもちろん、<0/>クラシックな装いにもよく合います",
+"영상 다운로드": "動画をダウンロード",
+"숏폼으로 보내기": "ショートフォームへ送信",
+"상품 클릭이 집중된 구간": "商品クリックが集中した区間",
+"좋아요 반응이 몰린 구간": "いいねが集中した区間",
+"채팅이 활발했던 구간": "チャットが盛り上がった区間",
+"동시 시청자가 급증한 구간": "同時視聴者が急増した区間",
+"신규 유입이 많았던 구간": "新規流入が多かった区間",
+"참고 · 타임라인 데이터 그래프": "参考 · タイムラインのデータグラフ",
+"하단 타임라인의 데이터 그래프는 지금 고른 탭의 지표(클릭 등) 변화를 보여줍니다. 그래프의 피크를 보고 해당 위치로 바로 이동할 수 있고, 썸네일 스트립을 클릭해도 그 장면으로 이동합니다.": "下部タイムラインのデータグラフは、選択中のタブの指標（クリックなど）の推移を表示します。グラフのピークを見てその位置へすぐに移動でき、サムネイルをクリックしてもそのシーンへ移動します。",
+"구간을 골라 순서를 정하고 미리 확인해요": "区間を選んで順番を決め、プレビューで確認します",
+"미리보기": "プレビュー",
+"카드를 클릭하면 오른쪽 플레이어에서 재생됩니다.": "カードをクリックすると、右のプレイヤーで再生されます。",
+"구간 담기": "区間を追加",
+"카드 왼쪽 위 <0>원형 버튼</0>을 누릅니다. 탭과 검색 결과를 오가며 섞어 담을 수 있습니다.": "カード左上の<0>丸いボタン</0>を押します。タブや検索結果を行き来しながら、組み合わせて追加できます。",
+"순서 정리": "順番を整理",
+"드래그로 순서를 바꾸고, <0>Delete</0> 키로 뺍니다.": "ドラッグで順番を変え、<0>Delete</0>キーで外します。",
+"직접 추가": "手動で追加",
+"<0>재생 위치에서 구간 추가</0>로 현재 위치부터 10초를 담습니다.": "<0>再生位置から区間を追加</0>で、現在の位置から10秒を追加します。",
+"완성본 확인": "完成版を確認",
+"<0>선택 구간만</0>을 체크하면 담은 구간만 이어서 재생됩니다. 비율 · 배속 · 자막도 여기서 조절합니다.": "<0>選択区間のみ</0>にチェックを入れると、追加した区間だけを続けて再生します。比率・再生速度・字幕もここで調整します。",
+"20초": "20秒",
+"선택한 구간": "選択した区間",
+"드래그하여 순서를 변경할 수 있습니다": "ドラッグして順番を変更できます",
+"2개 · 40초": "2件 · 40秒",
+"선택 구간만": "選択区間のみ",
+"타임라인 · 선택한 구간이 마커로 표시됩니다": "タイムライン · 選択した区間がマーカーで表示されます",
+"구간 2개 선택 · 2배속 · 자막 켜짐 · 선택 구간만 재생 중": "区間を2件選択 · 2倍速 · 字幕オン · 選択区間のみ再生中",
+"참고 · 타임라인 마커와 줌": "参考 · タイムラインのマーカーとズーム",
+"선택한 구간은 타임라인에 위치와 길이가 마커로 표시됩니다. 오른쪽 위 − / + 버튼과 슬라이더로 확대하면 마커와 데이터 그래프를 더 세밀하게 볼 수 있고, 확대한 상태에서는 가로로 스크롤해 이동합니다.": "選択した区間は、タイムライン上に位置と長さがマーカーで表示されます。右上の − / + ボタンとスライダーで拡大すると、マーカーとデータグラフをより細かく確認でき、拡大中は横にスクロールして移動します。",
+"숏폼으로 보내거나 영상을 다운로드해요": "ショートフォームへ送信するか、動画をダウンロードします",
+"구성한 구간은 오른쪽 영역 아래의 두 버튼으로 내보냅니다. 샵라이브에 바로 등록할 때는 <0>숏폼으로 보내기</0>를, 파일로 받아 다른 곳에 쓸 때는 <1>영상 다운로드</1>를 누르세요.": "構成した区間は、右エリア下部の2つのボタンで書き出します。Shopliveにそのまま登録する場合は<0>ショートフォームへ送信</0>を、ファイルとして受け取りほかで使う場合は<1>動画をダウンロード</1>を押してください。",
+"☑ 선택 구간만": "☑ 選択区間のみ",
+"자막 다운로드": "字幕をダウンロード",
+"확인 모달 → 새 탭에서<0/>숏폼 작성 화면 열림": "確認ダイアログ → 新しいタブで<0/>ショートフォーム作成画面が開く",
+"오른쪽 영역 하단 · 내보내기 버튼과 영상 다운로드 메뉴": "右エリア下部 · 書き出しボタンと動画ダウンロードメニュー",
+"샵라이브 숏폼으로 바로 등록할 때. 상품 상세페이지와 피드에 올릴 숏폼에 적합합니다.": "Shopliveのショートフォームとしてそのまま登録するとき。商品詳細ページやフィードに掲載するショートフォームに適しています。",
+"파일이 필요할 때. 누르면 영상(mp4)과 자막(srt) 두 가지 선택지가 나오며, 광고·SNS 채널이나 외부 편집에 사용합니다.": "ファイルが必要なとき。押すと動画（mp4）と字幕（srt）の2つの選択肢が表示され、広告・SNSチャネルや外部での編集に使えます。",
+"도입 문의": "導入のお問い合わせ",
+"AI 비디오 에디터,<0/>바로 사용해 보세요": "AIビデオエディターを<0/>今すぐ使ってみましょう",
+"닫기": "閉じる",
+"사용하고 싶다면 <0>ask@shoplive.cloud</0> 또는 연락받으신 담당자에게 문의해 주세요. 아래 버튼을 누르면 이메일 주소가 복사됩니다.": "ご利用をご希望の場合は、<0>ask@shoplive.cloud</0>またはご連絡を差し上げた担当者までお問い合わせください。下のボタンを押すとメールアドレスがコピーされます。",
+"AI 비디오 에디터 도입 문의": "AIビデオエディター導入のお問い合わせ"
+}
+};
 (function () {
   var $ = function (id) { return document.getElementById(id); };
   var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
 
-  // hero chips rotate every 3s
-  var chipsA = ['상품 등장 구간 8개 발견', '채팅이 몰린 구간 발견'];
-  var chipsB = ["'후디 스타일링' 검색 결과 8건", 'AI 추천: 롱스커트 매치 장면'];
-  var tick = 0;
-  setInterval(function () {
-    tick++;
-    $('chipA').textContent = chipsA[tick % 2];
-    $('chipB').textContent = chipsB[tick % 2];
-  }, 3000);
+  var LANGS = ['ko', 'en', 'ja'];
+  var lang = 'ko';
+
+  // ── dynamic demo strings, per language ──
+  var UI = {
+    ko: {
+      title: 'Shoplive AI 비디오 에디터 가이드', langLabel: '언어 선택',
+      chipsA: ['상품 등장 구간 8개 발견', '채팅이 몰린 구간 발견'],
+      chipsB: ["'후디 스타일링' 검색 결과 8건", 'AI 추천: 롱스커트 매치 장면'],
+      pills: ['상품별', 'AI 추천', '클릭순', '좋아요순', '채팅순', '시청자순', '유입순'],
+      searchOn: '후디 스타일링 보여주는 장면', searchOff: '찾고 싶은 장면을 입력하세요',
+      reason: '화면과 발화가 검색어에 가장 가까운 구간',
+      copy: 'ask@shoplive.cloud 복사하기', copied: '이메일 주소가 복사되었어요',
+      clicks: '클릭', sim: '유사도', sec: function (n) { return n + '초'; }, clipCount: '6개 구간'
+    },
+    en: {
+      title: 'Shoplive AI Video Editor Guide', langLabel: 'Select language',
+      chipsA: ['8 product appearances found', 'Chat spike detected'],
+      chipsB: ["8 results for 'hoodie styling'", 'AI pick: long skirt pairing'],
+      pills: ['By product', 'AI picks', 'Clicks', 'Likes', 'Chats', 'Viewers', 'Traffic'],
+      searchOn: 'Scenes showing hoodie styling', searchOff: 'Describe the scene you want',
+      reason: 'Visuals and speech closest to your search',
+      copy: 'Copy ask@shoplive.cloud', copied: 'Email address copied',
+      clicks: 'Clicks', sim: 'Similarity', sec: function (n) { return n + 's'; }, clipCount: '6 clips'
+    },
+    ja: {
+      title: 'Shoplive AIビデオエディターガイド', langLabel: '言語を選択',
+      chipsA: ['商品の登場区間を8件発見', 'チャットが集中した区間を発見'],
+      chipsB: ['「パーカーのスタイリング」検索結果 8件', 'AIおすすめ：ロングスカートの合わせ方'],
+      pills: ['商品別', 'AIおすすめ', 'クリック順', 'いいね順', 'チャット順', '視聴者順', '流入順'],
+      searchOn: 'パーカーのスタイリングを見せるシーン', searchOff: '探したいシーンを入力してください',
+      reason: '映像と発話が検索語に最も近い区間',
+      copy: 'ask@shoplive.cloud をコピー', copied: 'メールアドレスをコピーしました',
+      clicks: 'クリック', sim: '類似度', sec: function (n) { return n + '秒'; }, clipCount: '6件の区間'
+    }
+  };
 
   // frames: b = has original badge areas to cover
   var F = {
@@ -555,31 +895,89 @@ a{color:#0A62E6}a:hover{color:#0551C2}
     t6: { src: 'assets/f0c6399cf5579a75c406de2def2eff01.jpg' }
   };
   var C = {
-    a: { f: 't1', title: '후디에 롱스커트, 의외로 찰떡이에요', start: '00:14:32', end: '00:14:52', dur: '20초', tag1: '#오버핏후디', tag2: '#롱스커트' },
-    b: { f: 't2', title: '슬릿 디테일로 완성하는 실루엣', start: '00:08:17', end: '00:08:37', dur: '20초', tag1: '#슬릿스커트', tag2: '#데일리룩' },
-    c: { f: 't3', title: '뒷모습까지 예쁜 후드 라인', start: '00:11:03', end: '00:11:23', dur: '20초', tag1: '#후드라인', tag2: '#뒷태' },
-    d: { f: 't4', title: '오버핏인데 부해 보이지 않는 이유', start: '00:16:07', end: '00:16:27', dur: '20초', tag1: '#오버핏', tag2: '#핏체크' },
-    e: { f: 't5', title: '후디 소재 가까이서 보기', start: '00:21:40', end: '00:21:58', dur: '18초', tag1: '#소재', tag2: '#클로즈업' },
-    f: { f: 't6', title: '스커트 슬릿 길이 확인', start: '00:23:05', end: '00:23:20', dur: '15초', tag1: '#슬릿', tag2: '#기장' }
+    a: { f: 't1', start: '00:14:32', end: '00:14:52', dur: 20 },
+    b: { f: 't2', start: '00:08:17', end: '00:08:37', dur: 20 },
+    c: { f: 't3', start: '00:11:03', end: '00:11:23', dur: 20 },
+    d: { f: 't4', start: '00:16:07', end: '00:16:27', dur: 20 },
+    e: { f: 't5', start: '00:21:40', end: '00:21:58', dur: 18 },
+    f: { f: 't6', start: '00:23:05', end: '00:23:20', dur: 15 }
   };
+  // clip title, tag1, tag2
+  var CT = {
+    ko: {
+      a: ['후디에 롱스커트, 의외로 찰떡이에요', '#오버핏후디', '#롱스커트'],
+      b: ['슬릿 디테일로 완성하는 실루엣', '#슬릿스커트', '#데일리룩'],
+      c: ['뒷모습까지 예쁜 후드 라인', '#후드라인', '#뒷태'],
+      d: ['오버핏인데 부해 보이지 않는 이유', '#오버핏', '#핏체크'],
+      e: ['후디 소재 가까이서 보기', '#소재', '#클로즈업'],
+      f: ['스커트 슬릿 길이 확인', '#슬릿', '#기장']
+    },
+    en: {
+      a: ['A hoodie with a long skirt? It just works', '#OversizedHoodie', '#LongSkirt'],
+      b: ['A silhouette finished with a slit detail', '#SlitSkirt', '#DailyLook'],
+      c: ['A hood line that looks great from behind', '#HoodLine', '#BackView'],
+      d: ["Oversized, but here's why it doesn't look bulky", '#Oversized', '#FitCheck'],
+      e: ['A closer look at the hoodie fabric', '#Fabric', '#CloseUp'],
+      f: ['Checking the skirt slit length', '#Slit', '#Length']
+    },
+    ja: {
+      a: ['パーカーにロングスカート、意外と好相性', '#オーバーサイズパーカー', '#ロングスカート'],
+      b: ['スリットのディテールで仕上げるシルエット', '#スリットスカート', '#デイリールック'],
+      c: ['後ろ姿まできれいなフードライン', '#フードライン', '#後ろ姿'],
+      d: ['オーバーサイズなのにもたつかない理由', '#オーバーサイズ', '#フィットチェック'],
+      e: ['パーカーの素材を近くで見る', '#素材', '#クローズアップ'],
+      f: ['スカートのスリットの長さをチェック', '#スリット', '#丈']
+    }
+  };
+
   var G = [
-    { tab: '상품별', hint: '상세페이지용 숏폼', pill: 0, product: 1, midTitle: '브이넥 오버핏 후디', midSub: '6개 구간',
-      num: '2-1', title: '상품별', sub: '상품이 화면에 등장한 구간을 상품마다 모아 보여줍니다.',
-      detail: '라이브 방송에 등록한 상품 이미지를 분석해, 각 상품이 화면에 등장한 구간을 찾아 추천합니다. 상품 목록은 클릭 수 기준으로 정렬되며, 상품을 누르면 가운데에 해당 상품의 추천 구간이 나열됩니다. 추천 구간이 없는 상품은 하단에 접혀 있으며 펼쳐 볼 수 있습니다.',
-      list: ['a', 'b', 'c', 'd', 'e', 'f'], tops: null },
-    { tab: '라이브 방송 데이터', hint: '광고·SNS용 숏폼', pill: 2, data: 1, midTitle: '클릭순', midSub: '6개 구간',
-      num: '2-2', title: '라이브 방송 데이터 (클릭 · 좋아요 · 채팅 · 시청자 · 유입)', sub: '방송에서 수집된 데이터로 각 지표가 높게 측정된 구간을 찾아 추천합니다.',
-      detail: '지표별로 탭이 나뉘어 있어 목적에 맞는 기준을 바로 고를 수 있고, 카드에는 해당 지표 수치가 함께 표시됩니다.',
-      list: ['b', 'a', 'd', 'c', 'e', 'f'], tops: ['클릭 431', '클릭 127', '클릭 95', '클릭 81', '클릭 76', '클릭 69'] },
-    { tab: 'AI 추천', hint: '어디서 시작할지 모를 때', pill: 1, midTitle: 'AI 추천', midSub: '6개 구간',
-      num: '2-3', title: 'AI 추천', sub: '방송에서 발화된 스크립트를 분석해 유의미한 구간을 골라줍니다.',
-      detail: '상품이나 지표와 관계없이 "숏폼으로 쓸 만한 말"이 나온 구간을 찾을 때 유용합니다. 상품 설명, 스타일링 제안, 착용 후기처럼 하나의 이야기로 완결되는 구간을 제목과 함께 제안합니다.',
-      list: ['c', 'a', 'e', 'd', 'f', 'b'], tops: null },
-    { tab: 'AI 장면 검색', hint: '특정 장면을 찾을 때', pill: -1, search: 1, midTitle: "'후디 스타일링 보여주는 장면' 검색 결과", midSub: '6개 구간',
-      num: '2-4', title: 'AI 장면 검색', sub: '찾고 싶은 장면을 문장으로 설명하면 방송 스크립트를 분석해 구간을 찾아줍니다.',
-      detail: '검색창 아래에는 이 방송에 맞춰 생성된 추천 검색어가 노출되어 클릭 한 번으로 검색할 수 있고, 검색 이력은 최근 검색에 남아 다시 볼 수 있습니다. 결과 카드에는 유사도 점수와 "화면과 발화가 검색어에 가장 가까운 구간" 같은 추천 근거가 함께 표시되며, 결과 제목 옆 ×를 누르면 원래 탭 목록으로 돌아갑니다.',
-      list: ['a', 'd', 'b', 'c', 'e', 'f'], tops: ['유사도 0.07', '유사도 0.06', '유사도 0.06', '유사도 0.04', '유사도 0.04', '유사도 0.03'] }
+    { pill: 0, product: 1, num: '2-1', list: ['a', 'b', 'c', 'd', 'e', 'f'] },
+    { pill: 2, data: 1, num: '2-2', list: ['b', 'a', 'd', 'c', 'e', 'f'], clicks: [431, 127, 95, 81, 76, 69] },
+    { pill: 1, num: '2-3', list: ['c', 'a', 'e', 'd', 'f', 'b'] },
+    { pill: -1, search: 1, num: '2-4', list: ['a', 'd', 'b', 'c', 'e', 'f'], sims: ['0.07', '0.06', '0.06', '0.04', '0.04', '0.03'] }
   ];
+  // tab, hint, midTitle, title, sub, detail
+  var GT = {
+    ko: [
+      ['상품별', '상세페이지용 숏폼', '브이넥 오버핏 후디', '상품별', '상품이 화면에 등장한 구간을 상품마다 모아 보여줍니다.',
+        '라이브 방송에 등록한 상품 이미지를 분석해, 각 상품이 화면에 등장한 구간을 찾아 추천합니다. 상품 목록은 클릭 수 기준으로 정렬되며, 상품을 누르면 가운데에 해당 상품의 추천 구간이 나열됩니다. 추천 구간이 없는 상품은 하단에 접혀 있으며 펼쳐 볼 수 있습니다.'],
+      ['라이브 방송 데이터', '광고·SNS용 숏폼', '클릭순', '라이브 방송 데이터 (클릭 · 좋아요 · 채팅 · 시청자 · 유입)', '방송에서 수집된 데이터로 각 지표가 높게 측정된 구간을 찾아 추천합니다.',
+        '지표별로 탭이 나뉘어 있어 목적에 맞는 기준을 바로 고를 수 있고, 카드에는 해당 지표 수치가 함께 표시됩니다.'],
+      ['AI 추천', '어디서 시작할지 모를 때', 'AI 추천', 'AI 추천', '방송에서 발화된 스크립트를 분석해 유의미한 구간을 골라줍니다.',
+        '상품이나 지표와 관계없이 "숏폼으로 쓸 만한 말"이 나온 구간을 찾을 때 유용합니다. 상품 설명, 스타일링 제안, 착용 후기처럼 하나의 이야기로 완결되는 구간을 제목과 함께 제안합니다.'],
+      ['AI 장면 검색', '특정 장면을 찾을 때', "'후디 스타일링 보여주는 장면' 검색 결과", 'AI 장면 검색', '찾고 싶은 장면을 문장으로 설명하면 방송 스크립트를 분석해 구간을 찾아줍니다.',
+        '검색창 아래에는 이 방송에 맞춰 생성된 추천 검색어가 노출되어 클릭 한 번으로 검색할 수 있고, 검색 이력은 최근 검색에 남아 다시 볼 수 있습니다. 결과 카드에는 유사도 점수와 "화면과 발화가 검색어에 가장 가까운 구간" 같은 추천 근거가 함께 표시되며, 결과 제목 옆 ×를 누르면 원래 탭 목록으로 돌아갑니다.']
+    ],
+    en: [
+      ['By product', 'Shortforms for product pages', 'V-neck oversized hoodie', 'By product', 'Groups the segments where each product appears on screen, product by product.',
+        'AI analyzes the product images registered to the live stream and recommends the segments where each product appears on screen. The product list is sorted by clicks, and selecting a product lists its recommended segments in the center. Products without recommended segments are collapsed at the bottom and can be expanded.'],
+      ['Live stream data', 'Shortforms for ads and social', 'Clicks', 'Live stream data (Clicks · Likes · Chats · Viewers · Traffic)', 'Recommends the segments where each metric peaked, based on data collected during the stream.',
+        'Each metric has its own tab, so you can pick the criterion that fits your goal right away. Each card also shows the value of that metric.'],
+      ['AI picks', "When you don't know where to start", 'AI picks', 'AI picks', 'Analyzes the stream transcript and picks out meaningful segments.',
+        'Useful for finding moments where something "worth a shortform" was said, regardless of product or metric. It suggests self-contained segments, such as product explanations, styling tips, and try-on reviews, each with a title.'],
+      ['AI scene search', 'When you want a specific scene', "Results for 'Scenes showing hoodie styling'", 'AI scene search', 'Describe the scene you want in a sentence, and AI analyzes the stream transcript to find matching segments.',
+        'Below the search box, suggested queries generated for this stream let you search in one click, and your search history stays under Recent searches. Result cards show a similarity score and the reason for the match, such as "Visuals and speech closest to your search." Click the × next to the results title to return to the original tab.']
+    ],
+    ja: [
+      ['商品別', '商品詳細ページ用のショートフォーム', 'Vネック オーバーサイズパーカー', '商品別', '商品が画面に登場した区間を、商品ごとにまとめて表示します。',
+        'ライブ配信に登録した商品画像を分析し、各商品が画面に登場した区間を見つけておすすめします。商品一覧はクリック数順に並び、商品を選ぶと中央にその商品のおすすめ区間が表示されます。おすすめ区間がない商品は下部に折りたたまれており、展開して確認できます。'],
+      ['ライブ配信データ', '広告・SNS用のショートフォーム', 'クリック順', 'ライブ配信データ（クリック・いいね・チャット・視聴者・流入）', '配信中に収集したデータをもとに、各指標が高かった区間を見つけておすすめします。',
+        '指標ごとにタブが分かれているため、目的に合った基準をすぐに選べます。カードにはその指標の数値もあわせて表示されます。'],
+      ['AIおすすめ', 'どこから始めればよいか迷ったとき', 'AIおすすめ', 'AIおすすめ', '配信中の発話スクリプトを分析し、意味のある区間を選び出します。',
+        '商品や指標に関係なく、「ショートフォームに使えそうな話」が出た区間を探すときに便利です。商品説明、スタイリング提案、着用レビューのように、ひとつの話として完結する区間をタイトル付きで提案します。'],
+      ['AIシーン検索', '特定のシーンを探すとき', '「パーカーのスタイリングを見せるシーン」の検索結果', 'AIシーン検索', '探したいシーンを文章で説明すると、配信スクリプトを分析して該当する区間を見つけます。',
+        '検索欄の下には、この配信に合わせて生成されたおすすめ検索語が表示され、ワンクリックで検索できます。検索履歴は「最近の検索」に残り、あとから確認できます。結果カードには類似度スコアと「映像と発話が検索語に最も近い区間」のようなおすすめ理由が表示され、結果タイトル横の×を押すと元のタブ一覧に戻ります。']
+    ]
+  };
+
+  // hero chips rotate every 3s
+  var tick = 0;
+  function renderChips() {
+    var U = UI[lang];
+    $('chipA').textContent = U.chipsA[tick % 2];
+    $('chipB').textContent = U.chipsB[tick % 2];
+  }
+  setInterval(function () { tick++; renderChips(); }, 3000);
 
   var btnOn = 'display: block; width: 100%; color: #FFFFFF; background: #343A42; border: 1px solid #343A42; border-radius: 8px; padding: 12px 16px; box-shadow: 0 1px 0 0 rgba(12,14,19,0.04)';
   var btnOff = 'display: block; width: 100%; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; padding: 12px 16px; box-shadow: 0 1px 0 0 rgba(12,14,19,0.04)';
@@ -589,61 +987,60 @@ a{color:#0A62E6}a:hover{color:#0551C2}
   var pillOff = 'font-size: 10.5px; font-weight: 500; color: #343A42; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 4px 9px; background: #FFFFFF';
   var chipBase = 'position: absolute; background: #22262A; color: #FFFFFF; font-size: 8px; font-weight: 600; border-radius: 4px; display: flex; align-items: center; justify-content: center; box-sizing: border-box; padding: 0 3px; white-space: nowrap; ';
   var searchBase = 'position: relative; min-height: 64px; border-radius: 8px; padding: 9px 10px; box-sizing: border-box; ';
-  var PILLS = ['상품별', 'AI 추천', '클릭순', '좋아요순', '채팅순', '시청자순', '유입순'];
 
   var feat = 0;
   function render() {
-    var g = G[feat];
+    var g = G[feat], U = UI[lang], t = GT[lang][feat], ct = CT[lang];
 
     $('featTabs').innerHTML = G.map(function (x, i) {
-      var on = i === feat;
+      var on = i === feat, xt = GT[lang][i];
       return '<button type="button" class="tabbtn" role="tab" data-i="' + i + '" aria-selected="' + on + '" style="' + (on ? btnOn : btnOff) + '">' +
-        '<span style="display: block; font-size: 14px; font-weight: 600">' + (i + 1) + '. ' + esc(x.tab) + '</span>' +
-        '<span style="' + (on ? hintOn : hintOff) + '">' + esc(x.hint) + '</span></button>';
+        '<span style="display: block; font-size: 14px; font-weight: 600">' + (i + 1) + '. ' + esc(xt[0]) + '</span>' +
+        '<span style="' + (on ? hintOn : hintOff) + '">' + esc(xt[1]) + '</span></button>';
     }).join('');
 
-    $('pills').innerHTML = PILLS.map(function (label, i) {
-      return '<span style="' + (i === g.pill ? pillOn : pillOff) + '">' + label + '</span>';
+    $('pills').innerHTML = U.pills.map(function (label, i) {
+      return '<span style="' + (i === g.pill ? pillOn : pillOff) + '">' + esc(label) + '</span>';
     }).join('');
 
     $('searchBox').style.cssText = searchBase + (g.search ? 'border: 2px solid #2077F8; box-shadow: 0 0 0 3px #D1E3FF;' : 'border: 1px solid #E0E5EB;');
-    $('searchText').textContent = g.search ? '후디 스타일링 보여주는 장면' : '찾고 싶은 장면을 입력하세요';
+    $('searchText').textContent = g.search ? U.searchOn : U.searchOff;
     $('searchText').style.color = g.search ? '#22262A' : '#979FAA';
-    $('productList').hidden = !g.product;
     $('productList').style.display = g.product ? 'flex' : 'none';
     $('searchClose').hidden = !g.search;
-    $('midTitle').textContent = g.midTitle;
-    $('midSub').textContent = g.midSub;
+    $('midTitle').textContent = t[2];
+    $('midSub').textContent = U.clipCount;
 
     $('clips').innerHTML = g.list.map(function (k, i) {
-      var c = C[k], fr = F[c.f];
-      var top = g.tops ? g.tops[i] : c.dur;
+      var c = C[k], fr = F[c.f], tx = ct[k];
+      var dur = U.sec(c.dur);
+      var top = g.clicks ? U.clicks + ' ' + g.clicks[i] : g.sims ? U.sim + ' ' + g.sims[i] : dur;
       var topChip = chipBase + (fr.b ? 'top: 0.6%; right: 1%; min-width: 24%; height: 8%;' : 'top: 3%; right: 4%; height: 8%;');
       var botChip = chipBase + (fr.b ? 'bottom: 1.5%; right: 1%; min-width: 40%; height: 6.5%;' : 'bottom: 3%; right: 4%; height: 6.5%;');
       var reason = g.search
-        ? '<div style="font-size: 8.5px; line-height: 1.35; color: #6F4BF1; padding: 2px 1px 0">⌕ 화면과 발화가 검색어에 가장 가까운 구간</div>'
+        ? '<div style="font-size: 8.5px; line-height: 1.35; color: #6F4BF1; padding: 2px 1px 0">⌕ ' + esc(U.reason) + '</div>'
         : '';
       return '<div style="border: 1px solid #EAEDF1; border-radius: 8px; padding: 4px">' +
         '<div style="position: relative; aspect-ratio: 296 / 530; border-radius: 5px; overflow: hidden; background: #C9A57F">' +
         '<img src="' + fr.src + '" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover">' +
         '<span style="position: absolute; top: 3%; left: 6%; width: 18%; aspect-ratio: 1 / 1; border-radius: 50%; background: rgba(12,14,19,0.55); border: 1.5px solid #FFFFFF; box-sizing: border-box"></span>' +
-        '<span style="' + topChip + '">' + top + '</span>' +
+        '<span style="' + topChip + '">' + esc(top) + '</span>' +
         '<span style="' + botChip + '">' + c.start + '</span>' +
         '</div>' +
-        '<div style="font-size: 10.5px; font-weight: 600; line-height: 1.35; color: #22262A; padding: 5px 1px 0; height: 34px; overflow: hidden">' + esc(c.title) + '</div>' +
+        '<div style="font-size: 10.5px; font-weight: 600; line-height: 1.35; color: #22262A; padding: 5px 1px 0; height: 34px; overflow: hidden">' + esc(tx[0]) + '</div>' +
         reason +
-        '<div style="font-size: 9px; color: #525B66; padding: 2px 1px 0">' + c.start + ' – ' + c.end + ' · ' + c.dur + '</div>' +
+        '<div style="font-size: 9px; color: #525B66; padding: 2px 1px 0">' + c.start + ' – ' + c.end + ' · ' + esc(dur) + '</div>' +
         '<div style="display: flex; flex-wrap: wrap; gap: 2px; padding: 3px 1px 1px">' +
-        '<span style="font-size: 8.5px; color: #525B66; background: #F3F5F7; border-radius: 3px; padding: 1px 4px">' + c.tag1 + '</span>' +
-        '<span style="font-size: 8.5px; color: #525B66; background: #F3F5F7; border-radius: 3px; padding: 1px 4px">' + c.tag2 + '</span>' +
+        '<span style="font-size: 8.5px; color: #525B66; background: #F3F5F7; border-radius: 3px; padding: 1px 4px">' + esc(tx[1]) + '</span>' +
+        '<span style="font-size: 8.5px; color: #525B66; background: #F3F5F7; border-radius: 3px; padding: 1px 4px">' + esc(tx[2]) + '</span>' +
         '</div></div>';
     }).join('');
 
     $('clipTime').textContent = C[g.list[0]].start;
     $('curNum').textContent = g.num;
-    $('curTitle').textContent = g.title;
-    $('curSub').textContent = g.sub;
-    $('curDetail').textContent = g.detail;
+    $('curTitle').textContent = t[3];
+    $('curSub').textContent = t[4];
+    $('curDetail').textContent = t[5];
     $('dataTable').hidden = !g.data;
   }
 
@@ -653,12 +1050,113 @@ a{color:#0A62E6}a:hover{color:#0551C2}
     feat = +b.getAttribute('data-i');
     render();
   });
-  render();
+
+  // ── static text translation ──
+  // Each block whose children are only text and inline tags is one unit, keyed by its
+  // Korean HTML with tags replaced by numbered placeholders (<0>…</0>, <1/>).
+  var INLINE = /^(STRONG|B|EM|A|BR)$/;
+  var SKIP = /^(SCRIPT|STYLE|SVG|SELECT|OPTION|NOSCRIPT)$/;
+  var HANGUL = /[가-힣]/;
+  var units = [];
+  var norm = function (s) { return s.replace(/\s+/g, ' ').trim(); };
+
+  function toKey(html) {
+    var tags = [], stack = [];
+    var key = html.replace(/<(\/?)([a-z0-9]+)([^>]*)>/gi, function (m, close, name) {
+      if (close) return '</' + stack.pop() + '>';
+      var k = tags.length;
+      tags.push(m);
+      if (/^(br|img)$/i.test(name)) return '<' + k + '/>';
+      stack.push(k);
+      return '<' + k + '>';
+    });
+    return { key: norm(key), tags: tags };
+  }
+  function fromKey(str, tags) {
+    return str.replace(/<(\/?)(\d+)(\/?)>/g, function (m, close, k) {
+      return close ? '</' + tags[k].match(/^<([a-z0-9]+)/i)[1] + '>' : tags[k];
+    });
+  }
+
+  function walk(el) {
+    if (SKIP.test(el.tagName) || el.hasAttribute('data-i18n-skip')) return;
+    ['alt', 'aria-label'].forEach(function (a) {
+      var v = el.getAttribute(a);
+      if (v && HANGUL.test(v)) units.push({ el: el, attr: a, ko: v, key: norm(v) });
+    });
+    var kids = el.childNodes, hasText = false, allInline = true, i, n;
+    for (i = 0; i < kids.length; i++) {
+      n = kids[i];
+      if (n.nodeType === 3 && n.nodeValue.trim()) hasText = true;
+      else if (n.nodeType === 1 && !INLINE.test(n.tagName)) allInline = false;
+    }
+    if (hasText && allInline) {
+      var k = toKey(el.innerHTML);
+      if (HANGUL.test(k.key)) units.push({ el: el, html: true, ko: el.innerHTML, key: k.key, tags: k.tags });
+      return;
+    }
+    for (i = 0; i < kids.length; i++) {
+      n = kids[i];
+      if (n.nodeType === 3) {
+        if (HANGUL.test(n.nodeValue)) units.push({ node: n, ko: n.nodeValue, key: norm(n.nodeValue) });
+      } else if (n.nodeType === 1) walk(n);
+    }
+  }
+
+  ['chipA', 'chipB', 'featTabs', 'pills', 'searchText', 'midTitle', 'midSub', 'clips', 'clipTime',
+    'curNum', 'curTitle', 'curSub', 'curDetail', 'ctaCopyLabel'].forEach(function (id) { $(id).setAttribute('data-i18n-skip', ''); });
+  walk(document.body);
+
+  function applyStatic() {
+    var dict = lang === 'ko' ? null : I18N[lang], missing = [];
+    units.forEach(function (u) {
+      var v = dict ? dict[u.key] : null;
+      if (dict && v == null) missing.push(u.key);
+      if (u.attr) u.el.setAttribute(u.attr, v == null ? u.ko : v);
+      else if (u.html) u.el.innerHTML = v == null ? u.ko : fromKey(v, u.tags);
+      else u.node.nodeValue = v == null ? u.ko : u.ko.match(/^\s*/)[0] + v + u.ko.match(/\s*$/)[0];
+    });
+    window.__i18nMissing = missing;
+  }
+
+  // ── language switch: #lang=ko|en|ja ──
+  var select = $('langSelect');
+  function langFromHash() {
+    var m = /(?:^#|&)lang=(ko|en|ja)\b/.exec(location.hash);
+    return m ? m[1] : 'ko';
+  }
+  function setLang(l) {
+    if (LANGS.indexOf(l) < 0) l = 'ko';
+    lang = l;
+    document.documentElement.lang = l;
+    document.title = UI[l].title;
+    select.value = l;
+    select.setAttribute('aria-label', UI[l].langLabel);
+    applyStatic();
+    renderChips();
+    render();
+    setCopied(false);
+  }
+  select.addEventListener('change', function () {
+    history.replaceState(null, '', '#lang=' + select.value);
+    setLang(select.value);
+  });
+  window.addEventListener('hashchange', function () { setLang(langFromHash()); });
+
+  // section links scroll without replacing the #lang hash
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest('a[href^="#"]');
+    if (!a) return;
+    var target = document.getElementById(a.getAttribute('href').slice(1));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth' });
+  });
 
   // floating CTA
   var copyBtn = $('ctaCopy'), copyLabel = $('ctaCopyLabel');
   function setCopied(on) {
-    copyLabel.textContent = on ? '이메일 주소가 복사되었어요' : 'ask@shoplive.cloud 복사하기';
+    copyLabel.textContent = on ? UI[lang].copied : UI[lang].copy;
     copyBtn.style.background = on ? '#108446' : '#22262A';
   }
   $('ctaOpen').addEventListener('click', function () {
@@ -686,6 +1184,8 @@ a{color:#0A62E6}a:hover{color:#0551C2}
       else fallback();
     } catch (e) { fallback(); }
   });
+
+  setLang(langFromHash());
 })();
 </script>
 </body>
