@@ -690,7 +690,8 @@ var I18N = {
 "AI 비디오 에디터,<0/>바로 사용해 보세요": "Start using<0/>AI Video Editor today",
 "닫기": "Close",
 "사용하고 싶다면 <0>ask@shoplive.cloud</0> 또는 연락받으신 담당자에게 문의해 주세요. 아래 버튼을 누르면 이메일 주소가 복사됩니다.": "To get started, contact <0>ask@shoplive.cloud</0> or your Shoplive representative. Click the button below to copy the email address.",
-"AI 비디오 에디터 도입 문의": "Get AI Video Editor"
+"AI 비디오 에디터 도입 문의": "Get AI Video Editor",
+"후보 구간 찾기 방식": "Ways to find candidate segments"
 },
 "ja": {
 "섹션 이동": "セクション移動",
@@ -841,7 +842,8 @@ var I18N = {
 "AI 비디오 에디터,<0/>바로 사용해 보세요": "AIビデオエディターを<0/>今すぐ使ってみましょう",
 "닫기": "閉じる",
 "사용하고 싶다면 <0>ask@shoplive.cloud</0> 또는 연락받으신 담당자에게 문의해 주세요. 아래 버튼을 누르면 이메일 주소가 복사됩니다.": "ご利用をご希望の場合は、<0>ask@shoplive.cloud</0>またはご連絡を差し上げた担当者までお問い合わせください。下のボタンを押すとメールアドレスがコピーされます。",
-"AI 비디오 에디터 도입 문의": "AIビデオエディター導入のお問い合わせ"
+"AI 비디오 에디터 도입 문의": "AIビデオエディター導入のお問い合わせ",
+"후보 구간 찾기 방식": "候補区間の探し方"
 }
 };
 (function () {
@@ -1079,11 +1081,12 @@ var I18N = {
   }
 
   function walk(el) {
-    if (SKIP.test(el.tagName) || el.hasAttribute('data-i18n-skip')) return;
+    if (SKIP.test(el.tagName)) return;
     ['alt', 'aria-label'].forEach(function (a) {
       var v = el.getAttribute(a);
       if (v && HANGUL.test(v)) units.push({ el: el, attr: a, ko: v, key: norm(v) });
     });
+    if (el.hasAttribute('data-i18n-skip')) return;
     var kids = el.childNodes, hasText = false, allInline = true, i, n;
     for (i = 0; i < kids.length; i++) {
       n = kids[i];
