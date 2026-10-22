@@ -27,6 +27,15 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 .navtab{display:flex;align-items:center;height:52px;padding:0 14px;font-size:13px;font-weight:500;color:#6F7985;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;box-sizing:border-box}
 .navtab:hover{color:#22262A;border-bottom-color:#22262A}
 .tabbtn{font-family:inherit;cursor:pointer;min-height:44px;text-align:left}
+.cta-btn{animation:ctaGlow 4.8s ease-in-out infinite}
+.cta-btn:hover{background:#343A42 !important}
+.cta-shine{position:absolute;top:0;left:-50%;width:36%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.22) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:ctaShine 4.8s ease-in-out infinite;pointer-events:none}
+.cta-dot{position:relative;flex-shrink:0}
+.cta-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #E83B3B;animation:ctaPing 2.4s ease-out infinite}
+@keyframes ctaShine{0%,72%{left:-50%}100%{left:130%}}
+@keyframes ctaPing{0%{transform:scale(0.6);opacity:0.9}80%,100%{transform:scale(1.9);opacity:0}}
+@keyframes ctaGlow{0%,100%{box-shadow:0 1px 3px 0 rgba(12,14,19,0.16),0 8px 24px 0 rgba(12,14,19,0.24),0 0 0 0 rgba(232,59,59,0)}50%{box-shadow:0 1px 3px 0 rgba(12,14,19,0.16),0 8px 24px 0 rgba(12,14,19,0.24),0 0 0 6px rgba(232,59,59,0.14)}}
+@media (prefers-reduced-motion: reduce){.cta-btn,.cta-shine,.cta-dot::after{animation:none}}
 @keyframes ctaIn{from{opacity:0;transform:translateY(10px) scale(.94)}to{opacity:1;transform:none}}
 @media (max-width:768px){
 .wrap{padding:56px 20px}
@@ -172,7 +181,7 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 <p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">숏폼이 구매 결정을 돕는다는 건 알지만, 상품마다 설명 영상을 만들 여력이 없었습니다.</p>
 <div style="margin-top: auto; background: #F3F5F7; border-radius: 8px; padding: 14px 16px">
 <div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 4px">이렇게 써보세요</div>
-<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42"><strong style="color: #22262A; font-weight: 600">상품별</strong>로 상품을 고르고 <strong style="color: #22262A; font-weight: 600">AI 장면 검색</strong>으로 '기획 의도', '코디 방법' 장면을 찾으세요. 상품의 기획 의도와 스타일링을 보여주는 숏폼으로, "어떻게 입을지" 고민하는 고객의 구매 결정을 도울 수 있습니다.</p>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42"><strong style="color: #22262A; font-weight: 600">상품별</strong>로 상품을 고르고 <strong style="color: #22262A; font-weight: 600">AI 장면 검색</strong>으로 'A 상품 등장 구간 찾아줘'와 같은 자연어로 클립을 찾으세요. 상품의 기획 의도와 스타일링을 보여주는 숏폼으로, "어떻게 입을지" 고민하는 고객의 구매 결정을 도울 수 있습니다.</p>
 </div>
 </div>
 <div style="background: #FFFFFF; border: 1px solid #EAEDF1; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
@@ -502,7 +511,7 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 <button type="button" id="ctaCopy" style="display: flex; width: 100%; align-items: center; justify-content: center; gap: 8px; height: 46px; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 600; color: #FFFFFF; background: #22262A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><span id="ctaCopyLabel">ask@shoplive.cloud 복사하기</span></button>
 </div>
 
-<button type="button" id="ctaOpen" style="display: inline-flex; align-items: center; gap: 8px; height: 50px; padding: 0 20px; border: none; border-radius: 9999px; background: #22262A; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 8px 24px 0 rgba(12,14,19,0.24)"><span style="width: 8px; height: 8px; border-radius: 50%; background: #E83B3B"></span>AI 비디오 에디터 도입 문의</button>
+<button type="button" class="cta-btn" id="ctaOpen" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 22px; border: none; border-radius: 9999px; background: #22262A; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 8px 24px 0 rgba(12,14,19,0.24)"><span class="cta-shine" aria-hidden="true"></span><span class="cta-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #E83B3B"></span>AI 비디오 에디터 도입 문의</button>
 </div>
 
 
