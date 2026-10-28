@@ -78,6 +78,7 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 <a class="navtab" href="#intro">AI 비디오 에디터 소개</a>
 <a class="navtab" href="#impact">이런 게 좋아져요</a>
 <a class="navtab" href="#background">이렇게 써보세요</a>
+<a class="navtab" href="#display">숏폼 전시</a>
 <a class="navtab" href="#how">사용 방법</a>
 </div>
 </div>
@@ -236,8 +237,53 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 </div>
 </section>
 
+<!-- ── 03b DISPLAY ── -->
+<section id="display" style="background: #FFFFFF">
+<div class="wrap">
+<span class="eyebrow">숏폼 전시</span>
+<h2 class="h2">만든 숏폼은 이렇게 전시돼요</h2>
+<p class="lead">비디오 에디터에서 만든 숏폼은 숏폼 목록에 쌓이고, 원하는 곳 어디에나 바로 전시할 수 있어요.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 40px; align-items: center; margin-top: 36px">
+<div style="display: flex; flex-direction: column; gap: 20px">
+<div style="display: flex; gap: 12px">
+<span style="flex: 0 0 24px; height: 24px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 1px">1</span>
+<div style="min-width: 0">
+<div style="font-size: 16px; font-weight: 600; color: #22262A; margin-bottom: 4px">컬렉션·그룹</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.65; color: #525B66">태그·브랜드로 숏폼을 고르고 레이아웃과 정렬을 정하면 임베드 코드가 만들어져요. 메인, 기획전, 카테고리 어디든 붙이면 됩니다.</p>
+</div>
+</div>
+<div style="display: flex; gap: 12px">
+<span style="flex: 0 0 24px; height: 24px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 1px">2</span>
+<div style="min-width: 0">
+<div style="font-size: 16px; font-weight: 600; color: #22262A; margin-bottom: 4px">상품 맞춤 노출·미리보기</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.65; color: #525B66">상품상세마다 그 상품이 나온 숏폼만 자동으로 보여주고, 작은 <strong style="color: #22262A; font-weight: 600">미리보기(PIP)</strong> 창으로 띄울 수도 있어요.</p>
+</div>
+</div>
+<div style="display: flex; gap: 12px">
+<span style="flex: 0 0 24px; height: 24px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 1px">3</span>
+<div style="min-width: 0">
+<div style="font-size: 16px; font-weight: 600; color: #22262A; margin-bottom: 4px">ID 기반 피드</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.65; color: #525B66">숏폼 ID 목록으로 순서를 정하면, 우리 서비스만의 끊김 없는 세로 피드가 돼요.</p>
+</div>
+</div>
+<div style="display: flex; gap: 12px">
+<span style="flex: 0 0 24px; height: 24px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center; margin-top: 1px">4</span>
+<div style="min-width: 0">
+<div style="font-size: 16px; font-weight: 600; color: #22262A; margin-bottom: 4px">스토리<span style="margin-left: 6px; font-size: 10px; font-weight: 700; color: #FFFFFF; background: #C52628; border-radius: 4px; padding: 2px 6px; vertical-align: 2px">NEW</span></div>
+<p style="margin: 0; font-size: 14px; line-height: 1.65; color: #525B66">브랜드 원을 누르면 그 브랜드 숏폼이 전체 화면으로 재생돼요. <strong style="color: #22262A; font-weight: 600">간단한 코드 적용</strong>만으로 붙일 수 있어요.</p>
+<pre style="margin: 10px 0 0; padding: 12px 14px; background: #1A1C1F; color: #E0E5EB; border-radius: 8px; font-size: 12px; line-height: 1.6; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; overflow-x: auto; white-space: pre">cloud.shoplive.setShortformStory(<span style="color: #F2A541">'brand-story'</span>, {
+  brands: [<span style="color: #F2A541">'Brand A'</span>, <span style="color: #F2A541">'Brand B'</span>]
+});</pre>
+</div>
+</div>
+</div>
+<div style="border-radius: 12px; overflow: hidden; background: #F3F5F7"><img src="../assets/4ac4c7eaa25f3df92ee2c7074877b55f.jpg" alt="스토리 전시 예시: 브랜드 원을 누르면 그 브랜드 숏폼이 전체 화면으로 재생" style="display: block; width: 100%; height: auto"></div>
+</div>
+</div>
+</section>
+
 <!-- ── 04 SOLUTION ── -->
-<section id="how" style="background: #FFFFFF">
+<section id="how" style="background: #FFFFFF; border-top: 1px solid #E0E5EB">
 <div class="wrap">
 <span class="eyebrow">사용 방법</span>
 <h2 class="h2">방송이 끝나면 이렇게 숏폼을 만들 수 있어요</h2>
