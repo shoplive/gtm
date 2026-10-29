@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shoplive Clip Maker 가이드</title>
+<meta name="description" content="라이브 방송 속 구매를 이끈 결정적 장면을 AI가 찾아 자막·배경을 넣은 숏폼 영상으로 만들어 주는 Shoplive Clip Maker 사용 가이드">
+<link rel="icon" href="/gtm/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Shoplive">
+<meta property="og:title" content="Shoplive Clip Maker 가이드">
+<meta property="og:description" content="라이브 방송 속 구매를 이끈 결정적 장면을 AI가 찾아 자막·배경을 넣은 숏폼 영상으로 만들어 주는 Shoplive Clip Maker 사용 가이드">
+<meta property="og:url" content="https://shoplive.github.io/gtm/clip_maker/">
+<meta property="og:image" content="https://shoplive.github.io/gtm/video_editor/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Shoplive">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Shoplive Clip Maker 가이드">
+<meta name="twitter:description" content="라이브 방송 속 구매를 이끈 결정적 장면을 AI가 찾아 자막·배경을 넣은 숏폼 영상으로 만들어 주는 Shoplive Clip Maker 사용 가이드">
+<meta name="twitter:image" content="https://shoplive.github.io/gtm/video_editor/assets/og.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+html{scroll-behavior:smooth}
+section[id],div[id=features]{scroll-margin-top:52px}
+.langmenu summary::-webkit-details-marker{display:none}
+body{margin:0;background:#F3F5F7;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:#0A62E6}a:hover{color:#0551C2}
+.wrap{max-width:980px;margin:0 auto;padding:88px 40px;box-sizing:border-box}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;color:#FFFFFF;background:#C52628;padding:4px 12px;border-radius:4px;margin-bottom:16px;letter-spacing:0.2px}
+.h2{font-size:30px;font-weight:600;line-height:1.38;letter-spacing:-0.6px;color:#22262A;margin:0 0 14px}
+.lead{font-size:16px;line-height:1.75;color:#525B66;max-width:660px;margin:0}
+.two{display:flex;flex-wrap:wrap;gap:64px;align-items:center}
+.two-txt{flex:1 1 420px;min-width:0}
+.step{display:flex;flex-wrap:wrap;gap:56px;align-items:center;padding:48px 0;border-bottom:1px solid #E0E5EB}
+.step-txt{flex:1 1 300px;min-width:0}
+.step-shot{flex:1 1 460px;min-width:0;max-width:520px}
+.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,400px),1fr));gap:16px}
+.scroll-x{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.navtabs{display:flex;overflow-x:auto;scrollbar-width:none;min-width:0}
+[lang=ja]{word-break:normal;line-break:strict}
+.clipgrid div,.clipgrid span{overflow-wrap:anywhere}
+.navtab{display:flex;align-items:center;height:52px;padding:0 14px;font-size:13px;font-weight:500;color:#6F7985;text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent;box-sizing:border-box}
+.navtab:hover{color:#22262A;border-bottom-color:#22262A}
+.tabbtn{font-family:inherit;cursor:pointer;min-height:44px;text-align:left}
+.cta-btn{animation:ctaGlow 4.8s ease-in-out infinite}
+.cta-btn:hover{background:#343A42 !important}
+.cta-shine{position:absolute;top:0;left:-50%;width:36%;height:100%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0.22) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:ctaShine 4.8s ease-in-out infinite;pointer-events:none}
+.cta-dot{position:relative;flex-shrink:0}
+.cta-dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:2px solid #E83B3B;animation:ctaPing 2.4s ease-out infinite}
+@keyframes ctaShine{0%,72%{left:-50%}100%{left:130%}}
+@keyframes ctaPing{0%{transform:scale(0.6);opacity:0.9}80%,100%{transform:scale(1.9);opacity:0}}
+@keyframes ctaGlow{0%,100%{box-shadow:0 1px 3px 0 rgba(12,14,19,0.16),0 8px 24px 0 rgba(12,14,19,0.24),0 0 0 0 rgba(232,59,59,0)}50%{box-shadow:0 1px 3px 0 rgba(12,14,19,0.16),0 8px 24px 0 rgba(12,14,19,0.24),0 0 0 6px rgba(232,59,59,0.14)}}
+@media (prefers-reduced-motion: reduce){.cta-btn,.cta-shine,.cta-dot::after{animation:none}}
+@keyframes ctaIn{from{opacity:0;transform:translateY(10px) scale(.94)}to{opacity:1;transform:none}}
+@media (max-width:768px){
+.wrap{padding:56px 20px}
+.h2{font-size:24px}
+.lead{font-size:15px}
+.two{gap:40px}
+.step{gap:28px;padding:36px 0}
+.nav-title{display:none}
+}
+</style>
+</head>
+<body>
+<div style="font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Malgun Gothic', sans-serif; color: #343A42; background: #F3F5F7; min-height: 100vh">
+
+<!-- ── TOP NAV ── -->
+<nav aria-label="섹션 이동" style="position: sticky; top: 0; z-index: 50; background: #FFFFFF; border-bottom: 1px solid #E0E5EB">
+<div style="max-width: 1060px; margin: 0 auto; padding: 0 20px; display: flex; align-items: center; gap: 16px; height: 52px">
+<div style="display: flex; align-items: center; gap: 12px; flex-shrink: 0">
+<a href="#intro" aria-label="shoplive" style="display: flex; align-items: center; text-decoration: none"><svg width="90" height="22" viewBox="0 0 1000 250" fill="none" role="img" aria-label="shoplive"><path fill="#18181B" fill-rule="evenodd" clip-rule="evenodd" d="M511.964 56.194a71.859 71.859 0 0 1 31.298 7.162 70.932 70.932 0 0 1 24.908 20.032 69.776 69.776 0 0 1 13.431 28.81 69.313 69.313 0 0 1-.787 31.706 69.888 69.888 0 0 1-14.844 28.126 71.066 71.066 0 0 1-25.872 18.803 71.911 71.911 0 0 1-31.616 5.64 71.779 71.779 0 0 1-30.902-8.675v62.2h-36.71V126.376c0-18.613 7.49-36.464 20.823-49.626 13.332-13.162 31.416-20.556 50.271-20.556Zm13.172 38.79a34.84 34.84 0 0 0-19.888-1.933 34.56 34.56 0 0 0-17.623 9.299 33.842 33.842 0 0 0-9.420 17.397 33.577 33.577 0 0 0 1.959 19.632 34.08 34.08 0 0 0 12.678 15.249 34.734 34.734 0 0 0 19.122 5.726c9.129 0 17.884-3.579 24.339-9.952 6.455-6.372 10.081-15.014 10.081-24.026 0-6.72-2.02-13.290-5.802-18.877a34.325 34.325 0 0 0-15.446-12.515Z"></path><path fill="#18181B" d="M57.964 55.701c35.314 0 60.824 18.791 60.824 44.999H84.584c0-10.667-11.593-18.049-27.049-18.049-11.664 0-21.468 6.075-21.468 14.729 0 8.653 11.593 11.196 26.548 13.492 26.834 3.567 60.538 8.901 60.538 39.418 0 27.232-25.260 46.799-62.076 46.799-35.564 0-61.326-20.486-61.075-49.095h32.737c0 12.998 12.094 22.146 28.839 22.146 14.168 0 24.473-6.605 24.473-15.259 0-10.949-14.956-13.987-30.913-15.541-29.375-3.532-53.848-8.123-53.848-39.912C1.29 74.174 25.763 55.7 57.964 55.7Z"></path><path fill="#18181B" fill-rule="evenodd" clip-rule="evenodd" d="M928.868 56.053a71.857 71.857 0 0 1 30.526 6.782 70.97 70.97 0 0 1 24.622 19.062 69.855 69.855 0 0 1 13.946 27.653 69.273 69.273 0 0 1 .567 30.884h-104.94a37.537 37.537 0 0 0 10.472 14.47 38.192 38.192 0 0 0 16.048 8.081 38.48 38.48 0 0 0 18.015-.123 38.167 38.167 0 0 0 15.932-8.3h39.859c-5.142 11.599-13.367 21.61-23.801 28.973a71.705 71.705 0 0 1-35.473 12.853 71.94 71.94 0 0 1-37.134-6.896c-11.522-5.562-21.307-14.096-28.318-24.698a69.593 69.593 0 0 1-11.508-35.53 69.484 69.484 0 0 1 8.548-36.334c6.115-11.13 15.167-20.42 26.193-26.886a71.837 71.837 0 0 1 36.446-9.85v-.141Zm0 32.736a38.444 38.444 0 0 0-22.311 7.122c-6.493 4.63-11.345 11.162-13.863 18.668h72.347c-2.519-7.506-7.369-14.038-13.863-18.668a38.443 38.443 0 0 0-22.31-7.122Zm-569.93-32.595c18.852.01 36.929 7.407 50.26 20.567 13.33 13.16 20.824 31.005 20.833 49.615.007 13.891-4.159 27.471-11.972 39.024s-18.922 20.558-31.92 25.877a71.99 71.99 0 0 1-41.105 4.004c-13.801-2.708-26.478-9.397-36.428-19.219-9.95-9.822-16.724-22.337-19.467-35.961a69.374 69.374 0 0 1 4.055-40.577c5.388-12.831 14.511-23.797 26.213-31.51 11.703-7.713 25.46-11.827 39.531-11.82Zm13.128 38.787a34.834 34.834 0 0 0-19.891-1.927 34.561 34.561 0 0 0-17.623 9.308 33.857 33.857 0 0 0-9.413 17.407 33.574 33.574 0 0 0 1.974 19.635 34.078 34.078 0 0 0 12.693 15.241 34.741 34.741 0 0 0 19.132 5.709c9.122-.009 17.869-3.593 24.316-9.964 6.447-6.371 10.068-15.008 10.068-24.014 0-6.722-2.020-13.292-5.804-18.881a34.328 34.328 0 0 0-15.452-12.514Z"></path><path fill="#18181B" d="M638.233 191.508h-38.641V2.791h38.641v188.717Zm62.9 0h-38.641V61.281h38.641v130.227Zm87.123-28.998 32.202-101.229h41.468l-46.12 130.227h-55.135l-46.12-130.227h41.254l32.451 101.229ZM172.958 1.871v73.467c8.659-10.3 20.816-17.142 34.205-19.25h1.109a49.074 49.074 0 0 1 6.476-.389c22.577 0 42.399 13.564 53.132 33.837a76.136 76.136 0 0 1 5.403 12.822 72.114 72.114 0 0 1 2.862 13.846c.144 1.059.358 2.154.358 3.249.215 2.826.322 5.687.465 8.477v63.577h-36.709v-66.014c0-9.006-3.622-17.643-10.069-24.014-6.447-6.371-15.193-9.955-24.315-9.964a32.55 32.55 0 0 0-14.181 3.157 32.128 32.128 0 0 0-11.33 8.993 35.032 35.032 0 0 0-7.442 21.828v66.014h-36.709V1.871h36.745Z"></path><path fill="#E7000B" d="M681.813 0c12.587 0 22.791 10.073 22.791 22.499 0 12.426-10.204 22.499-22.791 22.499-12.588 0-22.792-10.073-22.792-22.499C659.022 10.073 669.226 0 681.813 0Z"></path></svg></a>
+<span class="nav-title" style="width: 1px; height: 16px; background: #E0E5EB"></span>
+<span class="nav-title" style="font-size: 13px; font-weight: 500; color: #6F7985">Clip Maker 가이드</span>
+</div>
+<div class="navtabs" style="margin-left: auto">
+<a class="navtab" href="#intro">Clip Maker 소개</a>
+<a class="navtab" href="#impact">이런 게 좋아져요</a>
+<a class="navtab" href="#background">이렇게 써보세요</a>
+<a class="navtab" href="#how">사용 방법</a>
+</div>
+<details class="langmenu" style="position: relative; flex-shrink: 0; margin-left: 4px"><summary aria-label="언어 선택" style="list-style: none; display: flex; align-items: center; gap: 6px; height: 34px; padding: 0 10px; border: 1px solid #E0E5EB; border-radius: 8px; background: #FFFFFF; font-size: 13px; font-weight: 500; color: #22262A; cursor: pointer"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></svg><span>한국어</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary><div style="position: absolute; right: 0; top: calc(100% + 6px); z-index: 60; min-width: 140px; box-sizing: border-box; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 8px 24px 0 rgba(12,14,19,0.12); padding: 4px; display: flex; flex-direction: column; gap: 2px"><a href="./" lang="ko" style="display: block; padding: 8px 10px; border-radius: 6px; font-size: 13px; text-decoration: none; color: #22262A; font-weight: 600; background: #F3F5F7">한국어</a><a href="en/" lang="en" style="display: block; padding: 8px 10px; border-radius: 6px; font-size: 13px; text-decoration: none; color: #22262A; font-weight: 500">English</a><a href="ja/" lang="ja" style="display: block; padding: 8px 10px; border-radius: 6px; font-size: 13px; text-decoration: none; color: #22262A; font-weight: 500">日本語</a></div></details>
+</div>
+</nav>
+
+<!-- ── 01 HERO ── -->
+<section id="intro" style="background: #F3F5F7">
+<div class="wrap" style="padding-top: 80px; max-width: 1240px">
+<div style="display: flex; flex-wrap: wrap; gap: 48px; align-items: center">
+<div style="flex: 1 1 400px; min-width: 0">
+<span class="eyebrow" style="font-size: 13px">SHOPLIVE CLIP MAKER 가이드</span>
+<h1 style="margin: 0 0 18px; font-size: 36px; font-weight: 600; line-height: 1.34; letter-spacing: -0.8px; color: #22262A">라이브 방송 속<br>고객의 구매를 이끈 결정적 장면,<br>AI가 찾아 숏폼으로 만들어요</h1>
+<p class="lead">시청 반응·상품 정보·방송 발화를 AI가 분석해 숏폼으로 만들 구간을 찾아줍니다. 원하는 기준으로 골라 담고, <strong style="color: #22262A; font-weight: 600">자막과 배경을 넣어 9:16 영상으로</strong> 만들어 다운로드하거나 바로 숏폼으로 등록하세요.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; margin-top: 24px">
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">상품별</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">AI 추천</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">클릭순</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">좋아요순</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">채팅순</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">시청자순</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">유입순</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">AI 장면 검색</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">자막 편집</span>
+<span style="font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 6px 12px">배경·비율 설정</span>
+</div>
+<div style="display: flex; gap: 10px; align-items: flex-start; margin-top: 28px; padding: 14px 16px; background: #FEFBF0; border: 1px solid #FEEAAE; border-radius: 8px; max-width: 560px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#694F02" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v5"></path><path d="M12 16h.01"></path></svg>
+<p style="margin: 0; font-size: 14px; line-height: 1.6; color: #694F02">라이브 방송이 종료된 캠페인에서 이용할 수 있습니다.</p>
+</div>
+</div>
+
+<div style="position: relative; flex: 1 1 540px; min-width: 0">
+<div style="position: relative; border-radius: 14px; overflow: hidden; background: #FFFFFF; border: 1px solid #E0E5EB; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 24px 64px rgba(12,14,19,0.16)">
+<div style="height: 36px; display: flex; align-items: center; gap: 6px; padding: 0 14px; background: #F9FAFB; border-bottom: 1px solid #EAEDF1">
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #E0E5EB"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #E0E5EB"></span>
+<span style="width: 10px; height: 10px; border-radius: 50%; background: #E0E5EB"></span>
+<span style="margin-left: 10px; font-size: 12px; font-weight: 500; color: #6F7985">Shoplive 어드민 · Clip Maker</span>
+</div>
+<img src="assets/06a58961fd2046d1c0a5c31cc1de9b2d.jpg" alt="Clip Maker 화면 예시: 가운데 추천 구간 카드와 선택한 구간, 오른쪽 9:16 플레이어와 편집해서 영상 만들기·바로 숏폼으로 보내기 버튼" style="display: block; width: 100%; height: auto">
+</div>
+<div style="position: absolute; top: 90px; left: -20px; z-index: 5; max-width: 220px; background: rgba(12,14,19,0.85); color: #FFFFFF; border-radius: 8px; padding: 9px 13px; font-size: 13px; font-weight: 600; line-height: 1.4; box-shadow: 0 8px 24px rgba(12,14,19,0.2)" id="chipA">상품 등장 구간 8개 발견</div>
+<div style="position: absolute; bottom: 90px; right: -20px; z-index: 5; max-width: 240px; background: rgba(12,14,19,0.85); color: #FFFFFF; border-radius: 8px; padding: 9px 13px; font-size: 13px; font-weight: 600; line-height: 1.4; box-shadow: 0 8px 24px rgba(12,14,19,0.2)" id="chipB">방송 자막 자동 불러오기</div>
+<p style="margin: 10px 0 0; font-size: 12px; color: #6F7985">화면 예시 · 데모 데이터</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ── 02 IMPACT ── -->
+<section id="impact" style="background: #FFFFFF">
+<div class="wrap">
+<span class="eyebrow">이런 게 좋아져요</span>
+<h2 class="h2">숏폼 만들기는 쉬워지고,<br>구매로 이어지는 영상은 많아져요</h2>
+<p class="lead">구간 찾기부터 영상 완성까지, 속도와 양, 성과가 함께 달라집니다.</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; margin-top: 40px">
+<div style="background: #F9FAFB; border: 1px solid #EAEDF1; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #C52628; background: #FFF5F5; border-radius: 4px; padding: 4px 10px">더 빠르게</span>
+<h3 style="margin: 2px 0 0; font-size: 20px; font-weight: 600; line-height: 1.45; color: #22262A">방송을 처음부터 다시 볼 필요가 없어요</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">1~2시간 방송을 처음부터 돌려볼 필요 없이, AI가 추천한 구간을 확인하고 고르기만 하면 됩니다.</p>
+<ul style="margin: 4px 0 0; padding: 14px 0 0; list-style: none; border-top: 1px solid #EAEDF1; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.55; color: #343A42">
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>방송 종료 후 자동 분석, 완료 메일로 알림</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>추천 구간 외에 원하는 구간도 직접 추가</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>기준만 고르면 구간이 바로 정렬</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>구간 찾기부터 편집·영상 완성·숏폼 등록까지 툴 하나로</span></li>
+</ul>
+</div>
+<div style="background: #F9FAFB; border: 1px solid #EAEDF1; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #C52628; background: #FFF5F5; border-radius: 4px; padding: 4px 10px">더 많이</span>
+<h3 style="margin: 2px 0 0; font-size: 20px; font-weight: 600; line-height: 1.45; color: #22262A">방송 한 번으로 여러 편의 숏폼을 만들어요</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">상품별·반응별로 구간이 나뉘어, 방송 한 번으로 상품 수만큼 숏폼을 만듭니다. 한 번 송출되고 끝나던 라이브가 계속 쓰이는 콘텐츠가 됩니다.</p>
+<ul style="margin: 4px 0 0; padding: 14px 0 0; list-style: none; border-top: 1px solid #EAEDF1; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.55; color: #343A42">
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>상품마다 대표 구간으로 숏폼 제작</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>영상이 없던 상세페이지까지 채움</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>기획전·홈 피드·외부 광고에 계속 활용</span></li>
+</ul>
+</div>
+<div style="background: #F9FAFB; border: 1px solid #EAEDF1; border-radius: 10px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<span style="align-self: flex-start; font-size: 13px; font-weight: 600; color: #C52628; background: #FFF5F5; border-radius: 4px; padding: 4px 10px">더 많은 구매로 이어지게</span>
+<h3 style="margin: 2px 0 0; font-size: 20px; font-weight: 600; line-height: 1.45; color: #22262A">구매로 이어지는 장면을 골라요</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">반응이 몰린 장면과 기획 의도·스타일링을 설명한 장면으로 숏폼을 만들어, 라이브를 못 본 고객도 "어떻게 입을지" 알고 구매를 결정할 수 있습니다.</p>
+<ul style="margin: 4px 0 0; padding: 14px 0 0; list-style: none; border-top: 1px solid #EAEDF1; display: flex; flex-direction: column; gap: 8px; font-size: 14px; line-height: 1.55; color: #343A42">
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>시청자 반응이 검증된 장면 선택</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>상세페이지에 설명·스타일링 숏폼 배치</span></li>
+<li style="display: flex; gap: 8px"><span style="color: #0FA954; font-weight: 600">✓</span><span>소리 없이도 전달되는 자막 영상으로 광고·SNS 활용</span></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+<!-- ── 03 BACKGROUND ── -->
+<section id="background" style="background: #F3F5F7">
+<div class="wrap">
+<span class="eyebrow">이렇게 써보세요</span>
+<h2 class="h2">숏폼 제작 효율부터 구매 전환까지,<br>목적에 맞게 써보세요</h2>
+<p class="lead">숏폼은 이미지보다 구매 전환에 효과적이지만, 쓸 장면을 찾는 일은 사람의 눈과 시간에 의존해 왔습니다.</p>
+
+<div class="grid-auto" style="margin-top: 40px">
+<div style="background: #FFFFFF; border: 1px solid #EAEDF1; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C52628">CASE 01 · 숏폼 제작 효율</span>
+<span style="width: 40px; height: 40px; border-radius: 8px; background: #F9FAFB; border: 1px solid #EAEDF1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg></span>
+</div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.45; color: #22262A">숏폼 제작 시간을 줄이고 싶다면</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">1~2시간 방송을 처음부터 돌려보며 구간을 찾느라, 숏폼 한 편에도 시간이 오래 걸렸습니다.</p>
+<div style="margin-top: auto; background: #F3F5F7; border-radius: 8px; padding: 14px 16px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 4px">이렇게 써보세요</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42">AI 추천 구간을 담고 <strong style="color: #22262A; font-weight: 600">바로 숏폼으로 보내기</strong>를 누르세요. 편집 없이 곧바로 숏폼 작성 화면으로 이어집니다.</p>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EAEDF1; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C52628">CASE 02 · 상세페이지 구매 전환</span>
+<span style="width: 40px; height: 40px; border-radius: 8px; background: #F9FAFB; border: 1px solid #EAEDF1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"></path><path d="M14 7h7v7"></path></svg></span>
+</div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.45; color: #22262A">상세페이지에서 구매 전환을 높이고 싶다면</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">숏폼이 구매 결정을 돕는다는 건 알지만, 상품마다 설명 영상을 만들 여력이 없었습니다.</p>
+<div style="margin-top: auto; background: #F3F5F7; border-radius: 8px; padding: 14px 16px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 4px">이렇게 써보세요</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42"><strong style="color: #22262A; font-weight: 600">상품별</strong>로 고르고 <strong style="color: #22262A; font-weight: 600">AI 장면 검색</strong>('A 상품 등장 구간 찾아줘')으로 찾은 뒤, 바로 숏폼으로 보내 상세페이지에 연결하세요. 고객의 구매 결정을 돕습니다.</p>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EAEDF1; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C52628">CASE 03 · 광고 소재 확보</span>
+<span style="width: 40px; height: 40px; border-radius: 8px; background: #F9FAFB; border: 1px solid #EAEDF1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6l-5 4H4a1 1 0 0 0-1 1z"></path><path d="M15 9a3 3 0 0 1 0 6"></path><path d="M18 6a7 7 0 0 1 0 12"></path></svg></span>
+</div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.45; color: #22262A">광고 소재가 꾸준히 필요하다면</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">광고·SNS 소재는 계속 필요한데, 어떤 장면이 반응이 좋을지 감으로 골라야 했습니다.</p>
+<div style="margin-top: auto; background: #F3F5F7; border-radius: 8px; padding: 14px 16px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 4px">이렇게 써보세요</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42"><strong style="color: #22262A; font-weight: 600">클릭·채팅·좋아요순</strong>으로 고르고, <strong style="color: #22262A; font-weight: 600">방송 자막과 배경을 넣어 9:16 영상</strong>으로 다운로드하세요. 소리 없이 보는 SNS에서도 자막으로 전달됩니다.</p>
+</div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #EAEDF1; border-radius: 8px; padding: 28px; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between">
+<span style="font-size: 13px; font-weight: 600; letter-spacing: 1px; color: #C52628">CASE 04 · 라이브 콘텐츠 효율 극대화</span>
+<span style="width: 40px; height: 40px; border-radius: 8px; background: #F9FAFB; border: 1px solid #EAEDF1; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"></path><path d="M3 3v5h5"></path></svg></span>
+</div>
+<h3 style="margin: 0; font-size: 18px; font-weight: 600; line-height: 1.45; color: #22262A">끝난 라이브 방송을 계속 활용하고 싶다면</h3>
+<p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">공들여 만든 방송이 한 번 송출되고 나면, 다시보기 말고는 쓰이지 않았습니다.</p>
+<div style="margin-top: auto; background: #F3F5F7; border-radius: 8px; padding: 14px 16px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 4px">이렇게 써보세요</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42">상품마다 대표 구간을 담고 카드를 나눠, <strong style="color: #22262A; font-weight: 600">한 번에 여러 편의 영상</strong>으로 만드세요. 기획전·홈 피드·외부 광고에 계속 활용할 수 있습니다.</p>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 24px; padding: 24px 28px; background: #F5F9FF; border: 1px solid #D1E3FF; border-radius: 8px; display: flex; gap: 14px; align-items: flex-start">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0551C2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 2px"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2z"></path></svg>
+<p style="margin: 0; font-size: 16px; line-height: 1.75; color: #0F3876">AI는 방송 데이터를 근거로 후보 구간을 제안하고, 최종 선택은 사람이 합니다.</p>
+</div>
+</div>
+</section>
+
+<!-- ── 04 SOLUTION ── -->
+<section id="how" style="background: #FFFFFF">
+<div class="wrap">
+<span class="eyebrow">사용 방법</span>
+<h2 class="h2">방송이 끝나면 이렇게 숏폼을 만들 수 있어요</h2>
+<p class="lead">Clip Maker를 열고 구간을 찾아 담은 뒤, 바로 숏폼으로 보내거나 영상으로 만드세요.</p>
+
+<!-- ═════ STEP 01 ═════ -->
+<div style="padding: 48px 0; border-bottom: 1px solid #E0E5EB">
+<div style="font-size: 15px; font-weight: 600; letter-spacing: 1px; color: #C52628; margin-bottom: 10px">STEP 01</div>
+<h3 style="margin: 0 0 24px; font-size: 22px; font-weight: 600; line-height: 1.4; color: #22262A">방송이 끝나면 Clip Maker를 열어요</h3>
+
+<div style="display: flex; gap: 14px; margin-bottom: 16px">
+<span style="flex: 0 0 34px; height: 34px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">1-1</span>
+<div><div style="font-size: 17px; font-weight: 600; color: #22262A; margin-bottom: 6px">Clip Maker 열기</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">어드민의 <strong style="color: #22262A; font-weight: 600">캠페인 목록</strong>에서 종료된 라이브를 선택하고, 상단 <strong style="color: #22262A; font-weight: 600">'Clip Maker'</strong> 버튼을 누르세요. 분석 결과와 영상이 한 화면에 열립니다.</p></div>
+</div>
+
+<div class="scroll-x" style="border: 1px solid #E0E5EB; border-radius: 12px; background: #F3F5F7; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 4px 12px 0 rgba(12,14,19,0.08)">
+<div style="min-width: 780px; padding: 18px 22px 22px">
+<div style="display: flex; justify-content: flex-end">
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #343A42; border-radius: 8px; padding: 8px 12px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 3h11l3 3v15H5z"></path><path d="M8 3v5h7V3"></path><rect x="8" y="13" width="8" height="5"></rect></svg>저장</span>
+</div>
+<div style="display: flex; align-items: center; gap: 14px; margin-top: 6px">
+<span style="width: 36px; height: 36px; border-radius: 8px; background: #FFFFFF; border: 1px solid #E0E5EB; display: flex; align-items: center; justify-content: center; color: #343A42; font-size: 16px">←</span>
+<div>
+<div style="display: flex; align-items: center; gap: 10px"><span style="font-size: 21px; font-weight: 600; color: #22262A">F/W 스타일링 라이브</span><span style="display: inline-flex; align-items: center; gap: 5px; font-size: 12px; font-weight: 600; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 3px 9px"><span style="width: 10px; height: 10px; border-radius: 50%; background: #343A42; display: flex; align-items: center; justify-content: center"><span style="width: 5px; height: 1.5px; background: #FFFFFF"></span></span>종료</span></div>
+<div style="font-size: 12px; color: #6F7985; margin-top: 3px">1048213</div>
+</div>
+</div>
+<div style="display: flex; justify-content: flex-end; gap: 8px; margin-top: 16px; flex-wrap: wrap">
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #FFFFFF; background: #343A42; border-radius: 8px; padding: 9px 13px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2"></circle><path d="M8 8a6 6 0 0 0 0 8M16 8a6 6 0 0 1 0 8"></path></svg>방송 콘솔</span>
+<span style="position: relative; display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 600; color: #22262A; background: #FFFFFF; border: 2px solid #C52628; border-radius: 8px; padding: 8px 12px; box-shadow: 0 0 0 4px #FED8D7"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22262A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4L8.12 15.88"></path><path d="M14.47 14.48L20 20"></path><path d="M8.12 8.12L12 12"></path></svg>Clip Maker<span style="position: absolute; left: 50%; top: calc(100% + 12px); transform: translateX(-50%); white-space: nowrap; font-size: 12px; font-weight: 600; color: #FFFFFF; background: #C52628; border-radius: 6px; padding: 5px 10px">여기를 눌러 진입</span><span style="position: absolute; left: 50%; top: calc(100% + 6px); transform: translateX(-50%) rotate(45deg); width: 10px; height: 10px; background: #C52628"></span></span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; padding: 9px 13px">다시보기 ▾</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; padding: 9px 13px">프롬프터 ▾</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-size: 13px; font-weight: 500; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; padding: 9px 13px">데이터 인사이트 <span style="font-size: 11px; font-weight: 600; color: #5F37D7; background: #EEEBFF; border-radius: 9999px; padding: 1px 7px">New</span></span>
+<span style="display: inline-flex; align-items: center; font-size: 13px; font-weight: 600; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; padding: 9px 12px">···</span>
+</div>
+<div style="height: 30px"></div>
+</div>
+</div>
+<p style="margin: 8px 0 0; font-size: 12px; color: #6F7985">종료된 캠페인 상세 화면 상단 · 화면 예시</p>
+
+<div style="display: flex; gap: 14px; margin: 40px 0 16px">
+<span style="flex: 0 0 34px; height: 34px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">1-2</span>
+<div><div style="font-size: 17px; font-weight: 600; color: #22262A; margin-bottom: 6px">화면 구성 살펴보기</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">상단 <strong style="color: #22262A; font-weight: 600">구간 선택</strong> 탭에서 장면을 담고, <strong style="color: #22262A; font-weight: 600">영상 편집</strong> 탭에서 자막과 화면을 다듬습니다.</p></div>
+</div>
+
+<div style="position: relative; border: 1px solid #E0E5EB; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 4px 12px 0 rgba(12,14,19,0.08)">
+<img src="assets/74cc44562e776990069ed1a1c5779569.jpg" alt="구간 선택 화면: ① 왼쪽 패널, ② 가운데 영역, ③ 오른쪽 영역, ④ 타임라인" style="display: block; width: 100%; height: auto">
+<span style="position: absolute; left: 19%; top: 7%; width: 30px; height: 30px; border-radius: 50%; background: #C52628; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #FFFFFF">1</span>
+<span style="position: absolute; left: 65%; top: 6%; width: 30px; height: 30px; border-radius: 50%; background: #C52628; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #FFFFFF">2</span>
+<span style="position: absolute; right: 1.5%; top: 50%; width: 30px; height: 30px; border-radius: 50%; background: #C52628; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #FFFFFF">3</span>
+<span style="position: absolute; left: 47%; top: 86%; width: 30px; height: 30px; border-radius: 50%; background: #C52628; color: #FFFFFF; font-size: 15px; font-weight: 600; display: flex; align-items: center; justify-content: center; box-shadow: 0 0 0 3px #FFFFFF">4</span>
+</div>
+<p style="margin: 8px 0 0; font-size: 12px; color: #6F7985">구간 선택 화면 · 상품별 탭에서 구간 3개를 담은 상태</p>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 10px 28px; margin-top: 20px; font-size: 15px; line-height: 1.6; color: #525B66">
+<div><strong style="color: #C52628; font-weight: 600">①</strong> <strong style="color: #22262A; font-weight: 600">왼쪽 패널</strong> · AI 장면 검색, 기준 탭, 상품 목록으로 구간을 찾습니다.</div>
+<div><strong style="color: #C52628; font-weight: 600">②</strong> <strong style="color: #22262A; font-weight: 600">가운데 영역</strong> · 구간 카드를 보고 담습니다. 아래 '선택한 구간'에서 순서를 정합니다.</div>
+<div><strong style="color: #C52628; font-weight: 600">③</strong> <strong style="color: #22262A; font-weight: 600">오른쪽 영역</strong> · 미리보기로 확인하고, 편집하거나 바로 숏폼으로 보냅니다.</div>
+<div><strong style="color: #C52628; font-weight: 600">④</strong> <strong style="color: #22262A; font-weight: 600">타임라인</strong> · 방송 전체 썸네일, 담은 구간 마커, 데이터 그래프를 보여줍니다.</div>
+</div>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 400px), 1fr)); gap: 12px; margin-top: 28px">
+<div style="background: #F9FAFB; border: 1px solid #E0E5EB; border-radius: 8px; padding: 16px 18px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 6px">참고 · 분석 완료 알림</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42">방송이 끝나면 자동으로 분석되고, 완료되면 <strong style="font-weight: 600">캠페인을 생성한 계정</strong>으로 메일이 옵니다. 메일 버튼을 누르면 Clip Maker로 바로 이동합니다. 수신 계정 추가는 <a href="mailto:ask@shoplive.cloud">ask@shoplive.cloud</a>로 신청하세요.</p>
+</div>
+</div>
+</div>
+
+<!-- ═════ STEP 02 ═════ -->
+<div id="features" style="padding: 48px 0 8px">
+<div style="font-size: 15px; font-weight: 600; letter-spacing: 1px; color: #C52628; margin-bottom: 10px">STEP 02</div>
+<h3 style="margin: 0 0 10px; font-size: 22px; font-weight: 600; line-height: 1.4; color: #22262A">구간을 찾아 담아요</h3>
+<p style="margin: 0; max-width: 700px; font-size: 15px; line-height: 1.8; color: #525B66">왼쪽 <strong style="color: #22262A; font-weight: 600">기준 탭</strong>이나 <strong style="color: #22262A; font-weight: 600">상품 목록</strong>을 고르면 구간 카드가 정렬됩니다. 원하는 장면이 분명하면 <strong style="color: #22262A; font-weight: 600">AI 장면 검색</strong>을 쓰세요. 아래 탭을 눌러 방식별 결과를 확인해 보세요.</p>
+
+<div id="featTabs" role="tablist" aria-label="후보 구간 찾기 방식" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 8px; margin-top: 28px"></div>
+
+<div class="scroll-x" style="margin-top: 20px; border: 1px solid #E0E5EB; border-radius: 12px; background: #FFFFFF; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 4px 12px 0 rgba(12,14,19,0.08)">
+<div style="min-width: 880px">
+<div style="height: 42px; display: flex; align-items: center; gap: 16px; padding: 0 16px; border-bottom: 1px solid #EAEDF1; font-size: 12.5px">
+<span style="color: #525B66">← 뒤로</span><span style="font-weight: 600; color: #22262A">F/W 스타일링 라이브</span><span style="flex: 1"></span><span style="font-size: 11px; font-weight: 500; color: #6F7985">화면 예시 · 데모 데이터</span>
+</div>
+<div style="display: flex">
+<!-- left -->
+<div style="flex: 0 0 220px; border-right: 1px solid #EAEDF1; padding: 12px; display: flex; flex-direction: column; gap: 9px">
+<div style="display: flex; gap: 8px; align-items: center">
+<span style="width: 24px; height: 24px; border-radius: 6px; background: #22262A; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20L14 10"></path><path d="M15 4v3M18 6h3M19 10v2"></path></svg></span>
+<span><span style="display: block; font-size: 12.5px; font-weight: 600; color: #22262A">AI 장면 검색</span><span style="display: block; font-size: 9.5px; color: #6F7985">찾고 싶은 장면을 문장으로 설명해 보세요</span></span>
+</div>
+<div id="searchBox">
+<span id="searchText" style="font-size: 11.5px"></span>
+<span style="position: absolute; right: 7px; bottom: 7px; font-size: 10.5px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 6px; padding: 4px 8px">검색</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 4px">
+<span style="font-size: 10px; color: #343A42; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 3px 8px">후디 스타일링 보여주는 장면</span>
+<span style="font-size: 10px; color: #343A42; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 3px 8px">슬릿 스커트 핏</span>
+<span style="font-size: 10px; color: #343A42; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 3px 8px">소재 클로즈업</span>
+</div>
+<div style="display: flex; justify-content: space-between; font-size: 10.5px; font-weight: 600; color: #343A42"><span>최근 검색</span><span style="font-weight: 500; color: #6F7985">지우기</span></div>
+<div style="display: flex; gap: 6px; align-items: flex-start; font-size: 10px; color: #343A42"><span style="color: #979FAA">◷</span><span><span style="display: block; font-weight: 600">뒷모습 보여주는 장면</span><span style="color: #6F7985">12개 · 25분 전</span></span></div>
+<div style="height: 1px; background: #EAEDF1; margin: 0 -12px"></div>
+<div id="pills" style="display: flex; flex-wrap: wrap; gap: 4px"></div>
+<div style="font-size: 10.5px; font-weight: 600; color: #22262A">상품 6 · 추천 구간 있는 상품 4</div>
+<div style="display: flex; align-items: center; gap: 7px; border: 2px solid #343A42; border-radius: 8px; padding: 5px; background: #F9FAFB">
+<span style="width: 30px; height: 30px; border-radius: 6px; background: #F3F0EB; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="22" height="20" viewBox="0 0 50 46" aria-hidden="true"><path d="M15 3l-12 9 5 10 6-4v26h22V18l6 4 5-10-12-9c-3 4-6 5-10 5s-7-1-10-5z" fill="#E6D3B8"></path></svg></span>
+<span style="flex: 1; min-width: 0"><span style="display: block; font-size: 11px; font-weight: 600; color: #22262A">브이넥 오버핏 후디</span><span style="display: block; font-size: 9.5px; color: #525B66">구간 8</span></span>
+<span style="font-size: 9px; color: #525B66; background: #F3F5F7; border-radius: 4px; padding: 1px 4px">클릭 4,150</span>
+</div>
+<div style="display: flex; align-items: center; gap: 7px; border: 1px solid #EAEDF1; border-radius: 8px; padding: 6px">
+<span style="width: 30px; height: 30px; border-radius: 6px; background: #F3F0EB; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="16" height="22" viewBox="0 0 34 44" aria-hidden="true"><path d="M9 2h16l7 40H2z" fill="#2B1E1A"></path></svg></span>
+<span style="flex: 1; min-width: 0"><span style="display: block; font-size: 11px; font-weight: 600; color: #22262A">슬릿 새틴 롱스커트</span><span style="display: block; font-size: 9.5px; color: #525B66">구간 6</span></span>
+<span style="font-size: 9px; color: #525B66; background: #F3F5F7; border-radius: 4px; padding: 1px 4px">클릭 3,777</span>
+</div>
+<div style="font-size: 10.5px; font-weight: 600; color: #343A42; border-top: 1px solid #EAEDF1; padding-top: 8px">→ 추천 구간 없는 상품 2</div>
+</div>
+<!-- middle -->
+<div style="flex: 1 1 auto; min-width: 0; border-right: 1px solid #EAEDF1; padding: 12px">
+<div style="display: flex; align-items: flex-start; gap: 8px; margin-bottom: 10px">
+<span style="flex: 1"><span style="display: block; font-size: 12.5px; font-weight: 600; color: #22262A" id="midTitle"></span><span style="display: block; font-size: 10.5px; color: #525B66" id="midSub"></span></span>
+<span id="searchClose" style="font-size: 14px; color: #6F7985">×</span>
+</div>
+<div class="clipgrid" style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 7px" id="clips">
+</div>
+</div>
+<!-- right -->
+<div style="flex: 0 0 180px; padding: 12px 10px; display: flex; flex-direction: column; align-items: center; gap: 9px">
+<div style="display: flex; background: #F3F5F7; border-radius: 8px; padding: 2px; gap: 2px; font-size: 10px; font-weight: 600">
+<span style="padding: 4px 8px; border-radius: 6px; background: #FFFFFF; color: #22262A">9:16</span><span style="padding: 4px 8px; color: #525B66">1:1</span><span style="padding: 4px 8px; color: #525B66">16:9</span>
+</div>
+<div style="position: relative; width: 100%; aspect-ratio: 572 / 1072; border-radius: 8px; overflow: hidden; background: #C9A57F">
+<img src="assets/08db7892c22aab7ec489e060355744a0.jpg" alt="" style="display: block; width: 100%; height: 100%">
+<span style="position: absolute; left: 6%; width: 88%; top: 83%; height: 12.5%; background: #0D0F11; border-radius: 4px; color: #FFFFFF; font-size: 8.5px; font-weight: 500; line-height: 1.4; display: flex; align-items: center; justify-content: center; text-align: center">편한 트레이닝 룩은 물론<br>클래식한 옷차림에도 잘 어울려요</span>
+</div>
+<div style="width: 100%; background: #F3F5F7; border-radius: 8px; padding: 7px 9px; box-sizing: border-box">
+<div style="display: flex; align-items: center; gap: 7px; font-size: 10px; font-weight: 600; color: #343A42"><span>▶</span><span style="background: #FFFFFF; border-radius: 3px; padding: 1px 4px">1x</span><span style="color: #525B66">2x</span><span style="color: #525B66">4x</span><span style="flex: 1"></span><span style="border: 1.3px solid #343A42; border-radius: 3px; padding: 0 3px; font-size: 8.5px">T</span><span>◁)</span></div>
+<div style="display: flex; align-items: center; gap: 6px; margin-top: 6px; font-size: 9px; color: #525B66"><span id="clipTime"></span><span style="flex: 1; height: 2px; background: #E0E5EB"></span><span>01:08:58</span></div>
+</div>
+<div style="width: 100%; display: flex; flex-direction: column; gap: 5px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; font-size: 9.5px"><span style="font-weight: 600; color: #22262A">담은 구간 3개로</span><span style="color: #525B66">영상·자막 다운로드</span></div>
+<span style="display: block; font-size: 10px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 6px; padding: 7px 9px">편집해서 영상 만들기</span>
+<span style="display: block; font-size: 10px; font-weight: 600; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 6px; padding: 7px 9px">바로 숏폼으로 보내기</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px; align-items: flex-start">
+<span style="flex: 0 0 auto; height: 34px; padding: 0 12px; border-radius: 9999px; background: #22262A; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center" id="curNum"></span>
+<div style="flex: 1 1 420px; min-width: 0">
+<h4 style="margin: 0 0 6px; font-size: 19px; font-weight: 600; line-height: 1.4; color: #22262A" id="curTitle"></h4>
+<p style="margin: 0 0 8px; font-size: 15px; font-weight: 500; line-height: 1.6; color: #343A42" id="curSub"></p>
+<p style="margin: 0; font-size: 15px; line-height: 1.8; color: #525B66" id="curDetail"></p>
+<div id="dataTable" hidden>
+<div style="margin-top: 14px; border: 1px solid #E0E5EB; border-radius: 8px; overflow: hidden; font-size: 14px">
+<div style="display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid #EAEDF1"><span style="padding: 10px 14px; background: #F9FAFB; font-weight: 600; color: #22262A">클릭순</span><span style="padding: 10px 14px; color: #525B66">상품 클릭이 집중된 구간</span></div>
+<div style="display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid #EAEDF1"><span style="padding: 10px 14px; background: #F9FAFB; font-weight: 600; color: #22262A">좋아요순</span><span style="padding: 10px 14px; color: #525B66">좋아요 반응이 몰린 구간</span></div>
+<div style="display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid #EAEDF1"><span style="padding: 10px 14px; background: #F9FAFB; font-weight: 600; color: #22262A">채팅순</span><span style="padding: 10px 14px; color: #525B66">채팅이 활발했던 구간</span></div>
+<div style="display: grid; grid-template-columns: 120px 1fr; border-bottom: 1px solid #EAEDF1"><span style="padding: 10px 14px; background: #F9FAFB; font-weight: 600; color: #22262A">시청자순</span><span style="padding: 10px 14px; color: #525B66">동시 시청자가 급증한 구간</span></div>
+<div style="display: grid; grid-template-columns: 120px 1fr"><span style="padding: 10px 14px; background: #F9FAFB; font-weight: 600; color: #22262A">유입순</span><span style="padding: 10px 14px; color: #525B66">신규 유입이 많았던 구간</span></div>
+</div>
+</div>
+</div>
+</div>
+
+<div style="margin-top: 24px; background: #F9FAFB; border: 1px solid #E0E5EB; border-radius: 8px; padding: 16px 18px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 6px">참고 · 타임라인 데이터 그래프</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42">하단 그래프는 지금 고른 탭의 지표를 보여줍니다. 피크나 썸네일을 누르면 그 장면으로 이동합니다.</p>
+</div>
+</div>
+
+<!-- ═════ STEP 02 · 담기 ═════ -->
+<div style="padding: 32px 0 48px; border-bottom: 1px solid #E0E5EB">
+<h4 style="margin: 0 0 6px; font-size: 19px; font-weight: 600; line-height: 1.4; color: #22262A">마음에 드는 구간을 담고 순서를 정해요</h4>
+<p style="margin: 0 0 20px; max-width: 700px; font-size: 15px; line-height: 1.8; color: #525B66">담은 구간은 아래 <strong style="color: #22262A; font-weight: 600">선택한 구간</strong>에 모입니다.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 40px; align-items: flex-start">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; border-bottom: 1px solid #EAEDF1">
+<div style="display: grid; grid-template-columns: 44px 130px 1fr; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid #EAEDF1"><span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 9999px; text-align: center; padding: 3px 0">2-5</span><span style="font-size: 16px; font-weight: 600; color: #22262A">미리보기</span><span style="font-size: 15px; line-height: 1.65; color: #525B66">카드를 누르면 오른쪽 플레이어에서 재생됩니다.</span></div>
+<div style="display: grid; grid-template-columns: 44px 130px 1fr; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid #EAEDF1"><span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 9999px; text-align: center; padding: 3px 0">2-6</span><span style="font-size: 16px; font-weight: 600; color: #22262A">구간 담기</span><span style="font-size: 15px; line-height: 1.65; color: #525B66">카드 왼쪽 위 <strong style="color: #22262A; font-weight: 600">원형 버튼</strong>으로 담고, 탭과 검색 결과를 오가며 섞어 담을 수 있습니다.</span></div>
+<div style="display: grid; grid-template-columns: 44px 130px 1fr; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid #EAEDF1"><span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 9999px; text-align: center; padding: 3px 0">2-7</span><span style="font-size: 16px; font-weight: 600; color: #22262A">순서 정리</span><span style="font-size: 15px; line-height: 1.65; color: #525B66">드래그로 순서를 바꾸고, <strong style="color: #22262A; font-weight: 600">Delete</strong> 키로 뺍니다.</span></div>
+<div style="display: grid; grid-template-columns: 44px 130px 1fr; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid #EAEDF1"><span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 9999px; text-align: center; padding: 3px 0">2-8</span><span style="font-size: 16px; font-weight: 600; color: #22262A">직접 추가</span><span style="font-size: 15px; line-height: 1.65; color: #525B66">재생 위치에서 <strong style="color: #22262A; font-weight: 600">구간 추가</strong>를 누르면 현재 위치부터 10초를 담습니다.</span></div>
+<div style="display: grid; grid-template-columns: 44px 130px 1fr; gap: 12px; align-items: baseline; padding: 14px 0; border-top: 1px solid #EAEDF1"><span style="font-size: 12px; font-weight: 600; color: #FFFFFF; background: #22262A; border-radius: 9999px; text-align: center; padding: 3px 0">2-9</span><span style="font-size: 16px; font-weight: 600; color: #22262A">선택 구간만 재생</span><span style="font-size: 15px; line-height: 1.65; color: #525B66"><strong style="color: #22262A; font-weight: 600">선택 구간만</strong>을 체크하면 담은 구간만 이어서 재생됩니다.</span></div>
+</div>
+
+<div style="flex: 1 1 420px; min-width: 0; max-width: 500px">
+<div style="background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 10px; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 4px 12px 0 rgba(12,14,19,0.08); padding: 12px; display: flex; gap: 12px">
+<div style="flex: 1 1 auto; min-width: 0; display: flex; flex-direction: column; gap: 10px">
+<div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px">
+<div style="position: relative; aspect-ratio: 296 / 530; border-radius: 6px; overflow: hidden; outline: 2px solid #343A42; outline-offset: 1px"><img src="assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.2)"><span style="position: absolute; top: 3%; left: 6%; width: 20%; aspect-ratio: 1 / 1; border-radius: 50%; background: #22262A; border: 1.5px solid #FFFFFF; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span></div>
+<div style="position: relative; aspect-ratio: 296 / 530; border-radius: 6px; overflow: hidden; outline: 2px solid #343A42; outline-offset: 1px"><img src="assets/0758f1929b2f6aee02775e52ff3e4b71.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.2)"><span style="position: absolute; top: 3%; left: 6%; width: 20%; aspect-ratio: 1 / 1; border-radius: 50%; background: #22262A; border: 1.5px solid #FFFFFF; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5 9-10"></path></svg></span></div>
+<div style="position: relative; aspect-ratio: 296 / 530; border-radius: 6px; overflow: hidden"><img src="assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; top: 3%; left: 6%; width: 20%; aspect-ratio: 1 / 1; border-radius: 50%; background: rgba(12,14,19,0.55); border: 1.5px solid #FFFFFF; box-sizing: border-box"></span></div>
+</div>
+<div style="border-top: 1px solid #EAEDF1; padding-top: 8px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px"><span style="font-size: 11px; font-weight: 600; color: #22262A">선택한 구간 <span style="font-weight: 400; color: #6F7985">드래그하여 순서를 변경할 수 있습니다</span></span><span style="font-size: 10.5px; font-weight: 600; color: #343A42">2개 · 40초</span></div>
+<div style="display: flex; gap: 6px">
+<div style="position: relative; width: 42px; height: 66px; border-radius: 5px; overflow: hidden; border: 1.5px solid #343A42"><img src="assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center">1</span></div>
+<div style="position: relative; width: 42px; height: 66px; border-radius: 5px; overflow: hidden; border: 1.5px solid #343A42"><img src="assets/0758f1929b2f6aee02775e52ff3e4b71.jpg" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover"><span style="position: absolute; top: 3px; left: 3px; width: 14px; height: 14px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 8px; font-weight: 600; display: flex; align-items: center; justify-content: center">2</span></div>
+<div style="width: 42px; height: 66px; border-radius: 5px; border: 1.5px dashed #E0E5EB; background: #F9FAFB; display: flex; align-items: center; justify-content: center; color: #979FAA; font-size: 16px">+</div>
+</div>
+</div>
+</div>
+<div style="flex: 0 0 128px; display: flex; flex-direction: column; gap: 6px">
+<div style="position: relative; aspect-ratio: 572 / 1072; border-radius: 6px; overflow: hidden; background: #C9A57F">
+<img src="assets/08db7892c22aab7ec489e060355744a0.jpg" alt="" style="display: block; width: 100%; height: 100%">
+<span style="position: absolute; left: 5%; width: 90%; top: 83%; height: 12.5%; background: #0D0F11; border-radius: 3px; color: #FFFFFF; font-size: 7px; line-height: 1.35; display: flex; align-items: center; justify-content: center; text-align: center">편한 트레이닝 룩은 물론<br>클래식한 옷차림에도 잘 어울려요</span>
+</div>
+<div style="background: #F3F5F7; border-radius: 6px; padding: 5px 6px; font-size: 8.5px; font-weight: 600; color: #343A42">
+<div style="display: flex; align-items: center; gap: 5px"><span>❚❚</span><span style="color: #525B66">1x</span><span style="background: #FFFFFF; border-radius: 3px; padding: 0 3px">2x</span><span style="color: #525B66">4x</span></div>
+<div style="display: flex; align-items: center; gap: 4px; margin-top: 4px"><span style="border: 1.2px solid #343A42; border-radius: 2px; padding: 0 2px; font-size: 7.5px">T</span><span style="width: 9px; height: 9px; border-radius: 2px; background: #22262A; color: #FFFFFF; font-size: 7px; display: flex; align-items: center; justify-content: center">✓</span><span>선택 구간만</span></div>
+</div>
+</div>
+</div>
+<div style="margin-top: 10px; border: 1px solid #E0E5EB; border-radius: 10px; background: #FFFFFF; padding: 10px 12px">
+<div style="position: relative; height: 34px; border-radius: 6px; overflow: hidden; display: flex; background: #C9A57F">
+<span style="flex: 1; background: url('assets/ac478e2cab4fa332e375cb79d81113e3.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/f813cca50a43788ef98312b37b459230.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/0758f1929b2f6aee02775e52ff3e4b71.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/7671f66a8f63b42b2eda7110836fd479.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/5f310d36cda95146759d87a633131846.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/f0c6399cf5579a75c406de2def2eff01.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/ac478e2cab4fa332e375cb79d81113e3.jpg') center 20% / cover; opacity: .8"></span><span style="flex: 1; background: url('assets/0758f1929b2f6aee02775e52ff3e4b71.jpg') center 20% / cover; opacity: .8"></span>
+<span style="position: absolute; left: 18%; top: 4px; width: 12px; height: 24px; border: 2px solid #22262A; border-radius: 6px; background: rgba(255,255,255,0.35)"></span>
+<span style="position: absolute; left: 42%; top: 4px; width: 12px; height: 24px; border: 2px solid #22262A; border-radius: 6px; background: rgba(255,255,255,0.35)"></span>
+<span style="position: absolute; left: 30%; top: 0; width: 2px; height: 34px; background: #E83B3B"></span>
+</div>
+<div style="font-size: 10.5px; color: #6F7985; margin-top: 6px">타임라인 · 선택한 구간이 마커로 표시됩니다</div>
+</div>
+<p style="margin: 8px 0 0; font-size: 12px; color: #6F7985">구간 2개 선택 · 2배속 · 자막 켜짐 · 선택 구간만 재생 중</p>
+</div>
+</div>
+
+<div style="margin-top: 28px; background: #F9FAFB; border: 1px solid #E0E5EB; border-radius: 8px; padding: 16px 18px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 6px">참고 · 타임라인 마커와 줌</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42">− / +와 슬라이더로 확대하면 마커와 그래프를 더 세밀하게 볼 수 있습니다.</p>
+</div>
+</div>
+
+<!-- ═════ STEP 03 ═════ -->
+<div style="padding: 48px 0; border-bottom: 1px solid #E0E5EB">
+<div style="font-size: 15px; font-weight: 600; letter-spacing: 1px; color: #C52628; margin-bottom: 10px">STEP 03</div>
+<h3 style="margin: 0 0 10px; font-size: 22px; font-weight: 600; line-height: 1.4; color: #22262A">편집해서 영상으로 만들지, 바로 숏폼으로 보낼지 골라요</h3>
+<p style="margin: 0 0 24px; max-width: 700px; font-size: 15px; line-height: 1.8; color: #525B66">구간을 다 담았다면 구간 선택 화면 오른쪽 아래에서 목적에 맞는 방법을 고르세요.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 16px; background: #F3F5F7; border-radius: 12px; padding: 24px">
+<div style="background: #FFFFFF; border: 2px solid #22262A; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="align-self: flex-start; height: 22px; padding: 0 8px; border-radius: 9999px; background: #C52628; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center">3-1</span>
+<div style="font-size: 18px; font-weight: 600; color: #22262A">편집해서 영상 만들기</div>
+<div style="font-size: 14px; font-weight: 500; color: #C52628">자막·비율·배경이 필요할 때</div>
+<div style="display: grid; grid-template-columns: 52px 1fr; gap: 6px 10px; font-size: 14px; line-height: 1.6"><span style="color: #6F7985; font-weight: 600">과정</span><span style="color: #343A42"><strong style="color: #22262A; font-weight: 600">영상 편집</strong> 탭에서 화면과 자막을 편집해 영상을 만듭니다.</span><span style="color: #6F7985; font-weight: 600">결과</span><span style="color: #343A42">카드마다 MP4(1080×1920), 다운로드하거나 숏폼으로 등록</span><span style="color: #6F7985; font-weight: 600">추천</span><span style="color: #343A42">광고·SNS</span></div>
+</div>
+<div style="background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 10px; padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<span style="align-self: flex-start; height: 22px; padding: 0 8px; border-radius: 9999px; background: #C52628; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center">3-2</span>
+<div style="font-size: 18px; font-weight: 600; color: #22262A">바로 숏폼으로 보내기</div>
+<div style="font-size: 14px; font-weight: 500; color: #C52628">편집 없이 빠르게 등록할 때</div>
+<div style="display: grid; grid-template-columns: 52px 1fr; gap: 6px 10px; font-size: 14px; line-height: 1.6"><span style="color: #6F7985; font-weight: 600">과정</span><span style="color: #343A42">담은 구간이 그대로 <strong style="color: #22262A; font-weight: 600">숏폼 작성 화면</strong>으로 넘어가고, 정보를 입력해 바로 등록합니다.</span><span style="color: #6F7985; font-weight: 600">추천</span><span style="color: #343A42">상세페이지·피드</span></div>
+</div>
+</div>
+<div style="margin-top: 28px; background: #F9FAFB; border: 1px solid #E0E5EB; border-radius: 8px; padding: 16px 18px">
+<div style="font-size: 12px; font-weight: 600; color: #6F7985; margin-bottom: 6px">참고 · 영상·자막 다운로드</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.7; color: #343A42">편집 없이 파일만 필요하면 구간 선택 화면의 <strong style="color: #22262A; font-weight: 600">영상·자막 다운로드</strong>를 누르세요. 영상(mp4)과 자막(srt) 중 골라 내려받아 외부 편집에 쓸 수 있습니다.</p>
+</div>
+</div>
+
+<!-- ═════ STEP 04 ═════ -->
+<div style="padding: 48px 0 0">
+<div style="font-size: 15px; font-weight: 600; letter-spacing: 1px; color: #C52628; margin-bottom: 10px">STEP 04</div>
+<h3 style="margin: 0 0 10px; font-size: 22px; font-weight: 600; line-height: 1.4; color: #22262A">편집해서 영상으로 만들어요</h3>
+<p style="margin: 0 0 28px; max-width: 700px; font-size: 15px; line-height: 1.8; color: #525B66">화면과 자막을 다듬고 <strong style="color: #22262A; font-weight: 600">영상 만들기</strong>를 누르면 카드마다 <strong style="color: #22262A; font-weight: 600">9:16 MP4</strong>가 만들어집니다. 화면 설정은 모든 카드에 똑같이 적용됩니다.</p>
+<div style="display: flex; gap: 14px; margin: 0 0 16px">
+<span style="flex: 0 0 34px; height: 34px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 12px; font-weight: 600; display: flex; align-items: center; justify-content: center">4-1</span>
+<div><div style="font-size: 17px; font-weight: 600; color: #22262A; margin-bottom: 6px">카드와 미리보기</div><p style="margin: 0; font-size: 15px; line-height: 1.75; color: #525B66">카드 1장이 영상 1개입니다. 카드를 나누면 여러 편을 한 번에 만들 수 있고, <strong style="color: #22262A; font-weight: 600">구간 더 담기</strong>로 구간을 추가합니다.</p></div>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 380px), 1fr)); gap: 32px; margin-top: 36px">
+<div style="min-width: 0">
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center">4-2</span><span style="font-size: 17px; font-weight: 600; color: #22262A">화면: 비율, 크기, 배경</span></div>
+<div style="border: 1px solid #E0E5EB; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 4px 12px 0 rgba(12,14,19,0.08)"><!-- MOTION 4-2 --><style>@keyframes m42-box{0%{width:32.114cqw;height:40.143cqw}16.67%{width:32.114cqw;height:40.143cqw}19.58%{width:32.114cqw;height:32.114cqw}33.33%{width:32.114cqw;height:32.114cqw}36.25%{width:32.114cqw;height:40.143cqw}41.67%{width:32.114cqw;height:40.143cqw}44.58%{width:41.290cqw;height:51.612cqw}83.33%{width:41.290cqw;height:51.612cqw}86.25%{width:32.114cqw;height:40.143cqw}100%{width:32.114cqw;height:40.143cqw}}@keyframes m42-ratio{0%{left:18.165cqw}16.67%{left:18.165cqw}19.58%{left:27.048cqw}33.33%{left:27.048cqw}36.25%{left:18.165cqw}100%{left:18.165cqw}}@keyframes m42-knob{0%{left:6.875cqw}41.67%{left:6.875cqw}44.58%{left:10.944cqw}83.33%{left:10.944cqw}86.25%{left:6.875cqw}100%{left:6.875cqw}}@keyframes m42-fill{0%{width:13%}41.67%{width:13%}44.58%{width:22%}83.33%{width:22%}86.25%{width:13%}100%{width:13%}}@keyframes m42-bgthumb{0%{left:0.399cqw}55.00%{left:0.399cqw}57.92%{left:15.199cqw}68.33%{left:15.199cqw}71.25%{left:30.000cqw}83.33%{left:30.000cqw}86.25%{left:0.399cqw}100%{left:0.399cqw}}@keyframes m42-s70{0%{opacity:1}41.67%{opacity:1}44.58%{opacity:0}83.33%{opacity:0}86.25%{opacity:1}100%{opacity:1}}@keyframes m42-s90{0%{opacity:0}41.67%{opacity:0}44.58%{opacity:1}83.33%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes m42-bg-blur{0%{opacity:1}55.00%{opacity:1}57.92%{opacity:0}68.33%{opacity:0}71.25%{opacity:0}83.33%{opacity:0}86.25%{opacity:1}100%{opacity:1}}@keyframes m42-bg-black{0%{opacity:0}55.00%{opacity:0}57.92%{opacity:1}68.33%{opacity:1}71.25%{opacity:0}83.33%{opacity:0}86.25%{opacity:0}100%{opacity:0}}@keyframes m42-bg-color{0%{opacity:0}55.00%{opacity:0}57.92%{opacity:0}68.33%{opacity:0}71.25%{opacity:1}83.33%{opacity:1}86.25%{opacity:0}100%{opacity:0}}@keyframes m42-tap0{0%,14.58%{opacity:0;transform:scale(0.4)}15.83%{opacity:0.45;transform:scale(1)}19.58%,100%{opacity:0;transform:scale(1.6)}}@keyframes m42-tap1{0%,31.25%{opacity:0;transform:scale(0.4)}32.50%{opacity:0.45;transform:scale(1)}36.25%,100%{opacity:0;transform:scale(1.6)}}@keyframes m42-tap2{0%,39.58%{opacity:0;transform:scale(0.4)}40.83%{opacity:0.45;transform:scale(1)}44.58%,100%{opacity:0;transform:scale(1.6)}}@keyframes m42-tap3{0%,52.92%{opacity:0;transform:scale(0.4)}54.17%{opacity:0.45;transform:scale(1)}57.92%,100%{opacity:0;transform:scale(1.6)}}@keyframes m42-tap4{0%,66.25%{opacity:0;transform:scale(0.4)}67.50%{opacity:0.45;transform:scale(1)}71.25%,100%{opacity:0;transform:scale(1.6)}}@keyframes m42-tap5{0%,81.25%{opacity:0;transform:scale(0.4)}82.50%{opacity:0.45;transform:scale(1)}86.25%,100%{opacity:0;transform:scale(1.6)}}.m42-box{width:32.114cqw;height:40.143cqw}.m42-ratio{left:18.165cqw}.m42-knob{left:6.875cqw}.m42-fill{width:13%}.m42-bgthumb{left:0.399cqw}.m42-s90,.m42-bg-black,.m42-bg-color,.m42-tap{opacity:0}.m42-box{animation:m42-box 12.0s ease-in-out infinite}.m42-ratio{animation:m42-ratio 12.0s ease-in-out infinite}.m42-knob{animation:m42-knob 12.0s ease-in-out infinite}.m42-fill{animation:m42-fill 12.0s ease-in-out infinite}.m42-bgthumb{animation:m42-bgthumb 12.0s ease-in-out infinite}.m42-s70{animation:m42-s70 12.0s linear infinite}.m42-s90{animation:m42-s90 12.0s linear infinite}.m42-bg-blur{animation:m42-bg-blur 12.0s linear infinite}.m42-bg-black{animation:m42-bg-black 12.0s linear infinite}.m42-bg-color{animation:m42-bg-color 12.0s linear infinite}.m42-tap0{animation:m42-tap0 12.0s ease-out infinite}.m42-tap1{animation:m42-tap1 12.0s ease-out infinite}.m42-tap2{animation:m42-tap2 12.0s ease-out infinite}.m42-tap3{animation:m42-tap3 12.0s ease-out infinite}.m42-tap4{animation:m42-tap4 12.0s ease-out infinite}.m42-tap5{animation:m42-tap5 12.0s ease-out infinite}@media (prefers-reduced-motion: reduce){.m42 *{animation:none !important}}</style>
+<div class="m42" role="img" aria-label="영상 편집 화면 탭: 비율을 4:5와 1:1로 바꾸고, 크기를 키우고, 배경을 블러·검정·색상으로 바꾸는 모습" style="container-type:inline-size">
+<div style="position:relative;width:100%;aspect-ratio:752/688;background:#FFFFFF;color:#22262A;overflow:hidden;line-height:1.4">
+<div style="position:absolute;left:2.527cqw;top:2.128cqw;width:45.878cqw;height:81.516cqw;border-radius:2.128cqw;overflow:hidden;background:#B79C80">
+<div class="m42-bg-blur" style="position:absolute;inset:-5.319cqw;background:url('assets/5f310d36cda95146759d87a633131846.jpg') center/cover;filter:blur(2.926cqw);transform:scale(1.1)"></div>
+<div class="m42-bg-black" style="position:absolute;inset:0;background:#0D0F11"></div>
+<div class="m42-bg-color" style="position:absolute;inset:0;background:#E8DCCB"></div>
+<div class="m42-box" style="position:absolute;left:50%;top:50%;transform:translate(-50%,-50%)">
+<img src="assets/5f310d36cda95146759d87a633131846.jpg" alt="" style="display:block;width:100%;height:100%;object-fit:cover"><span style="position:absolute;left:0.000cqw;top:-2.660cqw;background:#FFFFFF;color:#22262A;font-size:1.396cqw;font-weight:600;border-radius:0.532cqw;padding:0.266cqw 0.798cqw;line-height:1.3;white-space:nowrap">영상 · <span style="position:relative;display:inline-block"><span style="visibility:hidden">90%</span><span class="m42-s70" style="position:absolute;left:0">70%</span><span class="m42-s90" style="position:absolute;left:0">90%</span></span></span></div>
+<div style="position:absolute;right:1.596cqw;top:1.330cqw;background:rgba(60,60,60,0.55);color:#FFFFFF;font-size:1.463cqw;font-weight:600;border-radius:1.197cqw;padding:0.133cqw 1.064cqw">1/3</div>
+</div>
+<div style="position:absolute;left:0;top:85.106cqw;width:50.532cqw;height:6.383cqw;display:flex;align-items:center;font-size:1.862cqw">
+<span style="margin-left:1.862cqw;width:1.862cqw;height:1.862cqw;display:flex"><svg viewBox="0 0 24 24" style="width:1.862cqw;height:1.862cqw" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="#22262A"/></svg></span>
+<span style="margin-left:1.862cqw;font-weight:700">0:00</span><span style="margin-left:0.532cqw;color:#6F7985">/ 0:44</span>
+<div style="margin-left:2.660cqw;display:flex;background:#F3F5F7;border-radius:1.064cqw;padding:0.399cqw;font-size:1.662cqw;font-weight:600">
+<span style="padding:0.665cqw 1.330cqw;border-radius:0.798cqw;display:flex;align-items:center;gap:0.532cqw;white-space:nowrap;background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,19,0.12)"><svg width="100%" height="100%" style="width:1.729cqw;height:1.729cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#22262A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg> 이 카드</span>
+<span style="padding:0.665cqw 1.330cqw;color:#525B66;white-space:nowrap">전체</span></div>
+<span style="margin-left:auto;margin-right:1.862cqw;display:flex;gap:2.660cqw"><svg width="100%" height="100%" style="width:2.261cqw;height:2.261cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/></svg><svg width="100%" height="100%" style="width:2.261cqw;height:2.261cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></span>
+</div>
+<div style="position:absolute;left:50.532cqw;top:0;width:49.468cqw;height:100%;border-left:1px solid #EAEDF1;box-sizing:border-box">
+<div style="position:absolute;left:2.128cqw;top:2.660cqw;width:45.213cqw;height:4.521cqw;background:#F3F5F7;border-radius:1.197cqw;display:flex;padding:0.399cqw;box-sizing:border-box;font-size:1.729cqw;font-weight:600">
+<span style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.798cqw;border-radius:0.931cqw;background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,19,0.12)"><svg width="100%" height="100%" style="width:1.862cqw;height:1.862cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#22262A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"/></svg> 화면</span>
+<span style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.798cqw;color:#525B66"><svg width="100%" height="100%" style="width:1.862cqw;height:1.862cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6M12 9v7"/></svg> 자막</span></div>
+<div style="position:absolute;left:2.128cqw;top:9.043cqw;width:45.213cqw;background:#F3F5F7;border-radius:1.064cqw;padding:1.197cqw 1.596cqw;box-sizing:border-box;display:flex;gap:1.064cqw;font-size:1.529cqw;line-height:1.55;color:#525B66"><svg width="100%" height="100%" style="width:1.862cqw;height:1.862cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><span>결과물은 항상 9:16이에요. 여기서 정한 값은 숏폼의 모든 카드에 똑같이 적용돼요.</span></div>
+<div style="position:absolute;left:2.128cqw;top:18.085cqw;font-size:1.662cqw;font-weight:600;color:#343A42">비율</div>
+<div style="position:absolute;left:2.128cqw;top:20.745cqw;width:45.213cqw;height:4.787cqw;display:flex;background:#F3F5F7;border-radius:1.197cqw;padding:0.399cqw;box-sizing:border-box;font-size:1.662cqw;font-weight:600;color:#343A42"><span class="m42-ratio" style="position:absolute;top:0.399cqw;bottom:0.399cqw;width:8.883cqw;border-radius:0.931cqw;background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,19,0.12)"></span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">원본</span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">9:16</span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">4:5</span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">1:1</span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">16:9</span></div>
+<div style="position:absolute;left:2.128cqw;top:26.596cqw;font-size:1.529cqw;color:#6F7985">고르면 크기를 맞추고 가운데로 옮겨요</div>
+<div style="position:absolute;left:2.128cqw;top:31.649cqw;font-size:1.662cqw;font-weight:600;color:#343A42">크기<span style="position:relative;display:inline-block;margin-left:0.798cqw;font-weight:500;color:#6F7985"><span style="visibility:hidden">90%</span><span class="m42-s70" style="position:absolute;left:0">70%</span><span class="m42-s90" style="position:absolute;left:0">90%</span></span></div>
+<div style="position:absolute;right:2.128cqw;top:30.585cqw;height:4.255cqw;border:1px solid #D5DBE2;border-radius:1.064cqw;display:flex;align-items:center;gap:0.798cqw;padding:0 1.330cqw;font-size:1.662cqw;font-weight:600;color:#343A42;box-sizing:border-box;white-space:nowrap"><svg width="100%" height="100%" style="width:1.862cqw;height:1.862cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16M7 12h10M4 18h16"/></svg> 가운데로</div>
+<div style="position:absolute;left:2.128cqw;top:36.835cqw;width:45.213cqw;height:0.399cqw;background:#E0E5EB;border-radius:0.266cqw"><div class="m42-fill" style="height:100%;background:#343A42;border-radius:0.266cqw"></div></div>
+<div class="m42-knob" style="position:absolute;top:35.904cqw;width:2.261cqw;height:2.261cqw;border-radius:50%;background:#FFFFFF;border:1px solid #C9CED6;box-sizing:border-box;box-shadow:0 1px 2px rgba(12,14,19,0.2)"></div>
+<div style="position:absolute;left:2.128cqw;top:39.362cqw;width:45.213cqw;font-size:1.529cqw;line-height:1.55;color:#6F7985">미리보기에서 영상을 끌어 옮기고, 스크롤로 확대·축소해요. 가운데와 원본·꽉 채움 크기에서 착 붙어요.</div>
+<div style="position:absolute;left:2.128cqw;top:46.011cqw;width:45.213cqw;height:1px;background:#EAEDF1"></div>
+<div style="position:absolute;left:2.128cqw;top:48.404cqw;font-size:1.662cqw;font-weight:600;color:#343A42">배경</div>
+<div style="position:absolute;left:2.128cqw;top:51.064cqw;width:45.213cqw;height:4.787cqw;display:flex;background:#F3F5F7;border-radius:1.197cqw;padding:0.399cqw;box-sizing:border-box;font-size:1.662cqw;font-weight:600;color:#343A42"><span class="m42-bgthumb" style="position:absolute;top:0.399cqw;bottom:0.399cqw;width:14.801cqw;border-radius:0.931cqw;background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,19,0.12)"></span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">블러</span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">검정</span><span style="position:relative;flex:1;display:flex;align-items:center;justify-content:center;white-space:nowrap">색상</span></div>
+<div style="position:absolute;left:0;top:78.059cqw;width:49.468cqw;height:13.431cqw;border-top:1px solid #EAEDF1;background:#FFFFFF">
+<div style="position:absolute;left:2.128cqw;top:1.862cqw;width:45.213cqw;height:5.319cqw;background:#1A1C1F;border-radius:1.197cqw;display:flex;align-items:center;justify-content:center;gap:1.064cqw;color:#FFFFFF;font-size:1.862cqw;font-weight:700"><svg width="100%" height="100%" style="width:2.261cqw;height:2.261cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg> 영상 만들기</div>
+<div style="position:absolute;left:2.128cqw;top:8.245cqw;width:45.213cqw;text-align:center;font-size:1.463cqw;line-height:1.5;color:#6F7985">편집한 대로 카드 3장을 영상으로 만들어요 · 다운로드나 숏폼으로 이어져요</div>
+</div>
+</div>
+<span class="m42-tap m42-tap0" style="position:absolute;left:84.149cqw;top:23.138cqw;width:4.787cqw;height:4.787cqw;margin:-2.394cqw 0 0 -2.394cqw;border-radius:50%;background:#2554D9;pointer-events:none"></span><span class="m42-tap m42-tap1" style="position:absolute;left:75.266cqw;top:23.138cqw;width:4.787cqw;height:4.787cqw;margin:-2.394cqw 0 0 -2.394cqw;border-radius:50%;background:#2554D9;pointer-events:none"></span><span class="m42-tap m42-tap2" style="position:absolute;left:59.309cqw;top:36.968cqw;width:4.787cqw;height:4.787cqw;margin:-2.394cqw 0 0 -2.394cqw;border-radius:50%;background:#2554D9;pointer-events:none"></span><span class="m42-tap m42-tap3" style="position:absolute;left:75.259cqw;top:53.457cqw;width:4.787cqw;height:4.787cqw;margin:-2.394cqw 0 0 -2.394cqw;border-radius:50%;background:#2554D9;pointer-events:none"></span><span class="m42-tap m42-tap4" style="position:absolute;left:90.060cqw;top:53.457cqw;width:4.787cqw;height:4.787cqw;margin:-2.394cqw 0 0 -2.394cqw;border-radius:50%;background:#2554D9;pointer-events:none"></span><span class="m42-tap m42-tap5" style="position:absolute;left:60.459cqw;top:53.457cqw;width:4.787cqw;height:4.787cqw;margin:-2.394cqw 0 0 -2.394cqw;border-radius:50%;background:#2554D9;pointer-events:none"></span>
+</div>
+</div><!-- /MOTION 4-2 --></div>
+<p style="margin: 8px 0 0; font-size: 12px; color: #6F7985">화면 탭 · 비율·크기·배경을 바꾸는 모습</p>
+<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px; font-size: 14px; line-height: 1.6; color: #525B66">
+<div><strong style="color: #22262A; font-weight: 600">비율</strong> · 원본, 9:16, 4:5, 1:1, 16:9 중 영상을 보여줄 비율을 고릅니다.</div>
+<div><strong style="color: #22262A; font-weight: 600">크기·위치</strong> · 슬라이더나 드래그, 스크롤로 조절하고 <strong style="color: #22262A; font-weight: 600">가운데로</strong>로 정렬합니다.</div>
+<div><strong style="color: #22262A; font-weight: 600">배경</strong> · 영상 바깥 여백을 <strong style="color: #22262A; font-weight: 600">블러, 검정, 색상</strong> 중 하나로 채웁니다.</div>
+</div>
+</div>
+<div style="min-width: 0">
+<div style="display: flex; gap: 10px; align-items: center; margin-bottom: 8px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #22262A; color: #FFFFFF; font-size: 11px; font-weight: 600; display: flex; align-items: center; justify-content: center">4-3</span><span style="font-size: 17px; font-weight: 600; color: #22262A">자막: 방송 자막 불러오기, 텍스트 추가</span></div>
+<div style="border: 1px solid #E0E5EB; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 4px 12px 0 rgba(12,14,19,0.08)"><!-- MOTION 4-3 --><style>@keyframes m43-row0{0%,12.50%{opacity:0;transform:translateY(0.798cqw)}14.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row1{0%,13.50%{opacity:0;transform:translateY(0.798cqw)}15.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row2{0%,14.50%{opacity:0;transform:translateY(0.798cqw)}16.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row3{0%,15.50%{opacity:0;transform:translateY(0.798cqw)}17.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row4{0%,16.50%{opacity:0;transform:translateY(0.798cqw)}18.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row5{0%,17.50%{opacity:0;transform:translateY(0.798cqw)}19.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row6{0%,18.50%{opacity:0;transform:translateY(0.798cqw)}20.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-row7{0%,19.50%{opacity:0;transform:translateY(0.798cqw)}21.58%,95.00%{opacity:1;transform:none}97.50%,100%{opacity:0;transform:none}}@keyframes m43-hi0{0%,24.17%{background:transparent}25.42%,47.92%{background:#EEF3FF}49.17%,100%{background:transparent}}@keyframes m43-cap0{0%,24.17%{opacity:0;transform:translateY(1.064cqw)}26.67%,47.08%{opacity:1;transform:none}49.17%,100%{opacity:0}}@keyframes m43-t0{0%,24.17%{opacity:0}24.25%,49.08%{opacity:1}49.17%,100%{opacity:0}}@keyframes m43-hi1{0%,49.17%{background:transparent}50.42%,68.75%{background:#EEF3FF}70.00%,100%{background:transparent}}@keyframes m43-cap1{0%,49.17%{opacity:0;transform:translateY(1.064cqw)}51.67%,67.92%{opacity:1;transform:none}70.00%,100%{opacity:0}}@keyframes m43-t1{0%,49.17%{opacity:0}49.25%,69.92%{opacity:1}70.00%,100%{opacity:0}}@keyframes m43-hi2{0%,70.00%{background:transparent}71.25%,92.08%{background:#EEF3FF}93.33%,100%{background:transparent}}@keyframes m43-cap2{0%,70.00%{opacity:0;transform:translateY(1.064cqw)}72.50%,91.25%{opacity:1;transform:none}93.33%,100%{opacity:0}}@keyframes m43-t2{0%,70.00%{opacity:0}70.08%,93.25%{opacity:1}93.33%,100%{opacity:0}}@keyframes m43-t-start{0%,24.08%{opacity:1}24.17%,93.33%{opacity:0}93.42%,100%{opacity:1}}@keyframes m43-empty{0%,10.83%{opacity:1}12.50%,96.67%{opacity:0}99.17%,100%{opacity:1}}@keyframes m43-press{0%,7.50%{transform:none;background:#FFFFFF;border-color:#D5DBE2}8.33%,10.83%{transform:scale(0.96);background:#EEF3FF;border-color:#2554D9}12.08%,100%{transform:none;background:#FFFFFF;border-color:#D5DBE2}}@keyframes m43-tap{0%,7.50%{opacity:0;transform:scale(0.4)}8.75%{opacity:0.5;transform:scale(1)}12.50%,100%{opacity:0;transform:scale(1.6)}}@keyframes m43-play{0%,24.08%{opacity:1}24.17%,93.33%{opacity:0}93.42%,100%{opacity:1}}@keyframes m43-pause{0%,24.08%{opacity:0}24.17%,93.33%{opacity:1}93.42%,100%{opacity:0}}@keyframes m43-bar{0%,24.17%{width:0}93.33%{width:100%}93.42%,100%{width:0}}.m43-c0,.m43-c1,.m43-c2,.m43-t0,.m43-t1,.m43-t2,.m43-tap,.m43-pause{opacity:0}.m43-c0,.m43-t0{opacity:1}.m43-empty,.m43-t-start{opacity:0}.m43-h0{background:#EEF3FF}.m43-r0{animation:m43-row0 12.0s linear infinite}.m43-r1{animation:m43-row1 12.0s linear infinite}.m43-r2{animation:m43-row2 12.0s linear infinite}.m43-r3{animation:m43-row3 12.0s linear infinite}.m43-r4{animation:m43-row4 12.0s linear infinite}.m43-r5{animation:m43-row5 12.0s linear infinite}.m43-r6{animation:m43-row6 12.0s linear infinite}.m43-r7{animation:m43-row7 12.0s linear infinite}.m43-h0{animation:m43-hi0 12.0s linear infinite}.m43-h1{animation:m43-hi1 12.0s linear infinite}.m43-h2{animation:m43-hi2 12.0s linear infinite}.m43-c0{animation:m43-cap0 12.0s linear infinite}.m43-c1{animation:m43-cap1 12.0s linear infinite}.m43-c2{animation:m43-cap2 12.0s linear infinite}.m43-t0{animation:m43-t0 12.0s linear infinite}.m43-t1{animation:m43-t1 12.0s linear infinite}.m43-t2{animation:m43-t2 12.0s linear infinite}.m43-t-start{animation:m43-t-start 12.0s linear infinite}.m43-empty{animation:m43-empty 12.0s linear infinite}.m43-press{animation:m43-press 12.0s linear infinite}.m43-tap{animation:m43-tap 12.0s ease-out infinite}.m43-play{animation:m43-play 12.0s linear infinite}.m43-pause{animation:m43-pause 12.0s linear infinite}.m43-bar{animation:m43-bar 12.0s linear infinite}@media (prefers-reduced-motion: reduce){.m43 *{animation:none !important}.m43-empty,.m43-c1,.m43-c2,.m43-t1,.m43-t2,.m43-t-start,.m43-tap,.m43-pause{opacity:0 !important}.m43-h0{background:#EEF3FF !important}}</style>
+<div class="m43" role="img" aria-label="영상 편집 자막 탭: 방송 자막을 불러오면 목록이 채워지고, 말에 맞춰 영상 위 자막이 바뀌는 모습" style="container-type:inline-size">
+<div style="position:relative;width:100%;aspect-ratio:752/688;background:#FFFFFF;color:#22262A;overflow:hidden;line-height:1.4">
+<div style="position:absolute;left:2.527cqw;top:2.128cqw;width:45.878cqw;height:81.516cqw;border-radius:2.128cqw;overflow:hidden;background:#B79C80">
+<div style="position:absolute;inset:-5.319cqw;background:url('assets/5f310d36cda95146759d87a633131846.jpg') center/cover;filter:blur(2.926cqw);transform:scale(1.1)"></div>
+<img src="assets/5f310d36cda95146759d87a633131846.jpg" alt="" style="position:absolute;left:6.782cqw;top:12.234cqw;width:32.447cqw;height:57.181cqw;object-fit:cover">
+<div style="position:absolute;left:0;right:0;top:0;bottom:0;color:#FFFFFF;font-size:3.191cqw;font-weight:800;line-height:1.3;letter-spacing:-0.3px;-webkit-text-stroke:0.532cqw #0D0F11;paint-order:stroke fill"><div class="m43-c0" style="position:absolute;left:0;right:0;top:41.489cqw;text-align:center">오늘 소개할 제품은<br>베이지 컬러 후디예요</div><div class="m43-c1" style="position:absolute;left:0;right:0;top:41.489cqw;text-align:center">톤이 은은해서<br>어떤 하의에도 잘 어울려요</div><div class="m43-c2" style="position:absolute;left:0;right:0;top:41.489cqw;text-align:center">살짝 오버핏이라<br>편하게 입기 좋아요</div></div>
+<div style="position:absolute;right:1.596cqw;top:1.330cqw;background:rgba(60,60,60,0.55);color:#FFFFFF;font-size:1.463cqw;font-weight:600;border-radius:1.197cqw;padding:0.133cqw 1.064cqw">1/3</div>
+<div style="position:absolute;left:0;bottom:0;height:0.532cqw;width:100%;background:rgba(255,255,255,0.25)"><div class="m43-bar" style="height:100%;width:0;background:#FFFFFF"></div></div>
+</div>
+<div style="position:absolute;left:0;top:85.106cqw;width:50.532cqw;height:6.383cqw;display:flex;align-items:center;font-size:1.862cqw">
+<span style="position:relative;margin-left:1.862cqw;width:1.862cqw;height:1.862cqw"><span class="m43-play" style="position:absolute;inset:0"><svg viewBox="0 0 24 24" style="width:1.862cqw;height:1.862cqw" aria-hidden="true"><path d="M6 4l14 8-14 8z" fill="#22262A"/></svg></span><span class="m43-pause" style="position:absolute;inset:0"><svg viewBox="0 0 24 24" style="width:1.862cqw;height:1.862cqw" aria-hidden="true"><path d="M6 4h4v16H6zM14 4h4v16h-4z" fill="#22262A"/></svg></span></span>
+<span style="margin-left:1.862cqw"><span style="position:relative;display:inline-block;width:4.521cqw;font-weight:700"><span class="m43-t-start" style="position:absolute;left:0">0:00</span><span class="m43-t0" style="position:absolute;left:0">0:00</span><span class="m43-t1" style="position:absolute;left:0">0:03</span><span class="m43-t2" style="position:absolute;left:0">0:07</span><span style="visibility:hidden">0:00</span></span></span><span style="margin-left:0.532cqw;color:#6F7985">/ 11:07</span>
+<div style="margin-left:2.660cqw;display:flex;background:#F3F5F7;border-radius:1.064cqw;padding:0.399cqw;font-size:1.662cqw;font-weight:600">
+<span style="padding:0.665cqw 1.330cqw;border-radius:0.798cqw;display:flex;align-items:center;gap:0.532cqw;white-space:nowrap;background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,19,0.12)"><svg width="100%" height="100%" style="width:1.729cqw;height:1.729cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#22262A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9h13l-3-3M20 15H7l3 3"/></svg> 이 카드</span>
+<span style="padding:0.665cqw 1.330cqw;color:#525B66;white-space:nowrap">전체</span></div>
+<span style="margin-left:auto;margin-right:1.862cqw;display:flex;gap:2.660cqw"><svg width="100%" height="100%" style="width:2.261cqw;height:2.261cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="7" y="3" width="10" height="18" rx="2"/></svg><svg width="100%" height="100%" style="width:2.261cqw;height:2.261cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5L6 9H2v6h4l5 4V5z"/><path d="M15.5 8.5a5 5 0 0 1 0 7"/><path d="M19 5a10 10 0 0 1 0 14"/></svg></span>
+</div>
+<div style="position:absolute;left:50.532cqw;top:0;width:49.468cqw;height:100%;border-left:1px solid #EAEDF1;box-sizing:border-box">
+<div style="position:absolute;left:2.128cqw;top:2.660cqw;width:45.213cqw;height:4.521cqw;background:#F3F5F7;border-radius:1.197cqw;display:flex;padding:0.399cqw;box-sizing:border-box;font-size:1.729cqw;font-weight:600">
+<span style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.798cqw;color:#525B66"><svg width="100%" height="100%" style="width:1.862cqw;height:1.862cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="16" rx="2"/></svg> 화면</span>
+<span style="flex:1;display:flex;align-items:center;justify-content:center;gap:0.798cqw;border-radius:0.931cqw;background:#FFFFFF;box-shadow:0 1px 2px rgba(12,14,19,0.12)"><svg width="100%" height="100%" style="width:1.862cqw;height:1.862cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#22262A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6M12 9v7"/></svg> 자막</span></div>
+<div class="m43-press" style="position:absolute;left:2.128cqw;top:9.309cqw;width:22.074cqw;height:4.255cqw;border:1px solid #D5DBE2;border-radius:1.064cqw;display:flex;align-items:center;justify-content:center;gap:0.798cqw;font-size:1.662cqw;font-weight:600;color:#343A42;box-sizing:border-box;white-space:nowrap;background:#FFFFFF"><svg width="100%" height="100%" style="width:1.995cqw;height:1.995cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> 방송 자막 불러오기
+<span class="m43-tap" style="position:absolute;left:50%;top:50%;width:5.319cqw;height:5.319cqw;margin:-2.660cqw 0 0 -2.660cqw;border-radius:50%;background:#2554D9"></span></div>
+<div style="position:absolute;left:25.266cqw;top:9.309cqw;width:22.074cqw;height:4.255cqw;border:1px solid #D5DBE2;border-radius:1.064cqw;display:flex;align-items:center;justify-content:center;gap:0.798cqw;font-size:1.662cqw;font-weight:600;color:#343A42;box-sizing:border-box;white-space:nowrap"><svg width="100%" height="100%" style="width:1.995cqw;height:1.995cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> 텍스트 추가</div>
+<div style="position:absolute;left:2.128cqw;top:15.426cqw;width:45.213cqw;font-size:1.529cqw;line-height:1.55;color:#6F7985">텍스트를 고르면 여기서 문구와 스타일을 바꿀 수 있어요.</div>
+<div style="position:absolute;left:2.128cqw;top:19.947cqw;display:flex;align-items:center;gap:1.064cqw;font-size:1.662cqw;font-weight:600">
+<span style="width:0.931cqw;height:0.931cqw;border-radius:50%;background:#2554D9"></span>카드 1의 자막<span style="background:#F3F5F7;border-radius:0.665cqw;padding:0.266cqw 0.931cqw;font-weight:500;color:#343A42">11:07</span></div>
+<div class="m43-empty" style="position:absolute;left:2.128cqw;top:33.245cqw;width:45.213cqw;text-align:center;font-size:1.662cqw;color:#8A939E">아직 자막이 없어요</div>
+<div style="position:absolute;left:2.128cqw;top:23.936cqw;width:45.213cqw"><div class="m43-r0"><div class="m43-h0" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:00</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">오늘 소개할 제품은 베이지 컬러 후디예요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r1"><div class="m43-h1" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:03</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">톤이 은은해서 어떤 하의에도 잘 어울려요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r2"><div class="m43-h2" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:07</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">살짝 오버핏이라 편하게 입기 좋아요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r3"><div class="" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:10</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">소매랑 밑단이 립 조직이라 핏이 깔끔하게 잡혀요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r4"><div class="" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:13</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">원단이 부드럽고 가벼워서 하루 종일 편해요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r5"><div class="" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:17</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">후드가 있어서 캐주얼하게 연출하기 좋습니다</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r6"><div class="" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:20</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">데일리룩으로도, 홈웨어로도 활용도가 높아요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div><div class="m43-r7"><div class="" style="height:5.186cqw;display:flex;align-items:center;gap:1.197cqw;padding-left:1.330cqw;border-radius:0.798cqw;font-size:1.662cqw"><span style="flex:0 0 3.989cqw;color:#525B66;font-weight:500">0:23</span><span style="flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:500;color:#22262A">단품으로 하나만 입어도 충분히 예뻐요</span><span style="display:flex;align-items:center;gap:0.399cqw;background:#F3F5F7;border-radius:0.798cqw;padding:0.532cqw 0.931cqw;font-size:1.463cqw;font-weight:600;color:#525B66"><svg width="100%" height="100%" style="width:1.463cqw;height:1.463cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#6F7985" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/></svg> STT</span></div></div></div>
+<div style="position:absolute;left:0;top:78.059cqw;width:49.468cqw;height:13.431cqw;border-top:1px solid #EAEDF1;background:#FFFFFF">
+<div style="position:absolute;left:2.128cqw;top:1.862cqw;width:45.213cqw;height:5.319cqw;background:#1A1C1F;border-radius:1.197cqw;display:flex;align-items:center;justify-content:center;gap:1.064cqw;color:#FFFFFF;font-size:1.862cqw;font-weight:700"><svg width="100%" height="100%" style="width:2.261cqw;height:2.261cqw;flex:0 0 auto" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3"/></svg> 영상 만들기</div>
+<div style="position:absolute;left:2.128cqw;top:8.245cqw;width:45.213cqw;text-align:center;font-size:1.463cqw;line-height:1.5;color:#6F7985">편집한 대로 카드 3장을 영상으로 만들어요 · 다운로드나 숏폼으로 이어져요</div>
+</div>
+</div>
+</div>
+</div><!-- /MOTION 4-3 --></div>
+<p style="margin: 8px 0 0; font-size: 12px; color: #6F7985">자막 탭 · 방송 자막을 불러와 재생하는 모습</p>
+<div style="display: flex; flex-direction: column; gap: 8px; margin-top: 14px; font-size: 14px; line-height: 1.6; color: #525B66">
+<div><strong style="color: #22262A; font-weight: 600">방송 자막 불러오기</strong> · 방송에서 나온 말을 시간에 맞춰 자막으로 넣습니다.</div>
+<div><strong style="color: #22262A; font-weight: 600">텍스트 추가</strong> · 강조하고 싶은 문구를 직접 넣습니다.</div>
+<div><strong style="color: #22262A; font-weight: 600">스타일</strong> · <strong style="color: #22262A; font-weight: 600">기본, 강조, 박스</strong>와 크기, 색을 바꾸고 미리보기에서 끌어 옮깁니다.</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- ── 05 DISPLAY ── -->
+<section id="display" style="background: #F3F5F7">
+<div class="wrap" style="padding-top: 48px; padding-bottom: 48px">
+<div style="background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 16px; padding: 28px; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr)); gap: 28px; align-items: center">
+<div style="min-width: 0">
+<div style="display: flex; gap: 12px; align-items: center; margin-bottom: 22px"><span style="flex: 0 0 36px; height: 36px; border-radius: 10px; background: #F3F5F7; display: flex; align-items: center; justify-content: center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#343A42" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="7" height="16" rx="1.5"></rect><rect x="14" y="4" width="7" height="7" rx="1.5"></rect><rect x="14" y="14" width="7" height="6" rx="1.5"></rect></svg></span><div style="font-size: 18px; font-weight: 600; line-height: 1.4; color: #22262A">만든 다음엔 전시해요</div></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 220px), 1fr)); gap: 16px 20px">
+<div style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #E0E5EB; color: #343A42; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px">1</span><div style="min-width: 0; font-size: 13.5px; line-height: 1.55; color: #6F7985"><div style="font-size: 14px; font-weight: 600; color: #22262A">컬렉션·그룹</div>어드민에서 고르면 메인·기획전 어디든 전시</div></div>
+<div style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #E0E5EB; color: #343A42; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px">2</span><div style="min-width: 0; font-size: 13.5px; line-height: 1.55; color: #6F7985"><div style="font-size: 14px; font-weight: 600; color: #22262A">상품 맞춤 노출</div>상품상세에 그 상품 숏폼 자동 노출, PIP 미리보기</div></div>
+<div style="display: flex; gap: 10px; align-items: flex-start"><span style="flex: 0 0 20px; height: 20px; border-radius: 50%; background: #E0E5EB; color: #343A42; font-size: 10.5px; font-weight: 700; display: flex; align-items: center; justify-content: center; margin-top: 1px">3</span><div style="min-width: 0; font-size: 13.5px; line-height: 1.55; color: #6F7985"><div style="font-size: 14px; font-weight: 600; color: #22262A">스토리<span style="margin-left: 5px; font-size: 9.5px; font-weight: 700; color: #FFFFFF; background: #C52628; border-radius: 4px; padding: 1px 5px; vertical-align: 1px">NEW</span></div>브랜드 원을 누르면 바로 재생, 간단하게 적용<div style="margin-top: 6px"><a href="https://developer.shoplive.cloud/web/shortform/shoplive-web-shortform-guide-ko.html#m2" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 3px; font-size: 13px; font-weight: 600; color: #22262A; text-decoration: underline; text-underline-offset: 3px">적용 가이드<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"></path><path d="M8 7h9v9"></path></svg></a></div></div></div>
+</div>
+</div>
+<div style="max-width: 300px; width: 100%; justify-self: center; border-radius: 10px; overflow: hidden"><img src="assets/4ac4c7eaa25f3df92ee2c7074877b55f.jpg" alt="스토리 전시 예시: 브랜드 원을 누르면 그 브랜드 숏폼이 전체 화면으로 재생" style="display: block; width: 100%; height: auto"></div>
+</div>
+</div>
+</section>
+
+<!-- ── FOOTER ── -->
+<section style="background: #F3F5F7; border-top: 1px solid #E0E5EB">
+<div class="wrap" style="padding-top: 32px; padding-bottom: 40px">
+<p style="margin: 0; font-size: 12px; line-height: 1.7; color: #6F7985">© 2026 Shoplive. All rights reserved.</p>
+</div>
+</section>
+
+<!-- ── FLOATING CTA ── -->
+<div style="position: fixed; right: 24px; bottom: 24px; z-index: 100; display: flex; flex-direction: column; align-items: flex-end">
+<div id="ctaPanel" hidden role="dialog" aria-label="도입 문의" style="width: 320px; max-width: calc(100vw - 48px); background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 14px; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 12px 40px 0 rgba(12,14,19,0.18); padding: 22px; box-sizing: border-box; transform-origin: bottom right; animation: ctaIn 0.22s ease-out">
+<div style="display: flex; align-items: flex-start; gap: 10px">
+<span style="width: 36px; height: 36px; border-radius: 10px; background: #22262A; display: flex; align-items: center; justify-content: center; flex-shrink: 0"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M20 4L8.12 15.88"></path><path d="M14.47 14.48L20 20"></path><path d="M8.12 8.12L12 12"></path></svg></span>
+<div style="flex: 1"><div style="font-size: 16px; font-weight: 600; color: #22262A; line-height: 1.4">Clip Maker,<br>바로 사용해 보세요</div></div>
+<button type="button" aria-label="닫기" id="ctaClose" style="width: 32px; height: 32px; border: none; background: #F3F5F7; border-radius: 8px; font-size: 16px; color: #525B66; cursor: pointer; font-family: inherit">×</button>
+</div>
+<p style="margin: 14px 0 16px; font-size: 14px; line-height: 1.7; color: #525B66"><strong style="color: #22262A; font-weight: 600">ask@shoplive.cloud</strong> 또는 연락받으신 담당자에게 문의해 주세요.</p>
+<button type="button" id="ctaCopy" style="display: flex; width: 100%; align-items: center; justify-content: center; gap: 8px; height: 46px; border: none; border-radius: 8px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 600; color: #FFFFFF; background: #22262A"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"></rect><path d="M5 15V5a2 2 0 0 1 2-2h10"></path></svg><span id="ctaCopyLabel">ask@shoplive.cloud 복사하기</span></button>
+</div>
+
+<button type="button" class="cta-btn" id="ctaOpen" style="position: relative; overflow: hidden; display: inline-flex; align-items: center; gap: 10px; height: 50px; padding: 0 22px; border: none; border-radius: 9999px; background: #22262A; color: #FFFFFF; font-family: inherit; font-size: 15px; font-weight: 600; cursor: pointer; box-shadow: 0 1px 3px 0 rgba(12,14,19,0.16), 0 8px 24px 0 rgba(12,14,19,0.24)"><span class="cta-shine" aria-hidden="true"></span><span class="cta-dot" style="width: 8px; height: 8px; border-radius: 50%; background: #E83B3B"></span>Clip Maker 도입 문의</button>
+</div>
+
+
+</div>
+<script>
+var D = {"ui": {"title": "Shoplive Clip Maker 가이드", "langLabel": "언어 선택", "chipsA": ["상품 등장 구간 8개 발견", "AI 추천 구간 20개 발견"], "chipsB": ["방송 자막 자동 불러오기", "9:16 MP4로 영상 만들기"], "pills": ["AI 추천", "클릭순", "좋아요순", "채팅순", "시청자순", "유입순"], "searchOn": "후디 스타일링 보여주는 장면", "searchOff": "찾고 싶은 장면을 입력하세요", "reason": "화면과 발화가 검색어에 가장 가까운 구간", "copy": "ask@shoplive.cloud 복사하기", "copied": "이메일 주소가 복사되었어요", "clicks": "클릭", "sim": "유사도", "sec": "{n}초", "clipCount": "6개 구간"}, "ct": {"a": ["후디에 롱스커트, 의외로 찰떡이에요", "#오버핏후디", "#롱스커트"], "b": ["슬릿 디테일로 완성하는 실루엣", "#슬릿스커트", "#데일리룩"], "c": ["뒷모습까지 예쁜 후드 라인", "#후드라인", "#뒷태"], "d": ["오버핏인데 부해 보이지 않는 이유", "#오버핏", "#핏체크"], "e": ["후디 소재 가까이서 보기", "#소재", "#클로즈업"], "f": ["스커트 슬릿 길이 확인", "#슬릿", "#기장"]}, "gt": [["상품별", "상세페이지용 숏폼", "브이넥 오버핏 후디", "상품별", "상품이 화면에 등장한 구간을 상품마다 모아 보여줍니다.", "라이브 방송에 등록한 상품 이미지를 분석해, 각 상품이 화면에 등장한 구간을 찾아 추천합니다. 왼쪽 아래 상품 목록은 클릭 수 기준으로 정렬되며, 상품을 누르면 가운데에 해당 상품의 추천 구간이 나열됩니다. 추천 구간이 없는 상품은 하단에 접혀 있으며 펼쳐 볼 수 있습니다."], ["라이브 방송 데이터", "광고·SNS용 숏폼", "클릭순", "라이브 방송 데이터 (클릭 · 좋아요 · 채팅 · 시청자 · 유입)", "방송에서 수집된 데이터로 각 지표가 높게 측정된 구간을 찾아 추천합니다.", "지표별로 탭이 나뉘어 있어 목적에 맞는 기준을 바로 고를 수 있습니다."], ["AI 추천", "어디서 시작할지 모를 때", "AI 추천", "AI 추천", "방송에서 발화된 스크립트를 분석해 유의미한 구간을 골라줍니다.", "상품이나 지표와 관계없이 \"숏폼으로 쓸 만한 말\"이 나온 구간을 찾을 때 유용합니다. 상품 설명, 스타일링 제안, 착용 후기처럼 하나의 이야기로 완결되는 구간을 제목과 함께 제안합니다."], ["AI 장면 검색", "특정 장면을 찾을 때", "'후디 스타일링 보여주는 장면' 검색 결과", "AI 장면 검색", "찾고 싶은 장면을 문장으로 설명하면 방송 스크립트를 분석해 구간을 찾아줍니다.", "검색창 아래에는 이 방송에 맞춰 생성된 추천 검색어가 노출되어 클릭 한 번으로 검색할 수 있고, 검색 이력은 최근 검색에 남아 다시 볼 수 있습니다. 결과 제목 옆 ×를 누르면 원래 탭 목록으로 돌아갑니다."]], "code": "ko", "label": "한국어"};
+(function () {
+  var $ = function (id) { return document.getElementById(id); };
+  var esc = function (t) { return String(t).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); };
+
+  // demo strings (D, injected from the canvas artboard's script)
+  var U = D.ui;
+  var sec = function (n) { return U.sec.replace('{n}', n); };
+
+  // hero chips rotate every 3s
+  var tick = 0;
+  setInterval(function () {
+    tick++;
+    $('chipA').textContent = U.chipsA[tick % 2];
+    $('chipB').textContent = U.chipsB[tick % 2];
+  }, 3000);
+
+  // demo frames; cards zoom them slightly to trim their built-in corner badges
+  var F = {
+    t1: { src: 'assets/ac478e2cab4fa332e375cb79d81113e3.jpg', b: 1 },
+    t2: { src: 'assets/f813cca50a43788ef98312b37b459230.jpg', b: 1 },
+    t3: { src: 'assets/0758f1929b2f6aee02775e52ff3e4b71.jpg', b: 1 },
+    t4: { src: 'assets/7671f66a8f63b42b2eda7110836fd479.jpg', b: 1 },
+    t5: { src: 'assets/5f310d36cda95146759d87a633131846.jpg' },
+    t6: { src: 'assets/f0c6399cf5579a75c406de2def2eff01.jpg' }
+  };
+  var C = {
+    a: { f: 't1', start: '00:14:32', end: '00:14:52', dur: 20 },
+    b: { f: 't2', start: '00:08:17', end: '00:08:37', dur: 20 },
+    c: { f: 't3', start: '00:11:03', end: '00:11:23', dur: 20 },
+    d: { f: 't4', start: '00:16:07', end: '00:16:27', dur: 20 },
+    e: { f: 't5', start: '00:21:40', end: '00:21:58', dur: 18 },
+    f: { f: 't6', start: '00:23:05', end: '00:23:20', dur: 15 }
+  };
+  // pill indexes refer to U.pills (AI 추천, 클릭순, …); product and search tabs have no pill
+  var G = [
+    { pill: -1, num: '2-1', list: ['a', 'b', 'c', 'd', 'e', 'f'] },
+    { pill: 1, data: 1, num: '2-2', list: ['b', 'a', 'd', 'c', 'e', 'f'] },
+    { pill: 0, num: '2-3', list: ['c', 'a', 'e', 'd', 'f', 'b'] },
+    { pill: -1, search: 1, num: '2-4', list: ['a', 'd', 'b', 'c', 'e', 'f'] }
+  ];
+
+  var btnOn = 'display: block; width: 100%; color: #FFFFFF; background: #343A42; border: 1px solid #343A42; border-radius: 8px; padding: 12px 16px; box-shadow: 0 1px 0 0 rgba(12,14,19,0.04)';
+  var btnOff = 'display: block; width: 100%; color: #343A42; background: #FFFFFF; border: 1px solid #E0E5EB; border-radius: 8px; padding: 12px 16px; box-shadow: 0 1px 0 0 rgba(12,14,19,0.04)';
+  var hintOn = 'display: block; margin-top: 2px; font-size: 12px; font-weight: 500; color: #E0E5EB';
+  var hintOff = 'display: block; margin-top: 2px; font-size: 12px; font-weight: 500; color: #6F7985';
+  var pillOn = 'font-size: 10.5px; font-weight: 600; color: #22262A; border: 2px solid #343A42; border-radius: 9999px; padding: 3px 8px; background: #FFFFFF';
+  var pillOff = 'font-size: 10.5px; font-weight: 500; color: #343A42; border: 1px solid #E0E5EB; border-radius: 9999px; padding: 4px 9px; background: #FFFFFF';
+  var searchBase = 'position: relative; min-height: 64px; border-radius: 8px; padding: 9px 10px; box-sizing: border-box; ';
+
+  var feat = 0;
+  function render() {
+    var g = G[feat], t = D.gt[feat];
+
+    $('featTabs').innerHTML = G.map(function (x, i) {
+      var on = i === feat;
+      return '<button type="button" class="tabbtn" role="tab" data-i="' + i + '" aria-selected="' + on + '" style="' + (on ? btnOn : btnOff) + '">' +
+        '<span style="display: block; font-size: 14px; font-weight: 600">' + (i + 1) + '. ' + esc(D.gt[i][0]) + '</span>' +
+        '<span style="' + (on ? hintOn : hintOff) + '">' + esc(D.gt[i][1]) + '</span></button>';
+    }).join('');
+
+    $('pills').innerHTML = U.pills.map(function (label, i) {
+      return '<span style="' + (i === g.pill ? pillOn : pillOff) + '">' + esc(label) + '</span>';
+    }).join('');
+
+    $('searchBox').style.cssText = searchBase + (g.search ? 'border: 2px solid #2077F8; box-shadow: 0 0 0 3px #D1E3FF;' : 'border: 1px solid #E0E5EB;');
+    $('searchText').textContent = g.search ? U.searchOn : U.searchOff;
+    $('searchText').style.color = g.search ? '#22262A' : '#979FAA';
+    $('searchClose').hidden = !g.search;
+    $('midTitle').textContent = t[2];
+    $('midSub').textContent = U.clipCount;
+
+    $('clips').innerHTML = g.list.map(function (k, i) {
+      var c = C[k], fr = F[c.f], tx = D.ct[k];
+      var dur = sec(c.dur);
+      return '<div style="border: 1px solid #EAEDF1; border-radius: 8px; padding: 4px">' +
+        '<div style="position: relative; aspect-ratio: 296 / 530; border-radius: 5px; overflow: hidden; background: #C9A57F">' +
+        '<img src="' + fr.src + '" alt="" style="display: block; width: 100%; height: 100%; object-fit: cover; transform: scale(1.2)">' +
+        '<span style="position: absolute; top: 3%; left: 6%; width: 18%; aspect-ratio: 1 / 1; border-radius: 50%; background: rgba(12,14,19,0.55); border: 1.5px solid #FFFFFF; box-sizing: border-box"></span>' +
+        '</div>' +
+        '<div style="font-size: 10.5px; font-weight: 600; line-height: 1.35; color: #22262A; padding: 5px 1px 0; height: 34px; overflow: hidden">' + esc(tx[0]) + '</div>' +
+        '<div style="font-size: 9px; color: #525B66; padding: 2px 1px 0">' + c.start + ' – ' + c.end + ' · ' + esc(dur) + '</div>' +
+        '<div style="display: flex; flex-wrap: wrap; gap: 2px; padding: 3px 1px 1px">' +
+        '<span style="font-size: 8.5px; color: #525B66; background: #F3F5F7; border-radius: 3px; padding: 1px 4px">' + esc(tx[1]) + '</span>' +
+        '<span style="font-size: 8.5px; color: #525B66; background: #F3F5F7; border-radius: 3px; padding: 1px 4px">' + esc(tx[2]) + '</span>' +
+        '</div></div>';
+    }).join('');
+
+    $('clipTime').textContent = C[g.list[0]].start;
+    $('curNum').textContent = g.num;
+    $('curTitle').textContent = t[3];
+    $('curSub').textContent = t[4];
+    $('curDetail').textContent = t[5];
+    $('dataTable').hidden = !g.data;
+  }
+
+  $('featTabs').addEventListener('click', function (e) {
+    var b = e.target.closest('button[data-i]');
+    if (!b) return;
+    feat = +b.getAttribute('data-i');
+    render();
+  });
+  render();
+
+  // floating CTA
+  var copyBtn = $('ctaCopy'), copyLabel = $('ctaCopyLabel');
+  function setCopied(on) {
+    copyLabel.textContent = on ? U.copied : U.copy;
+    copyBtn.style.background = on ? '#108446' : '#22262A';
+  }
+  $('ctaOpen').addEventListener('click', function () {
+    $('ctaPanel').hidden = false;
+    $('ctaOpen').style.display = 'none';
+  });
+  $('ctaClose').addEventListener('click', function () {
+    $('ctaPanel').hidden = true;
+    $('ctaOpen').style.display = 'inline-flex';
+    setCopied(false);
+  });
+  copyBtn.addEventListener('click', function () {
+    var email = 'ask@shoplive.cloud';
+    var done = function () { setCopied(true); };
+    var fallback = function () {
+      try {
+        var ta = document.createElement('textarea');
+        ta.value = email; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+        document.body.appendChild(ta); ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+      } catch (e) {}
+      done();
+    };
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(email).then(done, fallback);
+      else fallback();
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
