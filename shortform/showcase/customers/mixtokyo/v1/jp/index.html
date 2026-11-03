@@ -5,6 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>mix.tokyo × Shoplive ShowCase 連携ガイド</title>
 <link rel="canonical" href="https://gtm.shoplive.cloud/shortform/showcase/customers/mixtokyo/v1/jp/">
+<script>
+// 옛 주소(shoplive.github.io/gtm/*)로 들어오면 정규 주소로 보낸다. CloudFront 가 같은 HTML 을
+// gtm.shoplive.cloud 로도 서빙하므로 호스트를 확인해야 한다 — 안 하면 무한 루프가 된다.
+(function () {
+  if (location.hostname !== "shoplive.github.io") return;
+  var path = location.pathname.replace(/^\/gtm(?=\/|$)/, "") || "/";
+  location.replace("https://gtm.shoplive.cloud" + path + location.search + location.hash);
+})();
+</script>
 <style>
   @font-face {
     font-family: 'Pretendard';
