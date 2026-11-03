@@ -4,7 +4,17 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shoplive Studio App v3.0 GTM Guide</title>
-<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
+<link rel="canonical" href="https://gtm.shoplive.cloud/studio/app/v2/us/">
+<script>
+// 옛 주소(shoplive.github.io/gtm/*)로 들어오면 정규 주소로 보낸다. CloudFront 가 같은 HTML 을
+// gtm.shoplive.cloud 로도 서빙하므로 호스트를 확인해야 한다 — 안 하면 무한 루프가 된다.
+(function () {
+  if (location.hostname !== "shoplive.github.io") return;
+  var path = location.pathname.replace(/^\/gtm(?=\/|$)/, "") || "/";
+  location.replace("https://gtm.shoplive.cloud" + path + location.search + location.hash);
+})();
+</script>
+<link rel="icon" href="../../../../favicon.svg" type="image/svg+xml">
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
 
