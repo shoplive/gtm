@@ -303,12 +303,12 @@
 </header>
 
 <main>
-  <h1>mix.tokyo 商品詳細ページ Shoplive ShowCase 連携ガイド</h1>
-  <p class="intro">商品画像ギャラリー領域をショートフォームコンテンツに置き換えるShowCase機能を、mix.tokyoの商品詳細ページ構造に合わせて連携する方法です。</p>
+  <h1>mix.tokyo 商品詳細ページ向け Shoplive ShowCase連携ガイド</h1>
+  <p class="intro">商品画像ギャラリーをショートフォームコンテンツに置き換えるShowCase機能を、mix.tokyoの商品詳細ページ構造に合わせて連携する方法です。</p>
 
   <section id="what">
     <h2><span class="mark">1</span>ShowCase機能概要</h2>
-    <p>商品詳細ページのメイン画像・サムネイル領域に、その商品と連携されたショートフォームカード(動画または画像)を表示します。新しいウィンドウやバナーを表示する方式ではなく、既存の画像ギャラリー領域を置き換える方式です。</p>
+    <p>商品詳細ページのメイン画像・サムネイル領域に、その商品と連携されたショートフォームカード(動画または画像)を表示します。新しいウィンドウやバナーを表示するのではなく、既存の画像ギャラリー領域を置き換える方式です。</p>
     <div class="note">
       <span class="ico">💡</span>
       <p>サムネイル領域は動画または画像で構成できます。マルチカード機能を使うと、1つの商品に動画と画像を組み合わせて最大20枚まで登録できます。詳細は<a href="https://gtm.shoplive.cloud/shortform/multicard/v1/jp/index.html" target="_blank" rel="noopener">マルチカードガイド</a>をご確認ください。</p>
@@ -342,7 +342,7 @@
   }
 &lt;/script&gt;</pre>
       </div>
-      <p>商品と連携するショートフォームを別途指定する必要はありません。現在のページURLを基準に連携されたショートフォームを照会します。</p>
+      <p>商品と連携するショートフォームを個別に指定する必要はありません。現在のページURLを基準に連携されたショートフォームを照会します。</p>
     </div>
 
     <div class="step">
@@ -370,10 +370,10 @@
       <table>
         <thead><tr><th>reason</th><th>意味</th></tr></thead>
         <tbody>
-          <tr><td><code>CUSTOMER_SETTINGS_DISABLED</code></td><td>顧客単位でShowCaseの表示がオフになっている — Shoplive担当者に有効化を依頼してください</td></tr>
+          <tr><td><code>CUSTOMER_SETTINGS_DISABLED</code></td><td>顧客単位でShowCase表示が無効になっている — Shoplive担当者に有効化を依頼してください</td></tr>
           <tr><td><code>NO_SHORTS</code></td><td>現在のページURLに連携されたショートフォームがない</td></tr>
           <tr><td><code>USE_SHOWCASE_DISABLED</code></td><td>ショートフォームは存在するが、そのショートフォームのShowCase表示設定がオフになっている</td></tr>
-          <tr><td><code>EMPTY_CARDS</code></td><td>連携されたショートフォームに表示するカードがない</td></tr>
+          <tr><td><code>EMPTY_CARDS</code></td><td>連携されたショートフォームに表示対象のカードが存在しない</td></tr>
           <tr><td><code>FETCH_ERROR</code></td><td>照会リクエスト自体が失敗(ネットワーク、accessKeyなど)</td></tr>
         </tbody>
       </table>
@@ -388,7 +388,7 @@
     <h2><span class="mark">F</span>FAQ</h2>
 
     <h3>商品ごとにショートフォームを直接指定する必要がありますか?</h3>
-    <p>現在のページアドレスを基準に連携されたショートフォームを自動的に照会します。別途のマッピングは必要ありません。</p>
+    <p>現在のページURLを基準に連携されたショートフォームを自動的に照会します。別途のマッピングは必要ありません。</p>
 
     <h3>連携したのにShowCaseが表示されません。</h3>
     <p>ShowCaseは連携コードとは別に、Shoplive側の表示設定がオンになっている必要があります。連携後も表示されない場合は、Shoplive担当者に表示の有効化状況を確認してください。その他の原因は上記4番の<code>reason</code>の値で確認します。</p>
@@ -397,10 +397,10 @@
     <p><code>&lt;product-media&gt;</code>は、デスクトップ用カルーセル(<code>hidden-pocket</code>)とモバイル用カルーセル(<code>hidden-lap-and-up</code>)の両方を1つで包んでいます。ShowCaseを1回呼び出すだけで、デスクトップとモバイルの両方に適用されます。</p>
 
     <h3>色を変更すると別のカードが表示されますか?</h3>
-    <p>ShowCaseはオプション選択とは関係なく、ページに連携されたカードを表示します。カラーオプションを変更しても、画面に表示されるカードは変わりません。これはShowCaseの基本動作です。</p>
+    <p>ShowCaseはオプション選択とは関係なく、ページに連携されたカードを表示します。カラーオプションを変更しても、表示されるカードは切り替わりません。これはShowCaseの基本動作です。</p>
 
     <h3>PreviewとShowCaseを同時に使用するとどうなりますか?</h3>
-    <p>すでにPreview機能を使用しているページにShowCaseを追加で適用すると、両方の機能がそれぞれ動画を表示するため、画面に動画が2つ表示される場合があります。表示方法の調整が必要な場合は、Shoplive担当者にご相談ください。</p>
+    <p>すでにPreview機能を使用しているページにShowCaseを追加で適用すると、両方の機能が動画を表示するため、画面に動画が2つ表示される場合があります。表示方法の調整が必要な場合は、Shoplive担当者にご相談ください。</p>
   </section>
 
   <footer class="doc-end">
