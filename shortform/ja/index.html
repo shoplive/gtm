@@ -287,7 +287,7 @@ html[lang=en] .h1{font-size:36px}html[lang=en] .d-hero .h2{font-size:29px}
 .checks li{position:relative;padding-left:24px;font-size:14px;line-height:1.6;color:var(--ink2)}
 .checks li::before{content:"";position:absolute;left:2px;top:6px;width:12px;height:7px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
 
-/* 구성 방법 */
+/* how-to steps */
 .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
 .stp{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px 24px;position:relative}
 .stp em{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-size:13px;font-weight:700;margin-bottom:14px}
@@ -467,7 +467,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
  </div>
 </nav>
 
-<!-- 1. 숏폼 소개 -->
+<!-- 1. Intro -->
 <section id="intro">
  <div class="wrap">
   <div class="hero">
@@ -498,7 +498,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
  </div>
 </section>
 
-<!-- 2. 네 가지 전시 방법 -->
+<!-- 2. Four ways to display -->
 <section id="display" class="sec-white">
  <div class="wrap">
   <div class="sec-head center">
@@ -527,7 +527,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
  </div>
 </section>
 
-<!-- 3. 상세 -->
+<!-- 3. Details -->
 <div id="detail">
  <div class="subnav">
   <div class="subnav-in" role="tablist" aria-label="表示方法を選択">
@@ -539,7 +539,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
   </div>
  </div>
 
- <!-- 컬렉션 -->
+ <!-- Collection -->
  <section class="panel" id="p-collection" role="tabpanel" hidden>
   <div class="wrap">
    <div class="d-hero">
@@ -614,7 +614,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
   </div>
  </section>
 
- <!-- 상품 프리뷰 -->
+ <!-- Product preview -->
  <section class="panel" id="p-preview" role="tabpanel" hidden>
   <div class="wrap">
    <div class="d-hero">
@@ -677,7 +677,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
   </div>
  </section>
 
- <!-- 쇼케이스 -->
+ <!-- Showcase -->
  <section class="panel" id="p-showcase" role="tabpanel" hidden>
   <div class="wrap">
    <div class="d-hero">
@@ -735,7 +735,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
   </div>
  </section>
 
- <!-- 스토리 -->
+ <!-- Story -->
  <section class="panel" id="p-story" role="tabpanel" hidden>
   <div class="wrap">
    <div class="d-hero">
@@ -805,7 +805,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
  </section>
 </div>
 
-<!-- 4. 문의 -->
+<!-- 4. Contact -->
 <section id="contact" class="sec-white">
  <div class="wrap">
   <div class="cta">
@@ -858,12 +858,12 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
   });
   window.addEventListener('popstate',function(){render(current())});
 
-  // 초기 진입: ?display= 가 있으면 그 섹션으로 바로 이동
+  // Initial load: jump to the section given by ?display=
   var hasParam=new URLSearchParams(location.search).has('display');
   render(current());
   if(hasParam){ setTimeout(function(){document.getElementById('detail').scrollIntoView();},0); }
 
-  // 언어 메뉴: 현재 ?display= 를 유지하고, 바깥을 누르면 닫는다
+  // Language menu: keep the current ?display= and close on outside click
   (function(){
     var m=document.querySelector('.langmenu'); if(!m) return;
     function sync(){ var k=new URLSearchParams(location.search).get('display'); m.querySelectorAll('.lang-list a').forEach(function(a){ var u=a.getAttribute('data-href')||a.getAttribute('href'); a.setAttribute('data-href',u); a.setAttribute('href', k?u+'?display='+k:u); }); }
@@ -872,7 +872,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     document.addEventListener('click',function(e){ if(m.open && !m.contains(e.target)) m.open=false; });
   })();
 
-  // 링크 복사
+  // Copy link
   var share=document.querySelector('[data-share]');
   share.addEventListener('click',function(){
     var u=new URL(location.href);u.searchParams.set('display',current());u.hash='';
@@ -880,7 +880,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     try{navigator.clipboard.writeText(s).then(function(){show(NAMES[current()]+' リンクをコピーしました')},function(){show(s)})}catch(e){show(s)}
   });
 
-  // 메일 복사
+  // Copy email address
   document.querySelectorAll('[data-copy]').forEach(function(b){
     b.addEventListener('click',function(){
       var mail='ask@shoplive.cloud';
@@ -888,7 +888,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     });
   });
 
-  // 선택 카드 영상: 시작 시점과 재생 시작을 엇갈리게
+  // Selector card videos: stagger start offset and playback start
   document.querySelectorAll('video.stagger').forEach(function(v){
     var i=+v.getAttribute('data-i');
     function start(){
@@ -898,7 +898,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     if(v.readyState>=1) start(); else v.addEventListener('loadedmetadata',start,{once:true});
   });
 
-  // 컬렉션: 보이는 카드만 재생, 카드마다 시작 시점・시작 타이밍을 다르게
+  // Collection: play only visible cards, with different start offsets and timing
   function syncCollectionVideos(){
     document.querySelectorAll('video.cv').forEach(function(v){
       var visible=v.offsetParent!==null;
@@ -936,7 +936,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!pl.hidden) close(); });
   })();
 
-  // 가로형: 마우스・터치로 끌어서 넘기기 + 진행 바
+  // Horizontal: drag with mouse/touch + progress bar
   document.querySelectorAll('.hrow.drag').forEach(function(row){
     var down=false,sx=0,sl=0,moved=false,bar=row.parentNode.querySelector('.hbar span');
     function upd(){ if(!bar) return; var max=row.scrollWidth-row.clientWidth; var w=row.clientWidth/row.scrollWidth*100; bar.style.width=w+'%'; bar.style.transform='translateX('+(max>0?row.scrollLeft/max*(100/w*100-100):0)+'%)'; }
@@ -948,7 +948,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     new MutationObserver(upd).observe(row.parentNode,{attributes:true,attributeFilter:['hidden']}); setTimeout(upd,0);
   });
 
-  // 스토리 데스크톱 목업: 원 클릭 → 전체화면 플레이어
+  // Story desktop mock: click a ring to open the fullscreen player
   (function(){
     var page=document.querySelector('.st-desk .sd-page'); if(!page) return;
     var pl=page.querySelector('.sd-player'), vid=pl.querySelector('.sd-video'), img=pl.querySelector('.sd-img'),
@@ -974,7 +974,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!pl.hidden) close(); });
   })();
 
-  // 상품 프리뷰: 드래그로 이동, 클릭하면 크게
+  // Product preview: drag to move, click to enlarge
   (function(){
     var page=document.querySelector('.pv-page'); if(!page) return;
     var pip=page.querySelector('.pv-pip'), pl=page.querySelector('.pv-player'), big=pl.querySelector('.pv-video'),
@@ -1010,7 +1010,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     restore.addEventListener('click',function(){ pip.hidden=false; restore.hidden=true; pip.style.cssText=''; });
   })();
 
-  // 쇼케이스 썸네일 클릭 → 메인 카드 전환
+  // Showcase: click a thumbnail to switch the main card
   (function(){
     var stage=document.querySelector('#p-showcase .sc-stage'); if(!stage) return;
     var vid=stage.querySelector('.sc-video'), img=stage.querySelector('.sc-img'),
@@ -1027,7 +1027,7 @@ footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
     });
   })();
 
-  // 컬렉션 형태 미리보기 전환
+  // Collection layout preview switch
   document.querySelectorAll('[data-col]').forEach(function(b){
     b.addEventListener('click',function(){
       var v=b.getAttribute('data-col');
