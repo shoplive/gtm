@@ -1,0 +1,1042 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shortform Guide | Shoplive</title>
+<link rel="canonical" href="https://gtm.shoplive.cloud/shortform/en/">
+<meta name="description" content="Create Shortforms from live streams or uploaded videos and display them on your own store four ways: Collection, Product Preview, Showcase, and Story.">
+<link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+<link rel="alternate" hreflang="ko" href="https://gtm.shoplive.cloud/shortform/">
+<link rel="alternate" hreflang="en" href="https://gtm.shoplive.cloud/shortform/en/">
+<link rel="alternate" hreflang="ja" href="https://gtm.shoplive.cloud/shortform/ja/">
+<link rel="alternate" hreflang="x-default" href="https://gtm.shoplive.cloud/shortform/">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
+<style>
+:root{--ink:#22262A;--ink2:#343A42;--sub:#525B66;--mute:#6F7985;--line:#E0E5EB;--line2:#EAEDF1;--bg:#F3F5F7;--bg2:#F9FAFB;--red:#C52628;--blue:#2554D9;--blue-bg:#EEF3FF;--green:#0FA954}
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+section[id],div[id]{scroll-margin-top:52px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Pretendard',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:#0A62E6}a:hover{color:#0551C2}
+img{display:block;max-width:100%}
+button{font:inherit}
+.wrap{max-width:980px;margin:0 auto;padding:88px 40px}
+.eyebrow{display:inline-block;font-size:12px;font-weight:600;color:#fff;background:var(--red);padding:4px 12px;border-radius:4px;margin-bottom:16px;letter-spacing:.2px}
+.h1{font-size:40px;font-weight:700;line-height:1.3;letter-spacing:-1px;margin:0 0 18px}
+.h2{font-size:30px;font-weight:600;line-height:1.38;letter-spacing:-.6px;margin:0 0 14px}
+.h3{font-size:19px;font-weight:600;line-height:1.45;margin:0 0 10px;letter-spacing:-.2px}
+.lead{font-size:16px;line-height:1.75;color:var(--sub);max-width:660px;margin:0}
+.muted{color:var(--mute)}
+.sec-white{background:#fff}
+.sec-head{margin-bottom:40px}
+.center{text-align:center}.center .lead{margin:0 auto}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.96);border-bottom:1px solid var(--line);backdrop-filter:saturate(1.4) blur(6px)}
+.nav-in{max-width:980px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:20px;height:52px}
+.brand{display:flex;align-items:center;gap:8px;font-size:14px;font-weight:700;color:var(--ink);text-decoration:none;white-space:nowrap}
+.brand b{font-weight:500;color:var(--mute)}
+.navtabs{display:flex;overflow-x:auto;scrollbar-width:none;min-width:0;margin-left:auto}
+.navtabs::-webkit-scrollbar{display:none}
+.navtab{display:flex;align-items:center;height:52px;padding:0 14px;font-size:13px;font-weight:500;color:var(--mute);text-decoration:none;white-space:nowrap;border-bottom:2px solid transparent}
+.navtab:hover{color:var(--ink);border-bottom-color:var(--ink)}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 20px;border-radius:8px;font-size:15px;font-weight:600;text-decoration:none;cursor:pointer;border:1px solid transparent}
+.btn-dark{background:var(--ink);color:#fff}.btn-dark:hover{background:var(--ink2);color:#fff}
+.btn-line{background:#fff;color:var(--ink);border-color:var(--line)}.btn-line:hover{color:var(--ink);border-color:#C9D0D8}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+
+/* lang menu */
+.langmenu{position:relative;flex-shrink:0;margin-left:4px}
+.langmenu summary{list-style:none;display:flex;align-items:center;gap:6px;height:34px;padding:0 10px;border:1px solid var(--line);border-radius:8px;background:#fff;font-size:13px;font-weight:500;color:var(--ink);cursor:pointer;white-space:nowrap}
+.langmenu summary::-webkit-details-marker{display:none}
+.langmenu summary:hover{border-color:#C9D0D8}
+.lang-list{position:absolute;right:0;top:calc(100% + 6px);z-index:60;min-width:140px;background:#fff;border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 3px rgba(12,14,19,.16),0 8px 24px rgba(12,14,19,.12);padding:4px;display:flex;flex-direction:column;gap:2px}
+.lang-list a{display:block;padding:8px 10px;border-radius:6px;font-size:13px;text-decoration:none;color:var(--ink)}
+.lang-list a:hover{background:var(--bg2)}
+.lang-list a.on{font-weight:600;background:var(--bg)}
+html[lang=ja] body{word-break:normal;line-break:strict;overflow-wrap:anywhere}
+html[lang=en] body{word-break:normal;overflow-wrap:break-word}
+html[lang=ja] .h1{font-size:34px;letter-spacing:-.5px}html[lang=ja] .d-hero .h2,html[lang=ja] .h2{font-size:27px;letter-spacing:-.3px}
+html[lang=en] .h1{font-size:36px}html[lang=en] .d-hero .h2{font-size:29px}
+.ring .logo,.cv-t,.st-l,.sd-name,.hprod em,.sl-t{word-break:keep-all;overflow-wrap:normal}
+.ring .logo{white-space:nowrap}
+@media (max-width:768px){html[lang=ja] .h1{font-size:26px}html[lang=ja] .h2,html[lang=ja] .d-hero .h2{font-size:22px}html[lang=en] .h1{font-size:27px}html[lang=en] .d-hero .h2{font-size:24px}}
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:48px;align-items:center}
+.hero-stats{display:flex;flex-wrap:wrap;gap:0;margin-top:32px;border-top:1px solid var(--line)}
+.hero-stats div{flex:1 1 140px;padding:16px 16px 0 0;font-size:13px;line-height:1.6;color:var(--sub)}
+.hero-stats b{display:block;font-size:15px;color:var(--ink);font-weight:600;margin-bottom:2px}
+.flowline{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:28px}
+.flowline span{font-size:13px;font-weight:600;color:var(--ink2);background:#fff;border:1px solid var(--line);border-radius:99px;padding:8px 14px}
+.flowline i{font-style:normal;color:var(--mute);font-size:14px}
+.flowline span.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+
+/* hero collage: 4 mini mocks */
+.collage{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.mini{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px;box-shadow:0 1px 3px rgba(12,14,19,.06);position:relative;overflow:hidden}
+.mini .lb{position:absolute;left:10px;top:10px;z-index:2;font-size:10px;font-weight:700;color:#fff;background:var(--ink);border-radius:4px;padding:2px 6px}
+.mini img{width:100%;height:100%;object-fit:cover}
+.m-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;margin-top:22px}
+.m-grid div{aspect-ratio:9/16;border-radius:4px;overflow:hidden;background:#ddd}
+.m-pdp{display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-top:22px}
+.m-pdp .sk{height:6px;border-radius:3px;background:var(--line2);margin-bottom:6px}
+.m-pdp .ph{aspect-ratio:3/4;border-radius:4px;background:var(--line2)}
+.m-pip{position:absolute;right:10px;bottom:10px;width:36%;aspect-ratio:9/16;border-radius:6px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,.25);border:2px solid #fff}
+.m-sc{aspect-ratio:3/4;border-radius:4px;overflow:hidden;position:relative}
+.m-sc i{position:absolute;left:4px;right:4px;top:4px;display:flex;gap:2px}
+.m-sc i b{flex:1;height:2px;background:rgba(255,255,255,.5)}.m-sc i b:first-child{background:#fff}
+.m-tray{display:flex;gap:6px;margin-top:22px}
+.m-tray span{width:30px;height:30px;border-radius:50%;padding:2px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);flex:0 0 30px}
+.m-tray span.s{background:#dbdbdb}
+.m-tray span img{width:100%;height:100%;border-radius:50%;border:1.5px solid #fff}
+.m-tray + .m-grid{margin-top:8px}
+
+/* 4 selector cards */
+.sel{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+.sel-card{position:relative;text-align:left;background:#fff;border:1px solid var(--line);border-radius:14px;padding:0;cursor:pointer;overflow:hidden;transition:transform .15s,box-shadow .15s,border-color .15s;color:var(--ink)}
+.sel-card:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(12,14,19,.08);border-color:#C9D0D8}
+.sel-card[aria-pressed=true]{border-color:var(--ink);box-shadow:0 0 0 2px var(--ink)}
+.sel-card .thumb{height:170px;background:var(--bg2);border-bottom:1px solid var(--line2);display:flex;align-items:center;justify-content:center;overflow:hidden;padding:16px}
+.sel-card .thumb.pdp-thumb{align-items:flex-end;padding-bottom:0}
+.rec{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.rec span{font-size:11px;font-weight:600;color:var(--ink2);background:var(--bg);border:1px solid var(--line2);border-radius:99px;padding:4px 9px}
+.rec span::before{content:"";display:inline-block;width:5px;height:5px;border-radius:50%;background:var(--green);margin-right:5px;vertical-align:1px}
+.sel-card .body{padding:18px 20px 20px}
+.sel-card .no{font-size:12px;font-weight:700;color:var(--red);letter-spacing:.4px}
+.sel-card h3{margin:6px 0 8px;font-size:18px;font-weight:600;letter-spacing:-.2px}
+.sel-card p{margin:0;font-size:13px;line-height:1.6;color:var(--sub)}
+.sel-card .more{display:inline-flex;align-items:center;gap:4px;margin-top:14px;font-size:13px;font-weight:600;color:var(--blue)}
+.sel-card[aria-pressed=true] .more{color:var(--ink)}
+.tag-new{display:inline-block;margin-left:6px;font-size:10px;font-weight:700;color:#fff;background:var(--blue);border-radius:3px;padding:1px 5px;vertical-align:2px}
+/* thumb mocks for selector */
+.t-grid{display:grid;grid-template-columns:repeat(3,44px);gap:4px}
+.t-grid div{aspect-ratio:9/16;border-radius:4px;overflow:hidden}
+.t-grid img{width:100%;height:100%;object-fit:cover}
+.t-pdp{width:170px;background:#fff;border:1px solid var(--line);border-radius:8px 8px 0 0;padding:10px;position:relative;height:100%}
+.t-pdp .sk{height:6px;border-radius:3px;background:var(--line2);margin-bottom:6px}
+.t-pdp .big{height:60px;border-radius:4px;background:var(--line2);margin-bottom:8px}
+.t-pdp .pip{position:absolute;right:8px;bottom:8px;width:40px;aspect-ratio:9/16;border-radius:5px;overflow:hidden;border:2px solid #fff;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+.t-pdp .pip img{width:100%;height:100%;object-fit:cover}
+.t-pdp .sc{position:absolute;left:10px;top:10px;width:66px;height:112px;border-radius:5px;overflow:hidden}
+.t-pdp .sc img{width:100%;height:100%;object-fit:cover}
+.t-pdp .sc i{position:absolute;left:4px;right:4px;top:4px;display:flex;gap:2px}
+.t-pdp .sc i b{flex:1;height:2px;background:rgba(255,255,255,.5)}.t-pdp .sc i b:first-child{background:#fff}
+.t-tray{display:flex;gap:8px}
+.t-tray span{width:40px;height:40px;border-radius:50%;padding:2.5px;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}
+.t-tray span.s{background:#dbdbdb}
+.t-tray span img{width:100%;height:100%;border-radius:50%;border:2px solid #fff;object-fit:cover}
+
+.t-grid video,.t-pdp .pip video,.t-pdp .sc video{width:100%;height:100%;object-fit:cover;display:block}
+/* story mock v2 */
+.ring .logo{display:flex;align-items:center;justify-content:center;width:100%;height:100%;border-radius:50%;border:2px solid #fff;box-sizing:border-box;font-size:10px;letter-spacing:.3px;overflow:hidden}
+.lg1{background:#111;color:#fff;font-family:Georgia,'Times New Roman',serif;font-weight:700;letter-spacing:.6px!important;font-size:8px!important}
+.lg2{background:#EFE6DA;color:#5A4632;font-family:Georgia,'Times New Roman',serif;font-style:italic;font-size:11px!important}
+.lg2 b{font-style:normal;font-weight:700;margin-left:1px}
+.sl-list{border-top:1px solid var(--line2);padding:12px 12px 14px}
+.sl-head{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:8px}
+.sl-head b{font-size:13px;font-weight:700}
+.sl-head span{font-size:11px;color:var(--mute)}
+.sl-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.sl-card{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#ddd}
+.sl-card img,.sl-card video{width:100%;height:100%;object-fit:cover;display:block}
+.sl-card img{transform:scale(1.22)}
+.sl-new{position:absolute;left:6px;top:6px;font-size:9px;font-weight:700;color:#fff;background:var(--red);border-radius:3px;padding:1px 5px}
+.sl-t{margin:6px 0 4px;font-size:11px;font-weight:600;line-height:1.35;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sl-p{display:flex;align-items:center;gap:5px;font-size:11px;font-weight:700;color:var(--ink)}
+.sl-p b{flex:0 0 22px;height:22px;border-radius:4px;overflow:hidden;background:var(--line2)}
+.sl-p b img{width:100%;height:100%;object-fit:cover;transform:scale(1.22)}
+/* story desktop mock */
+.lg3{background:#fff;color:#111;font-weight:800;letter-spacing:1px;font-size:9px!important;border:2px solid #fff;box-shadow:inset 0 0 0 1px var(--line)}
+.sd-page{position:relative;padding:14px 16px 16px;min-height:330px}
+.sd-head{display:flex;align-items:center;gap:14px;font-size:11px;color:var(--sub);padding-bottom:10px;border-bottom:1px solid var(--line2)}
+.sd-head b{font-size:13px;font-weight:800;color:var(--ink);margin-right:auto;letter-spacing:-.3px}
+.sd-tray{position:relative;display:flex;gap:6px;padding:14px 0 12px}
+.sd-tray .st{background:none;border:none;padding:0;cursor:pointer;font:inherit;width:58px;flex:0 0 58px}
+.sd-tray .ring{width:50px;height:50px;transition:transform .15s}
+.sd-tray .st:hover .ring{transform:scale(1.06)}
+.sd-tray .st-l{font-size:10px}
+.sd-tray .st.pulse .ring{animation:ringPulse 1.6s ease-out infinite}
+@keyframes ringPulse{0%{box-shadow:0 0 0 0 rgba(37,84,217,.45)}100%{box-shadow:0 0 0 10px rgba(37,84,217,0)}}
+.sd-hint{display:none;font-size:11px;font-weight:600;color:var(--blue);background:var(--blue-bg);border-radius:99px;padding:5px 10px;animation:hint 1.8s ease-in-out infinite}
+.sd-hint::before{content:"← ";}
+@keyframes hint{50%{transform:translateX(-4px)}}
+.sd-body{display:grid;gap:10px}
+.sd-banner{height:78px;border-radius:8px;background:linear-gradient(90deg,#EFE6DA,#E6DCCF)}
+.sd-prods{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.sd-prods div{display:grid;gap:4px}
+.sd-prods i{aspect-ratio:1;border-radius:6px;background:var(--line2)}
+.sd-prods span{height:5px;border-radius:3px;background:var(--line2)}.sd-prods span:last-child{width:50%}
+.sd-player{position:absolute;inset:0;background:rgba(10,12,15,.88);display:flex;align-items:center;justify-content:center;animation:sdIn .25s ease-out}
+.sd-player[hidden]{display:none}
+@keyframes sdIn{from{opacity:0}to{opacity:1}}
+.sd-frame{position:relative;height:calc(100% - 20px);aspect-ratio:9/16;border-radius:10px;overflow:hidden;background:#000;animation:sdUp .3s ease-out}
+@keyframes sdUp{from{transform:scale(.92)}to{transform:none}}
+.sd-video,.sd-img{width:100%;height:100%;object-fit:cover;display:block}
+.sd-img{transform:scale(1.22)}
+.sd-img[hidden],.sd-video[hidden]{display:none}
+.sd-prog{position:absolute;left:8px;right:8px;top:8px;display:flex;gap:3px;z-index:2}
+.sd-prog span{flex:1;height:2px;border-radius:2px;background:rgba(255,255,255,.35)}
+.sd-prog span.on{background:#fff}
+.sd-top{position:absolute;left:8px;right:8px;top:16px;display:flex;align-items:center;gap:6px;z-index:2;color:#fff;font-size:11px}
+.sd-av{width:20px;height:20px;border-radius:50%;background:#111;border:1px solid rgba(255,255,255,.6);display:flex;align-items:center;justify-content:center;font-size:5px;font-weight:700;letter-spacing:.3px;overflow:hidden}
+.sd-x{margin-left:auto;background:none;border:none;color:#fff;font-size:18px;line-height:1;cursor:pointer;padding:0 2px}
+.sd-prod{position:absolute;left:8px;right:8px;bottom:8px;z-index:2;display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.95);border-radius:6px;padding:5px;font-size:10px;color:var(--ink)}
+.sd-prod b{flex:0 0 26px;height:26px;border-radius:4px;overflow:hidden}
+.sd-prod b img{width:100%;height:100%;object-fit:cover;transform:scale(1.22)}
+.sd-prod span{flex:1;min-width:0;font-weight:700;line-height:1.3}
+.sd-prod em{display:block;font-style:normal;font-weight:500;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.sd-prod i{font-style:normal;font-weight:700;background:var(--ink);color:#fff;border-radius:4px;padding:4px 7px}
+@media (max-width:768px){.sd-hint{display:none}.sd-tray{overflow-x:auto;scrollbar-width:none}.sd-prods{grid-template-columns:repeat(2,1fr)}}
+.pip video{width:100%;height:100%;object-fit:cover;display:block}
+.stp h4 .opt{font-size:12px;font-weight:600;color:var(--mute)}
+/* preview interactive */
+.pv-page{position:relative;overflow:hidden}
+.pv-photo{aspect-ratio:3/4;border-radius:8px;overflow:hidden;background:var(--line2)}
+.pv-photo img{width:100%;height:100%;object-fit:cover;transform:scale(1.22)}
+.pv-pip{right:16px;bottom:16px;width:24%;cursor:grab;touch-action:none;user-select:none;-webkit-user-select:none;z-index:3;transition:box-shadow .15s}
+.pv-pip:hover{box-shadow:0 10px 28px rgba(0,0,0,.35)}
+.pv-pip.drag{cursor:grabbing;box-shadow:0 14px 32px rgba(0,0,0,.4);animation:none}
+.pv-pip video{pointer-events:none}
+.pv-pip .x{border:none;cursor:pointer;padding:0;line-height:1;z-index:2}
+.pv-restore{position:absolute;right:16px;bottom:16px;z-index:3;font:inherit;font-size:11px;font-weight:600;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 10px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+.pv-restore[hidden]{display:none}
+.pv-player{position:absolute;inset:0;z-index:5;background:rgba(10,12,15,.88);display:flex;align-items:center;justify-content:center;animation:sdIn .25s ease-out}
+.pv-player[hidden]{display:none}
+.pv-video{width:100%;height:100%;object-fit:cover;display:block}
+/* collection v2 */
+.cv-mock .col-mock{position:relative}
+.cv-card{cursor:pointer}
+.cv-card video{width:100%;height:100%;object-fit:cover;display:block}
+.gcard::after{display:none}
+.cv-meta{position:absolute;left:6px;top:6px;display:flex;align-items:center;gap:4px;z-index:1}
+.cv-meta .pl{position:relative!important;left:auto!important;top:auto!important;width:16px;height:16px;background:#fff!important;border-radius:50%}
+.cv-meta .pl::after{content:"";position:absolute;left:6px;top:4px;border-left:6px solid #111!important;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.cv-meta .vw{font-size:9px;font-weight:600;color:#fff;background:rgba(0,0,0,.45);border-radius:99px;padding:2px 6px}
+.cv-meta .vw::before{content:"👤 ";font-size:8px}
+.cv-t{position:absolute;left:6px;right:6px;bottom:6px;font-size:9px;font-weight:600;color:#fff;line-height:1.3;text-shadow:0 1px 3px rgba(0,0,0,.6);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv-card:hover video{filter:brightness(1.06)}
+.hrow{display:flex;gap:8px;overflow:hidden}
+.hitem{flex:0 0 23%;min-width:0}
+.hcard2{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#ddd}
+.hprod{display:flex;gap:6px;align-items:flex-start;margin-top:6px}
+.hprod b{flex:0 0 30px;height:30px;border-radius:4px;overflow:hidden;background:var(--line2)}
+.hprod b img{width:100%;height:100%;object-fit:cover;transform:scale(1.22)}
+.hprod span{min-width:0;font-size:9px;font-weight:700;color:var(--ink);line-height:1.35}
+.hprod em{display:block;font-style:normal;font-weight:500;color:var(--ink2);overflow:hidden;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.cv-player{position:absolute;inset:0;z-index:5;background:rgba(10,12,15,.88);display:flex;align-items:center;justify-content:center;animation:sdIn .25s ease-out;border-radius:0 0 16px 16px}
+.cv-player[hidden]{display:none}
+.cv-player .sd-frame{height:calc(100% - 24px);max-height:420px}
+.cv-name{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.cv-big{width:100%;height:100%;object-fit:cover;display:block}
+/* layout mini */
+.lay .pic{height:190px;padding:14px}
+.lay .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.lg-pair{display:flex;gap:22px;align-items:flex-end}
+.lg-col{display:flex;flex-direction:column;align-items:center;gap:6px}
+.lg-col span{font-size:11px;font-weight:600;color:var(--mute)}
+.lg-1{display:grid;grid-template-columns:44px;gap:4px;height:140px;overflow:hidden;align-content:start}
+.lg-42{display:grid;grid-template-columns:repeat(4,42px);gap:5px}
+.lg-42 .m{aspect-ratio:9/16;border-radius:4px;overflow:hidden;background:#ddd}
+.lg-2.solo{grid-template-columns:repeat(2,52px);gap:5px;height:162px}
+.lg-2{display:grid;grid-template-columns:repeat(2,38px);gap:4px;height:140px;overflow:hidden;align-content:start}
+.lg-1 .m,.lg-2 .m,.lg-h .m,.lg-it .m{aspect-ratio:9/16;border-radius:4px;overflow:hidden;background:#ddd}
+.lg-h{display:flex;gap:5px;width:100%;overflow:hidden}
+.lg-h .m{flex:0 0 22%}
+.lg-hp{display:flex;gap:6px;width:100%;overflow:hidden}
+.lg-it{flex:0 0 23%;min-width:0}
+.lg-it .m{aspect-ratio:9/14}
+.lg-pr{display:grid;grid-template-columns:16px 1fr;grid-template-rows:auto auto;column-gap:4px;row-gap:3px;margin-top:4px;align-items:center}
+.lg-pr b{grid-row:span 2;width:16px;height:16px;border-radius:3px;overflow:hidden;background:var(--line2)}
+.lg-pr i{display:block;height:4px;border-radius:2px;background:var(--line2)}
+.lg-pr i:last-child{width:60%;background:var(--ink);opacity:.6}
+/* horizontal drag */
+.hrow.drag{overflow-x:auto;scrollbar-width:none;cursor:grab;scroll-behavior:auto;user-select:none;-webkit-user-select:none}
+.hrow.drag::-webkit-scrollbar{display:none}
+.hrow.drag.grabbing{cursor:grabbing}
+.hrow.drag.grabbing .cv-card{pointer-events:none}
+.hrow.drag video{pointer-events:none}
+.hbar{height:3px;border-radius:2px;background:var(--line2);margin-top:10px;overflow:hidden}
+.hbar span{display:block;height:100%;width:30%;background:var(--ink);border-radius:2px;transform:translateX(0)}
+.hhint{margin:8px 0 0;text-align:center;font-size:11px;font-weight:600;color:var(--mute)}
+/* detail area */
+.subnav{position:sticky;top:52px;z-index:15;background:#fff;border-bottom:1px solid var(--line)}
+.subnav-in{max-width:980px;margin:0 auto;padding:0 40px;display:flex;align-items:center;gap:4px;overflow-x:auto;scrollbar-width:none}
+.subnav-in::-webkit-scrollbar{display:none}
+.subnav button{background:none;border:none;border-bottom:2px solid transparent;height:52px;padding:0 14px;font-size:14px;font-weight:600;color:var(--mute);cursor:pointer;white-space:nowrap;display:flex;align-items:center;gap:6px}
+.subnav button em{font-style:normal;font-size:11px;font-weight:700;color:var(--red)}
+.subnav button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--ink)}
+.subnav .cp{margin-left:auto;border:1px solid var(--line);border-radius:6px;height:32px;padding:0 10px;font-size:12px;font-weight:500;color:var(--sub);background:#fff;display:inline-flex;align-items:center;gap:6px;cursor:pointer;white-space:nowrap}
+.subnav .cp:hover{border-color:#C9D0D8;color:var(--ink)}
+.panel[hidden]{display:none}
+.d-hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;align-items:center}
+.d-no{font-size:13px;font-weight:700;color:var(--red);letter-spacing:.4px;margin-bottom:10px}
+.d-hero .h2{font-size:32px}
+.where{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.where span{font-size:13px;font-weight:500;color:var(--sub);background:#fff;border:1px solid var(--line);border-radius:99px;padding:6px 12px}
+.where i{font-style:normal;color:var(--mute);margin-right:6px;font-size:12px}
+
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:16px}
+.grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:16px}
+.card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.card-tag{display:inline-block;font-size:12px;font-weight:600;color:var(--blue);background:var(--blue-bg);border-radius:4px;padding:3px 8px;margin-bottom:14px}
+.card p{margin:0;font-size:14px;line-height:1.7;color:var(--sub)}
+.checks{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:8px}
+.checks li{position:relative;padding-left:24px;font-size:14px;line-height:1.6;color:var(--ink2)}
+.checks li::before{content:"";position:absolute;left:2px;top:6px;width:12px;height:7px;border-left:2px solid var(--green);border-bottom:2px solid var(--green);transform:rotate(-45deg)}
+
+/* how-to steps */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
+.stp{background:#fff;border:1px solid var(--line);border-radius:12px;padding:22px 22px 24px;position:relative}
+.stp em{display:flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:50%;background:var(--ink);color:#fff;font-style:normal;font-size:13px;font-weight:700;margin-bottom:14px}
+.stp h4{margin:0 0 8px;font-size:15px;font-weight:600;line-height:1.5}
+.stp p{margin:0;font-size:13px;line-height:1.7;color:var(--sub)}
+.stp .who{display:inline-block;margin-bottom:10px;font-size:11px;font-weight:600;color:var(--mute);background:var(--bg);border-radius:4px;padding:2px 7px}
+.layouts{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px}
+.lay{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.lay .pic{background:var(--bg2);border-bottom:1px solid var(--line2);padding:16px;height:170px;display:flex;align-items:center;justify-content:center}
+.lay .txt{padding:16px 18px 18px}
+.lay h4{margin:0 0 6px;font-size:15px;font-weight:600}
+.lay p{margin:0;font-size:13px;line-height:1.6;color:var(--sub)}
+.lay-g2{display:grid;grid-template-columns:repeat(2,54px);gap:5px}.lay-g1{display:grid;grid-template-columns:70px}
+.lay-g2 div,.lay-g1 div,.lay-h div{aspect-ratio:9/16;border-radius:5px;overflow:hidden}
+.lay-g2 img,.lay-g1 img,.lay-h img{width:100%;height:100%;object-fit:cover}
+.lay-h{display:flex;gap:5px;width:100%;overflow:hidden}
+.lay-h div{flex:0 0 52px}
+.lay-h.half div{flex:0 0 44px}
+.lay-hp{width:100%}
+.lay-hp .prods{display:flex;gap:5px;margin-top:6px}
+.lay-hp .prods div{flex:0 0 52px;aspect-ratio:auto;border-radius:5px;background:#fff;border:1px solid var(--line);padding:4px}
+.lay-hp .prods b{display:block;width:100%;aspect-ratio:1;border-radius:3px;background:var(--line2);margin-bottom:4px;overflow:hidden}
+.lay-hp .prods b img{width:100%;height:100%;object-fit:cover}
+.lay-hp .prods i{display:block;height:4px;border-radius:2px;background:var(--line2);margin-top:3px}
+.case{background:#fff;border:1px solid var(--line);border-radius:12px;padding:26px}
+.case-no{font-size:12px;font-weight:700;color:var(--red);letter-spacing:.4px}
+.case-kind{font-size:12px;font-weight:600;color:var(--mute);margin-left:6px}
+.case h3{margin:8px 0 10px;font-size:17px;font-weight:600;line-height:1.45}
+.case .prob{margin:0 0 14px;font-size:14px;line-height:1.7;color:var(--sub)}
+.case .sol{background:var(--bg2);border:1px solid var(--line2);border-radius:8px;padding:12px 14px;font-size:13px;line-height:1.7;color:var(--ink2)}
+.case .sol b{display:block;font-size:12px;color:var(--blue);margin-bottom:3px}
+.blk{margin-top:64px}
+.blk .h3{font-size:22px;margin-bottom:6px}
+.blk .lead{font-size:15px;margin-bottom:24px}
+.note{margin-top:16px;font-size:13px;line-height:1.7;color:var(--mute)}
+
+/* mocks */
+.mock{background:#fff;border:1px solid var(--line);border-radius:16px;box-shadow:0 1px 3px rgba(12,14,19,.06),0 12px 32px rgba(12,14,19,.08);overflow:hidden}
+.mock-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line2);font-size:11px;color:var(--mute)}
+.mock-bar span.d{width:8px;height:8px;border-radius:50%;background:var(--line)}
+.mock-bar .url{margin-left:8px;flex:1;background:var(--bg);border-radius:6px;padding:4px 10px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mock-cap{text-align:center;font-size:12px;color:var(--mute);margin-top:12px}
+.pdp{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:16px;padding:16px;position:relative}
+.pdp-info{display:flex;flex-direction:column;gap:8px;font-size:12px;min-width:0}
+.pdp-info .cat{color:var(--mute);font-size:11px}
+.pdp-info .nm{font-size:14px;font-weight:600;line-height:1.4}
+.pdp-info .pr{font-size:16px;font-weight:700}
+.sk{height:8px;border-radius:4px;background:var(--line2)}
+.sizes{display:flex;gap:4px}.sizes span{flex:1;text-align:center;border:1px solid var(--line);border-radius:4px;padding:5px 0;font-size:11px;color:var(--sub)}
+.buy{margin-top:auto;display:grid;gap:6px}
+.buy span{display:block;text-align:center;border-radius:6px;padding:8px 0;font-size:12px;font-weight:600}
+.buy .b1{background:var(--ink);color:#fff}.buy .b2{border:1px solid var(--line);color:var(--ink)}
+.imgph{aspect-ratio:3/4;border-radius:8px;background:var(--line2);display:flex;align-items:center;justify-content:center;color:var(--mute);font-size:12px}
+.pdp-long{padding:0 16px 16px;display:grid;gap:8px}
+.pdp-long .sk{width:100%}.pdp-long .sk:nth-child(2){width:80%}.pdp-long .sk:nth-child(3){width:90%}
+/* showcase stage */
+.sc-stage{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#111}
+.sc-track{display:flex;height:100%;animation:scSlide 12s infinite}
+.sc-track .sl{flex:0 0 100%;height:100%;overflow:hidden}
+.sc-track .sl img,.sc-th img,.g2 img,.pip img,.lay-g2 img,.lay-g1 img,.lay-h img,.t-grid img,.m-grid img,.m-sc img,.m-pip img,.t-pdp .sc img,.t-pdp .pip img,.gcard img,.hcard img{width:100%;height:100%;object-fit:cover;transform:scale(1.22)}
+@keyframes scSlide{0%,28%{transform:translateX(0)}33%,61%{transform:translateX(-100%)}66%,94%{transform:translateX(-200%)}100%{transform:translateX(0)}}
+.sc-prog{position:absolute;left:8px;right:8px;top:8px;display:flex;gap:3px;z-index:2}
+.sc-prog span{flex:1;height:2px;border-radius:2px;background:rgba(255,255,255,.35);overflow:hidden}
+.sc-prog span::after{content:"";display:block;height:100%;width:0;background:#fff}
+.sc-prog span:nth-child(2)::after{animation-name:scFill2}.sc-prog span:nth-child(3)::after{animation-name:scFill3}
+@keyframes scFill{0%{width:0}31%{width:100%}32%,100%{width:100%}}
+@keyframes scFill2{0%,32%{width:0}64%{width:100%}65%,100%{width:100%}}
+@keyframes scFill3{0%,65%{width:0}97%{width:100%}100%{width:100%}}
+.sc-video,.sc-img{width:100%;height:100%;object-fit:cover;display:block}
+.sc-img{transform:scale(1.22)}
+.sc-img[hidden],.sc-video[hidden]{display:none}
+button.sc-th{padding:0;cursor:pointer;font:inherit}
+button.sc-th:hover{border-color:#9AA3AE}
+button.sc-th.on{border-color:var(--ink)}
+.sc-prog span.on::after{width:100%;animation:none}
+.sc-th .pl{position:absolute;left:50%;top:50%;width:22px;height:22px;margin:-11px 0 0 -11px;border-radius:50%;background:rgba(0,0,0,.5);transform:none!important}
+.sc-th .pl::after{content:"";position:absolute;left:8px;top:6px;border-left:7px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent}
+.sc-badge{z-index:2;position:absolute;left:8px;bottom:8px;font-size:10px;font-weight:600;color:#fff;background:rgba(0,0,0,.5);border-radius:4px;padding:3px 6px}
+.sc-thumbs{display:flex;gap:6px;margin-top:8px}
+.sc-th{position:relative;flex:1;aspect-ratio:9/16;border-radius:6px;border:2px solid transparent;overflow:hidden;background:#ddd}
+.sc-th.on{border-color:var(--ink)}
+.sc-th.neon{border-width:0;padding:2px;background:#111;isolation:isolate}
+.sc-th.neon::before{content:"";position:absolute;inset:-50%;z-index:-1;background:conic-gradient(from 0deg,transparent 0deg 250deg,#0077ff 300deg,#00c2ff 330deg,#b3f0ff 350deg,transparent 360deg);animation:neon 4s linear infinite}
+.sc-th.neon img{border-radius:4px}
+@keyframes neon{to{transform:rotate(360deg)}}
+/* pip */
+.pip{position:absolute;right:16px;bottom:16px;width:24%;aspect-ratio:9/16;border-radius:10px;overflow:hidden;box-shadow:0 8px 24px rgba(0,0,0,.3);border:2px solid #fff;animation:pipIn .6s ease-out both}
+.pip .x{position:absolute;right:4px;top:4px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.55);color:#fff;font-size:11px;display:flex;align-items:center;justify-content:center;transform:none!important}
+.pip .t{position:absolute;left:6px;right:6px;bottom:6px;font-size:9px;color:#fff;font-weight:600;text-shadow:0 1px 2px rgba(0,0,0,.6);transform:none!important}
+@keyframes pipIn{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+/* phone / story */
+.phone{max-width:300px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:28px;padding:14px 0 0;box-shadow:0 1px 3px rgba(12,14,19,.06),0 12px 32px rgba(12,14,19,.08);overflow:hidden}
+.ph-top{display:flex;justify-content:space-between;align-items:center;padding:0 16px 10px;font-size:13px;font-weight:800;letter-spacing:-.3px}
+.ph-top i{font-style:normal;font-size:11px;font-weight:500;color:var(--mute)}
+.tray{display:flex;gap:4px;padding:4px 10px 12px;overflow:hidden}
+.st{display:flex;flex-direction:column;align-items:center;gap:6px;width:62px;flex:0 0 62px}
+.ring{width:56px;height:56px;padding:3px;border-radius:50%;background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7);overflow:hidden}
+.st.seen .ring{background:#dbdbdb}
+.ring img{width:100%;height:100%;border-radius:50%;border:2px solid #fff;object-fit:cover;background:#f5f5f5}
+.st-l{max-width:100%;font-size:11px;line-height:15px;color:#262626;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.st.act .st-l{font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:6px;padding:10px 10px 14px;border-top:1px solid var(--line2)}
+.g2 div{position:relative;aspect-ratio:9/16;border-radius:6px;overflow:hidden;background:#ddd}
+.g2 div::after{content:"";position:absolute;left:6px;right:30%;bottom:8px;height:5px;border-radius:3px;background:rgba(255,255,255,.85)}
+/* collection mock */
+.col-mock{padding:16px}
+.col-tabs{display:flex;gap:6px;margin-bottom:12px;font-size:11px;font-weight:600}
+.col-tabs span{padding:5px 11px;border-radius:99px;background:var(--bg);color:var(--sub)}
+.col-tabs span.on{background:var(--ink);color:#fff}
+.gcards{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gcard{position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#ddd}
+.gcard::after{content:"";position:absolute;left:8px;right:35%;bottom:8px;height:5px;border-radius:3px;background:rgba(255,255,255,.85)}
+.gcard .pl{position:absolute;left:8px;top:8px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.45);transform:none!important}
+.gcard .pl::after{content:"";position:absolute;left:7px;top:5px;border-left:6px solid #fff;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.hrow{display:flex;gap:8px;overflow:hidden}
+.hcard{flex:0 0 23%;position:relative;aspect-ratio:9/16;border-radius:8px;overflow:hidden;background:#ddd}
+.hcard .pl{position:absolute;left:8px;top:8px;width:18px;height:18px;border-radius:50%;background:rgba(0,0,0,.45);transform:none!important}
+.hcard .pl::after{content:"";position:absolute;left:7px;top:5px;border-left:6px solid #fff;border-top:4px solid transparent;border-bottom:4px solid transparent}
+.hcard .cap{position:absolute;left:8px;right:8px;bottom:8px;transform:none!important}
+.hcard .cap i{display:block;height:5px;border-radius:3px;background:rgba(255,255,255,.85);margin-top:4px}
+.hcard .cap i:last-child{width:60%;opacity:.7}
+.prow{display:flex;gap:8px;margin-top:8px;overflow:hidden}
+.prow div{flex:0 0 23%;display:flex;gap:6px;align-items:center;border:1px solid var(--line);border-radius:8px;padding:6px}
+.prow b{flex:0 0 34px;height:34px;border-radius:6px;background:var(--line2);overflow:hidden}
+.prow b img{width:100%;height:100%;object-fit:cover}
+.prow i{flex:1;display:grid;gap:4px}
+.prow i span{height:5px;border-radius:3px;background:var(--line2)}
+.prow i span:last-child{width:60%;background:var(--ink);opacity:.7}
+.col-switch{display:inline-flex;gap:4px;background:var(--bg);border-radius:8px;padding:3px;margin-bottom:12px}
+.col-switch button{border:none;background:none;border-radius:6px;padding:6px 10px;font-size:12px;font-weight:600;color:var(--mute);cursor:pointer}
+.col-switch button[aria-pressed=true]{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(12,14,19,.1)}
+.col-view[hidden]{display:none}
+
+/* cta */
+.cta{background:var(--ink);color:#fff;border-radius:16px;padding:48px 40px;display:flex;flex-wrap:wrap;gap:24px;align-items:center;justify-content:space-between}
+.cta h2{margin:0 0 8px;font-size:24px;font-weight:600;letter-spacing:-.4px}
+.cta p{margin:0;color:#C9D0D8;font-size:15px;line-height:1.7}
+.cta .btn-w{background:#fff;color:var(--ink)}
+.cta .btn-o{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+footer{padding:32px 40px;text-align:center;font-size:12px;color:var(--mute)}
+.toast{position:fixed;left:50%;bottom:28px;transform:translate(-50%,20px);background:var(--ink);color:#fff;font-size:14px;padding:10px 16px;border-radius:8px;opacity:0;pointer-events:none;transition:.2s;z-index:50}
+.toast.on{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion:reduce){.sc-track,.sc-prog span::after,.sc-th.neon::before,.pip{animation:none}}
+@media (max-width:980px){.sel{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:860px){.hero,.d-hero{grid-template-columns:minmax(0,1fr)}.hero{gap:40px}}
+@media (max-width:768px){
+ .wrap{padding:56px 16px}.nav-in,.subnav-in{padding:0 16px;gap:10px}.brand b{display:none}
+ .langmenu summary span{display:none}.langmenu summary{padding:0 8px;gap:4px}
+ .h1{font-size:28px}.h2{font-size:24px}.d-hero .h2{font-size:26px}.lead{font-size:15px}
+ .card,.case{padding:22px}.cta{padding:32px 24px}
+ .sel{grid-template-columns:minmax(0,1fr)}
+ .pdp{gap:12px;padding:12px}.gcards{grid-template-columns:repeat(3,1fr)}.hcard,.prow div{flex-basis:31%}
+ .subnav .cp span{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Jump to section">
+ <div class="nav-in">
+  <a class="brand" href="https://www.shoplive.cloud/">shoplive <b>Shortform Guide</b></a>
+  <div class="navtabs">
+   <a class="navtab" href="#intro">What is Shortform</a>
+   <a class="navtab" href="#display">Four ways to display</a>
+   <a class="navtab" href="#detail">Learn more</a>
+   <a class="navtab" href="#contact">Contact sales</a>
+  </div>
+  <details class="langmenu">
+   <summary aria-label="Select language"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></svg><span class="lang-cur">English</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"></path></svg></summary>
+   <div class="lang-list">
+    <a href="../" lang="ko" data-lang="ko">한국어</a>
+    <a href="./" lang="en" data-lang="en" class="on">English</a>
+    <a href="../ja/" lang="ja" data-lang="ja">日本語</a>
+   </div>
+  </details>
+ </div>
+</nav>
+
+<!-- 1. Intro -->
+<section id="intro">
+ <div class="wrap">
+  <div class="hero">
+   <div>
+    <span class="eyebrow">SHOPLIVE SHORTFORM GUIDE</span>
+    <h1 class="h1">One moment of attention<br>turns into a purchase</h1>
+    <p class="lead">Shoplive Shortform lets you create short vertical videos from live streams or uploaded footage and display them anywhere on your own store. Customers see products in video and buy right where they are.</p>
+    <div class="flowline" aria-label="Shortform flow">
+     <span>Live stream · video upload</span><i>→</i><span>Create Shortforms</span><i>→</i><span class="on">Display on your store</span><i>→</i><span>Track purchase data</span>
+    </div>
+    <div class="hero-stats">
+     <div><b>Many clips from one long video</b>Clip Maker suggests the best moments from your live stream</div>
+     <div><b>Linked straight to products</b>Attach products to each Shortform and drive purchases</div>
+     <div><b>Four ways to display</b>Pick the right fit for each page</div>
+    </div>
+    <div class="btns">
+     <a class="btn btn-dark" href="#display">See the four display options</a>
+     <button class="btn btn-line" type="button" data-copy>Contact sales</button>
+    </div>
+   </div>
+   <div class="collage" role="img" aria-label="Preview of the four display options: Collection, Product Preview, Showcase, Story">
+    <div class="mini" aria-hidden="true"><span class="lb">Collection</span><div class="m-grid"><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></div><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></div><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></div></div></div>
+    <div class="mini" aria-hidden="true"><span class="lb">Product Preview</span><div class="m-pdp"><div class="ph"></div><div><div class="sk" style="width:60%"></div><div class="sk"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:40%"></div></div></div><div class="m-pip"><img src="https://gtm.shoplive.cloud/clip_maker/assets/f813cca50a43788ef98312b37b459230.jpg" alt=""></div></div>
+    <div class="mini" aria-hidden="true"><span class="lb">Showcase</span><div class="m-pdp"><div class="m-sc"><img src="https://gtm.shoplive.cloud/clip_maker/assets/0758f1929b2f6aee02775e52ff3e4b71.jpg" alt=""><i><b></b><b></b><b></b></i></div><div><div class="sk" style="width:60%"></div><div class="sk"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:40%"></div></div></div></div>
+    <div class="mini" aria-hidden="true"><span class="lb">Story</span><div class="m-tray"><span><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></span><span><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></span><span class="s"><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></span><span class="s"><img src="https://gtm.shoplive.cloud/clip_maker/assets/7671f66a8f63b42b2eda7110836fd479.jpg" alt=""></span></div><div class="m-grid"><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/f813cca50a43788ef98312b37b459230.jpg" alt=""></div><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/0758f1929b2f6aee02775e52ff3e4b71.jpg" alt=""></div><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/7671f66a8f63b42b2eda7110836fd479.jpg" alt=""></div></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<!-- 2. Four ways to display -->
+<section id="display" class="sec-white">
+ <div class="wrap">
+  <div class="sec-head center">
+   <span class="eyebrow">4 WAYS TO DISPLAY</span>
+   <h2 class="h2">Same Shortforms, four ways to display them</h2>
+   <p class="lead">The right option depends on where it sits in your store. You don't have to pick just one. Use them together across pages. Tap a card to read the details.</p>
+  </div>
+  <div class="sel" role="list">
+   <button class="sel-card" type="button" data-display="collection" aria-pressed="false" role="listitem">
+    <div class="thumb" aria-hidden="true"><div class="t-grid"><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></div><div><video class="stagger" data-i="0" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="auto"></video></div><div><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></div></div></div>
+    <div class="body"><span class="no">01</span><h3>Collection</h3><p>Gather Shortforms into a grid or a horizontal row. This is the most basic way to display them.</p><div class="rec"><span>Best on home</span></div><span class="more">Learn more →</span></div>
+   </button>
+   <button class="sel-card" type="button" data-display="preview" aria-pressed="false" role="listitem">
+    <div class="thumb pdp-thumb" aria-hidden="true"><div class="t-pdp"><div class="big"></div><div class="sk" style="width:70%"></div><div class="sk"></div><div class="sk" style="width:50%"></div><div class="pip"><video class="stagger" data-i="1" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="auto"></video></div></div></div>
+    <div class="body"><span class="no">02</span><h3>Product Preview</h3><p>Floats as a small window on product detail pages. It follows the scroll and shows related Shortforms.</p><div class="rec"><span>Best on product pages</span></div><span class="more">Learn more →</span></div>
+   </button>
+   <button class="sel-card" type="button" data-display="showcase" aria-pressed="false" role="listitem">
+    <div class="thumb pdp-thumb" aria-hidden="true"><div class="t-pdp"><div class="sc"><video class="stagger" data-i="2" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="auto"></video><i><b></b><b></b><b></b></i></div><div style="margin-left:76px"><div class="sk" style="width:60%"></div><div class="sk"></div><div class="sk" style="width:80%"></div><div class="sk" style="width:40%"></div></div></div></div>
+    <div class="body"><span class="no">03</span><h3>Showcase<span class="tag-new">NEW</span></h3><p>Drop a Shortform right where you want it, like the product thumbnail slot. Shoplive can help with placement if needed.</p><div class="rec"><span>Best on product pages</span></div><span class="more">Learn more →</span></div>
+   </button>
+   <button class="sel-card" type="button" data-display="story" aria-pressed="false" role="listitem">
+    <div class="thumb" aria-hidden="true"><div class="t-tray"><span><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></span><span><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></span><span class="s"><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></span></div></div>
+    <div class="body"><span class="no">04</span><h3>Story<span class="tag-new">NEW</span></h3><p>Shows round icons like social media stories. A ring around the icon signals new Shortforms.</p><div class="rec"><span>Category pages</span><span>Best on home</span></div><span class="more">Learn more →</span></div>
+   </button>
+  </div>
+ </div>
+</section>
+
+<!-- 3. Details -->
+<div id="detail">
+ <div class="subnav">
+  <div class="subnav-in" role="tablist" aria-label="Choose a display option">
+   <button type="button" role="tab" data-display="collection" aria-selected="false"><em>01</em>Collection</button>
+   <button type="button" role="tab" data-display="preview" aria-selected="false"><em>02</em>Product Preview</button>
+   <button type="button" role="tab" data-display="showcase" aria-selected="false"><em>03</em>Showcase</button>
+   <button type="button" role="tab" data-display="story" aria-selected="false"><em>04</em>Story</button>
+   <button type="button" class="cp" data-share title="Copy link to this display option">🔗 <span>Copy link</span></button>
+  </div>
+ </div>
+
+ <!-- Collection -->
+ <section class="panel" id="p-collection" role="tabpanel" hidden>
+  <div class="wrap">
+   <div class="d-hero">
+    <div>
+     <div class="d-no">01 · Collection</div>
+     <h2 class="h2">Gather Shortforms<br>and lay them out</h2>
+     <p class="lead">This is the most basic way to display Shortforms. Lay out a Shortform group from Admin, or Shortforms matching tag and brand conditions, in a grid or horizontal row. Tapping a card opens the full-screen player.</p>
+     <div class="where"><span><i>Where</i>Home · promotion pages · events · brand pages</span><span><i>Layout</i>1- or 2-column grid, horizontal scroll</span></div>
+    </div>
+    <div>
+     <div class="mock cv-mock">
+      <div class="mock-bar" aria-hidden="true"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">myshop.com</span></div>
+      <div class="col-mock">
+       <div class="col-switch" role="group" aria-label="Collection layout preview">
+        <button type="button" data-col="grid" aria-pressed="true">Grid</button>
+        <button type="button" data-col="horizontal" aria-pressed="false">Horizontal</button>
+        <button type="button" data-col="product" aria-pressed="false">Horizontal + Products</button>
+       </div>
+       <div class="col-view" data-view="grid"><div class="gcards"><div class="gcard cv-card" data-i="0" role="button" tabindex="0" aria-label="Open Shortform: Oversized hoodie daily look"><video class="cv" data-o="1" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">373</span></span><span class="cv-t">Oversized hoodie daily look</span></div><div class="gcard cv-card" data-i="1" role="button" tabindex="0" aria-label="Open Shortform: Charcoal hoodie lounge look"><video class="cv" data-o="2" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">263</span></span><span class="cv-t">Charcoal hoodie lounge look</span></div><div class="gcard cv-card" data-i="2" role="button" tabindex="0" aria-label="Open Shortform: Beige hoodie fit comparison"><video class="cv" data-o="3" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">512</span></span><span class="cv-t">Beige hoodie fit comparison</span></div><div class="gcard cv-card" data-i="3" role="button" tabindex="0" aria-label="Open Shortform: Slit skirt styling"><video class="cv" data-o="4" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">198</span></span><span class="cv-t">Slit skirt styling</span></div><div class="gcard cv-card" data-i="4" role="button" tabindex="0" aria-label="Open Shortform: Hoodie + long skirt combo"><video class="cv" data-o="5" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">421</span></span><span class="cv-t">Hoodie + long skirt combo</span></div><div class="gcard cv-card" data-i="5" role="button" tabindex="0" aria-label="Open Shortform: 3 weekend outfit ideas"><video class="cv" data-o="6" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">287</span></span><span class="cv-t">3 weekend outfit ideas</span></div><div class="gcard cv-card" data-i="6" role="button" tabindex="0" aria-label="Open Shortform: Wedding guest look, reimagined"><video class="cv" data-o="7" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">355</span></span><span class="cv-t">Wedding guest look, reimagined</span></div><div class="gcard cv-card" data-i="7" role="button" tabindex="0" aria-label="Open Shortform: Fall layering tips"><video class="cv" data-o="8" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">640</span></span><span class="cv-t">Fall layering tips</span></div></div></div>
+       <div class="col-view" data-view="horizontal" hidden><div class="hrow drag" aria-label="Drag to browse"><div class="hcard cv-card" data-i="0" role="button" tabindex="0" aria-label="Open Shortform: Oversized hoodie daily look"><video class="cv" data-o="40" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">373</span></span><span class="cv-t">Oversized hoodie daily look</span></div><div class="hcard cv-card" data-i="1" role="button" tabindex="0" aria-label="Open Shortform: Charcoal hoodie lounge look"><video class="cv" data-o="41" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">263</span></span><span class="cv-t">Charcoal hoodie lounge look</span></div><div class="hcard cv-card" data-i="2" role="button" tabindex="0" aria-label="Open Shortform: Beige hoodie fit comparison"><video class="cv" data-o="42" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">512</span></span><span class="cv-t">Beige hoodie fit comparison</span></div><div class="hcard cv-card" data-i="3" role="button" tabindex="0" aria-label="Open Shortform: Slit skirt styling"><video class="cv" data-o="43" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">198</span></span><span class="cv-t">Slit skirt styling</span></div><div class="hcard cv-card" data-i="4" role="button" tabindex="0" aria-label="Open Shortform: Hoodie + long skirt combo"><video class="cv" data-o="44" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">421</span></span><span class="cv-t">Hoodie + long skirt combo</span></div><div class="hcard cv-card" data-i="5" role="button" tabindex="0" aria-label="Open Shortform: 3 weekend outfit ideas"><video class="cv" data-o="45" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">287</span></span><span class="cv-t">3 weekend outfit ideas</span></div><div class="hcard cv-card" data-i="6" role="button" tabindex="0" aria-label="Open Shortform: Wedding guest look, reimagined"><video class="cv" data-o="46" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">355</span></span><span class="cv-t">Wedding guest look, reimagined</span></div><div class="hcard cv-card" data-i="7" role="button" tabindex="0" aria-label="Open Shortform: Fall layering tips"><video class="cv" data-o="47" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">640</span></span><span class="cv-t">Fall layering tips</span></div></div><div class="hbar"><span></span></div><p class="hhint">← Drag to browse →</p></div>
+       <div class="col-view" data-view="product" hidden><div class="hrow drag"><div class="hitem"><div class="hcard2 cv-card" data-i="0" role="button" tabindex="0" aria-label="Open Shortform: Oversized hoodie daily look"><video class="cv" data-o="14" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">373</span></span><span class="cv-t">Oversized hoodie daily look</span></div><div class="hprod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></b><span><em>Beige oversized hoodie</em>$42</span></div></div><div class="hitem"><div class="hcard2 cv-card" data-i="1" role="button" tabindex="0" aria-label="Open Shortform: Charcoal hoodie lounge look"><video class="cv" data-o="15" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">263</span></span><span class="cv-t">Charcoal hoodie lounge look</span></div><div class="hprod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></b><span><em>Charcoal half-zip hoodie</em>$44</span></div></div><div class="hitem"><div class="hcard2 cv-card" data-i="2" role="button" tabindex="0" aria-label="Open Shortform: Beige hoodie fit comparison"><video class="cv" data-o="16" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">512</span></span><span class="cv-t">Beige hoodie fit comparison</span></div><div class="hprod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></b><span><em>Slit long skirt</em>$32</span></div></div><div class="hitem"><div class="hcard2 cv-card" data-i="3" role="button" tabindex="0" aria-label="Open Shortform: Slit skirt styling"><video class="cv" data-o="17" src="../assets/shortform-demo2.mp4" poster="../assets/shortform-demo2-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">198</span></span><span class="cv-t">Slit skirt styling</span></div><div class="hprod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/f813cca50a43788ef98312b37b459230.jpg" alt=""></b><span><em>Cotton oversized hoodie</em>$41</span></div></div><div class="hitem"><div class="hcard2 cv-card" data-i="4" role="button" tabindex="0" aria-label="Open Shortform: Hoodie + long skirt combo"><video class="cv" data-o="18" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video><span class="cv-meta"><span class="pl"></span><span class="vw">421</span></span><span class="cv-t">Hoodie + long skirt combo</span></div><div class="hprod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/0758f1929b2f6aee02775e52ff3e4b71.jpg" alt=""></b><span><em>Satin long skirt</em>$35</span></div></div></div></div>
+       <div class="cv-player" hidden role="dialog" aria-label="Shortform full-screen player">
+        <div class="sd-frame">
+         <video class="cv-big" muted loop playsinline preload="none"></video>
+         <div class="sd-prog"><span class="on"></span><span></span><span></span></div>
+         <div class="sd-top"><span class="sd-av" style="background:#C9B49A"></span><b class="cv-name">MY SHOP</b><button type="button" class="sd-x cv-x" aria-label="Close">×</button></div>
+         <div class="sd-prod"><b><img class="cv-pimg" src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></b><span><em class="cv-pn">Beige oversized hoodie</em><span class="cv-pp">$42</span></span><i>Buy</i></div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p class="mock-cap">Sample screen · tap a Shortform to open it</p>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Three layouts to choose from</h3>
+    <p class="lead">Pick a layout that fits the page width and placement. The same set of Shortforms can appear in different layouts in several places.</p>
+    <div class="layouts">
+     <div class="lay"><div class="pic"><div class="lg-42"><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div></div></div><div class="txt"><h4>Grid</h4><p>Lays out Shortforms like tiles. Great for feed pages where customers keep scrolling down.</p></div></div>
+     <div class="lay"><div class="pic"><div class="lg-h"><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div></div></div><div class="txt"><h4>Horizontal</h4><p>Scrolls horizontally in a single row. Perfect as a strip in the middle of your home or promotion page. It can also auto-scroll.</p></div></div>
+     <div class="lay"><div class="pic"><div class="lg-hp"><div class="lg-it"><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="lg-pr"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></b><i></i><i></i></div></div><div class="lg-it"><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="lg-pr"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></b><i></i><i></i></div></div><div class="lg-it"><div class="m"><img src="../assets/shortform-demo-poster.jpg" alt=""></div><div class="lg-pr"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></b><i></i><i></i></div></div><div class="lg-it"><div class="m"><img src="../assets/shortform-demo2-poster.jpg" alt=""></div><div class="lg-pr"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/f813cca50a43788ef98312b37b459230.jpg" alt=""></b><i></i><i></i></div></div></div></div><div class="txt"><h4>Horizontal + Products<span class="tag-new">NEW</span></h4><p>Products linked to each Shortform appear right below it. Customers can go from video to product in one tap.</p></div></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Key features</h3>
+    <div class="grid3">
+     <div class="card"><span class="card-tag">Gather</span><h3 class="h3" style="font-size:16px">Set the conditions and it fills itself</h3><ul class="checks"><li>Display a Shortform group created in Admin as is</li><li>Auto-build from tag, brand, or category conditions</li><li>Add tag tabs on top so customers can browse by topic</li></ul></div>
+     <div class="card"><span class="card-tag">Watch</span><h3 class="h3" style="font-size:16px">Preview right on the card, tap to watch full-screen</h3><ul class="checks"><li>Videos preview on hover or when they scroll into view</li><li>Tap to keep watching in the full-screen player</li></ul></div>
+     <div class="card"><span class="card-tag">Style</span><h3 class="h3" style="font-size:16px">Matches your store design</h3><ul class="checks"><li>Title and description below or inside the card</li><li>Horizontal: choose arrows, progress bar, or auto-scroll</li><li>Product thumbnails as circles or cards</li></ul></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">How to set it up</h3>
+    <p class="lead">Two steps: choose which Shortforms to gather in Admin, then place them in your store.</p>
+    <div class="steps">
+     <div class="stp"><em>1</em><span class="who">Admin</span><h4>Create Shortforms and organize them with groups and tags</h4><p>Create Shortforms by cutting live streams with Clip Maker or uploading videos, then link products. Build a Shortform group or mark them with tags to decide what to display.</p></div>
+     <div class="stp"><em>2</em><span class="who">Your store</span><h4>Choose the placement and layout</h4><p>Decide where to display, such as home or promotion pages, and choose Grid or Horizontal. Also pick which set to show (group, tag, or brand).</p></div>
+     <div class="stp"><em>3</em><span class="who">Your store</span><h4>Fine-tune display options</h4><p>Adjust title position, product thumbnail shape, and more to match your store design. Shoplive can help if needed.</p></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Ways to use it</h3>
+    <div class="grid2">
+     <div class="case"><span class="case-no">CASE 01</span><span class="case-kind">Home</span><h3>Want a Shortform strip on your home page?</h3><p class="prob">Home banners are hard to update often, and new content gets buried.</p><div class="sol"><b>Ways to use it</b>Place a Horizontal Collection mid-page on your home and auto-fill it with the 'New arrivals' tag. Tag a new Shortform and your home page updates itself.</div></div>
+     <div class="case"><span class="case-no">CASE 02</span><span class="case-kind">Promotions</span><h3>Want to show promotion products in video?</h3><p class="prob">Each promotion product has an explainer video, but they're scattered.</p><div class="sol"><b>Ways to use it</b>Create a Shortform group for the promotion and use the Horizontal + Products layout. Products appear right below the video, making purchase easy.</div></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Product preview -->
+ <section class="panel" id="p-preview" role="tabpanel" hidden>
+  <div class="wrap">
+   <div class="d-hero">
+    <div>
+     <div class="d-no">02 · Product Preview</div>
+     <h2 class="h2">Follows the product page,<br>showing related Shortforms</h2>
+     <p class="lead">A small window floats on the product detail page and follows the customer as they scroll. It appears only when a Shortform is linked to that product, and tapping it opens full-screen.</p>
+     <div class="where"><span><i>Where</i>Product detail pages</span><span><i>Layout</i>Small window floating in a screen corner</span></div>
+    </div>
+    <div>
+     <div class="mock pv-mock">
+      <div class="mock-bar" aria-hidden="true"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">myshop.com/product/hoodie-beige</span></div>
+      <div class="pv-page">
+       <div class="pdp" aria-hidden="true">
+        <div class="pv-photo"><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></div>
+        <div class="pdp-info"><span class="cat">Women · Tops</span><span class="nm">Beige oversized hoodie</span><span class="pr">$42</span><span class="sk" style="width:90%"></span><span class="sk" style="width:70%"></span><div class="sizes"><span>S</span><span>M</span><span>L</span></div><div class="buy"><span class="b1">Buy now</span><span class="b2">Add to cart</span></div></div>
+       </div>
+       <div class="pdp-long" aria-hidden="true"><span class="sk"></span><span class="sk"></span><span class="sk"></span></div>
+       <div class="pip pv-pip" role="button" tabindex="0" aria-label="Shortform preview. Drag to move, tap to open full-screen"><video src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" autoplay muted loop playsinline preload="metadata"></video><button type="button" class="x" aria-label="Close preview">×</button><span class="t">Watch try-on video</span></div>
+       <button type="button" class="pv-restore" hidden>Show preview again</button>
+       <div class="pv-player" hidden role="dialog" aria-label="Shortform full-screen player">
+        <div class="sd-frame">
+         <video class="pv-video" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video>
+         <div class="sd-prog"><span class="on"></span><span></span><span></span></div>
+         <div class="sd-top"><span class="sd-av" style="background:#C9B49A"></span><b>MY SHOP</b><button type="button" class="sd-x pv-x" aria-label="Close">×</button></div>
+         <div class="sd-prod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg" alt=""></b><span><em>Beige oversized hoodie</em>$42</span><i>Buy</i></div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p class="mock-cap">Sample screen · drag the preview to move it, or tap it</p>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Key features</h3>
+    <div class="grid3">
+     <div class="card"><span class="card-tag">Automatic</span><h3 class="h3" style="font-size:16px">Shows only Shortforms linked to the product</h3><ul class="checks"><li>Finds and shows Shortforms linked to the product page being viewed</li><li>Match more precisely with SKU or product name</li><li>Stays hidden when no Shortform is linked</li></ul></div>
+     <div class="card"><span class="card-tag">Sticky</span><h3 class="h3" style="font-size:16px">Stays in view while scrolling</h3><ul class="checks"><li>Keeps showing while customers read the product details</li><li>Place it in any of the four corners</li><li>Optionally let customers resize the window</li></ul></div>
+     <div class="card"><span class="card-tag">Unobtrusive</span><h3 class="h3" style="font-size:16px">Once closed, it stays away for a while</h3><ul class="checks"><li>Set how long to wait before showing again after it's closed</li><li>Different window sizes per device (PC, tablet, mobile)</li><li>Leaves your existing page layout untouched</li></ul></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">How to set it up</h3>
+    <div class="steps">
+     <div class="stp"><em>1</em><span class="who">Admin</span><h4>Link products to Shortforms</h4><p>When creating a Shortform, attach the product it features. This link is how product pages find their Shortforms.</p></div>
+     <div class="stp"><em>2</em><span class="who">Your store</span><h4>Add it to product detail pages</h4><p>Add the call code once to your product detail template and it applies to every product page. Pass the SKU or product name for more precise matching.</p></div>
+     <div class="stp"><em>3</em><span class="who">Your store</span><h4>Set position, size, and close rules <span class="opt">(optional)</span></h4><p>Choose the corner, size per device, and how long to wait before showing again after close.</p></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Ways to use it</h3>
+    <div class="grid2">
+     <div class="case"><span class="case-no">CASE 01</span><span class="case-kind">Product detail pages</span><h3>Videos getting buried in long product descriptions?</h3><p class="prob">Product detail images are long, and customers scroll past videos placed in the middle.</p><div class="sol"><b>Ways to use it</b>Place the Product Preview at the bottom of the screen and the video stays in view no matter how far they scroll. One tap opens it full-screen.</div></div>
+     <div class="case"><span class="case-no">CASE 02</span><span class="case-kind">After a live stream</span><h3>Want to attach live stream moments to the products you featured?</h3><p class="prob">Live replays are long, and finding the part about a product is hard.</p><div class="sol"><b>Ways to use it</b>Cut each product's segment with Clip Maker, make a Shortform, and attach the product. That moment then appears as a preview on each product's detail page.</div></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Showcase -->
+ <section class="panel" id="p-showcase" role="tabpanel" hidden>
+  <div class="wrap">
+   <div class="d-hero">
+    <div>
+     <div class="d-no">03 · Showcase <span class="tag-new">NEW</span></div>
+     <h2 class="h2">Drop a Shortform<br>right where you want it</h2>
+     <p class="lead">Place a Shortform directly where your store wants it, such as the thumbnail slot on a product detail page. There's no fixed spot, so it works in product list tiles, the top of a detail page, brand pages, anywhere. If editing code is hard, Shoplive can handle placement with a store-specific script.</p>
+     <div class="where"><span><i>Where</i>Product detail thumbnails · product list tiles · anywhere you like</span><span><i>Layout</i>A Shortform card that plays right in place</span></div>
+    </div>
+    <div>
+     <div class="mock" role="img" aria-label="Showcase example: a 9:16 Shortform video plays in the product detail image slot, with video and image cards in the thumbnail row below">
+      <div class="mock-bar" aria-hidden="true"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">myshop.com/product/hoodie-beige</span></div>
+      <div class="pdp">
+       <div>
+        <div class="sc-stage">
+         <video class="sc-video" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" autoplay muted loop playsinline preload="metadata" aria-hidden="true"></video>
+         <div class="sc-prog"><span class="on"></span><span></span><span></span></div>
+         <img class="sc-img" alt="" hidden>
+         <span class="sc-badge">Shortform Showcase · now playing</span>
+        </div>
+        <div class="sc-thumbs" aria-hidden="false"><button type="button" class="sc-th on" data-sc="0" aria-label="Card 1: video"><img src="../assets/shortform-demo-poster.jpg" alt=""><span class="pl"></span></button><button type="button" class="sc-th" data-sc="1" data-src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" aria-label="Card 2: image"><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></button><button type="button" class="sc-th" data-sc="2" data-src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" aria-label="Card 3: image"><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></button></div>
+       </div>
+       <div class="pdp-info"><span class="cat">Women · Tops</span><span class="nm">Beige oversized hoodie</span><span class="pr">$42</span><span class="sk" style="width:90%"></span><span class="sk" style="width:70%"></span><div class="sizes"><span>S</span><span>M</span><span>L</span></div><div class="buy"><span class="b1">Buy now</span><span class="b2">Add to cart</span></div></div>
+      </div>
+     </div>
+     <p class="mock-cap">Sample screen · demo images</p>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Key features</h3>
+    <div class="grid3">
+     <div class="card"><span class="card-tag">Any placement</span><h3 class="h3" style="font-size:16px">No fixed spot</h3><ul class="checks"><li>Replace the whole product thumbnail slot with a Shortform</li><li>Works in every tile of a product list</li><li>Appears wherever it's called: top of detail pages, brand pages, and more</li></ul></div>
+     <div class="card"><span class="card-tag">Easy setup</span><h3 class="h3" style="font-size:16px">We can set it up for you</h3><ul class="checks"><li>One call places a Shortform where you want it</li><li>If editing is hard, Shoplive sets position and conditions with a store-specific script</li><li>When your store design changes, just update the script</li></ul></div>
+     <div class="card"><span class="card-tag">Reliability</span><h3 class="h3" style="font-size:16px">No Shortform, no change to your page</h3><ul class="checks"><li>Swaps the slot only after the Shortform has loaded</li><li>If loading fails, the original image stays untouched</li><li>Turn Showcase on or off for each Shortform</li></ul></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">How to set it up</h3>
+    <div class="steps">
+     <div class="stp"><em>1</em><span class="who">Shoplive</span><h4>Enable Showcase</h4><p>Showcase is enabled per store. Ask your account manager and a Showcase option appears in Admin Shortform settings.</p></div>
+     <div class="stp"><em>2</em><span class="who">Your store · Shoplive (if needed)</span><h4>Choose the placement</h4><p>Call it directly where you want it, such as a thumbnail slot or list tile. If editing is hard, tell us the spot and Shoplive can add it to a store-specific script.</p></div>
+<div class="stp"><em>3</em><span class="who">Admin</span><h4>Turn on Showcase for the Shortforms to show</h4><p>Each Shortform has a Showcase switch. Only Shortforms with it on appear in Showcase, and the attached products decide which product pages they appear on.</p></div>
+         </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Ways to use it</h3>
+    <div class="grid2">
+     <div class="case"><span class="case-no">CASE 01</span><span class="case-kind">Product detail pages</span><h3>Want to show fit and feel right in the photo slot?</h3><p class="prob">Photos alone don't convey fit, texture, or real use.</p><div class="sol"><b>Ways to use it</b>Replace the product thumbnail slot with Showcase. Customers watch the video right where they'd swipe photos, then go straight to the buy button below.</div></div>
+     <div class="case"><span class="case-no">CASE 02</span><span class="case-kind">Product lists</span><h3>Want to catch the eye from the product list?</h3><p class="prob">It's hard to make one product stand out among static thumbnails.</p><div class="sol"><b>Ways to use it</b>Put each product's Showcase in its tile. The Shortform plays inside the tile, and tapping it goes straight to the product page.</div></div>
+    </div>
+   </div>
+  </div>
+ </section>
+
+ <!-- Story -->
+ <section class="panel" id="p-story" role="tabpanel" hidden>
+  <div class="wrap">
+   <div class="d-hero">
+    <div>
+     <div class="d-no">04 · Story <span class="tag-new">NEW</span></div>
+     <h2 class="h2">New Shortform?<br>The icon ring tells them first</h2>
+     <p class="lead">Displays a row of round icons, like Instagram stories. Each brand, tag, or Shortform group gets its own circle, and a ring appears when there are new Shortforms the customer hasn't seen yet.</p>
+     <div class="where"><span><i>Where</i>Top of home · brand pages · category pages</span><span><i>Layout</i>Row of round icons (+ Shortform list below)</span></div>
+    </div>
+    <div>
+     <div class="mock st-desk">
+      <div class="mock-bar" aria-hidden="true"><span class="d"></span><span class="d"></span><span class="d"></span><span class="url">myshop.com</span></div>
+      <div class="sd-page">
+       <div class="sd-head" aria-hidden="true"><b>MY SHOP</b><span>New arrivals</span><span>Brand</span><span>Promotions</span><span>Sale</span></div>
+       <div class="sd-tray" role="group" aria-label="Story icon. Tap to open the Shortform full-screen">
+        <button type="button" class="st pulse" data-story="0"><span class="ring"><span class="logo lg1">NORDE</span></span><span class="st-l">NORDE</span></button>
+        <button type="button" class="st" data-story="1"><span class="ring"><span class="logo lg2">atelier<b>9</b></span></span><span class="st-l">Atelier Nine</span></button>
+        <button type="button" class="st" data-story="2"><span class="ring"><span class="logo lg3">MONO</span></span><span class="st-l">MONO</span></button>
+        <button type="button" class="st seen" data-story="3"><span class="ring"><img src="../assets/shortform-demo-poster.jpg" alt=""></span><span class="st-l">#newarrivals</span></button>
+        <button type="button" class="st seen" data-story="4"><span class="ring"><img src="https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg" alt=""></span><span class="st-l">#dailylook</span></button>
+       </div>
+       <div class="sd-body" aria-hidden="true">
+        <div class="sd-banner"></div>
+        <div class="sd-prods"><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div><div><i></i><span></span><span></span></div></div>
+       </div>
+       <div class="sd-player" hidden role="dialog" aria-label="Shortform full-screen player">
+        <div class="sd-frame">
+         <video class="sd-video" src="../assets/shortform-demo.mp4" poster="../assets/shortform-demo-poster.jpg" muted loop playsinline preload="none"></video>
+         <img class="sd-img" alt="" hidden>
+         <div class="sd-prog"><span class="on"></span><span></span><span></span></div>
+         <div class="sd-top"><span class="sd-av"></span><b class="sd-name">NORDE</b><button type="button" class="sd-x" aria-label="Close">×</button></div>
+         <div class="sd-prod"><b><img src="https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg" alt=""></b><span><em>Beige oversized hoodie</em>$42</span><i>Buy</i></div>
+        </div>
+       </div>
+      </div>
+     </div>
+     <p class="mock-cap">Sample screen · tap a circle to open the Shortform full-screen</p>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Key features</h3>
+    <div class="grid3">
+     <div class="card"><span class="card-tag">Built from conditions</span><h3 class="h3" style="font-size:16px">One round icon per brand or tag</h3><ul class="checks"><li>Brands use their logo as the icon</li><li>Tags and Shortform groups use the first Shortform's thumbnail</li><li>Icons with no Shortforms to show hide automatically</li></ul></div>
+     <div class="card"><span class="card-tag">New Shortform alerts</span><h3 class="h3" style="font-size:16px">A ring signals new Shortforms</h3><ul class="checks"><li>Rainbow ring when there are unseen new Shortforms</li><li>Gray ring once seen and nothing new</li><li>Catches the eye again every time you upload</li></ul></div>
+     <div class="card"><span class="card-tag">Two modes</span><h3 class="h3" style="font-size:16px">Play instantly or show the list</h3><ul class="checks"><li>Tap a circle to play full-screen right away</li><li>Or expand that condition's Shortform list below the circles, like tabs</li><li>Circle size and ring colors match your store design</li></ul></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">How to set it up</h3>
+    <div class="steps">
+     <div class="stp"><em>1</em><span class="who">Admin</span><h4>Choose how to group the circles</h4><p>Decide whether circles are made per brand, tag, or Shortform group, and attach that brand or tag to your Shortforms.</p></div>
+     <div class="stp"><em>2</em><span class="who">Your store</span><h4>Choose where the Story goes</h4><p>Decide where the icon row goes: top of home, brand pages, category pages, and more.</p></div>
+     <div class="stp"><em>3</em><span class="who">Your store</span><h4>Set the playback mode and look</h4><p>Choose whether tapping a circle plays right away or expands the list below, and set circle size and ring colors.</p></div>
+    </div>
+   </div>
+
+   <div class="blk">
+    <h3 class="h3">Ways to use it</h3>
+    <div class="grid2">
+     <div class="case"><span class="case-no">CASE 01</span><span class="case-kind">Home · brand pages</span><h3>Want to show what's new across many brands at a glance?</h3><p class="prob">The more brands you carry, the more new Shortforms get buried on home.</p><div class="sol"><b>Ways to use it</b>Place a Story with one circle per brand at the top of home. Only brands with new Shortforms get the ring, so they stand out again.</div></div>
+     <div class="case"><span class="case-no">CASE 02</span><span class="case-kind">Promotions · category pages</span><h3>Want Shortform tabs customers can browse by topic?</h3><p class="prob">Building and updating a separate Shortform section for every promotion is tedious.</p><div class="sol"><b>Ways to use it</b>Make circles from tags or Shortform groups and turn on the list view. The first circle's Shortforms open below, and tapping another circle switches the topic.</div></div>
+    </div>
+   </div>
+  </div>
+ </section>
+</div>
+
+<!-- 4. Contact -->
+<section id="contact" class="sec-white">
+ <div class="wrap">
+  <div class="cta">
+   <div>
+    <h2>Get started with Shortform today</h2>
+    <p>We'll help you decide which display option fits best. Reach out to your account manager or ask@shoplive.cloud.</p>
+   </div>
+   <div class="btns" style="margin-top:0">
+    <a class="btn btn-w" href="https://www.shoplive.cloud/en/demo">Contact sales</a>
+    <button class="btn btn-o" type="button" data-copy>Copy ask@shoplive.cloud</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>© 2026 Shoplive. All rights reserved.</footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  var KEYS=['collection','preview','showcase','story'];
+  var NAMES={collection:'Collection',preview:'Product Preview',showcase:'Showcase',story:'Story'};
+  var toast=document.getElementById('toast'),tm;
+  function show(m){toast.textContent=m;toast.classList.add('on');clearTimeout(tm);tm=setTimeout(function(){toast.classList.remove('on')},1800)}
+
+  function render(key){
+    KEYS.forEach(function(k){
+      var on=k===key;
+      document.getElementById('p-'+k).hidden=!on;
+      document.querySelectorAll('[data-display="'+k+'"]').forEach(function(b){
+        if(b.getAttribute('role')==='tab') b.setAttribute('aria-selected',on);
+        else b.setAttribute('aria-pressed',on);
+      });
+    });
+    document.title=(key?NAMES[key]+' · ':'')+'Shortform Guide | Shoplive';
+    if(typeof syncCollectionVideos==='function') setTimeout(syncCollectionVideos,0);
+  }
+  function current(){
+    var k=new URLSearchParams(location.search).get('display');
+    return KEYS.indexOf(k)>=0?k:'collection';
+  }
+  function go(key,push,scroll){
+    var u=new URL(location.href);u.searchParams.set('display',key);u.hash='';
+    if(push) history.pushState({display:key},'',u);
+    render(key);
+    if(scroll) document.getElementById('detail').scrollIntoView({behavior:'smooth'});
+  }
+  document.querySelectorAll('[data-display]').forEach(function(b){
+    b.addEventListener('click',function(){go(b.getAttribute('data-display'),true,true)});
+  });
+  window.addEventListener('popstate',function(){render(current())});
+
+  // Initial load: jump to the section given by ?display=
+  var hasParam=new URLSearchParams(location.search).has('display');
+  render(current());
+  if(hasParam){ setTimeout(function(){document.getElementById('detail').scrollIntoView();},0); }
+
+  // Language menu: keep the current ?display= and close on outside click
+  (function(){
+    var m=document.querySelector('.langmenu'); if(!m) return;
+    function sync(){ var k=new URLSearchParams(location.search).get('display'); m.querySelectorAll('.lang-list a').forEach(function(a){ var u=a.getAttribute('data-href')||a.getAttribute('href'); a.setAttribute('data-href',u); a.setAttribute('href', k?u+'?display='+k:u); }); }
+    sync(); window.addEventListener('popstate',sync);
+    var _go=go; go=function(key,push,scroll){ _go(key,push,scroll); sync(); };
+    document.addEventListener('click',function(e){ if(m.open && !m.contains(e.target)) m.open=false; });
+  })();
+
+  // Copy link
+  var share=document.querySelector('[data-share]');
+  share.addEventListener('click',function(){
+    var u=new URL(location.href);u.searchParams.set('display',current());u.hash='';
+    var s=u.toString();
+    try{navigator.clipboard.writeText(s).then(function(){show(NAMES[current()]+' link copied')},function(){show(s)})}catch(e){show(s)}
+  });
+
+  // Copy email address
+  document.querySelectorAll('[data-copy]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var mail='ask@shoplive.cloud';
+      try{navigator.clipboard.writeText(mail).then(function(){show('ask@shoplive.cloud copied')},function(){show(mail)})}catch(e){show(mail)}
+    });
+  });
+
+  // Selector card videos: stagger start offset and playback start
+  document.querySelectorAll('video.stagger').forEach(function(v){
+    var i=+v.getAttribute('data-i');
+    function start(){
+      try{ v.currentTime=(i*3.3)%(v.duration||10); }catch(e){}
+      setTimeout(function(){ var p=v.play(); if(p&&p.catch) p.catch(function(){}); }, i*900);
+    }
+    if(v.readyState>=1) start(); else v.addEventListener('loadedmetadata',start,{once:true});
+  });
+
+  // Collection: play only visible cards, with different start offsets and timing
+  function syncCollectionVideos(){
+    document.querySelectorAll('video.cv').forEach(function(v){
+      var visible=v.offsetParent!==null;
+      if(!visible){ if(!v.paused) v.pause(); return; }
+      if(!v.paused) return;
+      var o=+v.getAttribute('data-o')||0;
+      if(v.preload!=='auto') v.preload='auto';
+      function go(){
+        if(!v._seeded){ try{ v.currentTime=(o*1.37)%Math.max(1,(v.duration||10)-0.5); }catch(e){} v._seeded=true; }
+        setTimeout(function(){ if(v.offsetParent!==null){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); } }, (o%6)*350);
+      }
+      if(v.readyState>=1) go(); else v.addEventListener('loadedmetadata',go,{once:true});
+    });
+  }
+  (function(){
+    var root=document.querySelector('.cv-mock .col-mock'); if(!root) return;
+    var pl=root.querySelector('.cv-player'), big=pl.querySelector('.cv-big');
+    var PRODS=[["Beige oversized hoodie","$42","https://gtm.shoplive.cloud/clip_maker/assets/5f310d36cda95146759d87a633131846.jpg"],["Charcoal half-zip hoodie","$44","https://gtm.shoplive.cloud/clip_maker/assets/ac478e2cab4fa332e375cb79d81113e3.jpg"],["Slit long skirt","$32","https://gtm.shoplive.cloud/clip_maker/assets/f0c6399cf5579a75c406de2def2eff01.jpg"],["Cotton oversized hoodie","$41","https://gtm.shoplive.cloud/clip_maker/assets/f813cca50a43788ef98312b37b459230.jpg"],["Satin long skirt","$35","https://gtm.shoplive.cloud/clip_maker/assets/0758f1929b2f6aee02775e52ff3e4b71.jpg"]];
+    function open(c){
+      var v=c.querySelector('video'), i=+c.getAttribute('data-i'), pr=PRODS[i%PRODS.length];
+      big.src=v.getAttribute('src'); big.poster=v.getAttribute('poster');
+      root.querySelector('.cv-name').textContent=c.querySelector('.cv-t').textContent;
+      root.querySelector('.cv-pimg').src=pr[2]; root.querySelector('.cv-pn').textContent=pr[0]; root.querySelector('.cv-pp').textContent=pr[1];
+      pl.hidden=false;
+      big.addEventListener('loadedmetadata',function f(){ try{big.currentTime=v.currentTime||0;}catch(e){} big.removeEventListener('loadedmetadata',f); },{once:true});
+      var p=big.play(); if(p&&p.catch)p.catch(function(){});
+    }
+    function close(){ pl.hidden=true; big.pause(); }
+    root.querySelectorAll('.cv-card').forEach(function(c){
+      c.addEventListener('click',function(){open(c)});
+      c.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){e.preventDefault();open(c);} });
+    });
+    pl.querySelector('.cv-x').addEventListener('click',close);
+    pl.addEventListener('click',function(e){ if(e.target===pl) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!pl.hidden) close(); });
+  })();
+
+  // Horizontal: drag with mouse/touch + progress bar
+  document.querySelectorAll('.hrow.drag').forEach(function(row){
+    var down=false,sx=0,sl=0,moved=false,bar=row.parentNode.querySelector('.hbar span');
+    function upd(){ if(!bar) return; var max=row.scrollWidth-row.clientWidth; var w=row.clientWidth/row.scrollWidth*100; bar.style.width=w+'%'; bar.style.transform='translateX('+(max>0?row.scrollLeft/max*(100/w*100-100):0)+'%)'; }
+    row.addEventListener('scroll',upd); window.addEventListener('resize',upd);
+    row.addEventListener('pointerdown',function(e){ if(e.pointerType!=='mouse') return; down=true; moved=false; sx=e.clientX; sl=row.scrollLeft; });
+    window.addEventListener('pointermove',function(e){ if(!down) return; var dx=e.clientX-sx; if(!moved&&Math.abs(dx)>5){ moved=true; row.classList.add('grabbing'); } if(moved) row.scrollLeft=sl-dx; });
+    window.addEventListener('pointerup',function(){ if(!down) return; down=false; setTimeout(function(){row.classList.remove('grabbing')},0); });
+    row.addEventListener('click',function(e){ if(moved){ e.stopPropagation(); e.preventDefault(); moved=false; } },true);
+    new MutationObserver(upd).observe(row.parentNode,{attributes:true,attributeFilter:['hidden']}); setTimeout(upd,0);
+  });
+
+  // Story desktop mock: click a ring to open the fullscreen player
+  (function(){
+    var page=document.querySelector('.st-desk .sd-page'); if(!page) return;
+    var pl=page.querySelector('.sd-player'), vid=pl.querySelector('.sd-video'), img=pl.querySelector('.sd-img'),
+        nm=pl.querySelector('.sd-name'), av=pl.querySelector('.sd-av'), hint=page.querySelector('.sd-hint');
+    var A='https://gtm.shoplive.cloud/clip_maker/assets/';
+    var D=[{n:'NORDE',v:1,av:'NORDE',bg:'#111',c:'#fff'},
+           {n:'atelier9',img:A+'f813cca50a43788ef98312b37b459230.jpg',av:'a9',bg:'#EFE6DA',c:'#5A4632'},
+           {n:'MONO',img:A+'ac478e2cab4fa332e375cb79d81113e3.jpg',av:'MONO',bg:'#fff',c:'#111'},
+           {n:'#newarrivals',v:1,av:'',bg:'#C9B49A',c:'#fff'},
+           {n:'#dailylook',img:A+'f0c6399cf5579a75c406de2def2eff01.jpg',av:'',bg:'#C9B49A',c:'#fff'}];
+    function close(){ pl.hidden=true; vid.pause(); }
+    page.querySelectorAll('.sd-tray .st').forEach(function(b){
+      b.addEventListener('click',function(){
+        var d=D[+b.getAttribute('data-story')];
+        nm.textContent=d.n; av.textContent=d.av; av.style.background=d.bg; av.style.color=d.c;
+        if(d.v){ img.hidden=true; vid.hidden=false; vid.currentTime=0; var p=vid.play(); if(p&&p.catch)p.catch(function(){}); }
+        else { vid.pause(); vid.hidden=true; img.src=d.img; img.hidden=false; }
+        pl.hidden=false; b.classList.add('seen'); page.querySelectorAll('.st.pulse').forEach(function(x){x.classList.remove('pulse')});
+      });
+    });
+    pl.querySelector('.sd-x').addEventListener('click',close);
+    pl.addEventListener('click',function(e){ if(e.target===pl) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!pl.hidden) close(); });
+  })();
+
+  // Product preview: drag to move, click to enlarge
+  (function(){
+    var page=document.querySelector('.pv-page'); if(!page) return;
+    var pip=page.querySelector('.pv-pip'), pl=page.querySelector('.pv-player'), big=pl.querySelector('.pv-video'),
+        restore=page.querySelector('.pv-restore'), x=pip.querySelector('.x');
+    var sx,sy,ox,oy,moved=false,down=false;
+    pip.addEventListener('pointerdown',function(e){
+      if(e.target===x) return;
+      down=true; moved=false; sx=e.clientX; sy=e.clientY;
+      var pr=page.getBoundingClientRect(), r=pip.getBoundingClientRect();
+      ox=r.left-pr.left; oy=r.top-pr.top;
+      pip.setPointerCapture(e.pointerId);
+    });
+    pip.addEventListener('pointermove',function(e){
+      if(!down) return;
+      var dx=e.clientX-sx, dy=e.clientY-sy;
+      if(!moved && Math.abs(dx)+Math.abs(dy)<5) return;
+      moved=true; pip.classList.add('drag');
+      var pr=page.getBoundingClientRect(), w=pip.offsetWidth, h=pip.offsetHeight;
+      var nx=Math.max(4,Math.min(pr.width-w-4,ox+dx)), ny=Math.max(4,Math.min(pr.height-h-4,oy+dy));
+      pip.style.left=nx+'px'; pip.style.top=ny+'px'; pip.style.right='auto'; pip.style.bottom='auto';
+    });
+    function up(){ if(!down) return; down=false; pip.classList.remove('drag'); if(!moved) open(); }
+    pip.addEventListener('pointerup',up);
+    pip.addEventListener('pointercancel',function(){down=false;pip.classList.remove('drag')});
+    pip.addEventListener('keydown',function(e){ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); open(); } });
+    function open(){ pl.hidden=false; big.currentTime=pip.querySelector('video').currentTime||0; var p=big.play(); if(p&&p.catch)p.catch(function(){}); }
+    function close(){ pl.hidden=true; big.pause(); }
+    pl.querySelector('.pv-x').addEventListener('click',close);
+    pl.addEventListener('click',function(e){ if(e.target===pl) close(); });
+    document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&!pl.hidden) close(); });
+    x.addEventListener('pointerdown',function(e){e.stopPropagation()});
+    x.addEventListener('click',function(e){ e.stopPropagation(); pip.hidden=true; restore.hidden=false; });
+    restore.addEventListener('click',function(){ pip.hidden=false; restore.hidden=true; pip.style.cssText=''; });
+  })();
+
+  // Showcase: click a thumbnail to switch the main card
+  (function(){
+    var stage=document.querySelector('#p-showcase .sc-stage'); if(!stage) return;
+    var vid=stage.querySelector('.sc-video'), img=stage.querySelector('.sc-img'),
+        badge=stage.querySelector('.sc-badge'), bars=stage.querySelectorAll('.sc-prog span'),
+        ths=document.querySelectorAll('#p-showcase .sc-th');
+    ths.forEach(function(t){
+      t.addEventListener('click',function(){
+        var i=+t.getAttribute('data-sc'), src=t.getAttribute('data-src');
+        ths.forEach(function(o){o.classList.toggle('on',o===t)});
+        bars.forEach(function(b,k){b.classList.toggle('on',k<=i)});
+        if(src){ vid.pause(); vid.hidden=true; img.src=src; img.hidden=false; badge.textContent='Shortform Showcase · image card'; }
+        else { img.hidden=true; vid.hidden=false; try{vid.play()}catch(e){} badge.textContent='Shortform Showcase · now playing'; }
+      });
+    });
+  })();
+
+  // Collection layout preview switch
+  document.querySelectorAll('[data-col]').forEach(function(b){
+    b.addEventListener('click',function(){
+      var v=b.getAttribute('data-col');
+      document.querySelectorAll('[data-col]').forEach(function(o){o.setAttribute('aria-pressed',o===b)});
+      document.querySelectorAll('.col-view').forEach(function(p){p.hidden=p.getAttribute('data-view')!==v});
+      syncCollectionVideos();
+    });
+  });
+})();
+</script>
+</body>
+</html>
