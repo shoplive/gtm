@@ -45,8 +45,7 @@
     btn.addEventListener('click',function(){
       var text=btn.getAttribute('data-copy');
       function done(){ btn.style.minWidth=btn.offsetWidth+'px'; btn.classList.add('is-copied'); clearTimeout(t); t=setTimeout(function(){btn.classList.remove('is-copied'); btn.style.minWidth='';},2000); }
-      function fallback(){ var ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ document.execCommand('copy'); }catch(e){} document.body.removeChild(ta); done(); }
-      if(navigator.clipboard&&navigator.clipboard.writeText){ navigator.clipboard.writeText(text).then(done,fallback); } else { fallback(); }
+function fallback(){ var ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ if(document.execCommand('copy')) done(); }catch(e){} document.body.removeChild(ta); }
     });
   });
   /* 모바일 메뉴 */
