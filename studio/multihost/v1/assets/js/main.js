@@ -42,11 +42,10 @@
   /* 이메일 복사 */
   [].forEach.call(document.querySelectorAll('.btn-copy'),function(btn){
     var t;
-    btn.addEventListener('click',function(){
       var text=btn.getAttribute('data-copy');
       function done(){ btn.style.minWidth=btn.offsetWidth+'px'; btn.classList.add('is-copied'); clearTimeout(t); t=setTimeout(function(){btn.classList.remove('is-copied'); btn.style.minWidth='';},2000); }
-function fallback(){ var ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ if(document.execCommand('copy')) done(); }catch(e){} document.body.removeChild(ta); }
-    });
+      function fallback(){ var ta=document.createElement('textarea'); ta.value=text; ta.setAttribute('readonly',''); ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{ if(document.execCommand('copy')) done(); }catch(e){} document.body.removeChild(ta); }
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done,fallback);}else{fallback();}
   });
   /* 모바일 메뉴 */
   function setMenu(open){ nav.classList.toggle('open',open); menuBtn.setAttribute('aria-expanded',open); menuBtn.setAttribute('aria-label',open?(document.documentElement.getAttribute('data-menu-close')||'메뉴 닫기'):(document.documentElement.getAttribute('data-menu-open')||'메뉴 열기')); }
