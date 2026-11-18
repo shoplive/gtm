@@ -77,17 +77,6 @@ h3{font-size:16px;line-height:1.6;margin:0 0 6px;font-weight:600;color:var(--tex
 .pill.plan{color:#AA7E03;background:#FEFBF0}
 .pill.acc{color:var(--n800);background:var(--n100)}
 
-.rfp{overflow:hidden}
-.rfp-row{display:grid;grid-template-columns:150px 1fr 64px 1.5fr;gap:20px;padding:16px 20px;border-top:1px solid var(--line);align-items:start}
-.rfp-row:first-child{border-top:0}
-.rfp-row.head{background:var(--surface-2);font-size:12px;color:var(--muted);font-weight:500;padding:10px 20px}
-.rfp-row .grp{color:var(--muted);font-size:13px}
-.rfp-row .pts{font-family:var(--mono);color:var(--text);font-weight:600}
-.rfp-row .how{color:var(--text);font-size:15px;line-height:1.55}
-.rfp-row .how b{font-weight:600}
-.rfp-row.head .how{color:var(--text);font-weight:600;font-size:12px}
-.rfp-row .how a{color:var(--text);font-weight:500;text-decoration:underline;text-decoration-color:var(--n400);text-underline-offset:3px}
-.rfp-row .how a:hover{text-decoration-color:var(--text)}
 
 .seg{display:inline-flex;background:var(--n200);border-radius:var(--r-md);padding:2px;gap:2px;flex-wrap:wrap}
 .seg button:focus-visible,.btn:focus-visible,.part:focus-visible{outline:2px solid var(--focus);outline-offset:1px}
@@ -175,7 +164,14 @@ details.more summary:hover{color:var(--text)}
 .fr .screen video{width:100%;height:100%;display:block;object-fit:contain}
 .fr.wide .screen{aspect-ratio:16/9}
 .fr.tall .screen{aspect-ratio:9/16}
-.fr.hero-fr .screen{outline:2px solid var(--accent);outline-offset:2px}
+.fr.hero-fr{position:relative;margin:-8px;padding:8px 8px 12px;border-radius:14px;background:#EAF2FF;box-shadow:0 0 0 2px var(--c1),0 8px 24px rgba(32,119,248,.18);z-index:1}
+.fr.hero-fr .screen{border-color:var(--c1)}
+.fr .hero-tag{position:absolute;top:8px;left:8px;right:8px;display:flex;justify-content:center;align-items:center;gap:4px;height:24px;border-radius:9999px;background:var(--c1);color:var(--white);font-size:11px;font-weight:600;white-space:nowrap;box-shadow:0 2px 6px rgba(12,14,19,.25);pointer-events:none}
+.fr.hero-fr .cap b{color:#0B5BD3;font-size:14px}
+.fr.hero-fr .cap span{color:var(--n800)}
+.fr.hero-fr .cap .pill{background:var(--c1);color:var(--white)}
+.lab .fr:not(.hero-fr):not(.wide) .screen{opacity:.82;transition:opacity .15s}
+.lab .fr:not(.hero-fr):not(.wide):hover .screen{opacity:1}
 .fr .cap{display:flex;flex-direction:column;gap:2px}
 .fr .cap b{font-size:13px;font-weight:600;color:var(--text)}
 .fr .cap span{font-size:12px;color:var(--muted);line-height:1.4}
@@ -194,6 +190,21 @@ details.more summary:hover{color:var(--text)}
 .why-grid .card{padding:20px}
 .why-grid p{margin:0;color:var(--text-2)}
 
+.bc-group+.bc-group,.lab-group+.lab-group{margin-top:64px;padding-top:48px;border-top:1px dashed var(--line-2)}
+.bc-title{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.bc-title .no{display:inline-grid;place-items:center;height:28px;padding:0 10px;border-radius:9999px;background:var(--n900);color:var(--white);font-size:12px;font-weight:600}
+.bc-title h3{margin:0;font-size:22px;line-height:1.3;letter-spacing:-.01em}
+.bc-title .sub{font-size:13px;color:var(--muted)}
+.lab-group .bc-title{margin-bottom:16px}
+.lab-row+.lab-row{margin-top:40px}
+.lab-row-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.lab-row-head b{font-size:16px;color:var(--text)}
+.lab-row-head .mono{color:var(--muted)}
+.ed-steps{display:flex;flex-direction:column;gap:48px;margin-top:40px}
+.ed-step-head{display:flex;gap:14px;align-items:flex-start}
+.ed-step-head .no{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--n900);color:var(--white);font-size:14px;font-weight:600}
+.ed-step-head h3{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:3px 0 6px;font-size:18px}
+.ed-step-head p{margin:0;color:var(--text-2);max-width:820px}
 .two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .ed-shot{margin:14px 0 0;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;background:var(--surface);box-shadow:var(--sh-xs)}
 .ed-shot img{display:block;width:100%;height:auto}
@@ -238,7 +249,12 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .demo-cta .ey .pill{background:var(--c1);color:var(--white)}
 .demo-cta strong{display:block;font-size:17px;font-weight:600;line-height:1.5}
 .demo-cta .ds{display:block;font-size:13px;color:var(--n400);margin-top:2px}
-.demo-cta .go{flex:none;display:inline-flex;align-items:center;gap:6px;height:40px;padding:0 16px;border-radius:var(--r);background:var(--white);color:var(--text);font-size:14px;font-weight:600;white-space:nowrap}
+.demo-cta{border:1px solid rgba(32,119,248,.45)}
+.demo-cta .go{flex:none;display:inline-flex;align-items:center;gap:8px;height:52px;padding:0 24px;border-radius:var(--r-md);background:var(--c1);color:var(--white);font-size:16px;font-weight:600;white-space:nowrap;animation:goPulse 2.4s ease-in-out infinite;transition:background .15s}
+.demo-cta:hover .go{background:#1567E0}
+.demo-cta .go small{font-size:12px;font-weight:500;opacity:.8}
+@keyframes goPulse{0%,100%{box-shadow:0 0 0 0 rgba(32,119,248,.55),0 6px 16px rgba(32,119,248,.3)}50%{box-shadow:0 0 0 10px rgba(32,119,248,0),0 6px 16px rgba(32,119,248,.3)}}
+@media (prefers-reduced-motion:reduce){.demo-cta .go{animation:none}}
 .demo-cta .go svg{transition:transform .15s}
 .demo-cta:hover .go svg{transform:translateX(3px)}
 @media (max-width:560px){.demo-cta{flex-wrap:wrap;padding:18px}.demo-cta .ic{display:none}.demo-cta .go{width:100%;justify-content:center}}
@@ -252,9 +268,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 @media (max-width:900px){
   .bc,.two,.why-grid,.grid3,.shorts,.excl{grid-template-columns:1fr}
   .short .vid{width:min(100%,380px);margin:0 auto}
-  .rfp-row{grid-template-columns:1fr 48px;gap:6px 14px}
-  .rfp-row .grp,.rfp-row .how{grid-column:1/-1}
-  .rfp-row.head{display:none}
   .sub-demo{grid-template-columns:1fr}
   .sub-demo video{max-width:260px}
   h1{font-size:28px}
@@ -274,7 +287,6 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <div class="brand"><svg aria-label="Shoplive" role="img" viewBox="0 0 1000 250" fill="none" xmlns="http://www.w3.org/2000/svg" > <path d="M62.6155 110.872C47.6598 108.576 36.0673 106.033 36.0673 97.3795C36.0673 88.726 45.8708 82.6509 57.5349 82.6509C72.9915 82.6509 84.584 90.0328 84.584 100.7H118.789C118.789 74.4918 93.2784 55.7013 57.9642 55.7013C25.7629 55.7013 1.28986 74.1739 1.28986 99.4281C1.28986 131.217 25.7629 135.808 55.1377 139.34C71.0952 140.894 86.051 143.932 86.051 154.881C86.051 163.535 75.7465 170.14 61.5779 170.14C44.8332 170.14 32.7398 160.992 32.7398 147.994H0.00181046C-0.248644 176.603 25.5124 197.089 61.077 197.089C97.8939 197.089 123.154 177.522 123.154 150.29C123.154 119.773 89.45 114.439 62.6155 110.872Z" fill="#333333"/> <path d="M638.233 2.79053H599.592V191.508H638.233V2.79053Z" fill="#333333"/> <path d="M701.134 61.281H662.492V191.508H701.134V61.281Z" fill="#333333"/> <path d="M820.457 61.281L788.256 162.51L755.804 61.281H714.551L760.67 191.508H815.806L861.925 61.281H820.457Z" fill="#333333"/> <path d="M681.813 44.9983C694.4 44.9983 704.604 34.9251 704.604 22.4992C704.604 10.0732 694.4 0 681.813 0C669.226 0 659.022 10.0732 659.022 22.4992C659.022 34.9251 669.226 44.9983 681.813 44.9983Z" fill="#EF3434"/> <path d="M358.938 56.1942C344.867 56.1872 331.11 60.3004 319.407 68.0132C307.705 75.7261 298.582 86.6922 293.194 99.5242C287.806 112.356 286.395 126.477 289.138 140.101C291.882 153.726 298.657 166.24 308.606 176.062C318.556 185.885 331.234 192.573 345.035 195.281C358.836 197.989 373.14 196.596 386.139 191.277C399.137 185.958 410.246 176.953 418.059 165.4C425.872 153.847 430.039 140.267 430.032 126.376C430.022 107.766 422.529 89.92 409.198 76.7604C395.868 63.6007 377.79 56.2036 358.938 56.1942ZM358.938 160.354C352.129 160.361 345.471 158.375 339.806 154.645C334.141 150.916 329.724 145.612 327.113 139.404C324.502 133.195 323.816 126.362 325.14 119.769C326.464 113.175 329.739 107.118 334.551 102.362C339.364 97.6068 345.497 94.3672 352.174 93.0533C358.852 91.7393 365.774 92.4102 372.066 94.9809C378.357 97.5516 383.735 101.907 387.519 107.495C391.302 113.084 393.322 119.654 393.322 126.376C393.322 135.382 389.701 144.019 383.253 150.39C376.806 156.761 368.061 160.345 358.938 160.354V160.354Z" fill="#333333"/> <path d="M511.964 56.1942C493.109 56.1942 475.026 63.5884 461.693 76.75C448.361 89.9117 440.871 107.763 440.871 126.376V249.998H477.58V187.798C487.075 192.98 497.646 195.947 508.482 196.473C519.318 196.999 530.133 195.07 540.097 190.833C550.062 186.596 558.912 180.164 565.969 172.03C573.027 163.896 578.105 154.274 580.814 143.904C583.524 133.533 583.793 122.687 581.601 112.198C579.41 101.708 574.815 91.8534 568.169 83.3875C561.524 74.9216 553.004 68.0695 543.261 63.356C533.519 58.6426 522.813 56.1927 511.964 56.1942V56.1942ZM511.964 160.354C505.156 160.354 498.502 158.362 492.841 154.628C487.181 150.894 482.77 145.588 480.164 139.379C477.559 133.17 476.878 126.338 478.206 119.747C479.534 113.156 482.812 107.102 487.626 102.35C492.439 97.5978 498.572 94.3617 505.249 93.0506C511.926 91.7396 518.846 92.4125 525.136 94.9842C531.425 97.5559 536.801 101.911 540.583 107.499C544.365 113.086 546.384 119.656 546.384 126.376C546.384 135.388 542.757 144.03 536.302 150.402C529.847 156.775 521.093 160.354 511.964 160.354V160.354Z" fill="#333333"/> <path d="M928.868 56.1945C916.042 56.1739 903.449 59.5771 892.422 66.0439C881.396 72.5107 872.345 81.8004 866.229 92.9296C860.114 104.059 857.16 116.614 857.681 129.264C858.202 141.915 862.179 154.192 869.19 164.794C876.2 175.396 885.985 183.93 897.507 189.492C909.029 195.053 921.86 197.436 934.642 196.388C947.424 195.339 959.681 190.898 970.115 183.535C980.549 176.172 988.772 166.161 993.914 154.562H954.056C949.496 158.55 944.032 161.396 938.124 162.862C932.216 164.328 926.037 164.37 920.109 162.985C914.181 161.6 908.678 158.828 904.062 154.904C899.447 150.979 895.855 146.016 893.589 140.434H998.53C1000.67 130.225 1000.47 119.675 997.962 109.55C995.451 99.4242 990.687 89.9781 984.016 81.8975C977.345 73.817 968.934 67.3049 959.395 62.8345C949.856 58.364 939.427 56.0475 928.868 56.0532V56.1945ZM961.069 114.579H892.695C895.213 107.073 900.064 100.541 906.557 95.9107C913.051 91.2809 920.857 88.789 928.868 88.789C936.878 88.789 944.684 91.2809 951.178 95.9107C957.672 100.541 962.522 107.073 965.04 114.579H961.069Z" fill="#333333"/> <path d="M276.504 119.453C276.504 118.358 276.289 117.263 276.146 116.204C275.648 111.508 274.689 106.871 273.284 102.358C271.879 97.9318 270.071 93.6404 267.881 89.5366C257.148 69.2627 237.326 55.6996 214.749 55.6996C212.584 55.6861 210.421 55.8159 208.273 56.0881H207.164C193.774 58.1962 181.618 65.0376 172.959 75.3378C172.959 75.3378 172.959 69.7925 172.959 69.8278V1.87109H136.214V191.507H172.923V125.493C172.864 117.6 175.484 109.916 180.365 103.665C183.398 99.8539 187.273 96.778 191.695 94.6721C196.116 92.5662 200.967 91.4862 205.876 91.5146C214.998 91.5239 223.744 95.1079 230.191 101.479C236.638 107.85 240.26 116.487 240.26 125.493V126.376V191.507H276.969V138.526C276.969 134.994 276.969 131.462 276.969 127.93C276.826 125.14 276.719 122.279 276.504 119.453Z" fill="#333333"/> </svg><span>Clip Maker</span><span class="sep"></span><small>롯데홈쇼핑 제안</small></div>
     <nav id="toc">
-      <a href="#rfp">RFP 대응</a>
       <a href="#samples">샘플 6편</a>
       <a href="#framing">화면 구성</a>
       <a href="#subtitles">자막 · STT</a>
@@ -289,26 +301,15 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <span class="eyebrow"><i></i>Proposal · AI 숏폼 제작 솔루션</span>
     <h1><span class="dim">20분 방송 한 편이</span><br><em>업로드용 숏폼 3편</em>이 됩니다.</h1>
-    <p class="lede">Shoplive Clip Maker는 방송 음성과 화면을 함께 읽고 상품의 판매 소구점이 드러난 구간을 골라 9:16 세로 숏폼으로 만듭니다. 자막, 제목·설명·해시태그, 구간 정보와 AI 평가 점수까지 함께 전달합니다. 아래 샘플은 롯데홈쇼핑이 제공한 방송 2편을 <b>자동 생성 API</b>로 만들어 방송마다 상위 3편씩 고른 뒤, STT 오인식과 시작 · 끝 지점을 사람이 검수해 다듬은 결과이며, 길이는 30~37초입니다.</p>
-  </div>
-</section>
-
-<section class="block" id="rfp">
-  <div class="wrap">
-    <div class="sec-head">
-      <div><div class="sec-no">01 — RFP COVERAGE</div><h2>평가 항목별 대응</h2>
-      <p>제안서 평가 기준(60점)의 각 항목을 Shoplive Clip Maker의 어떤 기능이 맡는지, 그리고 이 페이지의 어디에서 확인할 수 있는지 정리했습니다.</p></div>
-    </div>
-    <div class="card rfp" id="rfpTable"></div>
+    <p class="lede">Shoplive Clip Maker는 방송 음성과 화면을 함께 읽고 상품의 판매 소구점이 드러난 구간을 골라 9:16 세로 숏폼으로 만듭니다. 자막, 제목·설명·해시태그, 구간 정보와 AI 평가 점수까지 함께 전달합니다. 아래 샘플은 롯데홈쇼핑이 제공한 방송 2편을 <b>자동 생성 API</b>로 만들어 방송마다 상위 3편씩 고른 결과이며, 길이는 30~37초입니다.</p>
   </div>
 </section>
 
 <section class="block" id="samples">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">02 — SAMPLES</div><h2>AI 숏폼 샘플 6편</h2>
-      <p>방송별 3편씩 생성했습니다. 그다음 순위 후보와, 가격 · 할인 · 재고처럼 방송 중에만 유효한 정보나 자료영상 · 판넬이 화면을 덮어 뺀 후보는 숏폼 아래에 이유와 함께 적었습니다. 모든 샘플은 <b>크롭 · 얼굴 트래킹</b> 화면 구성으로 만들었습니다. 원본 타임라인의 색 구간이 각 숏폼에 쓰인 장면입니다. 구간이나 자막 줄을 누르면 해당 위치로 이동합니다.</p></div>
-      <div class="seg" id="bcSwitch"></div>
+      <div><div class="sec-no">01 — SAMPLES</div><h2>AI 숏폼 샘플 6편</h2>
+      <p>방송별 3편씩 생성했습니다. 그다음 순위 후보와, 가격 · 할인 · 재고처럼 방송 중에만 유효한 정보나 자료영상 · 판넬이 화면을 덮어 뺀 후보는 숏폼 아래에 이유와 함께 적었습니다. 모든 샘플은 <b>크롭 · 얼굴 트래킹</b> 화면 구성으로 만들었습니다. 원본 타임라인의 색 구간이 각 숏폼에 쓰인 장면입니다. 구간이나 자막 줄을 누르면 해당 위치로 이동합니다. 아로마티카 에센스, 박준면의 김치이야기 순서로 이어집니다.</p></div>
     </div>
     <div id="bcView"></div>
   </div>
@@ -317,20 +318,10 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="framing">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">03 — FRAMING</div><h2>가로 방송을 세로로: 화면 구성 8가지 비교</h2>
-      <p>같은 숏폼을 화면 구성 옵션만 바꿔 렌더했습니다. 위 샘플 6편은 모두 <b>크롭 · 얼굴 트래킹</b>으로 만든 것입니다. 고객사별 기본값으로 저장해 두고 요청마다 바꿀 수도 있습니다. 8개 화면은 함께 맞춰 재생됩니다.</p></div>
+      <div><div class="sec-no">02 — FRAMING</div><h2>가로 방송을 세로로: 화면 구성 8가지 비교</h2>
+      <p>같은 숏폼을 화면 구성 옵션만 바꿔 렌더했습니다. 위 샘플 6편은 모두 <b>크롭 · 얼굴 트래킹</b>으로 만든 것입니다. 고객사별 기본값으로 저장해 두고 요청마다 바꿀 수도 있습니다. 숏폼마다 8개 화면을 함께 맞춰 재생할 수 있습니다.</p></div>
     </div>
-    <div class="lab-bar">
-      <div class="seg" id="labBc"></div>
-      <div class="seg" id="labShort"></div>
-    </div>
-    <div class="lab" id="lab"></div>
-    <div class="ctrl">
-      <button class="btn pri" id="labPlay">▶ 함께 재생</button>
-      <button class="btn" id="labSound">🔇 소리 켜기</button>
-      <input type="range" id="labSeek" min="0" max="1000" value="0" aria-label="재생 위치">
-      <span class="t" id="labTime">0:00 / 0:00</span>
-    </div>
+    <div id="labs"></div>
     <div class="why-head"><h3>크롭 · 얼굴 트래킹에 들어간 처리</h3><span>샘플 6편에 적용된 방식입니다.</span></div>
     <div class="why-grid">
       <div class="card"><h3>얼굴이 잘리지 않게</h3><p>얼굴을 검출해 크롭 창이 진행자 얼굴 전체를 담도록 맞춥니다.</p></div>
@@ -345,7 +336,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="subtitles">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">04 — SUBTITLES · STT</div><h2>자막은 브랜드에 맞게, 고유명사는 정확하게</h2>
+      <div><div class="sec-no">03 — SUBTITLES · STT</div><h2>자막 스타일은 방송마다 다르게, 고유명사는 정확하게</h2>
       <p>같은 엔진으로 방송마다 다른 자막 스타일을 입힐 수 있습니다. 상품명·브랜드명·출연자 이름은 STT vocabulary로 등록해 음성 인식 단계에서부터 정확히 받아 적습니다.</p></div>
     </div>
     <div class="why-head" style="margin-top:0"><h3>방송마다 다른 자막 스타일</h3><span>샘플 2편에 서로 다른 스타일을 적용했습니다. 고객사 기본값으로 저장해 두고 요청마다 바꿀 수 있습니다.</span></div>
@@ -367,9 +358,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="editor">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">05 — EDITOR</div><h2>자동 생성 결과는 Clip Maker로 수정할 수 있습니다</h2>
+      <div><div class="sec-no">04 — EDITOR</div><h2>자동 생성 결과는 Clip Maker로 수정할 수 있습니다</h2>
       <p>자동 생성 결과를 그대로 쓰지 않고 다듬고 싶을 때는 Shoplive 어드민의 <b>Clip Maker 에디터</b>에서 구간 · 자막 · 화면 구성을 수정할 수 있습니다. 별도 편집 프로그램 없이 브라우저에서 미세 조정을 하고 다시 렌더합니다.</p></div>
-      <div class="seg" id="edSwitch"></div>
     </div>
     <a class="demo-cta" href="https://dev-shortform.shoplive.show/clip-maker-demo/682ab287dced339f063fbb03/index.html" target="_blank" rel="noopener">
       <span class="ic" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m10 8.5 4 2.5-4 2.5z" fill="currentColor"/><path d="M7 21h10"/></svg></span>
@@ -378,22 +368,24 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <strong>어떤 방식으로 편집할 수 있는지 직접 확인해 보세요</strong>
         <span class="ds">데모로 구간 선택 · 자막 고치기 · 화면 조정을 어떤 방식으로 편집할 수 있는지 볼 수 있는 샘플입니다.</span>
       </span>
-      <span class="go">데모 열기<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+      <span class="go">데모 열기 <small>새 창</small><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
     </a>
-    <figure class="ed-shot"><img id="edImg" src="img/editor-select.jpg" alt="Clip Maker 에디터 화면"><figcaption id="edCap"></figcaption></figure>
-    <div class="why-grid">
-      <div class="card"><h3>구간 선택</h3><p>AI가 추천한 구간 목록에서 다른 구간을 고르거나, 찾고 싶은 장면을 문장으로 검색합니다. 타임라인에서 구간의 시작 · 끝을 끌어 길이를 맞춥니다.</p></div>
-      <div class="card"><h3>자막 고치기</h3><p>음성 인식 자막이 시간순으로 깔려 있습니다. 문구를 고치거나 지우고, 강조 문구를 새로 넣습니다. 글자 크기 · 색 · 위치는 자막 하나만 또는 전체에 한 번에 적용합니다.</p></div>
-      <div class="card"><h3>화면 조정</h3><p>원본 영상의 크기와 위치를 미리보기에서 끌어 맞추고, 배경은 블러 · 검정 · 흰색 · 컬러 팔레트에서 고릅니다. 고친 내용은 숏폼의 모든 장면에 똑같이 적용됩니다.</p></div>
+    <div class="ed-steps">
+      <div class="ed-step"><div class="ed-step-head"><span class="no">1</span><div><h3>구간 선택<span class="pill">구간 선택 화면</span></h3><p>AI가 추천한 구간 목록에서 쓸 구간을 고르거나, 왼쪽 AI 장면 검색에 「특대 용량 2통 설명 구간 찾아줘」처럼 찾고 싶은 장면을 문장으로 입력합니다. 아래 타임라인에서 방송 전체를 훑어보고, 구간의 시작 · 끝을 끌어 길이를 맞춥니다.</p></div></div>
+        <figure class="ed-shot"><img src="img/aromatica-editor-select.jpg" alt="Clip Maker 에디터 — 구간 선택 (구간 선택 화면)" loading="lazy" width="2000" height="1024"></figure></div>
+      <div class="ed-step"><div class="ed-step-head"><span class="no">2</span><div><h3>자막 고치기<span class="pill">영상 편집 · 텍스트 탭</span></h3><p>음성 인식 자막이 오른쪽에 시간순으로 깔려 있습니다. 문구를 고치거나 지우고, 강조 문구를 새로 넣습니다. 글자 크기 · 색 · 위치는 자막 하나만 또는 전체에 한 번에 적용하고, 타임라인에서 자막 블록을 끌어 시각을 맞춥니다.</p></div></div>
+        <figure class="ed-shot"><img src="img/aromatica-editor-text.jpg" alt="Clip Maker 에디터 — 자막 고치기 (영상 편집 · 텍스트 탭)" loading="lazy" width="2000" height="1024"></figure></div>
+      <div class="ed-step"><div class="ed-step-head"><span class="no">3</span><div><h3>화면 조정<span class="pill">영상 편집 · 화면 탭</span></h3><p>원본 영상의 크기와 위치를 미리보기에서 끌어 맞추고, 출력 비율(9:16 · 4:5 · 1:1 · 16:9)과 배경(블러 · 검정 · 흰색 · 색상)을 고릅니다. 고친 내용은 숏폼의 모든 장면에 똑같이 적용됩니다.</p></div></div>
+        <figure class="ed-shot"><img src="img/aromatica-editor-screen.jpg" alt="Clip Maker 에디터 — 화면 조정 (영상 편집 · 화면 탭)" loading="lazy" width="2000" height="1024"></figure></div>
     </div>
-    <p class="note">편집을 마치면 「영상 만들기」로 다시 렌더해 내려받습니다. 되돌리기 · 다시하기를 지원하므로 여러 번 고쳐 봐도 원본은 그대로입니다. 화면은 Clip Maker 에디터 캡처입니다 (예시 방송).</p>
+    <p class="note">편집을 마치면 「영상 만들기」로 다시 렌더해 내려받습니다. 되돌리기 · 다시하기를 지원하므로 여러 번 고쳐 봐도 원본은 그대로입니다. 화면은 위 샘플과 같은 아로마티카 에센스 방송을 Clip Maker 에디터에서 캡처한 것입니다.</p>
   </div>
 </section>
 
 <section class="block" id="integration">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">06 — INTEGRATION</div><h2>현행 S3 · SNS 연동을 그대로 유지</h2>
+      <div><div class="sec-no">05 — INTEGRATION</div><h2>현행 S3 · SNS 연동을 그대로 유지</h2>
       <p>롯데홈쇼핑의 현재 송수신 절차를 바꾸지 않고 연동합니다. 아래 연동부(SQS 수신 · S3 저장 · SNS 발행)는 계약 후 구축합니다. 원본과 request.json을 받는 쪽, 결과와 메타데이터를 돌려주는 쪽 모두 지금과 같은 S3 저장 + SNS 메시지 방식입니다. 결과를 저장할 버킷은 현행 방식에 맞춥니다. 롯데홈쇼핑 버킷에 직접 쓰는 방식(교차 계정 쓰기 권한)과 Shoplive 버킷에서 가져가는 방식 모두 지원합니다.</p></div>
     </div>
     <div class="flow">
@@ -436,13 +428,13 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="quality">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">07 — QUALITY · COMPLIANCE</div><h2>품질 검증과 방송 심의</h2>
+      <div><div class="sec-no">06 — QUALITY · COMPLIANCE</div><h2>품질 검증과 방송 심의</h2>
       <p>숏폼마다 AI 평가를 붙여 기준 미달을 걸러내고, 방송이 끝나면 의미가 없어지는 정보는 AI 심사에서 감점해 걸러냅니다. <span class="pill ok">제공 중</span> 은 지금 자동 생성 API에 들어 있는 기능, <span class="pill plan">구축 가능</span> 은 롯데홈쇼핑 심의 기준을 받아 구축할 항목입니다.</p></div>
     </div>
     <div class="grid3">
       <div class="card"><div class="status"><span class="pill ok">제공 중</span></div><h3>구간 선정</h3><ul>
         <li>방송 발화에서 판매 소구점을 뽑고, 각 소구점이 가장 잘 드러난 구간을 고릅니다.</li>
-        <li>가격 · 할인 · 마감 · 재고처럼 방송 중에만 유효한 정보는 AI 심사의 신선도 항목으로 감점해 상위 숏폼에서 밀어냅니다. 다 걸러지지 않는 경우가 있어 검수로 한 번 더 확인합니다.</li>
+        <li>가격 · 할인 · 마감 · 재고처럼 방송 중에만 유효한 정보는 AI 심사의 신선도 항목으로 감점해 상위 숏폼에서 밀어냅니다.</li>
         <li>한 장면만 오래 멈춰 있는 화면(정지 이미지·그래픽)은 후보 순위를 크게 낮춥니다.</li>
         <li>같은 소구점이 반복되지 않도록 숏폼마다 주제를 나눠 구성합니다.</li>
         <li>원본 발언에 없는 내용은 자막에 넣지 않습니다. 새로 생성하는 문구는 제목·설명·해시태그뿐입니다.</li>
@@ -456,7 +448,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li>롯데홈쇼핑의 심의 기준(금지 문구 사전 등)을 받아 아래 검사를 구축합니다.</li>
         <li>심의 위반 문구 사전(과장 · 효능 단정 · 비교 광고 등)으로 발화와 자막을 검사해 해당 구간을 제외합니다.</li>
         <li>VCR 등 삽입 자료 영상 구간을 화면 특징으로 검출해 생성 대상에서 뺍니다.</li>
-        <li>화질 · 음량 · 자막 겹침 자동 점검 후 미달 숏폼은 재생성하고, 그래도 미달이면 사람 검수로 넘깁니다.</li>
+        <li>화질 · 음량 · 자막 겹침 자동 점검 후 미달 숏폼은 다시 생성합니다.</li>
       </ul></div>
     </div>
   </div>
@@ -487,20 +479,6 @@ const $ = (s, el = document) => el.querySelector(s);
 const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;"}[c]));
 const tc = ms => { const s = Math.floor(ms / 1000); return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`; };
 const tcs = sec => tc(sec * 1000);
-
-function rfp() {
-  const rows = [
-    ["업체 수행 능력", "업체 신뢰성, 업체 수행 역량", 10, `라이브커머스 플랫폼 Shoplive가 <b>직접 개발·운영하는 숏폼 생성 엔진</b>입니다. 이 페이지의 샘플은 운영 중인 자동 생성 API로 만들고 사람이 검수했습니다.`],
-    ["영상 분석 및 구성", "원본 영상의 핵심 장면 추출 정확도", 10, `발화에서 판매 소구점을 뽑고 <b>근거 발화가 있는 구간만</b> 고릅니다. <a href="#samples">원본 타임라인</a>에서 구간을 바로 확인할 수 있습니다.`],
-    ["", "상품 특징 및 주요 판매 소구점 반영", 10, `숏폼마다 <b>소구점 · 강도 · 근거 발화</b>를 함께 제공합니다. <a href="#samples">각 숏폼의 소구점</a>을 펼쳐 보세요.`],
-    ["영상 완성도", "시청 몰입도 및 콘텐츠 매력도", 10, `숏폼마다 주제와 시청 포인트를 정하고, <b>AI 루브릭으로 다시 채점</b>합니다.`],
-    ["", "영상 흐름 및 장면 전환의 자연스러움", 5, `<b>문장 경계에서 자르고</b>, 크롭은 스테디캠처럼 움직입니다. <a href="#framing">화면 구성 비교</a>`],
-    ["자막 및 정보 정확성", "음성 인식 및 자막 표기 정확도", 10, `상품명·브랜드명을 <b>STT vocabulary로 등록</b>해 인식 단계에서 바로잡고, 남은 오인식은 검수에서 고칩니다. <a href="#subtitles">STT vocabulary</a>`],
-    ["", "자막 가독성 및 노출 타이밍 적절성", 5, `<b>발화 타이밍에 맞춘 자막</b>을 굽고, 크기·위치·색·외곽선·배경 박스를 고객사별로 정합니다. <a href="#subtitles">자막 스타일</a>`],
-  ];
-  $("#rfpTable").innerHTML = `<div class="rfp-row head"><span>구분</span><span>평가 내용</span><span>배점</span><span class="how">Shoplive Clip Maker 대응</span></div>` +
-    rows.map(([g, c, p, h]) => `<div class="rfp-row"><span class="grp">${g}</span><span>${c}</span><span class="pts">${p}</span><span class="how">${h}</span></div>`).join("");
-}
 
 function seg(el, items, on, pick) {
   el.innerHTML = items.map((t, i) => `<button class="${i === on ? "on" : ""}" data-i="${i}">${esc(t)}</button>`).join("");
@@ -550,16 +528,16 @@ function shortCard(b, s, i) {
     </div></article>`;
 }
 
-function renderBroadcast(bi) {
-  const b = DATA.broadcasts[bi];
+function renderBroadcast(b, bi, root) {
   const dur = b.durationSec;
   const bars = b.shorts.flatMap((s, i) => s.parts.map(p => `<div class="seg-bar" title="#${s.rank} ${tc(p.fromMs)}–${tc(p.toMs)}" data-sec="${p.fromMs / 1000}" style="left:${p.fromMs / 10 / dur}%;width:${Math.max(0.4, (p.toMs - p.fromMs) / 10 / dur)}%;background:${COLORS[i]}"></div>`)).join("");
   const axis = [0, .25, .5, .75, 1].map(f => `<span>${tcs(dur * f)}</span>`).join("");
-  $("#bcView").innerHTML = `
+  root.innerHTML = `
+    <div class="bc-title"><span class="no">방송 ${bi + 1}</span><h3>${esc(b.short)}</h3><span class="sub">${esc(b.name)}</span></div>
     <div class="bc">
       <div class="card bc-src">
-        <video id="src" src="${b.src}" controls playsinline preload="metadata"></video>
-        <div class="tl" id="tl">${bars}<div class="head" id="tlHead" style="left:0"></div></div>
+        <video class="src" src="${b.src}" controls playsinline preload="metadata"></video>
+        <div class="tl">${bars}<div class="head" style="left:0"></div></div>
         <div class="tl-axis">${axis}</div>
         <div class="legend">${b.shorts.map((s, i) => `<span data-rank="${s.rank}"><i style="background:${COLORS[i]}"></i>#${s.rank} ${esc(s.title)}</span>`).join("")}</div>
       </div>
@@ -576,46 +554,56 @@ function renderBroadcast(bi) {
       </div>
     </div>
     <div class="shorts">${b.shorts.map((s, i) => shortCard(b, s, i)).join("")}</div>${candidates(b)}`;
-  const src = $("#src"), head = $("#tlHead");
+  const src = $(".src", root), head = $(".tl .head", root);
   src.addEventListener("timeupdate", () => { head.style.left = `${src.currentTime / dur * 100}%`; });
   const seek = sec => { src.currentTime = sec; src.play().catch(() => {}); src.scrollIntoView({behavior: "smooth", block: "center"}); };
-  $("#tl").onclick = e => { const bar = e.target.closest(".seg-bar"); if (bar) return seek(+bar.dataset.sec); const r = e.currentTarget.getBoundingClientRect(); seek((e.clientX - r.left) / r.width * dur); };
-  $("#bcView").querySelectorAll(".part").forEach(p => p.onclick = () => seek(+p.dataset.sec));
-  $("#bcView").querySelectorAll(".short").forEach(card => {
+  $(".tl", root).onclick = e => { const bar = e.target.closest(".seg-bar"); if (bar) return seek(+bar.dataset.sec); const r = e.currentTarget.getBoundingClientRect(); seek((e.clientX - r.left) / r.width * dur); };
+  root.querySelectorAll(".part").forEach(p => p.onclick = () => seek(+p.dataset.sec));
+  root.querySelectorAll(".short").forEach(card => {
     const v = $("video", card);
     const lines = [...card.querySelectorAll(".srt div")];
     lines.forEach(line => line.onclick = () => { v.currentTime = +line.dataset.t + 0.05; v.play().catch(() => {}); });
     v.addEventListener("timeupdate", () => { const t = v.currentTime; lines.forEach((line, k) => { const next = lines[k + 1]; line.classList.toggle("on", t >= +line.dataset.t && (!next || t < +next.dataset.t)); }); });
   });
-  $("#bcView").querySelectorAll(".legend span").forEach(l => l.onclick = () => $(`.short[data-rank="${l.dataset.rank}"]`).scrollIntoView({behavior: "smooth", block: "start"}));
+  root.querySelectorAll(".legend span").forEach(l => l.onclick = () => $(`.short[data-rank="${l.dataset.rank}"]`, root).scrollIntoView({behavior: "smooth", block: "start"}));
 }
 
-let labBc = 0, labShort = 0, muted = true;
-function lab() {
-  const s = DATA.broadcasts[labBc].shorts[labShort];
-  $("#lab").innerHTML = FRAMINGS.map(f => `<div class="fr ${f.wide ? "wide" : "tall"} ${f.hero ? "hero-fr" : ""}"><div class="screen">${s.videos[f.key] ? `<video src="${s.videos[f.key]}" poster="${s.thumbs[f.key]}" muted playsinline preload="auto"></video>` : `<div class="pending">렌더 중</div>`}</div><div class="cap"><b>${f.label}${f.hero ? ' <span class="pill acc" style="margin-left:4px">추천</span>' : ""}</b><span>${f.note}</span></div></div>`).join("");
-  $("#labPlay").textContent = "▶ 함께 재생";
-  const vids = [...$("#lab").querySelectorAll("video")];
+function labRow(b, s, root) {
+  root.innerHTML = `<div class="lab-row-head"><span class="pill acc">숏폼 #${s.rank}</span><b>${esc(s.title)}</b><span class="mono">${(s.durationMs / 1000).toFixed(0)}s</span></div>
+    <div class="lab">${FRAMINGS.map(f => `<div class="fr ${f.wide ? "wide" : "tall"} ${f.hero ? "hero-fr" : ""}"><div class="screen">${s.videos[f.key] ? `<video src="${s.videos[f.key]}" poster="${s.thumbs[f.key]}" muted playsinline preload="metadata"></video>` : `<div class="pending">렌더 중</div>`}${f.hero ? '<span class="hero-tag">★ 샘플 6편 적용</span>' : ""}</div><div class="cap"><b>${f.label}${f.hero ? ' <span class="pill" style="margin-left:4px">추천</span>' : ""}</b><span>${f.note}</span></div></div>`).join("")}</div>
+    <div class="ctrl">
+      <button class="btn pri lab-play">▶ 함께 재생</button>
+      <button class="btn lab-sound">🔇 소리 켜기</button>
+      <input type="range" class="lab-seek" min="0" max="1000" value="0" aria-label="${esc(b.short)} 숏폼 #${s.rank} 재생 위치">
+      <span class="t lab-time">0:00 / 0:00</span>
+    </div>`;
+  const play = $(".lab-play", root), sound = $(".lab-sound", root), seekEl = $(".lab-seek", root), time = $(".lab-time", root);
+  const vids = [...root.querySelectorAll("video")];
   const master = vids[vids.length - 1];
+  let muted = true;
+  if (!master) return;
   vids.forEach(v => { v.muted = v !== master || muted; });
   master.addEventListener("timeupdate", () => {
     const d = master.duration || 1;
-    $("#labSeek").value = master.currentTime / d * 1000;
-    $("#labTime").textContent = `${tcs(master.currentTime)} / ${tcs(d)}`;
+    seekEl.value = master.currentTime / d * 1000;
+    time.textContent = `${tcs(master.currentTime)} / ${tcs(d)}`;
     vids.forEach(v => { if (v !== master && Math.abs(v.currentTime - master.currentTime) > 0.25) v.currentTime = master.currentTime; });
   });
-  master.addEventListener("ended", () => { vids.forEach(v => v.pause()); $("#labPlay").textContent = "▶ 함께 재생"; });
-  $("#labPlay").onclick = () => {
-    if (master.paused) { vids.forEach(v => { v.currentTime = master.currentTime; v.play().catch(() => {}); }); $("#labPlay").textContent = "❚❚ 일시정지"; }
-    else { vids.forEach(v => v.pause()); $("#labPlay").textContent = "▶ 함께 재생"; }
+  master.addEventListener("ended", () => { vids.forEach(v => v.pause()); play.textContent = "▶ 함께 재생"; });
+  play.onclick = () => {
+    if (master.paused) {
+      document.querySelectorAll(".lab-row").forEach(r => { if (r !== root && r.__stop) r.__stop(); });
+      vids.forEach(v => { v.preload = "auto"; v.currentTime = master.currentTime; v.play().catch(() => {}); }); play.textContent = "❚❚ 일시정지";
+    } else root.__stop();
   };
-  $("#labSound").onclick = () => { muted = !muted; master.muted = muted; $("#labSound").textContent = muted ? "🔇 소리 켜기" : "🔊 소리 끄기"; };
-  $("#labSeek").oninput = e => { const t = e.target.value / 1000 * (master.duration || 0); vids.forEach(v => { v.currentTime = t; }); };
+  root.__stop = () => { vids.forEach(v => v.pause()); play.textContent = "▶ 함께 재생"; };
+  sound.onclick = () => { muted = !muted; master.muted = muted; sound.textContent = muted ? "🔇 소리 켜기" : "🔊 소리 끄기"; };
+  seekEl.oninput = e => { const tt = e.target.value / 1000 * (master.duration || 0); vids.forEach(v => { v.currentTime = tt; }); };
 }
-function labPickers() {
-  seg($("#labBc"), DATA.broadcasts.map(b => b.short), labBc, i => { labBc = i; labShort = 0; labPickers(); });
-  seg($("#labShort"), DATA.broadcasts[labBc].shorts.map(s => `숏폼 #${s.rank}`), labShort, i => { labShort = i; lab(); });
-  lab();
+function labGroup(b, bi, root) {
+  root.innerHTML = `<div class="bc-title"><span class="no">방송 ${bi + 1}</span><h3>${esc(b.short)}</h3></div>` +
+    b.shorts.map(s => `<div class="lab-row" data-rank="${s.rank}"></div>`).join("");
+  root.querySelectorAll(".lab-row").forEach((r, i) => labRow(b, b.shorts[i], r));
 }
 
 function subtitles() {
@@ -628,20 +616,11 @@ function subtitles() {
   $("#vocabCard").innerHTML = `<h3>STT vocabulary</h3><p class="note" style="margin:0">브랜드·상품·출연자 이름을 고객사 설정(최대 100개)이나 요청 단위로 등록합니다. <b style="color:var(--text)">음성 인식 엔진이 등록된 정답 단어를 인식해 상품명·브랜드명 오탈자를 줄입니다.</b> 이번 샘플은 요청에 담긴 브랜드·상품명을 등록했습니다.</p>${rows}`;
 }
 
-rfp();
-seg($("#bcSwitch"), DATA.broadcasts.map(b => b.short), 0, renderBroadcast);
-renderBroadcast(0); labPickers(); subtitles();
-const ED = [
-  ["구간 선택", "editor-select.jpg", "구간 선택", "왼쪽에서 장면을 문장으로 검색하고, 가운데 AI 추천 구간 중 쓸 것을 담습니다. 아래 타임라인에서 전체 방송을 훑어볼 수 있습니다."],
-  ["자막 고치기", "editor-text.jpg", "영상 편집 · 텍스트 탭", "오른쪽에 음성 인식 자막이 시간순으로 놓입니다. 줄을 골라 문구와 스타일을 고치고, 타임라인에서 자막 블록을 끌어 시각을 맞춥니다."],
-  ["화면 조정", "editor-screen.jpg", "영상 편집 · 화면 탭", "비율 · 크기 · 위치와 배경(블러 · 검정 · 흰색 · 색상)을 정합니다. 설정은 숏폼의 모든 장면에 똑같이 적용됩니다."],
-];
-function edPick(i) {
-  const [, file, where, cap] = ED[i];
-  $("#edImg").src = "img/" + file;
-  $("#edCap").innerHTML = `<b>${where}</b>${cap}`;
-}
-seg($("#edSwitch"), ED.map(e => e[0]), 0, edPick); edPick(0);
+$("#bcView").innerHTML = DATA.broadcasts.map(b => `<div class="bc-group" id="bc-${b.key}"></div>`).join("");
+DATA.broadcasts.forEach((b, i) => renderBroadcast(b, i, $(`#bc-${b.key}`)));
+$("#labs").innerHTML = DATA.broadcasts.map(b => `<div class="lab-group" id="lab-${b.key}"></div>`).join("");
+DATA.broadcasts.forEach((b, i) => labGroup(b, i, $(`#lab-${b.key}`)));
+subtitles();
 $("#resultJson").innerHTML = DATA.resultPretty;
 $("#resultFiles").innerHTML = "전체 파일: " + DATA.resultFiles.map(k => `<a href="result/${k}.json" target="_blank">${k}.json</a>`).join(" · ");
 $("#gen").textContent = DATA.generatedAt;
