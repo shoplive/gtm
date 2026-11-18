@@ -1,0 +1,4488 @@
+{
+  "schema": "shoplive.shortform.result/v1",
+  "generatedAt": "2026-11-18T08:26:31",
+  "request": {
+    "requestId": "AI_SYSTEM",
+    "programId": "202610262255",
+    "goodsNo": 12920971,
+    "bdStartDate": "20261026225500",
+    "bdEndDate": "20261026235500"
+  },
+  "segment": {
+    "id": 1793027125171,
+    "category": "뷰티",
+    "categoryBackup": "화장품/이미용",
+    "brand": "아로마티카",
+    "goods": "굿바이패키지 (에센스100ml*10병_에센스전용 펌프*10개_ 에센스 300ml*2)",
+    "start": "00:00:00",
+    "end": "00:19:59"
+  },
+  "source": {
+    "file": "2026-10-27_00:05:25||202610262255||AI_SYSTEM||20||아로마티카||굿바이패키지 (에센스100ml*10병_에센스전용 펌프*10개_ 에센스 300ml*2)/segments/segment_1_202610262255.mp4",
+    "width": 1280,
+    "height": 720,
+    "durationMs": 1199033
+  },
+  "engine": {
+    "api": "POST /customers/{id}/media/{mediaId}/composite-videos",
+    "jobId": "120d4f67bb554ed6a7d63555b422afd0",
+    "options": {
+      "subtitles": true,
+      "background": "black",
+      "aspectRatio": "9:16",
+      "fit": "cover",
+      "reframe": "face",
+      "blurScale": null,
+      "videoScale": null,
+      "videoCenterX": null,
+      "videoCenterY": null,
+      "subtitleStyle": {
+        "fontSize": 0.048,
+        "bottom": 0.2,
+        "centerX": 0.5,
+        "width": 0.84,
+        "align": "center",
+        "color": "#FFFFFF",
+        "strokeColor": null,
+        "boxColor": "#0D0F11B8"
+      },
+      "uploadToShopliveMedia": false
+    }
+  },
+  "shorts": [
+    {
+      "rank": 1,
+      "renderIndex": 0,
+      "title": "아로마 좋아하면 피부에도 이 느낌",
+      "description": "아로마를 즐겨온 경험에서 시작해 로즈마리 퍼스트 에센스로 이어져요. 향으로 몸을 깨우던 감각을 피부에 담은 아로마 뷰티를 소개합니다.",
+      "hashtags": [
+        "#로즈마리스킨케어",
+        "#아로마뷰티",
+        "#퍼스트에센스"
+      ],
+      "theme": {
+        "angle": "로즈마리 추출물과 아로마 감각을 피부에 담은 제품을 찾는 사람에게 브랜드와 사용 경험을 함께 전합니다.",
+        "title": "로즈마리 아로마 스킨케어"
+      },
+      "review": {
+        "total": 25,
+        "reason": "로즈마리 아로마를 사랑하는 사용 경험과 피부에 향을 담은 브랜드 이야기가 한 편에 자연스럽게 담겼어요.",
+        "rubric": {
+          "flow": 4,
+          "hook": 3,
+          "variety": 5,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 3
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 41690,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/0.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/0.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/aromatica-1.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 41723,
+          "sizeBytes": 7852600,
+          "bitrateKbps": 1506,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.048,
+            "bottom": 0.2,
+            "centerX": 0.5,
+            "width": 0.84,
+            "align": "center",
+            "color": "#FFFFFF",
+            "strokeColor": null,
+            "boxColor": "#0D0F11B8"
+          },
+          "box": {
+            "widthPx": 605,
+            "centerXPx": 360,
+            "bottomPx": 256,
+            "fontSizePx": 35
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/0.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/0.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/0.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/0.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/0.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/0.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/0.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/0.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "향으로 온몸 깨우던 그 느낌, 피부에도",
+          "score": 0.767,
+          "output": {
+            "fromMs": 0,
+            "toMs": 41690,
+            "from": "00:00:00.000",
+            "to": "00:00:41.690"
+          },
+          "source": {
+            "fromMs": 303040,
+            "toMs": 344730,
+            "from": "00:05:03.040",
+            "to": "00:05:44.730",
+            "plannedFromMs": 304000,
+            "plannedToMs": 345000
+          },
+          "aired": {
+            "from": "2026-10-26T23:00:03.040000",
+            "to": "2026-10-26T23:00:44.730000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.5546
+              },
+              {
+                "t": 0.5,
+                "x": 0.5546
+              },
+              {
+                "t": 1.0,
+                "x": 0.5546
+              },
+              {
+                "t": 1.5,
+                "x": 0.5546
+              },
+              {
+                "t": 2.0,
+                "x": 0.5546
+              },
+              {
+                "t": 2.5,
+                "x": 0.5546
+              },
+              {
+                "t": 3.0,
+                "x": 0.5546
+              },
+              {
+                "t": 3.5,
+                "x": 0.5546
+              },
+              {
+                "t": 4.0,
+                "x": 0.5546
+              },
+              {
+                "t": 4.5,
+                "x": 0.5546
+              },
+              {
+                "t": 5.0,
+                "x": 0.5546
+              },
+              {
+                "t": 5.5,
+                "x": 0.5546
+              },
+              {
+                "t": 6.0,
+                "x": 0.5546
+              },
+              {
+                "t": 6.5,
+                "x": 0.5546
+              },
+              {
+                "t": 7.0,
+                "x": 0.5546
+              },
+              {
+                "t": 7.5,
+                "x": 0.5546
+              },
+              {
+                "t": 8.0,
+                "x": 0.5546
+              },
+              {
+                "t": 8.5,
+                "x": 0.5546
+              },
+              {
+                "t": 9.0,
+                "x": 0.5546
+              },
+              {
+                "t": 9.5,
+                "x": 0.5546
+              },
+              {
+                "t": 10.0,
+                "x": 0.5546
+              },
+              {
+                "t": 10.5,
+                "x": 0.5546
+              },
+              {
+                "t": 11.0,
+                "x": 0.5546
+              },
+              {
+                "t": 11.5,
+                "x": 0.5546
+              },
+              {
+                "t": 12.0,
+                "x": 0.5546
+              },
+              {
+                "t": 12.5,
+                "x": 0.5546
+              },
+              {
+                "t": 13.0,
+                "x": 0.5546
+              },
+              {
+                "t": 13.5,
+                "x": 0.5546
+              },
+              {
+                "t": 14.0,
+                "x": 0.5546
+              },
+              {
+                "t": 14.5,
+                "x": 0.5546
+              },
+              {
+                "t": 15.0,
+                "x": 0.5546
+              },
+              {
+                "t": 15.5,
+                "x": 0.5546
+              },
+              {
+                "t": 16.0,
+                "x": 0.5546
+              },
+              {
+                "t": 16.5,
+                "x": 0.5546
+              },
+              {
+                "t": 17.0,
+                "x": 0.5546
+              },
+              {
+                "t": 17.5,
+                "x": 0.5546
+              },
+              {
+                "t": 18.0,
+                "x": 0.5546
+              },
+              {
+                "t": 18.5,
+                "x": 0.5546
+              },
+              {
+                "t": 19.0,
+                "x": 0.5546
+              },
+              {
+                "t": 19.5,
+                "x": 0.5546
+              },
+              {
+                "t": 20.0,
+                "x": 0.5546
+              },
+              {
+                "t": 20.5,
+                "x": 0.5546
+              },
+              {
+                "t": 21.0,
+                "x": 0.5546
+              },
+              {
+                "t": 21.5,
+                "x": 0.5546
+              },
+              {
+                "t": 22.0,
+                "x": 0.5546
+              },
+              {
+                "t": 22.5,
+                "x": 0.5546
+              },
+              {
+                "t": 23.0,
+                "x": 0.5546
+              },
+              {
+                "t": 23.5,
+                "x": 0.5546
+              },
+              {
+                "t": 24.0,
+                "x": 0.5546
+              },
+              {
+                "t": 24.5,
+                "x": 0.5546
+              },
+              {
+                "t": 25.0,
+                "x": 0.5546
+              },
+              {
+                "t": 25.5,
+                "x": 0.5546
+              },
+              {
+                "t": 26.0,
+                "x": 0.5546
+              },
+              {
+                "t": 26.5,
+                "x": 0.5546
+              },
+              {
+                "t": 27.0,
+                "x": 0.5546
+              },
+              {
+                "t": 27.5,
+                "x": 0.5546
+              },
+              {
+                "t": 28.0,
+                "x": 0.5546
+              },
+              {
+                "t": 28.5,
+                "x": 0.5546
+              },
+              {
+                "t": 29.0,
+                "x": 0.5546
+              },
+              {
+                "t": 29.5,
+                "x": 0.5546
+              },
+              {
+                "t": 30.0,
+                "x": 0.5546
+              },
+              {
+                "t": 30.5,
+                "x": 0.5546
+              },
+              {
+                "t": 31.0,
+                "x": 0.5546
+              },
+              {
+                "t": 31.5,
+                "x": 0.5546
+              },
+              {
+                "t": 32.0,
+                "x": 0.5546
+              },
+              {
+                "t": 32.5,
+                "x": 0.5546
+              },
+              {
+                "t": 33.0,
+                "x": 0.5546
+              },
+              {
+                "t": 33.5,
+                "x": 0.5546
+              },
+              {
+                "t": 34.0,
+                "x": 0.5546
+              },
+              {
+                "t": 34.5,
+                "x": 0.5546
+              },
+              {
+                "t": 35.0,
+                "x": 0.5546
+              },
+              {
+                "t": 35.5,
+                "x": 0.5546
+              },
+              {
+                "t": 36.0,
+                "x": 0.5546
+              },
+              {
+                "t": 36.5,
+                "x": 0.5546
+              },
+              {
+                "t": 37.0,
+                "x": 0.5546
+              },
+              {
+                "t": 37.5,
+                "x": 0.5546
+              },
+              {
+                "t": 38.0,
+                "x": 0.5546
+              },
+              {
+                "t": 38.5,
+                "x": 0.5546
+              },
+              {
+                "t": 39.0,
+                "x": 0.5546
+              },
+              {
+                "t": 39.5,
+                "x": 0.5546
+              },
+              {
+                "t": 40.0,
+                "x": 0.5546
+              },
+              {
+                "t": 40.5,
+                "x": 0.5546
+              },
+              {
+                "t": 41.0,
+                "x": 0.5546
+              },
+              {
+                "t": 41.5,
+                "x": 0.5546
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.5546,
+                "toX": 0.5546,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "브랜드 강점",
+              "strength": 4,
+              "claim": "아로마티카가 아로마를 피부에 적용해 아로마 뷰티의 장을 연 선두주자라고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 333000,
+                  "toMs": 345000,
+                  "text": "그걸 피부로 올려준 아로마티카예요. 그걸 피부로 올려준 아로마 뷰티의 장을 연 선두주자예요."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "지금 스킨케어 중에 아로마티카의",
+          "output": {
+            "fromMs": 0,
+            "toMs": 1550,
+            "from": "00:00:00.000",
+            "to": "00:00:01.550"
+          },
+          "source": {
+            "fromMs": 303040,
+            "toMs": 304590
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "그 스킨케어의 1등에 로즈마리",
+          "output": {
+            "fromMs": 1550,
+            "toMs": 4010,
+            "from": "00:00:01.550",
+            "to": "00:00:04.010"
+          },
+          "source": {
+            "fromMs": 304590,
+            "toMs": 307050
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "퍼스트 에센스인데, 그러니까",
+          "output": {
+            "fromMs": 4130,
+            "toMs": 5930,
+            "from": "00:00:04.130",
+            "to": "00:00:05.930"
+          },
+          "source": {
+            "fromMs": 307170,
+            "toMs": 308970
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "저는 아로마에 완전히",
+          "output": {
+            "fromMs": 6110,
+            "toMs": 8210,
+            "from": "00:00:06.110",
+            "to": "00:00:08.210"
+          },
+          "source": {
+            "fromMs": 309150,
+            "toMs": 311250
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "진짜 홀릭하고 미치는 1인이거든요.",
+          "output": {
+            "fromMs": 9290,
+            "toMs": 11390,
+            "from": "00:00:09.290",
+            "to": "00:00:11.390"
+          },
+          "source": {
+            "fromMs": 312330,
+            "toMs": 314430
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "애들하고 동남아를 여행을 가도 그때야말로",
+          "output": {
+            "fromMs": 11810,
+            "toMs": 14210,
+            "from": "00:00:11.810",
+            "to": "00:00:14.210"
+          },
+          "source": {
+            "fromMs": 314850,
+            "toMs": 317250
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "내가 언제 이런 호사를 누리냐",
+          "output": {
+            "fromMs": 14690,
+            "toMs": 16610,
+            "from": "00:00:14.690",
+            "to": "00:00:16.610"
+          },
+          "source": {
+            "fromMs": 317730,
+            "toMs": 319650
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "싶어서",
+          "output": {
+            "fromMs": 16730,
+            "toMs": 18120,
+            "from": "00:00:16.730",
+            "to": "00:00:18.120"
+          },
+          "source": {
+            "fromMs": 319770,
+            "toMs": 321160
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "1일 1아로마 전신.",
+          "output": {
+            "fromMs": 18170,
+            "toMs": 20810,
+            "from": "00:00:18.170",
+            "to": "00:00:20.810"
+          },
+          "source": {
+            "fromMs": 321210,
+            "toMs": 323850
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "근데 그렇게 내 몸으로만도 그냥",
+          "output": {
+            "fromMs": 21110,
+            "toMs": 23570,
+            "from": "00:00:21.110",
+            "to": "00:00:23.570"
+          },
+          "source": {
+            "fromMs": 324150,
+            "toMs": 326610
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "이미 그 향으로만도 내 온몸을",
+          "output": {
+            "fromMs": 23930,
+            "toMs": 26030,
+            "from": "00:00:23.930",
+            "to": "00:00:26.030"
+          },
+          "source": {
+            "fromMs": 326970,
+            "toMs": 329070
+          }
+        },
+        {
+          "index": 12,
+          "part": 1,
+          "text": "깨웠을 때 그 느낌 아시죠?",
+          "output": {
+            "fromMs": 26150,
+            "toMs": 28010,
+            "from": "00:00:26.150",
+            "to": "00:00:28.010"
+          },
+          "source": {
+            "fromMs": 329190,
+            "toMs": 331050
+          }
+        },
+        {
+          "index": 13,
+          "part": 1,
+          "text": "그걸",
+          "output": {
+            "fromMs": 28370,
+            "toMs": 30060,
+            "from": "00:00:28.370",
+            "to": "00:00:30.060"
+          },
+          "source": {
+            "fromMs": 331410,
+            "toMs": 333100
+          }
+        },
+        {
+          "index": 14,
+          "part": 1,
+          "text": "피부로 올려준 아로마티카예요.",
+          "output": {
+            "fromMs": 30110,
+            "toMs": 32090,
+            "from": "00:00:30.110",
+            "to": "00:00:32.090"
+          },
+          "source": {
+            "fromMs": 333150,
+            "toMs": 335130
+          }
+        },
+        {
+          "index": 15,
+          "part": 1,
+          "text": "그걸 피부로 올려준",
+          "output": {
+            "fromMs": 32690,
+            "toMs": 34910,
+            "from": "00:00:32.690",
+            "to": "00:00:34.910"
+          },
+          "source": {
+            "fromMs": 335730,
+            "toMs": 337950
+          }
+        },
+        {
+          "index": 16,
+          "part": 1,
+          "text": "아로마 뷰티의",
+          "output": {
+            "fromMs": 35750,
+            "toMs": 37550,
+            "from": "00:00:35.750",
+            "to": "00:00:37.550"
+          },
+          "source": {
+            "fromMs": 338790,
+            "toMs": 340590
+          }
+        },
+        {
+          "index": 17,
+          "part": 1,
+          "text": "장을 연 선두주자예요.",
+          "output": {
+            "fromMs": 38630,
+            "toMs": 40430,
+            "from": "00:00:38.630",
+            "to": "00:00:40.430"
+          },
+          "source": {
+            "fromMs": 341670,
+            "toMs": 343470
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "renderIndex": 1,
+      "title": "뿌렸는데 속광이 차오르는 이유",
+      "description": "건조하고 간지러운 피부에 뿌린 뒤 속광과 탄탄한 보습감이 차오르는 이야기를 담았어요. 예민한 피부도 편안하게 꾸준히 사용할 수 있는 느낌까지 이어집니다.",
+      "hashtags": [
+        "#속건조",
+        "#속보습",
+        "#민감성피부",
+        "#로즈마리퍼스트에센스"
+      ],
+      "theme": {
+        "angle": "건조하고 당기는 피부가 제품을 사용한 뒤 속광과 보습을 채우고 편안한 피부 컨디션을 느끼는 과정을 보여주는 숏폼입니다.",
+        "title": "속건조와 피부 당김 케어"
+      },
+      "review": {
+        "total": 26,
+        "reason": "건조하고 당기는 피부에 뿌린 뒤 속광과 보습감이 채워지는 사용감을 한 흐름으로 보여줘요.",
+        "rubric": {
+          "flow": 4,
+          "hook": 4,
+          "variety": 4,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 4
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 32570,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/1.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/1.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/aromatica-2.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 32593,
+          "sizeBytes": 10418816,
+          "bitrateKbps": 2557,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.048,
+            "bottom": 0.2,
+            "centerX": 0.5,
+            "width": 0.84,
+            "align": "center",
+            "color": "#FFFFFF",
+            "strokeColor": null,
+            "boxColor": "#0D0F11B8"
+          },
+          "box": {
+            "widthPx": 605,
+            "centerXPx": 360,
+            "bottomPx": 256,
+            "fontSizePx": 35
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/1.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/1.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/1.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/1.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/1.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/1.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/1.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/1.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "뿌렸는데 속광이 차오르는 이유",
+          "score": 0.9,
+          "output": {
+            "fromMs": 0,
+            "toMs": 32570,
+            "from": "00:00:00.000",
+            "to": "00:00:32.570"
+          },
+          "source": {
+            "fromMs": 716620,
+            "toMs": 749190,
+            "from": "00:11:56.620",
+            "to": "00:12:29.190",
+            "plannedFromMs": 716670,
+            "plannedToMs": 749000
+          },
+          "aired": {
+            "from": "2026-10-26T23:06:56.620000",
+            "to": "2026-10-26T23:07:29.190000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.3726
+              },
+              {
+                "t": 0.5,
+                "x": 0.3726
+              },
+              {
+                "t": 1.0,
+                "x": 0.3726
+              },
+              {
+                "t": 1.5,
+                "x": 0.3759
+              },
+              {
+                "t": 2.0,
+                "x": 0.3997
+              },
+              {
+                "t": 2.5,
+                "x": 0.4014
+              },
+              {
+                "t": 3.0,
+                "x": 0.4014
+              },
+              {
+                "t": 3.5,
+                "x": 0.4014
+              },
+              {
+                "t": 4.0,
+                "x": 0.4014
+              },
+              {
+                "t": 4.5,
+                "x": 0.4014
+              },
+              {
+                "t": 5.0,
+                "x": 0.4069
+              },
+              {
+                "t": 5.5,
+                "x": 0.4471
+              },
+              {
+                "t": 6.0,
+                "x": 0.45
+              },
+              {
+                "t": 6.5,
+                "x": 0.4458
+              },
+              {
+                "t": 7.0,
+                "x": 0.4157
+              },
+              {
+                "t": 7.5,
+                "x": 0.3813
+              },
+              {
+                "t": 8.0,
+                "x": 0.3758
+              },
+              {
+                "t": 8.5,
+                "x": 0.3782
+              },
+              {
+                "t": 9.0,
+                "x": 0.3963
+              },
+              {
+                "t": 9.5,
+                "x": 0.4226
+              },
+              {
+                "t": 10.0,
+                "x": 0.4269
+              },
+              {
+                "t": 10.5,
+                "x": 0.4269
+              },
+              {
+                "t": 11.0,
+                "x": 0.4269
+              },
+              {
+                "t": 11.5,
+                "x": 0.4269
+              },
+              {
+                "t": 12.0,
+                "x": 0.4269
+              },
+              {
+                "t": 12.5,
+                "x": 0.4269
+              },
+              {
+                "t": 13.0,
+                "x": 0.4235
+              },
+              {
+                "t": 13.5,
+                "x": 0.3982
+              },
+              {
+                "t": 14.0,
+                "x": 0.4123
+              },
+              {
+                "t": 14.5,
+                "x": 0.4283
+              },
+              {
+                "t": 15.0,
+                "x": 0.4283
+              },
+              {
+                "t": 15.5,
+                "x": 0.4146
+              },
+              {
+                "t": 16.0,
+                "x": 0.4034
+              },
+              {
+                "t": 16.5,
+                "x": 0.4034
+              },
+              {
+                "t": 17.0,
+                "x": 0.4034
+              },
+              {
+                "t": 17.5,
+                "x": 0.4034
+              },
+              {
+                "t": 18.0,
+                "x": 0.4034
+              },
+              {
+                "t": 18.5,
+                "x": 0.4034
+              },
+              {
+                "t": 19.0,
+                "x": 0.4034
+              },
+              {
+                "t": 19.5,
+                "x": 0.4034
+              },
+              {
+                "t": 20.0,
+                "x": 0.4034
+              },
+              {
+                "t": 20.5,
+                "x": 0.4069
+              },
+              {
+                "t": 21.0,
+                "x": 0.4325
+              },
+              {
+                "t": 21.5,
+                "x": 0.4344
+              },
+              {
+                "t": 22.0,
+                "x": 0.4344
+              },
+              {
+                "t": 22.5,
+                "x": 0.4308
+              },
+              {
+                "t": 23.0,
+                "x": 0.405
+              },
+              {
+                "t": 23.5,
+                "x": 0.4032
+              },
+              {
+                "t": 24.0,
+                "x": 0.4032
+              },
+              {
+                "t": 24.5,
+                "x": 0.4032
+              },
+              {
+                "t": 25.0,
+                "x": 0.4032
+              },
+              {
+                "t": 25.5,
+                "x": 0.4032
+              },
+              {
+                "t": 26.0,
+                "x": 0.4032
+              },
+              {
+                "t": 26.5,
+                "x": 0.4032
+              },
+              {
+                "t": 27.0,
+                "x": 0.4032
+              },
+              {
+                "t": 27.5,
+                "x": 0.4032
+              },
+              {
+                "t": 28.0,
+                "x": 0.4032
+              },
+              {
+                "t": 28.5,
+                "x": 0.4209
+              },
+              {
+                "t": 29.0,
+                "x": 0.4354
+              },
+              {
+                "t": 29.5,
+                "x": 0.4354
+              },
+              {
+                "t": 30.0,
+                "x": 0.4108
+              },
+              {
+                "t": 30.5,
+                "x": 0.4108
+              },
+              {
+                "t": 31.0,
+                "x": 0.4108
+              },
+              {
+                "t": 31.5,
+                "x": 0.4149
+              },
+              {
+                "t": 32.0,
+                "x": 0.4449
+              },
+              {
+                "t": 32.5,
+                "x": 0.447
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.3726,
+                "toX": 0.3726,
+                "kind": "cut"
+              },
+              {
+                "startSec": 1.32,
+                "endSec": 2.12,
+                "fromX": 0.3726,
+                "toX": 0.4014,
+                "kind": "pan"
+              },
+              {
+                "startSec": 4.83,
+                "endSec": 5.62,
+                "fromX": 0.4014,
+                "toX": 0.45,
+                "kind": "pan"
+              },
+              {
+                "startSec": 6.33,
+                "endSec": 7.12,
+                "fromX": 0.45,
+                "toX": 0.4136,
+                "kind": "pan"
+              },
+              {
+                "startSec": 7.12,
+                "endSec": 7.62,
+                "fromX": 0.4136,
+                "toX": 0.3758,
+                "kind": "pan"
+              },
+              {
+                "startSec": 8.32,
+                "endSec": 9.12,
+                "fromX": 0.3758,
+                "toX": 0.3976,
+                "kind": "pan"
+              },
+              {
+                "startSec": 9.12,
+                "endSec": 9.62,
+                "fromX": 0.3976,
+                "toX": 0.4269,
+                "kind": "pan"
+              },
+              {
+                "startSec": 12.82,
+                "endSec": 13.62,
+                "fromX": 0.4269,
+                "toX": 0.3963,
+                "kind": "pan"
+              },
+              {
+                "startSec": 13.62,
+                "endSec": 14.38,
+                "fromX": 0.3963,
+                "toX": 0.4283,
+                "kind": "pan"
+              },
+              {
+                "startSec": 15.07,
+                "endSec": 15.88,
+                "fromX": 0.4283,
+                "toX": 0.4034,
+                "kind": "pan"
+              },
+              {
+                "startSec": 20.32,
+                "endSec": 21.12,
+                "fromX": 0.4034,
+                "toX": 0.4344,
+                "kind": "pan"
+              },
+              {
+                "startSec": 22.32,
+                "endSec": 23.12,
+                "fromX": 0.4344,
+                "toX": 0.4032,
+                "kind": "pan"
+              },
+              {
+                "startSec": 28.07,
+                "endSec": 28.88,
+                "fromX": 0.4032,
+                "toX": 0.4354,
+                "kind": "pan"
+              },
+              {
+                "startSec": 30.0,
+                "endSec": 30.0,
+                "fromX": 0.4354,
+                "toX": 0.4108,
+                "kind": "cut"
+              },
+              {
+                "startSec": 31.32,
+                "endSec": 32.12,
+                "fromX": 0.4108,
+                "toX": 0.447,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "효과/효능",
+              "strength": 5,
+              "claim": "건조하고 간지러운 부위에 뿌리면 피부 속에서 속광이 차오르고 당김이 줄어든다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 717000,
+                  "toMs": 723000,
+                  "text": "아로마티카 이렇게 듬뿍듬뿍 목 있는 데 있죠? 건조하고 간지러운 부위에 듬뿍듬뿍 뿌리시면 웬일이야."
+                },
+                {
+                  "fromMs": 723000,
+                  "toMs": 733000,
+                  "text": "속 안에서부터 이렇게 속광이 차오르면서 당기는 게 없어요. 보통 이렇게 물처럼 뿌리는 제형은 뿌리고 나서 금방 내 수분이랑 같이 날아가는 제형들이 많잖아요."
+                },
+                {
+                  "fromMs": 733000,
+                  "toMs": 745000,
+                  "text": "근데 아로마티카는 뭐지? 왜 속 안에서부터 탄탄하고 날아가지가 않지? 그냥 꽉 하고 잠금을 해주면서 피부 속 안에서부터 속 탄력을 잡아주고 그리고 속 건조를 너무너무 잘 잡아줘요."
+                }
+              ]
+            },
+            {
+              "category": "활용법",
+              "strength": 4,
+              "claim": "건조하고 간지러운 목 같은 부위에 제품을 듬뿍 뿌리면 속광과 보습을 채울 수 있다고 말합니다.",
+              "evidence": [
+                {
+                  "fromMs": 717000,
+                  "toMs": 723000,
+                  "text": "아로마티카 이렇게 듬뿍듬뿍 목 있는 데 있죠? 건조하고 간지러운 부위에 듬뿍듬뿍 뿌리시면 웬일이야."
+                }
+              ]
+            },
+            {
+              "category": "제품 특징",
+              "strength": 4,
+              "claim": "물처럼 뿌리는 가벼운 제형이지만 수분이 날아가지 않도록 피부 속에서 꽉 잠가준다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 723000,
+                  "toMs": 733000,
+                  "text": "속 안에서부터 이렇게 속광이 차오르면서 당기는 게 없어요. 보통 이렇게 물처럼 뿌리는 제형은 뿌리고 나서 금방 내 수분이랑 같이 날아가는 제형들이 많잖아요."
+                },
+                {
+                  "fromMs": 733000,
+                  "toMs": 745000,
+                  "text": "근데 아로마티카는 뭐지? 왜 속 안에서부터 탄탄하고 날아가지가 않지? 그냥 꽉 하고 잠금을 해주면서 피부 속 안에서부터 속 탄력을 잡아주고 그리고 속 건조를 너무너무 잘 잡아줘요."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "아로마티카 이렇게 듬뿍듬뿍 목 있는 데 있죠?",
+          "output": {
+            "fromMs": 0,
+            "toMs": 2340,
+            "from": "00:00:00.000",
+            "to": "00:00:02.340"
+          },
+          "source": {
+            "fromMs": 716620,
+            "toMs": 718960
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "건조하고 간지러운 부위에",
+          "output": {
+            "fromMs": 2760,
+            "toMs": 3970,
+            "from": "00:00:02.760",
+            "to": "00:00:03.970"
+          },
+          "source": {
+            "fromMs": 719380,
+            "toMs": 720590
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "듬뿍듬뿍 뿌리시면 웬일이야.",
+          "output": {
+            "fromMs": 4020,
+            "toMs": 6060,
+            "from": "00:00:04.020",
+            "to": "00:00:06.060"
+          },
+          "source": {
+            "fromMs": 720640,
+            "toMs": 722680
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "속 안에서부터 이렇게 속광이 차오르면서",
+          "output": {
+            "fromMs": 6720,
+            "toMs": 8940,
+            "from": "00:00:06.720",
+            "to": "00:00:08.940"
+          },
+          "source": {
+            "fromMs": 723340,
+            "toMs": 725560
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "당기는 게 없어요.",
+          "output": {
+            "fromMs": 10020,
+            "toMs": 10990,
+            "from": "00:00:10.020",
+            "to": "00:00:10.990"
+          },
+          "source": {
+            "fromMs": 726640,
+            "toMs": 727610
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "보통 이렇게 물처럼 뿌리는 제형은 뿌리고 나서",
+          "output": {
+            "fromMs": 11040,
+            "toMs": 13620,
+            "from": "00:00:11.040",
+            "to": "00:00:13.620"
+          },
+          "source": {
+            "fromMs": 727660,
+            "toMs": 730240
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "금방 내 수분이랑 같이 날아가는 제형들이 많잖아요.",
+          "output": {
+            "fromMs": 13800,
+            "toMs": 16200,
+            "from": "00:00:13.800",
+            "to": "00:00:16.200"
+          },
+          "source": {
+            "fromMs": 730420,
+            "toMs": 732820
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "근데 아로마티카는 뭐지?",
+          "output": {
+            "fromMs": 16260,
+            "toMs": 18010,
+            "from": "00:00:16.260",
+            "to": "00:00:18.010"
+          },
+          "source": {
+            "fromMs": 732880,
+            "toMs": 734630
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "왜 속 안에서부터 탄탄하고 날아가지가 않지?",
+          "output": {
+            "fromMs": 18060,
+            "toMs": 20460,
+            "from": "00:00:18.060",
+            "to": "00:00:20.460"
+          },
+          "source": {
+            "fromMs": 734680,
+            "toMs": 737080
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "그냥 꽉 하고 잠금을 해주면서 피부",
+          "output": {
+            "fromMs": 20580,
+            "toMs": 23040,
+            "from": "00:00:20.580",
+            "to": "00:00:23.040"
+          },
+          "source": {
+            "fromMs": 737200,
+            "toMs": 739660
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "속 안에서부터 속 탄력을 잡아주고 그리고",
+          "output": {
+            "fromMs": 23160,
+            "toMs": 25320,
+            "from": "00:00:23.160",
+            "to": "00:00:25.320"
+          },
+          "source": {
+            "fromMs": 739780,
+            "toMs": 741940
+          }
+        },
+        {
+          "index": 12,
+          "part": 1,
+          "text": "속 건조를 너무너무 잘 잡아줘요.",
+          "output": {
+            "fromMs": 25680,
+            "toMs": 27720,
+            "from": "00:00:25.680",
+            "to": "00:00:27.720"
+          },
+          "source": {
+            "fromMs": 742300,
+            "toMs": 744340
+          }
+        },
+        {
+          "index": 13,
+          "part": 1,
+          "text": "속, 속. 여러분 그러니까 참 핵심이",
+          "output": {
+            "fromMs": 28320,
+            "toMs": 30180,
+            "from": "00:00:28.320",
+            "to": "00:00:30.180"
+          },
+          "source": {
+            "fromMs": 744940,
+            "toMs": 746800
+          }
+        },
+        {
+          "index": 14,
+          "part": 1,
+          "text": "이제 제품들을 보세요.",
+          "output": {
+            "fromMs": 30420,
+            "toMs": 32220,
+            "from": "00:00:30.420",
+            "to": "00:00:32.220"
+          },
+          "source": {
+            "fromMs": 747040,
+            "toMs": 748840
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "renderIndex": 2,
+      "title": "세안 직후부터 화장 위까지 챙겨요",
+      "description": "세안 후 가장 먼저 바르는 방법부터 메이크업한 얼굴 위에 수시로 더하는 방법까지 보여줘요. 쓰던 기초 위에도 함께 사용할 수 있는지 알려드립니다.",
+      "hashtags": [
+        "#스킨케어루틴",
+        "#세안후스킨케어",
+        "#메이크업위스킨케어",
+        "#속건조케어"
+      ],
+      "theme": {
+        "angle": "세안 직후 첫 단계부터 기존 기초 위와 메이크업한 얼굴 위까지 수시로 더하는 방법을 알고 싶은 분을 위한 숏폼입니다.",
+        "title": "세안 후부터 메이크업 위까지의 사용법"
+      },
+      "review": {
+        "total": 27,
+        "reason": "세안 직후 첫 단계라는 답에서 기존 기초와 메이크업 전후에도 더하는 방법으로 자연스럽게 이어져요.",
+        "rubric": {
+          "flow": 5,
+          "hook": 3,
+          "variety": 4,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 5
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 30850,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/2.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/2.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/aromatica-3.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 30889,
+          "sizeBytes": 9119054,
+          "bitrateKbps": 2362,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.048,
+            "bottom": 0.2,
+            "centerX": 0.5,
+            "width": 0.84,
+            "align": "center",
+            "color": "#FFFFFF",
+            "strokeColor": null,
+            "boxColor": "#0D0F11B8"
+          },
+          "box": {
+            "widthPx": 605,
+            "centerXPx": 360,
+            "bottomPx": 256,
+            "fontSizePx": 35
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/2.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/2.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/2.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/2.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/2.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/2.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/2.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/2.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "언제 발라요? 세안 직후 첫 단계",
+          "score": 0.867,
+          "output": {
+            "fromMs": 0,
+            "toMs": 8200,
+            "from": "00:00:00.000",
+            "to": "00:00:08.200"
+          },
+          "source": {
+            "fromMs": 540950,
+            "toMs": 549150,
+            "from": "00:09:00.950",
+            "to": "00:09:09.150",
+            "plannedFromMs": 540950,
+            "plannedToMs": 548850
+          },
+          "aired": {
+            "from": "2026-10-26T23:04:00.950000",
+            "to": "2026-10-26T23:04:09.150000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4028
+              },
+              {
+                "t": 0.5,
+                "x": 0.4028
+              },
+              {
+                "t": 1.0,
+                "x": 0.4028
+              },
+              {
+                "t": 1.5,
+                "x": 0.4028
+              },
+              {
+                "t": 2.0,
+                "x": 0.4028
+              },
+              {
+                "t": 2.5,
+                "x": 0.4028
+              },
+              {
+                "t": 3.0,
+                "x": 0.4028
+              },
+              {
+                "t": 3.5,
+                "x": 0.3698
+              },
+              {
+                "t": 4.0,
+                "x": 0.3323
+              },
+              {
+                "t": 4.5,
+                "x": 0.3583
+              },
+              {
+                "t": 5.0,
+                "x": 0.3615
+              },
+              {
+                "t": 5.5,
+                "x": 0.3392
+              },
+              {
+                "t": 6.0,
+                "x": 0.3376
+              },
+              {
+                "t": 6.5,
+                "x": 0.3166
+              },
+              {
+                "t": 7.0,
+                "x": 0.2993
+              },
+              {
+                "t": 7.5,
+                "x": 0.2993
+              },
+              {
+                "t": 8.0,
+                "x": 0.2993
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4028,
+                "toX": 0.4028,
+                "kind": "cut"
+              },
+              {
+                "startSec": 3.08,
+                "endSec": 3.88,
+                "fromX": 0.4028,
+                "toX": 0.3426,
+                "kind": "pan"
+              },
+              {
+                "startSec": 3.88,
+                "endSec": 4.12,
+                "fromX": 0.3426,
+                "toX": 0.322,
+                "kind": "pan"
+              },
+              {
+                "startSec": 4.12,
+                "endSec": 4.62,
+                "fromX": 0.322,
+                "toX": 0.3646,
+                "kind": "pan"
+              },
+              {
+                "startSec": 4.83,
+                "endSec": 5.62,
+                "fromX": 0.3646,
+                "toX": 0.3376,
+                "kind": "pan"
+              },
+              {
+                "startSec": 6.08,
+                "endSec": 6.88,
+                "fromX": 0.3376,
+                "toX": 0.2993,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "사용법",
+              "strength": 5,
+              "claim": "세안 후 가장 먼저 바르고 화장한 뒤에도 수시로 얼굴 위에 덧바를 수 있다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 544000,
+                  "toMs": 546000,
+                  "text": "무조건 바로. 제일 그냥 처음에."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "쓰던 기초 위에 그냥 더해도 된대",
+          "score": 0.9,
+          "output": {
+            "fromMs": 8200,
+            "toMs": 30850,
+            "from": "00:00:08.200",
+            "to": "00:00:30.850"
+          },
+          "source": {
+            "fromMs": 991440,
+            "toMs": 1014090,
+            "from": "00:16:31.440",
+            "to": "00:16:54.090",
+            "plannedFromMs": 991590,
+            "plannedToMs": 1013790
+          },
+          "aired": {
+            "from": "2026-10-26T23:11:31.440000",
+            "to": "2026-10-26T23:11:54.090000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4792
+              },
+              {
+                "t": 0.5,
+                "x": 0.5058
+              },
+              {
+                "t": 1.0,
+                "x": 0.5058
+              },
+              {
+                "t": 1.5,
+                "x": 0.4888
+              },
+              {
+                "t": 2.0,
+                "x": 0.4728
+              },
+              {
+                "t": 2.5,
+                "x": 0.4453
+              },
+              {
+                "t": 3.0,
+                "x": 0.4558
+              },
+              {
+                "t": 3.5,
+                "x": 0.4698
+              },
+              {
+                "t": 4.0,
+                "x": 0.489
+              },
+              {
+                "t": 4.5,
+                "x": 0.4905
+              },
+              {
+                "t": 5.0,
+                "x": 0.4905
+              },
+              {
+                "t": 5.5,
+                "x": 0.4877
+              },
+              {
+                "t": 6.0,
+                "x": 0.4677
+              },
+              {
+                "t": 6.5,
+                "x": 0.4313
+              },
+              {
+                "t": 7.0,
+                "x": 0.4718
+              },
+              {
+                "t": 7.5,
+                "x": 0.475
+              },
+              {
+                "t": 8.0,
+                "x": 0.475
+              },
+              {
+                "t": 8.5,
+                "x": 0.475
+              },
+              {
+                "t": 9.0,
+                "x": 0.475
+              },
+              {
+                "t": 9.5,
+                "x": 0.475
+              },
+              {
+                "t": 10.0,
+                "x": 0.475
+              },
+              {
+                "t": 10.5,
+                "x": 0.475
+              },
+              {
+                "t": 11.0,
+                "x": 0.475
+              },
+              {
+                "t": 11.5,
+                "x": 0.4796
+              },
+              {
+                "t": 12.0,
+                "x": 0.5133
+              },
+              {
+                "t": 12.5,
+                "x": 0.5157
+              },
+              {
+                "t": 13.0,
+                "x": 0.5157
+              },
+              {
+                "t": 13.5,
+                "x": 0.5157
+              },
+              {
+                "t": 14.0,
+                "x": 0.5318
+              },
+              {
+                "t": 14.5,
+                "x": 0.545
+              },
+              {
+                "t": 15.0,
+                "x": 0.5281
+              },
+              {
+                "t": 15.5,
+                "x": 0.4924
+              },
+              {
+                "t": 16.0,
+                "x": 0.4475
+              },
+              {
+                "t": 16.5,
+                "x": 0.3962
+              },
+              {
+                "t": 17.0,
+                "x": 0.3962
+              },
+              {
+                "t": 17.5,
+                "x": 0.4101
+              },
+              {
+                "t": 18.0,
+                "x": 0.4216
+              },
+              {
+                "t": 18.5,
+                "x": 0.4216
+              },
+              {
+                "t": 19.0,
+                "x": 0.4216
+              },
+              {
+                "t": 19.5,
+                "x": 0.4216
+              },
+              {
+                "t": 20.0,
+                "x": 0.4461
+              },
+              {
+                "t": 20.5,
+                "x": 0.4989
+              },
+              {
+                "t": 21.0,
+                "x": 0.5696
+              },
+              {
+                "t": 21.5,
+                "x": 0.5696
+              },
+              {
+                "t": 22.0,
+                "x": 0.5592
+              },
+              {
+                "t": 22.5,
+                "x": 0.4835
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4792,
+                "toX": 0.4792,
+                "kind": "cut"
+              },
+              {
+                "startSec": 0.0,
+                "endSec": 0.38,
+                "fromX": 0.4792,
+                "toX": 0.5058,
+                "kind": "pan"
+              },
+              {
+                "startSec": 1.07,
+                "endSec": 1.88,
+                "fromX": 0.5058,
+                "toX": 0.4749,
+                "kind": "pan"
+              },
+              {
+                "startSec": 1.88,
+                "endSec": 2.62,
+                "fromX": 0.4749,
+                "toX": 0.4432,
+                "kind": "pan"
+              },
+              {
+                "startSec": 2.62,
+                "endSec": 3.38,
+                "fromX": 0.4432,
+                "toX": 0.4684,
+                "kind": "pan"
+              },
+              {
+                "startSec": 3.38,
+                "endSec": 4.12,
+                "fromX": 0.4684,
+                "toX": 0.4905,
+                "kind": "pan"
+              },
+              {
+                "startSec": 5.33,
+                "endSec": 6.12,
+                "fromX": 0.4905,
+                "toX": 0.4662,
+                "kind": "pan"
+              },
+              {
+                "startSec": 6.12,
+                "endSec": 6.38,
+                "fromX": 0.4662,
+                "toX": 0.4281,
+                "kind": "pan"
+              },
+              {
+                "startSec": 6.38,
+                "endSec": 7.12,
+                "fromX": 0.4281,
+                "toX": 0.475,
+                "kind": "pan"
+              },
+              {
+                "startSec": 11.32,
+                "endSec": 12.12,
+                "fromX": 0.475,
+                "toX": 0.5157,
+                "kind": "pan"
+              },
+              {
+                "startSec": 13.57,
+                "endSec": 14.38,
+                "fromX": 0.5157,
+                "toX": 0.545,
+                "kind": "pan"
+              },
+              {
+                "startSec": 14.57,
+                "endSec": 15.38,
+                "fromX": 0.545,
+                "toX": 0.5143,
+                "kind": "pan"
+              },
+              {
+                "startSec": 15.38,
+                "endSec": 15.62,
+                "fromX": 0.5143,
+                "toX": 0.4705,
+                "kind": "pan"
+              },
+              {
+                "startSec": 15.62,
+                "endSec": 16.12,
+                "fromX": 0.4705,
+                "toX": 0.4436,
+                "kind": "pan"
+              },
+              {
+                "startSec": 16.12,
+                "endSec": 16.38,
+                "fromX": 0.4436,
+                "toX": 0.3962,
+                "kind": "pan"
+              },
+              {
+                "startSec": 17.07,
+                "endSec": 17.88,
+                "fromX": 0.3962,
+                "toX": 0.4216,
+                "kind": "pan"
+              },
+              {
+                "startSec": 19.57,
+                "endSec": 20.38,
+                "fromX": 0.4216,
+                "toX": 0.4662,
+                "kind": "pan"
+              },
+              {
+                "startSec": 20.38,
+                "endSec": 20.62,
+                "fromX": 0.4662,
+                "toX": 0.5316,
+                "kind": "pan"
+              },
+              {
+                "startSec": 20.62,
+                "endSec": 20.88,
+                "fromX": 0.5316,
+                "toX": 0.5696,
+                "kind": "pan"
+              },
+              {
+                "startSec": 21.82,
+                "endSec": 22.62,
+                "fromX": 0.5696,
+                "toX": 0.4781,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "활용법",
+              "strength": 4,
+              "claim": "기존에 쓰던 기초 제품 위에 함께 사용할 수 있어 현재의 스킨케어 루틴에 쉽게 더할 수 있다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 1000000,
+                  "toMs": 1002000,
+                  "text": "이 위에 같이 써보세요."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "세안하고 무조건 바로.",
+          "output": {
+            "fromMs": 0,
+            "toMs": 1660,
+            "from": "00:00:00.000",
+            "to": "00:00:01.660"
+          },
+          "source": {
+            "fromMs": 540950,
+            "toMs": 542610
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "제일 처음에.",
+          "output": {
+            "fromMs": 1840,
+            "toMs": 2570,
+            "from": "00:00:01.840",
+            "to": "00:00:02.570"
+          },
+          "source": {
+            "fromMs": 542790,
+            "toMs": 543520
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "무조건 바로. 제일 그냥 처음에. 정말.",
+          "output": {
+            "fromMs": 2620,
+            "toMs": 5570,
+            "from": "00:00:02.620",
+            "to": "00:00:05.570"
+          },
+          "source": {
+            "fromMs": 543570,
+            "toMs": 546520
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "그러면 뭐 화장하고 나서는 그러면 안 돼요?",
+          "output": {
+            "fromMs": 5620,
+            "toMs": 7900,
+            "from": "00:00:05.620",
+            "to": "00:00:07.900"
+          },
+          "source": {
+            "fromMs": 546570,
+            "toMs": 548850
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "정말 피부는 편안하고 숨을 쉬고요.",
+          "output": {
+            "fromMs": 7900,
+            "toMs": 10420,
+            "from": "00:00:07.900",
+            "to": "00:00:10.420"
+          },
+          "source": {
+            "fromMs": 548850,
+            "toMs": 551370
+          }
+        },
+        {
+          "index": 6,
+          "part": 2,
+          "text": "화장을 하시든 안 하시든",
+          "output": {
+            "fromMs": 11020,
+            "toMs": 13120,
+            "from": "00:00:11.020",
+            "to": "00:00:13.120"
+          },
+          "source": {
+            "fromMs": 994260,
+            "toMs": 996360
+          }
+        },
+        {
+          "index": 7,
+          "part": 2,
+          "text": "상관없고 쓰시던 기초 있는데요.",
+          "output": {
+            "fromMs": 13300,
+            "toMs": 15460,
+            "from": "00:00:13.300",
+            "to": "00:00:15.460"
+          },
+          "source": {
+            "fromMs": 996540,
+            "toMs": 998700
+          }
+        },
+        {
+          "index": 8,
+          "part": 2,
+          "text": "이 위에 같이 써보세요. 너무 좋다.",
+          "output": {
+            "fromMs": 15760,
+            "toMs": 18050,
+            "from": "00:00:15.760",
+            "to": "00:00:18.050"
+          },
+          "source": {
+            "fromMs": 999000,
+            "toMs": 1001290
+          }
+        },
+        {
+          "index": 9,
+          "part": 2,
+          "text": "나 다른 거 안 하고 뭘",
+          "output": {
+            "fromMs": 18100,
+            "toMs": 19130,
+            "from": "00:00:18.100",
+            "to": "00:00:19.130"
+          },
+          "source": {
+            "fromMs": 1001340,
+            "toMs": 1002370
+          }
+        },
+        {
+          "index": 10,
+          "part": 2,
+          "text": "살까 했는데 그럼 이걸 쓰세요.",
+          "output": {
+            "fromMs": 19180,
+            "toMs": 21100,
+            "from": "00:00:19.180",
+            "to": "00:00:21.100"
+          },
+          "source": {
+            "fromMs": 1002420,
+            "toMs": 1004340
+          }
+        },
+        {
+          "index": 11,
+          "part": 2,
+          "text": "그러니까 이거는 어떤 단계에서의 필수가 아니라",
+          "output": {
+            "fromMs": 21340,
+            "toMs": 23560,
+            "from": "00:00:21.340",
+            "to": "00:00:23.560"
+          },
+          "source": {
+            "fromMs": 1004580,
+            "toMs": 1006800
+          }
+        },
+        {
+          "index": 12,
+          "part": 2,
+          "text": "그냥 내 루틴, 내 피부에 그냥",
+          "output": {
+            "fromMs": 24100,
+            "toMs": 26980,
+            "from": "00:00:24.100",
+            "to": "00:00:26.980"
+          },
+          "source": {
+            "fromMs": 1007340,
+            "toMs": 1010220
+          }
+        },
+        {
+          "index": 13,
+          "part": 2,
+          "text": "지금부터 만난 내 피부의 최고 아이템.",
+          "output": {
+            "fromMs": 27160,
+            "toMs": 30100,
+            "from": "00:00:27.160",
+            "to": "00:00:30.100"
+          },
+          "source": {
+            "fromMs": 1010400,
+            "toMs": 1013340
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "renderIndex": 3,
+      "title": "기름종이에 담가도 오일감이 없네",
+      "description": "기름종이를 반만 담가 오일감이 올라오는지 직접 확인해요. 오일 프리와 로즈마리 추출물 중심의 6가지 성분을 함께 보여줘요.",
+      "hashtags": [
+        "#오일프리스킨케어",
+        "#로즈마리스킨케어",
+        "#민감성피부"
+      ],
+      "theme": {
+        "angle": "기름종이를 반만 담가 기름기가 올라오지 않는 걸 직접 보여주며 오일 프리 · 6가지 성분을 확인시키는 숏폼입니다.",
+        "title": "오일 프리 기름종이 테스트"
+      },
+      "review": {
+        "total": 26,
+        "reason": "기름종이 테스트로 오일 프리와 6가지 전 성분, 로즈마리 추출물 중심이라는 포인트를 직접 확인시켜줘요.",
+        "rubric": {
+          "flow": 4,
+          "hook": 4,
+          "variety": 4,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 4
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 34826,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/3.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/3.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/aromatica-4.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 34856,
+          "sizeBytes": 8011149,
+          "bitrateKbps": 1839,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.048,
+            "bottom": 0.2,
+            "centerX": 0.5,
+            "width": 0.84,
+            "align": "center",
+            "color": "#FFFFFF",
+            "strokeColor": null,
+            "boxColor": "#0D0F11B8"
+          },
+          "box": {
+            "widthPx": 605,
+            "centerXPx": 360,
+            "bottomPx": 256,
+            "fontSizePx": 35
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/3.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/3.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/3.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/3.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/3.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/3.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/3.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/3.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "기름종이에 넣었는데 기름기가 안 올라와요",
+          "score": 0.8,
+          "output": {
+            "fromMs": 0,
+            "toMs": 34826,
+            "from": "00:00:00.000",
+            "to": "00:00:34.826"
+          },
+          "source": {
+            "fromMs": 499060,
+            "toMs": 533886,
+            "from": "00:08:19.060",
+            "to": "00:08:53.886",
+            "plannedFromMs": 499110,
+            "plannedToMs": 533800
+          },
+          "aired": {
+            "from": "2026-10-26T23:03:19.060000",
+            "to": "2026-10-26T23:03:53.886000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.3418
+              },
+              {
+                "t": 0.5,
+                "x": 0.3418
+              },
+              {
+                "t": 1.0,
+                "x": 0.3418
+              },
+              {
+                "t": 1.5,
+                "x": 0.3418
+              },
+              {
+                "t": 2.0,
+                "x": 0.3418
+              },
+              {
+                "t": 2.5,
+                "x": 0.462
+              },
+              {
+                "t": 3.0,
+                "x": 0.462
+              },
+              {
+                "t": 3.5,
+                "x": 0.462
+              },
+              {
+                "t": 4.0,
+                "x": 0.462
+              },
+              {
+                "t": 4.5,
+                "x": 0.462
+              },
+              {
+                "t": 5.0,
+                "x": 0.462
+              },
+              {
+                "t": 5.5,
+                "x": 0.462
+              },
+              {
+                "t": 6.0,
+                "x": 0.462
+              },
+              {
+                "t": 6.5,
+                "x": 0.462
+              },
+              {
+                "t": 7.0,
+                "x": 0.462
+              },
+              {
+                "t": 7.5,
+                "x": 0.462
+              },
+              {
+                "t": 8.0,
+                "x": 0.462
+              },
+              {
+                "t": 8.5,
+                "x": 0.462
+              },
+              {
+                "t": 9.0,
+                "x": 0.462
+              },
+              {
+                "t": 9.5,
+                "x": 0.3418
+              },
+              {
+                "t": 10.0,
+                "x": 0.3418
+              },
+              {
+                "t": 10.5,
+                "x": 0.3418
+              },
+              {
+                "t": 11.0,
+                "x": 0.3418
+              },
+              {
+                "t": 11.5,
+                "x": 0.3418
+              },
+              {
+                "t": 12.0,
+                "x": 0.3418
+              },
+              {
+                "t": 12.5,
+                "x": 0.3418
+              },
+              {
+                "t": 13.0,
+                "x": 0.3418
+              },
+              {
+                "t": 13.5,
+                "x": 0.3418
+              },
+              {
+                "t": 14.0,
+                "x": 0.3418
+              },
+              {
+                "t": 14.5,
+                "x": 0.3418
+              },
+              {
+                "t": 15.0,
+                "x": 0.3418
+              },
+              {
+                "t": 15.5,
+                "x": 0.3418
+              },
+              {
+                "t": 16.0,
+                "x": 0.3418
+              },
+              {
+                "t": 16.5,
+                "x": 0.3418
+              },
+              {
+                "t": 17.0,
+                "x": 0.3418
+              },
+              {
+                "t": 17.5,
+                "x": 0.3418
+              },
+              {
+                "t": 18.0,
+                "x": 0.3418
+              },
+              {
+                "t": 18.5,
+                "x": 0.3418
+              },
+              {
+                "t": 19.0,
+                "x": 0.3418
+              },
+              {
+                "t": 19.5,
+                "x": 0.3418
+              },
+              {
+                "t": 20.0,
+                "x": 0.3418
+              },
+              {
+                "t": 20.5,
+                "x": 0.3418
+              },
+              {
+                "t": 21.0,
+                "x": 0.3418
+              },
+              {
+                "t": 21.5,
+                "x": 0.3418
+              },
+              {
+                "t": 22.0,
+                "x": 0.3418
+              },
+              {
+                "t": 22.5,
+                "x": 0.3418
+              },
+              {
+                "t": 23.0,
+                "x": 0.3418
+              },
+              {
+                "t": 23.5,
+                "x": 0.3418
+              },
+              {
+                "t": 24.0,
+                "x": 0.3418
+              },
+              {
+                "t": 24.5,
+                "x": 0.3418
+              },
+              {
+                "t": 25.0,
+                "x": 0.3418
+              },
+              {
+                "t": 25.5,
+                "x": 0.3418
+              },
+              {
+                "t": 26.0,
+                "x": 0.3418
+              },
+              {
+                "t": 26.5,
+                "x": 0.3418
+              },
+              {
+                "t": 27.0,
+                "x": 0.3418
+              },
+              {
+                "t": 27.5,
+                "x": 0.3418
+              },
+              {
+                "t": 28.0,
+                "x": 0.3418
+              },
+              {
+                "t": 28.5,
+                "x": 0.3418
+              },
+              {
+                "t": 29.0,
+                "x": 0.3418
+              },
+              {
+                "t": 29.5,
+                "x": 0.3418
+              },
+              {
+                "t": 30.0,
+                "x": 0.3418
+              },
+              {
+                "t": 30.5,
+                "x": 0.3418
+              },
+              {
+                "t": 31.0,
+                "x": 0.3418
+              },
+              {
+                "t": 31.5,
+                "x": 0.3418
+              },
+              {
+                "t": 32.0,
+                "x": 0.3418
+              },
+              {
+                "t": 32.5,
+                "x": 0.3418
+              },
+              {
+                "t": 33.0,
+                "x": 0.3418
+              },
+              {
+                "t": 33.5,
+                "x": 0.3418
+              },
+              {
+                "t": 34.0,
+                "x": 0.3418
+              },
+              {
+                "t": 34.5,
+                "x": 0.3418
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 2.25,
+                "endSec": 2.25,
+                "fromX": 0.3418,
+                "toX": 0.462,
+                "kind": "cut"
+              },
+              {
+                "startSec": 9.25,
+                "endSec": 9.25,
+                "fromX": 0.462,
+                "toX": 0.3418,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "시연",
+              "strength": 4,
+              "claim": "제품을 기름종이에 반만 담가도 기름기가 올라오지 않는 모습을 보여주며 오일 프리임을 확인시킵니다.",
+              "evidence": [
+                {
+                  "fromMs": 506000,
+                  "toMs": 512000,
+                  "text": "피부에 바르는 게 내 피부의 체질이 돼요. 기름종이에요? 그냥 담글게요."
+                },
+                {
+                  "fromMs": 512000,
+                  "toMs": 520000,
+                  "text": "제가 왜 푹 안 담그냐면 반 정도를 담가야 비교가 되잖아, 고객님. 전체를 다 담그면 이게 전체가 파란 건지 아닌지 어떻게 아시겠어요?"
+                },
+                {
+                  "fromMs": 520000,
+                  "toMs": 525000,
+                  "text": "반 정도만 풍덩 담그는데 여러분 기름기 치고 올라오나요? 아니요."
+                },
+                {
+                  "fromMs": 526000,
+                  "toMs": 528000,
+                  "text": "네, 오일 프리."
+                }
+              ]
+            },
+            {
+              "category": "제품 특징",
+              "strength": 5,
+              "claim": "오일 무첨가이며 전 성분이 6가지이고 로즈마리 추출물을 주성분으로 담았다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 526000,
+                  "toMs": 528000,
+                  "text": "네, 오일 프리."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "내가 먹는 게 나를 만든다고 하잖아요.",
+          "output": {
+            "fromMs": 0,
+            "toMs": 1570,
+            "from": "00:00:00.000",
+            "to": "00:00:01.570"
+          },
+          "source": {
+            "fromMs": 499060,
+            "toMs": 500630
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "이거 보세요. 바르는 게, 피부에 먹이는 게",
+          "output": {
+            "fromMs": 1620,
+            "toMs": 4320,
+            "from": "00:00:01.620",
+            "to": "00:00:04.320"
+          },
+          "source": {
+            "fromMs": 500680,
+            "toMs": 503380
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "내 피부 타입이 돼요. 그럼요.",
+          "output": {
+            "fromMs": 4440,
+            "toMs": 6670,
+            "from": "00:00:04.440",
+            "to": "00:00:06.670"
+          },
+          "source": {
+            "fromMs": 503500,
+            "toMs": 505730
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "피부에 바르는 게 내 피부의 체질이 돼요.",
+          "output": {
+            "fromMs": 6720,
+            "toMs": 9360,
+            "from": "00:00:06.720",
+            "to": "00:00:09.360"
+          },
+          "source": {
+            "fromMs": 505780,
+            "toMs": 508420
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "기름종이에요? 그냥 담글게요.",
+          "output": {
+            "fromMs": 10020,
+            "toMs": 12240,
+            "from": "00:00:10.020",
+            "to": "00:00:12.240"
+          },
+          "source": {
+            "fromMs": 509080,
+            "toMs": 511300
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "제가 왜 푹 안 담그냐면 반",
+          "output": {
+            "fromMs": 12240,
+            "toMs": 13990,
+            "from": "00:00:12.240",
+            "to": "00:00:13.990"
+          },
+          "source": {
+            "fromMs": 511300,
+            "toMs": 513050
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "정도를 담가야 비교가 되잖아, 고객님.",
+          "output": {
+            "fromMs": 14040,
+            "toMs": 16080,
+            "from": "00:00:14.040",
+            "to": "00:00:16.080"
+          },
+          "source": {
+            "fromMs": 513100,
+            "toMs": 515140
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "전체를 다 담그면 이게 전체가",
+          "output": {
+            "fromMs": 16620,
+            "toMs": 18370,
+            "from": "00:00:16.620",
+            "to": "00:00:18.370"
+          },
+          "source": {
+            "fromMs": 515680,
+            "toMs": 517430
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "파란 건지 아닌지 어떻게 아시겠어요?",
+          "output": {
+            "fromMs": 18420,
+            "toMs": 20220,
+            "from": "00:00:18.420",
+            "to": "00:00:20.220"
+          },
+          "source": {
+            "fromMs": 517480,
+            "toMs": 519280
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "반 정도만 풍덩 담그는데",
+          "output": {
+            "fromMs": 20880,
+            "toMs": 22450,
+            "from": "00:00:20.880",
+            "to": "00:00:22.450"
+          },
+          "source": {
+            "fromMs": 519940,
+            "toMs": 521510
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "여러분 기름기 치고 올라오나요? 아니요.",
+          "output": {
+            "fromMs": 22500,
+            "toMs": 25210,
+            "from": "00:00:22.500",
+            "to": "00:00:25.210"
+          },
+          "source": {
+            "fromMs": 521560,
+            "toMs": 524270
+          }
+        },
+        {
+          "index": 12,
+          "part": 1,
+          "text": "네, 오일 프리.",
+          "output": {
+            "fromMs": 26700,
+            "toMs": 28150,
+            "from": "00:00:26.700",
+            "to": "00:00:28.150"
+          },
+          "source": {
+            "fromMs": 525760,
+            "toMs": 527210
+          }
+        },
+        {
+          "index": 13,
+          "part": 1,
+          "text": "오일 무첨가.",
+          "output": {
+            "fromMs": 28200,
+            "toMs": 29110,
+            "from": "00:00:28.200",
+            "to": "00:00:29.110"
+          },
+          "source": {
+            "fromMs": 527260,
+            "toMs": 528170
+          }
+        },
+        {
+          "index": 14,
+          "part": 1,
+          "text": "오일 노. 전 성분 단 6가지로",
+          "output": {
+            "fromMs": 29160,
+            "toMs": 31680,
+            "from": "00:00:29.160",
+            "to": "00:00:31.680"
+          },
+          "source": {
+            "fromMs": 528220,
+            "toMs": 530740
+          }
+        },
+        {
+          "index": 15,
+          "part": 1,
+          "text": "로즈마리 추출물 주성분으로.",
+          "output": {
+            "fromMs": 32520,
+            "toMs": 34690,
+            "from": "00:00:32.520",
+            "to": "00:00:34.690"
+          },
+          "source": {
+            "fromMs": 531580,
+            "toMs": 533750
+          }
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "renderIndex": 4,
+      "title": "민감한 피부도 편안한 속보습 루틴",
+      "description": "겹겹이 쌓아도 부담이 적은 항산화와 속보습 케어를 보여줘요. 민감하고 예민한 피부부터 10대 피부까지 함께 사용하는 방법을 전해요.",
+      "hashtags": [
+        "#속보습케어",
+        "#민감성피부",
+        "#청소년스킨케어"
+      ],
+      "theme": {
+        "angle": "모공을 막는 화장품이 부담스러운 건성 · 민감 피부가 온 가족과 편하게 쓰는 속보습 케어를 보여주는 숏폼입니다.",
+        "title": "모공 부담 없는 속보습"
+      },
+      "review": {
+        "total": 25,
+        "reason": "모공 부담이 걱정되는 피부에서 민감한 피부와 10대까지 함께 쓰는 속보습 이야기로 이어져요.",
+        "rubric": {
+          "flow": 4,
+          "hook": 4,
+          "variety": 4,
+          "freshness": 4,
+          "theme_fit": 5,
+          "self_contained": 4
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 30810,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/4.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/4.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/aromatica-5.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 30863,
+          "sizeBytes": 8069953,
+          "bitrateKbps": 2092,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.048,
+            "bottom": 0.2,
+            "centerX": 0.5,
+            "width": 0.84,
+            "align": "center",
+            "color": "#FFFFFF",
+            "strokeColor": null,
+            "boxColor": "#0D0F11B8"
+          },
+          "box": {
+            "widthPx": 605,
+            "centerXPx": 360,
+            "bottomPx": 256,
+            "fontSizePx": 35
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/tracking/4.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/product/4.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/both/4.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/center/4.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/blur/4.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/white/4.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/black/4.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/aromatica/original/4.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "겹겹이 쌓는 항산화 · 속보습",
+          "score": 0.8,
+          "output": {
+            "fromMs": 0,
+            "toMs": 17340,
+            "from": "00:00:00.000",
+            "to": "00:00:17.340"
+          },
+          "source": {
+            "fromMs": 766950,
+            "toMs": 784290,
+            "from": "00:12:46.950",
+            "to": "00:13:04.290",
+            "plannedFromMs": 767000,
+            "plannedToMs": 784000
+          },
+          "aired": {
+            "from": "2026-10-26T23:07:46.950000",
+            "to": "2026-10-26T23:08:04.290000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4521
+              },
+              {
+                "t": 0.5,
+                "x": 0.4321
+              },
+              {
+                "t": 1.0,
+                "x": 0.43
+              },
+              {
+                "t": 1.5,
+                "x": 0.43
+              },
+              {
+                "t": 2.0,
+                "x": 0.43
+              },
+              {
+                "t": 2.5,
+                "x": 0.43
+              },
+              {
+                "t": 3.0,
+                "x": 0.4269
+              },
+              {
+                "t": 3.5,
+                "x": 0.4042
+              },
+              {
+                "t": 4.0,
+                "x": 0.4026
+              },
+              {
+                "t": 4.5,
+                "x": 0.3977
+              },
+              {
+                "t": 5.0,
+                "x": 0.3615
+              },
+              {
+                "t": 5.5,
+                "x": 0.3653
+              },
+              {
+                "t": 6.0,
+                "x": 0.4119
+              },
+              {
+                "t": 6.5,
+                "x": 0.4454
+              },
+              {
+                "t": 7.0,
+                "x": 0.4454
+              },
+              {
+                "t": 7.5,
+                "x": 0.4312
+              },
+              {
+                "t": 8.0,
+                "x": 0.4038
+              },
+              {
+                "t": 8.5,
+                "x": 0.388
+              },
+              {
+                "t": 9.0,
+                "x": 0.388
+              },
+              {
+                "t": 9.5,
+                "x": 0.4088
+              },
+              {
+                "t": 10.0,
+                "x": 0.4402
+              },
+              {
+                "t": 10.5,
+                "x": 0.4545
+              },
+              {
+                "t": 11.0,
+                "x": 0.4545
+              },
+              {
+                "t": 11.5,
+                "x": 0.4545
+              },
+              {
+                "t": 12.0,
+                "x": 0.4545
+              },
+              {
+                "t": 12.5,
+                "x": 0.4621
+              },
+              {
+                "t": 13.0,
+                "x": 0.5174
+              },
+              {
+                "t": 13.5,
+                "x": 0.551
+              },
+              {
+                "t": 14.0,
+                "x": 0.5253
+              },
+              {
+                "t": 14.5,
+                "x": 0.5043
+              },
+              {
+                "t": 15.0,
+                "x": 0.5043
+              },
+              {
+                "t": 15.5,
+                "x": 0.5043
+              },
+              {
+                "t": 16.0,
+                "x": 0.5043
+              },
+              {
+                "t": 16.5,
+                "x": 0.4896
+              },
+              {
+                "t": 17.0,
+                "x": 0.4776
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4521,
+                "toX": 0.4521,
+                "kind": "cut"
+              },
+              {
+                "startSec": 0.0,
+                "endSec": 0.62,
+                "fromX": 0.4521,
+                "toX": 0.43,
+                "kind": "pan"
+              },
+              {
+                "startSec": 2.83,
+                "endSec": 3.62,
+                "fromX": 0.43,
+                "toX": 0.4026,
+                "kind": "pan"
+              },
+              {
+                "startSec": 4.33,
+                "endSec": 5.12,
+                "fromX": 0.4026,
+                "toX": 0.359,
+                "kind": "pan"
+              },
+              {
+                "startSec": 5.33,
+                "endSec": 6.12,
+                "fromX": 0.359,
+                "toX": 0.4153,
+                "kind": "pan"
+              },
+              {
+                "startSec": 6.12,
+                "endSec": 6.38,
+                "fromX": 0.4153,
+                "toX": 0.4454,
+                "kind": "pan"
+              },
+              {
+                "startSec": 7.08,
+                "endSec": 7.88,
+                "fromX": 0.4454,
+                "toX": 0.4196,
+                "kind": "pan"
+              },
+              {
+                "startSec": 7.88,
+                "endSec": 8.12,
+                "fromX": 0.4196,
+                "toX": 0.388,
+                "kind": "pan"
+              },
+              {
+                "startSec": 9.07,
+                "endSec": 9.88,
+                "fromX": 0.388,
+                "toX": 0.4259,
+                "kind": "pan"
+              },
+              {
+                "startSec": 9.88,
+                "endSec": 10.12,
+                "fromX": 0.4259,
+                "toX": 0.4545,
+                "kind": "pan"
+              },
+              {
+                "startSec": 12.32,
+                "endSec": 13.12,
+                "fromX": 0.4545,
+                "toX": 0.5214,
+                "kind": "pan"
+              },
+              {
+                "startSec": 13.12,
+                "endSec": 13.38,
+                "fromX": 0.5214,
+                "toX": 0.551,
+                "kind": "pan"
+              },
+              {
+                "startSec": 13.57,
+                "endSec": 14.38,
+                "fromX": 0.551,
+                "toX": 0.5043,
+                "kind": "pan"
+              },
+              {
+                "startSec": 16.07,
+                "endSec": 16.88,
+                "fromX": 0.5043,
+                "toX": 0.4776,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "효과/효능",
+              "strength": 4,
+              "claim": "항산화와 속보습 케어가 피부를 편안하게 하면서 피부 컨디션을 끌어올린다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 767000,
+                  "toMs": 784000,
+                  "text": "그러니까 어떤 화장품은 오히려 내 모공을 막는 것 같아서 부담이 될 때가 있어요. 건성이라고 해서 여러분 무언가 잘못했다가 실제로 겹겹이 쌓이는 이 항산화와 속보습 케어를 해주는 게 피부에서는 참 편안한데 정말 내 피부 컨디션을 쫙 끌어올리거든요."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "민감한 피부, 10대 아이와 같이 써요",
+          "score": 0.8,
+          "output": {
+            "fromMs": 17340,
+            "toMs": 30810,
+            "from": "00:00:17.340",
+            "to": "00:00:30.810"
+          },
+          "source": {
+            "fromMs": 980940,
+            "toMs": 994410,
+            "from": "00:16:20.940",
+            "to": "00:16:34.410",
+            "plannedFromMs": 981100,
+            "plannedToMs": 994100
+          },
+          "aired": {
+            "from": "2026-10-26T23:11:20.940000",
+            "to": "2026-10-26T23:11:34.410000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4671
+              },
+              {
+                "t": 0.5,
+                "x": 0.4671
+              },
+              {
+                "t": 1.0,
+                "x": 0.4671
+              },
+              {
+                "t": 1.5,
+                "x": 0.4671
+              },
+              {
+                "t": 2.0,
+                "x": 0.4671
+              },
+              {
+                "t": 2.5,
+                "x": 0.4671
+              },
+              {
+                "t": 3.0,
+                "x": 0.4671
+              },
+              {
+                "t": 3.5,
+                "x": 0.4671
+              },
+              {
+                "t": 4.0,
+                "x": 0.4671
+              },
+              {
+                "t": 4.5,
+                "x": 0.4632
+              },
+              {
+                "t": 5.0,
+                "x": 0.4343
+              },
+              {
+                "t": 5.5,
+                "x": 0.4005
+              },
+              {
+                "t": 6.0,
+                "x": 0.4005
+              },
+              {
+                "t": 6.5,
+                "x": 0.4005
+              },
+              {
+                "t": 7.0,
+                "x": 0.4005
+              },
+              {
+                "t": 7.5,
+                "x": 0.4005
+              },
+              {
+                "t": 8.0,
+                "x": 0.4005
+              },
+              {
+                "t": 8.5,
+                "x": 0.4005
+              },
+              {
+                "t": 9.0,
+                "x": 0.4005
+              },
+              {
+                "t": 9.5,
+                "x": 0.4005
+              },
+              {
+                "t": 10.0,
+                "x": 0.423
+              },
+              {
+                "t": 10.5,
+                "x": 0.4604
+              },
+              {
+                "t": 11.0,
+                "x": 0.5058
+              },
+              {
+                "t": 11.5,
+                "x": 0.5058
+              },
+              {
+                "t": 12.0,
+                "x": 0.4888
+              },
+              {
+                "t": 12.5,
+                "x": 0.4728
+              },
+              {
+                "t": 13.0,
+                "x": 0.4453
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4671,
+                "toX": 0.4671,
+                "kind": "cut"
+              },
+              {
+                "startSec": 4.33,
+                "endSec": 5.12,
+                "fromX": 0.4671,
+                "toX": 0.4322,
+                "kind": "pan"
+              },
+              {
+                "startSec": 5.12,
+                "endSec": 5.38,
+                "fromX": 0.4322,
+                "toX": 0.4005,
+                "kind": "pan"
+              },
+              {
+                "startSec": 9.57,
+                "endSec": 10.38,
+                "fromX": 0.4005,
+                "toX": 0.4416,
+                "kind": "pan"
+              },
+              {
+                "startSec": 10.38,
+                "endSec": 10.62,
+                "fromX": 0.4416,
+                "toX": 0.4792,
+                "kind": "pan"
+              },
+              {
+                "startSec": 10.62,
+                "endSec": 10.88,
+                "fromX": 0.4792,
+                "toX": 0.5058,
+                "kind": "pan"
+              },
+              {
+                "startSec": 11.57,
+                "endSec": 12.38,
+                "fromX": 0.5058,
+                "toX": 0.4749,
+                "kind": "pan"
+              },
+              {
+                "startSec": 12.38,
+                "endSec": 13.12,
+                "fromX": 0.4749,
+                "toX": 0.4432,
+                "kind": "pan"
+              },
+              {
+                "startSec": 13.12,
+                "endSec": 13.38,
+                "fromX": 0.4432,
+                "toX": 0.4211,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "활용법",
+              "strength": 4,
+              "claim": "기존에 쓰던 기초 제품 위에 함께 사용할 수 있어 현재의 스킨케어 루틴에 쉽게 더할 수 있다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 981000,
+                  "toMs": 991000,
+                  "text": "여러분 이거 방법 없고 특히 민감하다, 예민하다 하시면 너무 좋으실 거고 만약에 10대 중학생, 청소년을 같이 키우는 만약에 부모다 아이들 같이 해주세요."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "그러니까 어떤 화장품은 오히려 내 모공을 막는",
+          "output": {
+            "fromMs": 0,
+            "toMs": 2110,
+            "from": "00:00:00.000",
+            "to": "00:00:02.110"
+          },
+          "source": {
+            "fromMs": 766950,
+            "toMs": 769060
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "것 같아서 부담이 될 때가 있어요.",
+          "output": {
+            "fromMs": 2170,
+            "toMs": 4270,
+            "from": "00:00:02.170",
+            "to": "00:00:04.270"
+          },
+          "source": {
+            "fromMs": 769120,
+            "toMs": 771220
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "건성이라고 해서 여러분 무언가 잘못했다가",
+          "output": {
+            "fromMs": 4930,
+            "toMs": 7330,
+            "from": "00:00:04.930",
+            "to": "00:00:07.330"
+          },
+          "source": {
+            "fromMs": 771880,
+            "toMs": 774280
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "실제로 겹겹이 쌓이는 이 항산화와",
+          "output": {
+            "fromMs": 7930,
+            "toMs": 10330,
+            "from": "00:00:07.930",
+            "to": "00:00:10.330"
+          },
+          "source": {
+            "fromMs": 774880,
+            "toMs": 777280
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "속보습 케어를 해주는 게 피부에서는",
+          "output": {
+            "fromMs": 10810,
+            "toMs": 13210,
+            "from": "00:00:10.810",
+            "to": "00:00:13.210"
+          },
+          "source": {
+            "fromMs": 777760,
+            "toMs": 780160
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "참 편안한데 정말 내",
+          "output": {
+            "fromMs": 13450,
+            "toMs": 15080,
+            "from": "00:00:13.450",
+            "to": "00:00:15.080"
+          },
+          "source": {
+            "fromMs": 780400,
+            "toMs": 782030
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "피부 컨디션을 쫙 끌어올리거든요.",
+          "output": {
+            "fromMs": 15130,
+            "toMs": 16990,
+            "from": "00:00:15.130",
+            "to": "00:00:16.990"
+          },
+          "source": {
+            "fromMs": 782080,
+            "toMs": 783940
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "여러분 이거 방법 없고 특히 민감하다,",
+          "output": {
+            "fromMs": 17000,
+            "toMs": 19450,
+            "from": "00:00:17.000",
+            "to": "00:00:19.450"
+          },
+          "source": {
+            "fromMs": 783950,
+            "toMs": 786400
+          }
+        },
+        {
+          "index": 9,
+          "part": 2,
+          "text": "예민하다 하시면 너무 좋으실 거고 만약에",
+          "output": {
+            "fromMs": 19510,
+            "toMs": 22030,
+            "from": "00:00:19.510",
+            "to": "00:00:22.030"
+          },
+          "source": {
+            "fromMs": 983110,
+            "toMs": 985630
+          }
+        },
+        {
+          "index": 10,
+          "part": 2,
+          "text": "10대 중학생, 청소년을 같이 키우는",
+          "output": {
+            "fromMs": 22270,
+            "toMs": 24490,
+            "from": "00:00:22.270",
+            "to": "00:00:24.490"
+          },
+          "source": {
+            "fromMs": 985870,
+            "toMs": 988090
+          }
+        },
+        {
+          "index": 11,
+          "part": 2,
+          "text": "만약에 부모다 아이들 같이 해주세요.",
+          "output": {
+            "fromMs": 24670,
+            "toMs": 26890,
+            "from": "00:00:24.670",
+            "to": "00:00:26.890"
+          },
+          "source": {
+            "fromMs": 988270,
+            "toMs": 990490
+          }
+        },
+        {
+          "index": 12,
+          "part": 2,
+          "text": "정말 피부는 편안하고 숨을 쉬고요.",
+          "output": {
+            "fromMs": 27490,
+            "toMs": 30000,
+            "from": "00:00:27.490",
+            "to": "00:00:30.000"
+          },
+          "source": {
+            "fromMs": 991090,
+            "toMs": 993600
+          }
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "span": "14:27–15:27",
+      "category": "자료영상",
+      "title": "허브향인 줄 알았는데 고급 스파 무드",
+      "reason": "AI 심사 29/30점으로 1순위였지만, 진행자가 말하는 도중 마지막 약 7초가 제품 자료영상으로 바뀝니다. 말은 이어지는데 진행자 얼굴이 사라져 제외했습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/aromatica-insert-original.mp4"
+    },
+    {
+      "span": "13:04–14:00",
+      "category": "방송 한정 구성",
+      "title": "악건성인데 환절기에도 안 당겨요",
+      "reason": "후반이 '특대 용량 · 두 통 · 다시는 없습니다' 같은 이번 방송 구성 안내로 넘어가고, 중간에 매장 자료화면과 구성 그래픽이 들어갑니다. 방송이 끝나면 맞지 않는 정보라 제외했습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/aromatica-offer.mp4"
+    },
+    {
+      "span": "1:39–2:03 + 3:33–3:51",
+      "category": "가격 · 재고",
+      "title": "물량 수급 비상 · 역대 최저가",
+      "reason": "공급 중단 공문, '월 1만 원대 · 역대 최저가' 같은 가격 · 재고 안내 구간입니다. 방송 시점에만 유효한 정보라 후보에서 뺐습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/aromatica-price.mp4"
+    }
+  ]
+}

@@ -1,0 +1,4829 @@
+{
+  "schema": "shoplive.shortform.result/v1",
+  "generatedAt": "2026-11-18T08:26:49",
+  "request": {
+    "requestId": "AI_SYSTEM",
+    "programId": "202610271635",
+    "goodsNo": 12914381,
+    "bdStartDate": "20261027163500",
+    "bdEndDate": "20261027173500"
+  },
+  "segment": {
+    "id": 1793091927133,
+    "category": "일반",
+    "categoryBackup": "식품/건강식품",
+    "brand": "박준면의 김치이야기",
+    "goods": "박준면의 김치이야기 포기김치 6kg, 섞박지 1kg",
+    "start": "00:00:00",
+    "end": "00:19:59"
+  },
+  "source": {
+    "file": "2026-10-27_18:05:27||202610271635||AI_SYSTEM||20||박준면의 김치이야기||박준면의 김치이야기 포기김치 6kg, 섞박지 1kg/segments/segment_1_202610271635.mp4",
+    "width": 1280,
+    "height": 720,
+    "durationMs": 1199033
+  },
+  "engine": {
+    "api": "POST /customers/{id}/media/{mediaId}/composite-videos",
+    "jobId": "5b3cf7e5709740c5bf33a0afe3f75496",
+    "options": {
+      "subtitles": true,
+      "background": "black",
+      "aspectRatio": "9:16",
+      "fit": "cover",
+      "reframe": "face",
+      "blurScale": null,
+      "videoScale": null,
+      "videoCenterX": null,
+      "videoCenterY": null,
+      "subtitleStyle": {
+        "fontSize": 0.056,
+        "bottom": 0.28,
+        "centerX": 0.5,
+        "width": 0.88,
+        "align": "center",
+        "color": "#FDCC3A",
+        "strokeColor": "#0D0F11",
+        "boxColor": null
+      },
+      "uploadToShopliveMedia": false
+    }
+  },
+  "shorts": [
+    {
+      "rank": 1,
+      "renderIndex": 0,
+      "title": "김치 받자마자 이렇게 먹어봐",
+      "description": "김치에 참기름·깨·파를 넣어 겉절이로 무치는 방법부터 보여줘요. 이어서 수육과 무말랭이 김치의 씹는 맛 좋은 조합까지 만나봅니다.",
+      "hashtags": [
+        "#김치",
+        "#겉절이",
+        "#수육",
+        "#무말랭이"
+      ],
+      "theme": {
+        "angle": "김치를 받자마자 참기름·깨·파를 넣어 겉절이로 무치거나 수육과 곁들여 먹는 방법을 찾는 분들을 위한 숏폼입니다.",
+        "title": "받자마자 즐기는 김치 활용법"
+      },
+      "review": {
+        "total": 28,
+        "reason": "받자마자 참기름·깨·파로 무치는 법에서 수육과 함께 먹는 장면으로 자연스럽게 이어져 활용법이 잘 살아납니다.",
+        "rubric": {
+          "flow": 5,
+          "hook": 4,
+          "variety": 4,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 5
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 37920,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/0.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/0.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/kimchi-1.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 37989,
+          "sizeBytes": 10449161,
+          "bitrateKbps": 2200,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.056,
+            "bottom": 0.28,
+            "centerX": 0.5,
+            "width": 0.88,
+            "align": "center",
+            "color": "#FDCC3A",
+            "strokeColor": "#0D0F11",
+            "boxColor": null
+          },
+          "box": {
+            "widthPx": 634,
+            "centerXPx": 360,
+            "bottomPx": 358,
+            "fontSizePx": 40
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/0.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/0.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/0.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/0.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/0.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/0.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/0.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/0.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/0.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "김치 받자마자 이렇게 무치면 더 맛있대",
+          "score": 0.867,
+          "output": {
+            "fromMs": 0,
+            "toMs": 20510,
+            "from": "00:00:00.000",
+            "to": "00:00:20.510"
+          },
+          "source": {
+            "fromMs": 462940,
+            "toMs": 483450,
+            "from": "00:07:42.940",
+            "to": "00:08:03.450",
+            "plannedFromMs": 463000,
+            "plannedToMs": 483150
+          },
+          "aired": {
+            "from": "2026-10-27T16:42:42.940000",
+            "to": "2026-10-27T16:43:03.450000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.3167
+              },
+              {
+                "t": 0.5,
+                "x": 0.3167
+              },
+              {
+                "t": 1.0,
+                "x": 0.3167
+              },
+              {
+                "t": 1.5,
+                "x": 0.3167
+              },
+              {
+                "t": 2.0,
+                "x": 0.3167
+              },
+              {
+                "t": 2.5,
+                "x": 0.3418
+              },
+              {
+                "t": 3.0,
+                "x": 0.3418
+              },
+              {
+                "t": 3.5,
+                "x": 0.3418
+              },
+              {
+                "t": 4.0,
+                "x": 0.3418
+              },
+              {
+                "t": 4.5,
+                "x": 0.3418
+              },
+              {
+                "t": 5.0,
+                "x": 0.3418
+              },
+              {
+                "t": 5.5,
+                "x": 0.3418
+              },
+              {
+                "t": 6.0,
+                "x": 0.3418
+              },
+              {
+                "t": 6.5,
+                "x": 0.3418
+              },
+              {
+                "t": 7.0,
+                "x": 0.3418
+              },
+              {
+                "t": 7.5,
+                "x": 0.3418
+              },
+              {
+                "t": 8.0,
+                "x": 0.3418
+              },
+              {
+                "t": 8.5,
+                "x": 0.3418
+              },
+              {
+                "t": 9.0,
+                "x": 0.3418
+              },
+              {
+                "t": 9.5,
+                "x": 0.3418
+              },
+              {
+                "t": 10.0,
+                "x": 0.3418
+              },
+              {
+                "t": 10.5,
+                "x": 0.3418
+              },
+              {
+                "t": 11.0,
+                "x": 0.3418
+              },
+              {
+                "t": 11.5,
+                "x": 0.3418
+              },
+              {
+                "t": 12.0,
+                "x": 0.3418
+              },
+              {
+                "t": 12.5,
+                "x": 0.3418
+              },
+              {
+                "t": 13.0,
+                "x": 0.3418
+              },
+              {
+                "t": 13.5,
+                "x": 0.3418
+              },
+              {
+                "t": 14.0,
+                "x": 0.3418
+              },
+              {
+                "t": 14.5,
+                "x": 0.3418
+              },
+              {
+                "t": 15.0,
+                "x": 0.3418
+              },
+              {
+                "t": 15.5,
+                "x": 0.3418
+              },
+              {
+                "t": 16.0,
+                "x": 0.3418
+              },
+              {
+                "t": 16.5,
+                "x": 0.3418
+              },
+              {
+                "t": 17.0,
+                "x": 0.3418
+              },
+              {
+                "t": 17.5,
+                "x": 0.3418
+              },
+              {
+                "t": 18.0,
+                "x": 0.3418
+              },
+              {
+                "t": 18.5,
+                "x": 0.3418
+              },
+              {
+                "t": 19.0,
+                "x": 0.3418
+              },
+              {
+                "t": 19.5,
+                "x": 0.3418
+              },
+              {
+                "t": 20.0,
+                "x": 0.3418
+              },
+              {
+                "t": 20.5,
+                "x": 0.3418
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.3167,
+                "toX": 0.3167,
+                "kind": "cut"
+              },
+              {
+                "startSec": 2.5,
+                "endSec": 2.5,
+                "fromX": 0.3167,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 17.75,
+                "endSec": 17.75,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "활용법",
+              "strength": 4,
+              "claim": "김치를 받자마자 참기름, 깨, 파를 넣어 겉절이처럼 무쳐 먹는 방법을 소개합니다.",
+              "evidence": [
+                {
+                  "fromMs": 463000,
+                  "toMs": 467000,
+                  "text": "받자마자 드셔도 맛있고요. 받자마자 이렇게 겉절이 하면 더 맛있더라고요."
+                },
+                {
+                  "fromMs": 467000,
+                  "toMs": 471000,
+                  "text": "네, 받자마자 이렇게 좀 참기름 좀 넣고요."
+                },
+                {
+                  "fromMs": 473000,
+                  "toMs": 475000,
+                  "text": "깨 넣고. 아시죠, 여러분?"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "씹을수록 맛있다더니 이 조합 찐이다",
+          "score": 0.9,
+          "output": {
+            "fromMs": 20510,
+            "toMs": 37920,
+            "from": "00:00:20.510",
+            "to": "00:00:37.920"
+          },
+          "source": {
+            "fromMs": 590300,
+            "toMs": 607710,
+            "from": "00:09:50.300",
+            "to": "00:10:07.710",
+            "plannedFromMs": 590300,
+            "plannedToMs": 607470
+          },
+          "aired": {
+            "from": "2026-10-27T16:44:50.300000",
+            "to": "2026-10-27T16:45:07.710000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4379
+              },
+              {
+                "t": 0.5,
+                "x": 0.4379
+              },
+              {
+                "t": 1.0,
+                "x": 0.4379
+              },
+              {
+                "t": 1.5,
+                "x": 0.4379
+              },
+              {
+                "t": 2.0,
+                "x": 0.4379
+              },
+              {
+                "t": 2.5,
+                "x": 0.4379
+              },
+              {
+                "t": 3.0,
+                "x": 0.4379
+              },
+              {
+                "t": 3.5,
+                "x": 0.4442
+              },
+              {
+                "t": 4.0,
+                "x": 0.49
+              },
+              {
+                "t": 4.5,
+                "x": 0.4933
+              },
+              {
+                "t": 5.0,
+                "x": 0.4933
+              },
+              {
+                "t": 5.5,
+                "x": 0.4933
+              },
+              {
+                "t": 6.0,
+                "x": 0.4933
+              },
+              {
+                "t": 6.5,
+                "x": 0.4933
+              },
+              {
+                "t": 7.0,
+                "x": 0.4933
+              },
+              {
+                "t": 7.5,
+                "x": 0.4527
+              },
+              {
+                "t": 8.0,
+                "x": 0.4193
+              },
+              {
+                "t": 8.5,
+                "x": 0.4115
+              },
+              {
+                "t": 9.0,
+                "x": 0.3547
+              },
+              {
+                "t": 9.5,
+                "x": 0.3506
+              },
+              {
+                "t": 10.0,
+                "x": 0.3506
+              },
+              {
+                "t": 10.5,
+                "x": 0.3506
+              },
+              {
+                "t": 11.0,
+                "x": 0.3506
+              },
+              {
+                "t": 11.5,
+                "x": 0.3506
+              },
+              {
+                "t": 12.0,
+                "x": 0.3506
+              },
+              {
+                "t": 12.5,
+                "x": 0.3506
+              },
+              {
+                "t": 13.0,
+                "x": 0.2723
+              },
+              {
+                "t": 13.5,
+                "x": 0.208
+              },
+              {
+                "t": 14.0,
+                "x": 0.208
+              },
+              {
+                "t": 14.5,
+                "x": 0.1288
+              },
+              {
+                "t": 15.0,
+                "x": 0.0638
+              },
+              {
+                "t": 15.5,
+                "x": 0.0638
+              },
+              {
+                "t": 16.0,
+                "x": 0.0638
+              },
+              {
+                "t": 16.5,
+                "x": 0.0638
+              },
+              {
+                "t": 17.0,
+                "x": 0.0638
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4379,
+                "toX": 0.4379,
+                "kind": "cut"
+              },
+              {
+                "startSec": 3.33,
+                "endSec": 4.12,
+                "fromX": 0.4379,
+                "toX": 0.4933,
+                "kind": "pan"
+              },
+              {
+                "startSec": 7.08,
+                "endSec": 7.88,
+                "fromX": 0.4933,
+                "toX": 0.4193,
+                "kind": "pan"
+              },
+              {
+                "startSec": 8.32,
+                "endSec": 9.12,
+                "fromX": 0.4193,
+                "toX": 0.3506,
+                "kind": "pan"
+              },
+              {
+                "startSec": 12.57,
+                "endSec": 13.38,
+                "fromX": 0.3506,
+                "toX": 0.208,
+                "kind": "pan"
+              },
+              {
+                "startSec": 14.07,
+                "endSec": 14.88,
+                "fromX": 0.208,
+                "toX": 0.0638,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "활용법",
+              "strength": 4,
+              "claim": "무말랭이의 씹는 맛과 향이 수육과 잘 어울린다고 말하며 함께 먹는 모습을 보여줍니다.",
+              "evidence": [
+                {
+                  "fromMs": 592000,
+                  "toMs": 597000,
+                  "text": "이렇게 수육 딱 담아가지고요. 아, 향도 좋아."
+                },
+                {
+                  "fromMs": 597000,
+                  "toMs": 604000,
+                  "text": "향 너무 좋죠. 이게 아무래도 받자마자 새김치를 드실 수가 있다 보니까 수육하고의 궁합이 또 너무 좋아요."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "받자마자 드셔도 맛있고요.",
+          "output": {
+            "fromMs": 0,
+            "toMs": 1200,
+            "from": "00:00:00.000",
+            "to": "00:00:01.200"
+          },
+          "source": {
+            "fromMs": 462940,
+            "toMs": 464140
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "받자마자 이렇게 겉절이 하면 더 맛있더라고요.",
+          "output": {
+            "fromMs": 1250,
+            "toMs": 3530,
+            "from": "00:00:01.250",
+            "to": "00:00:03.530"
+          },
+          "source": {
+            "fromMs": 464190,
+            "toMs": 466470
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "네, 받자마자 이렇게",
+          "output": {
+            "fromMs": 3590,
+            "toMs": 5390,
+            "from": "00:00:03.590",
+            "to": "00:00:05.390"
+          },
+          "source": {
+            "fromMs": 466530,
+            "toMs": 468330
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "좀 참기름 좀 넣고요.",
+          "output": {
+            "fromMs": 6170,
+            "toMs": 7430,
+            "from": "00:00:06.170",
+            "to": "00:00:07.430"
+          },
+          "source": {
+            "fromMs": 469110,
+            "toMs": 470370
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "참기름 넣고. 깨도 넣고. 깨도 살짝.",
+          "output": {
+            "fromMs": 7430,
+            "toMs": 9780,
+            "from": "00:00:07.430",
+            "to": "00:00:09.780"
+          },
+          "source": {
+            "fromMs": 470370,
+            "toMs": 472720
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "깨 넣고. 아시죠, 여러분?",
+          "output": {
+            "fromMs": 9830,
+            "toMs": 11630,
+            "from": "00:00:09.830",
+            "to": "00:00:11.630"
+          },
+          "source": {
+            "fromMs": 472770,
+            "toMs": 474570
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "파 넣고.",
+          "output": {
+            "fromMs": 11870,
+            "toMs": 13020,
+            "from": "00:00:11.870",
+            "to": "00:00:13.020"
+          },
+          "source": {
+            "fromMs": 474810,
+            "toMs": 475960
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "새김치 먹고 싶은 이 시기,",
+          "output": {
+            "fromMs": 13070,
+            "toMs": 14990,
+            "from": "00:00:13.070",
+            "to": "00:00:14.990"
+          },
+          "source": {
+            "fromMs": 476010,
+            "toMs": 477930
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "받자마자 새김치에 딱 이렇게 겉절이",
+          "output": {
+            "fromMs": 15170,
+            "toMs": 17930,
+            "from": "00:00:15.170",
+            "to": "00:00:17.930"
+          },
+          "source": {
+            "fromMs": 478110,
+            "toMs": 480870
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "무침으로 해서 맛있게 드실 수가 있거든요.",
+          "output": {
+            "fromMs": 17990,
+            "toMs": 20150,
+            "from": "00:00:17.990",
+            "to": "00:00:20.150"
+          },
+          "source": {
+            "fromMs": 480930,
+            "toMs": 483090
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "아삭아삭 씹히는 맛이 기가 막히거든요. 그렇죠.",
+          "output": {
+            "fromMs": 20150,
+            "toMs": 21720,
+            "from": "00:00:20.150",
+            "to": "00:00:21.720"
+          },
+          "source": {
+            "fromMs": 483090,
+            "toMs": 484660
+          }
+        },
+        {
+          "index": 12,
+          "part": 2,
+          "text": "이렇게 수육 딱 담아가지고요.",
+          "output": {
+            "fromMs": 21720,
+            "toMs": 23760,
+            "from": "00:00:21.720",
+            "to": "00:00:23.760"
+          },
+          "source": {
+            "fromMs": 591510,
+            "toMs": 593550
+          }
+        },
+        {
+          "index": 13,
+          "part": 2,
+          "text": "아, 향도 좋아.",
+          "output": {
+            "fromMs": 24420,
+            "toMs": 26110,
+            "from": "00:00:24.420",
+            "to": "00:00:26.110"
+          },
+          "source": {
+            "fromMs": 594210,
+            "toMs": 595900
+          }
+        },
+        {
+          "index": 14,
+          "part": 2,
+          "text": "향 너무 좋죠. 이게",
+          "output": {
+            "fromMs": 26160,
+            "toMs": 27960,
+            "from": "00:00:26.160",
+            "to": "00:00:27.960"
+          },
+          "source": {
+            "fromMs": 595950,
+            "toMs": 597750
+          }
+        },
+        {
+          "index": 15,
+          "part": 2,
+          "text": "아무래도 받자마자 새김치를 드실 수가 있다",
+          "output": {
+            "fromMs": 28620,
+            "toMs": 30900,
+            "from": "00:00:28.620",
+            "to": "00:00:30.900"
+          },
+          "source": {
+            "fromMs": 598410,
+            "toMs": 600690
+          }
+        },
+        {
+          "index": 16,
+          "part": 2,
+          "text": "보니까 수육하고의 궁합이 또 너무 좋아요. 맞는데.",
+          "output": {
+            "fromMs": 30960,
+            "toMs": 34210,
+            "from": "00:00:30.960",
+            "to": "00:00:34.210"
+          },
+          "source": {
+            "fromMs": 600750,
+            "toMs": 604000
+          }
+        },
+        {
+          "index": 17,
+          "part": 2,
+          "text": "또 이렇게 해서.",
+          "output": {
+            "fromMs": 34260,
+            "toMs": 35410,
+            "from": "00:00:34.260",
+            "to": "00:00:35.410"
+          },
+          "source": {
+            "fromMs": 604050,
+            "toMs": 605200
+          }
+        },
+        {
+          "index": 18,
+          "part": 2,
+          "text": "무말랭이가 진짜 씹을수록 맛있어.",
+          "output": {
+            "fromMs": 35460,
+            "toMs": 37320,
+            "from": "00:00:35.460",
+            "to": "00:00:37.320"
+          },
+          "source": {
+            "fromMs": 605250,
+            "toMs": 607110
+          }
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "renderIndex": 3,
+      "title": "무말랭이 김치가 익을수록 맛있는 이유",
+      "description": "제주산 무말랭이가 들어간 김치의 오독오독한 식감을 보여줘요. 받자마자 아삭하게 먹는 맛부터 익을수록 깊어지는 맛, 물이 많이 생기지 않는 특징까지 담았습니다.",
+      "hashtags": [
+        "#무말랭이김치",
+        "#김치",
+        "#아삭한김치"
+      ],
+      "theme": {
+        "angle": "제주산 무말랭이가 오독오독 씹히고 물이 생기지 않아 받자마자도, 익어서도 맛있다는 점을 보여주는 숏폼입니다.",
+        "title": "익을수록 맛있는 무말랭이 김치"
+      },
+      "review": {
+        "total": 28,
+        "reason": "제주산 무말랭이의 오독한 식감부터 바로 먹을 때와 익었을 때의 맛 변화까지 한 가지 메시지를 깊게 보여줍니다.",
+        "rubric": {
+          "flow": 5,
+          "hook": 4,
+          "variety": 5,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 4
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 34860,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/3.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/3.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/kimchi-2.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 34893,
+          "sizeBytes": 7803283,
+          "bitrateKbps": 1789,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.056,
+            "bottom": 0.28,
+            "centerX": 0.5,
+            "width": 0.88,
+            "align": "center",
+            "color": "#FDCC3A",
+            "strokeColor": "#0D0F11",
+            "boxColor": null
+          },
+          "box": {
+            "widthPx": 634,
+            "centerXPx": 360,
+            "bottomPx": 358,
+            "fontSizePx": 40
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/3.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/3.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/3.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/3.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/3.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/3.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/3.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/3.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/3.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "무말랭이 넣어서 물이 안 생겨요",
+          "score": 0.8,
+          "output": {
+            "fromMs": 0,
+            "toMs": 27870,
+            "from": "00:00:00.000",
+            "to": "00:00:27.870"
+          },
+          "source": {
+            "fromMs": 745620,
+            "toMs": 773490,
+            "from": "00:12:25.620",
+            "to": "00:12:53.490",
+            "plannedFromMs": 745770,
+            "plannedToMs": 773370
+          },
+          "aired": {
+            "from": "2026-10-27T16:47:25.620000",
+            "to": "2026-10-27T16:47:53.490000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4764
+              },
+              {
+                "t": 0.5,
+                "x": 0.4764
+              },
+              {
+                "t": 1.0,
+                "x": 0.4764
+              },
+              {
+                "t": 1.5,
+                "x": 0.4764
+              },
+              {
+                "t": 2.0,
+                "x": 0.4764
+              },
+              {
+                "t": 2.5,
+                "x": 0.4764
+              },
+              {
+                "t": 3.0,
+                "x": 0.4666
+              },
+              {
+                "t": 3.5,
+                "x": 0.3949
+              },
+              {
+                "t": 4.0,
+                "x": 0.3898
+              },
+              {
+                "t": 4.5,
+                "x": 0.3898
+              },
+              {
+                "t": 5.0,
+                "x": 0.3898
+              },
+              {
+                "t": 5.5,
+                "x": 0.3898
+              },
+              {
+                "t": 6.0,
+                "x": 0.3898
+              },
+              {
+                "t": 6.5,
+                "x": 0.3898
+              },
+              {
+                "t": 7.0,
+                "x": 0.3898
+              },
+              {
+                "t": 7.5,
+                "x": 0.3898
+              },
+              {
+                "t": 8.0,
+                "x": 0.3898
+              },
+              {
+                "t": 8.5,
+                "x": 0.3898
+              },
+              {
+                "t": 9.0,
+                "x": 0.3898
+              },
+              {
+                "t": 9.5,
+                "x": 0.3898
+              },
+              {
+                "t": 10.0,
+                "x": 0.3898
+              },
+              {
+                "t": 10.5,
+                "x": 0.4405
+              },
+              {
+                "t": 11.0,
+                "x": 0.4821
+              },
+              {
+                "t": 11.5,
+                "x": 0.4821
+              },
+              {
+                "t": 12.0,
+                "x": 0.4821
+              },
+              {
+                "t": 12.5,
+                "x": 0.4821
+              },
+              {
+                "t": 13.0,
+                "x": 0.4821
+              },
+              {
+                "t": 13.5,
+                "x": 0.4821
+              },
+              {
+                "t": 14.0,
+                "x": 0.4821
+              },
+              {
+                "t": 14.5,
+                "x": 0.4052
+              },
+              {
+                "t": 15.0,
+                "x": 0.2644
+              },
+              {
+                "t": 15.5,
+                "x": 0.2644
+              },
+              {
+                "t": 16.0,
+                "x": 0.2644
+              },
+              {
+                "t": 16.5,
+                "x": 0.2644
+              },
+              {
+                "t": 17.0,
+                "x": 0.2644
+              },
+              {
+                "t": 17.5,
+                "x": 0.2644
+              },
+              {
+                "t": 18.0,
+                "x": 0.2644
+              },
+              {
+                "t": 18.5,
+                "x": 0.2644
+              },
+              {
+                "t": 19.0,
+                "x": 0.2644
+              },
+              {
+                "t": 19.5,
+                "x": 0.2644
+              },
+              {
+                "t": 20.0,
+                "x": 0.2644
+              },
+              {
+                "t": 20.5,
+                "x": 0.2644
+              },
+              {
+                "t": 21.0,
+                "x": 0.2644
+              },
+              {
+                "t": 21.5,
+                "x": 0.2644
+              },
+              {
+                "t": 22.0,
+                "x": 0.2644
+              },
+              {
+                "t": 22.5,
+                "x": 0.2644
+              },
+              {
+                "t": 23.0,
+                "x": 0.2644
+              },
+              {
+                "t": 23.5,
+                "x": 0.2644
+              },
+              {
+                "t": 24.0,
+                "x": 0.2644
+              },
+              {
+                "t": 24.5,
+                "x": 0.2644
+              },
+              {
+                "t": 25.0,
+                "x": 0.2644
+              },
+              {
+                "t": 25.5,
+                "x": 0.2644
+              },
+              {
+                "t": 26.0,
+                "x": 0.2644
+              },
+              {
+                "t": 26.5,
+                "x": 0.2644
+              },
+              {
+                "t": 27.0,
+                "x": 0.2644
+              },
+              {
+                "t": 27.5,
+                "x": 0.2644
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4764,
+                "toX": 0.4764,
+                "kind": "cut"
+              },
+              {
+                "startSec": 2.83,
+                "endSec": 3.62,
+                "fromX": 0.4764,
+                "toX": 0.3898,
+                "kind": "pan"
+              },
+              {
+                "startSec": 10.07,
+                "endSec": 10.88,
+                "fromX": 0.3898,
+                "toX": 0.4821,
+                "kind": "pan"
+              },
+              {
+                "startSec": 14.07,
+                "endSec": 14.88,
+                "fromX": 0.4821,
+                "toX": 0.3421,
+                "kind": "pan"
+              },
+              {
+                "startSec": 15.0,
+                "endSec": 15.0,
+                "fromX": 0.3421,
+                "toX": 0.2644,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "효과/효능",
+              "strength": 5,
+              "claim": "김치를 받자마자 먹으면 아삭하고 시원하며 익을수록 깊은 맛이 살아난다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 761000,
+                  "toMs": 769000,
+                  "text": "네, 받자마자 먹어도 아삭아삭하게 정말 아까 샐러드 먹는 느낌처럼 좀 아삭하고 시원하고, 익으면 익을수록 또 깊은 맛이 와요."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "무말랭이 넣어서 물이 안 생겨요",
+          "score": 0.8,
+          "output": {
+            "fromMs": 27870,
+            "toMs": 34860,
+            "from": "00:00:27.870",
+            "to": "00:00:34.860"
+          },
+          "source": {
+            "fromMs": 775800,
+            "toMs": 782790,
+            "from": "00:12:55.800",
+            "to": "00:13:02.790",
+            "plannedFromMs": 775950,
+            "plannedToMs": 782740
+          },
+          "aired": {
+            "from": "2026-10-27T16:47:55.800000",
+            "to": "2026-10-27T16:48:02.790000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.2988
+              },
+              {
+                "t": 0.5,
+                "x": 0.2988
+              },
+              {
+                "t": 1.0,
+                "x": 0.2988
+              },
+              {
+                "t": 1.5,
+                "x": 0.2988
+              },
+              {
+                "t": 2.0,
+                "x": 0.2988
+              },
+              {
+                "t": 2.5,
+                "x": 0.2988
+              },
+              {
+                "t": 3.0,
+                "x": 0.2988
+              },
+              {
+                "t": 3.5,
+                "x": 0.2988
+              },
+              {
+                "t": 4.0,
+                "x": 0.2988
+              },
+              {
+                "t": 4.5,
+                "x": 0.2988
+              },
+              {
+                "t": 5.0,
+                "x": 0.2988
+              },
+              {
+                "t": 5.5,
+                "x": 0.2988
+              },
+              {
+                "t": 6.0,
+                "x": 0.2988
+              },
+              {
+                "t": 6.5,
+                "x": 0.2988
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.2988,
+                "toX": 0.2988,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "활용법",
+              "strength": 4,
+              "claim": "익은 김치를 등갈비찜이나 김치찜으로 활용하면 좋다고 말합니다.",
+              "evidence": [
+                {
+                  "fromMs": 776000,
+                  "toMs": 783000,
+                  "text": "아니, 받자마자 새김치 마음껏 즐기시고, 익을수록 맛있기 때문에 등갈비찜이나 김치찜으로도 너무나 좋으실 거예요."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "야, 무말랭이까지 오독오독.",
+          "output": {
+            "fromMs": 0,
+            "toMs": 2460,
+            "from": "00:00:00.000",
+            "to": "00:00:02.460"
+          },
+          "source": {
+            "fromMs": 745620,
+            "toMs": 748080
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "심지어 제주산 무말랭이.",
+          "output": {
+            "fromMs": 2460,
+            "toMs": 4030,
+            "from": "00:00:02.460",
+            "to": "00:00:04.030"
+          },
+          "source": {
+            "fromMs": 748080,
+            "toMs": 749650
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "아니, 박준면 김치는 제가 1년 동안",
+          "output": {
+            "fromMs": 4080,
+            "toMs": 5710,
+            "from": "00:00:04.080",
+            "to": "00:00:05.710"
+          },
+          "source": {
+            "fromMs": 749700,
+            "toMs": 751330
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "우리 오미란 님하고 같이 먹었잖아요.",
+          "output": {
+            "fromMs": 5760,
+            "toMs": 7510,
+            "from": "00:00:05.760",
+            "to": "00:00:07.510"
+          },
+          "source": {
+            "fromMs": 751380,
+            "toMs": 753130
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "익으면 익을수록 맛있어요.",
+          "output": {
+            "fromMs": 7560,
+            "toMs": 9060,
+            "from": "00:00:07.560",
+            "to": "00:00:09.060"
+          },
+          "source": {
+            "fromMs": 753180,
+            "toMs": 754680
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "더 맛있어요.",
+          "output": {
+            "fromMs": 9060,
+            "toMs": 9850,
+            "from": "00:00:09.060",
+            "to": "00:00:09.850"
+          },
+          "source": {
+            "fromMs": 754680,
+            "toMs": 755470
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "진짜 지킬 수 있는",
+          "output": {
+            "fromMs": 9900,
+            "toMs": 10810,
+            "from": "00:00:09.900",
+            "to": "00:00:10.810"
+          },
+          "source": {
+            "fromMs": 755520,
+            "toMs": 756430
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "맛은 끝까지 맛있는 김치.",
+          "output": {
+            "fromMs": 10860,
+            "toMs": 12660,
+            "from": "00:00:10.860",
+            "to": "00:00:12.660"
+          },
+          "source": {
+            "fromMs": 756480,
+            "toMs": 758280
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "받자마자 먹어도 상관없잖아요, 그냥.",
+          "output": {
+            "fromMs": 12840,
+            "toMs": 14460,
+            "from": "00:00:12.840",
+            "to": "00:00:14.460"
+          },
+          "source": {
+            "fromMs": 758460,
+            "toMs": 760080
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "네, 받자마자 먹어도 아삭아삭하게 정말 아까",
+          "output": {
+            "fromMs": 14460,
+            "toMs": 16920,
+            "from": "00:00:14.460",
+            "to": "00:00:16.920"
+          },
+          "source": {
+            "fromMs": 760080,
+            "toMs": 762540
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "샐러드 먹는 느낌처럼 좀 아삭하고 시원하고,",
+          "output": {
+            "fromMs": 17160,
+            "toMs": 19740,
+            "from": "00:00:17.160",
+            "to": "00:00:19.740"
+          },
+          "source": {
+            "fromMs": 762780,
+            "toMs": 765360
+          }
+        },
+        {
+          "index": 12,
+          "part": 1,
+          "text": "익으면 익을수록 또 깊은 맛이 와요.",
+          "output": {
+            "fromMs": 20580,
+            "toMs": 22740,
+            "from": "00:00:20.580",
+            "to": "00:00:22.740"
+          },
+          "source": {
+            "fromMs": 766200,
+            "toMs": 768360
+          }
+        },
+        {
+          "index": 13,
+          "part": 1,
+          "text": "저희가 또 무말랭이를 넣어서 물이",
+          "output": {
+            "fromMs": 23040,
+            "toMs": 25380,
+            "from": "00:00:23.040",
+            "to": "00:00:25.380"
+          },
+          "source": {
+            "fromMs": 768660,
+            "toMs": 771000
+          }
+        },
+        {
+          "index": 14,
+          "part": 1,
+          "text": "많이 안 생기는구나, 이게 장점이거든요.",
+          "output": {
+            "fromMs": 25440,
+            "toMs": 27600,
+            "from": "00:00:25.440",
+            "to": "00:00:27.600"
+          },
+          "source": {
+            "fromMs": 771060,
+            "toMs": 773220
+          }
+        },
+        {
+          "index": 15,
+          "part": 1,
+          "text": "아니, 받자마자 새김치 마음껏",
+          "output": {
+            "fromMs": 27600,
+            "toMs": 29520,
+            "from": "00:00:27.600",
+            "to": "00:00:29.520"
+          },
+          "source": {
+            "fromMs": 773220,
+            "toMs": 775140
+          }
+        },
+        {
+          "index": 16,
+          "part": 2,
+          "text": "즐기시고, 익을수록 맛있기 때문에 등갈비찜이나",
+          "output": {
+            "fromMs": 29580,
+            "toMs": 32520,
+            "from": "00:00:29.580",
+            "to": "00:00:32.520"
+          },
+          "source": {
+            "fromMs": 777510,
+            "toMs": 780450
+          }
+        },
+        {
+          "index": 17,
+          "part": 2,
+          "text": "김치찜으로도 너무나 좋으실 거예요.",
+          "output": {
+            "fromMs": 32640,
+            "toMs": 34390,
+            "from": "00:00:32.640",
+            "to": "00:00:34.390"
+          },
+          "source": {
+            "fromMs": 780570,
+            "toMs": 782320
+          }
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "renderIndex": 4,
+      "title": "알던 김치 맛이랑 다르대",
+      "description": "지인들과 나눠 먹던 김치가 이어진 이야기를 먼저 들려줘요. 이어서 시원하고 많이 맵지 않은 맛에 대한 반응과 어머니의 취향까지 보여줍니다.",
+      "hashtags": [
+        "#김치",
+        "#김치추천",
+        "#시원한김치"
+      ],
+      "theme": {
+        "angle": "지인과 나눠 먹던 김치가 사업이 된 이야기와 '알던 김치 맛과 다르다'는 시식 반응을 담은 숏폼입니다.",
+        "title": "나눠 먹다 시작된 박준면 김치"
+      },
+      "review": {
+        "total": 27,
+        "reason": "지인과 나눠 먹던 김치가 이어진 배경 뒤에 시원하고 덜 매운 맛에 대한 시식 반응이 붙어 이야기와 맛이 함께 전달됩니다.",
+        "rubric": {
+          "flow": 4,
+          "hook": 4,
+          "variety": 4,
+          "freshness": 5,
+          "theme_fit": 5,
+          "self_contained": 5
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 37230,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/4.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/4.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/kimchi-3.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 37289,
+          "sizeBytes": 9148566,
+          "bitrateKbps": 1963,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.056,
+            "bottom": 0.28,
+            "centerX": 0.5,
+            "width": 0.88,
+            "align": "center",
+            "color": "#FDCC3A",
+            "strokeColor": "#0D0F11",
+            "boxColor": null
+          },
+          "box": {
+            "widthPx": 634,
+            "centerXPx": 360,
+            "bottomPx": 358,
+            "fontSizePx": 40
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/4.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/4.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/4.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/4.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/4.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/4.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/4.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/4.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/4.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "연예인들이 인정한 김치",
+          "score": 0.8,
+          "output": {
+            "fromMs": 0,
+            "toMs": 21570,
+            "from": "00:00:00.000",
+            "to": "00:00:21.570"
+          },
+          "source": {
+            "fromMs": 186600,
+            "toMs": 208170,
+            "from": "00:03:06.600",
+            "to": "00:03:28.170",
+            "plannedFromMs": 186800,
+            "plannedToMs": 208100
+          },
+          "aired": {
+            "from": "2026-10-27T16:38:06.600000",
+            "to": "2026-10-27T16:38:28.170000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.2764
+              },
+              {
+                "t": 0.5,
+                "x": 0.2764
+              },
+              {
+                "t": 1.0,
+                "x": 0.2764
+              },
+              {
+                "t": 1.5,
+                "x": 0.2764
+              },
+              {
+                "t": 2.0,
+                "x": 0.2764
+              },
+              {
+                "t": 2.5,
+                "x": 0.2764
+              },
+              {
+                "t": 3.0,
+                "x": 0.2764
+              },
+              {
+                "t": 3.5,
+                "x": 0.2764
+              },
+              {
+                "t": 4.0,
+                "x": 0.2764
+              },
+              {
+                "t": 4.5,
+                "x": 0.2764
+              },
+              {
+                "t": 5.0,
+                "x": 0.2764
+              },
+              {
+                "t": 5.5,
+                "x": 0.2764
+              },
+              {
+                "t": 6.0,
+                "x": 0.2764
+              },
+              {
+                "t": 6.5,
+                "x": 0.2764
+              },
+              {
+                "t": 7.0,
+                "x": 0.2764
+              },
+              {
+                "t": 7.5,
+                "x": 0.2764
+              },
+              {
+                "t": 8.0,
+                "x": 0.2764
+              },
+              {
+                "t": 8.5,
+                "x": 0.2764
+              },
+              {
+                "t": 9.0,
+                "x": 0.2764
+              },
+              {
+                "t": 9.5,
+                "x": 0.2764
+              },
+              {
+                "t": 10.0,
+                "x": 0.2764
+              },
+              {
+                "t": 10.5,
+                "x": 0.2764
+              },
+              {
+                "t": 11.0,
+                "x": 0.2764
+              },
+              {
+                "t": 11.5,
+                "x": 0.2764
+              },
+              {
+                "t": 12.0,
+                "x": 0.4792
+              },
+              {
+                "t": 12.5,
+                "x": 0.4792
+              },
+              {
+                "t": 13.0,
+                "x": 0.4792
+              },
+              {
+                "t": 13.5,
+                "x": 0.4792
+              },
+              {
+                "t": 14.0,
+                "x": 0.4792
+              },
+              {
+                "t": 14.5,
+                "x": 0.4792
+              },
+              {
+                "t": 15.0,
+                "x": 0.4792
+              },
+              {
+                "t": 15.5,
+                "x": 0.4792
+              },
+              {
+                "t": 16.0,
+                "x": 0.4792
+              },
+              {
+                "t": 16.5,
+                "x": 0.4792
+              },
+              {
+                "t": 17.0,
+                "x": 0.4792
+              },
+              {
+                "t": 17.5,
+                "x": 0.4792
+              },
+              {
+                "t": 18.0,
+                "x": 0.4792
+              },
+              {
+                "t": 18.5,
+                "x": 0.4792
+              },
+              {
+                "t": 19.0,
+                "x": 0.4792
+              },
+              {
+                "t": 19.5,
+                "x": 0.4792
+              },
+              {
+                "t": 20.0,
+                "x": 0.4792
+              },
+              {
+                "t": 20.5,
+                "x": 0.4792
+              },
+              {
+                "t": 21.0,
+                "x": 0.4792
+              },
+              {
+                "t": 21.5,
+                "x": 0.4792
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.2764,
+                "toX": 0.2764,
+                "kind": "cut"
+              },
+              {
+                "startSec": 11.75,
+                "endSec": 11.75,
+                "fromX": 0.2764,
+                "toX": 0.4792,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "브랜드 강점",
+              "strength": 4,
+              "claim": "여러 연예인과 배우들이 맛을 인정했고 지인들과 나누던 김치가 사업으로 이어졌다는 이야기가 제품의 맛에 대한 신뢰를 높입니다.",
+              "evidence": [
+                {
+                  "fromMs": 187000,
+                  "toMs": 195000,
+                  "text": "여러분, 워낙 이제 박준면 님 김치는 사실은 우리 시청자분들뿐만이 아니라 수많은 연예인분들이, 또 배우분들이 인정하는 김치 아니겠어요."
+                },
+                {
+                  "fromMs": 195000,
+                  "toMs": 207000,
+                  "text": "네, 주변에 지인들하고 김치를 나눠 먹다가 이렇게 김치, 이렇게 사업까지 이어지게 된 거라서 맛만큼은 정말 저를 한번 믿어보셔도 괜찮을 것 같습니다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "어머니도 박준면 김치만 먹을래",
+          "score": 0.8,
+          "output": {
+            "fromMs": 21570,
+            "toMs": 37230,
+            "from": "00:00:21.570",
+            "to": "00:00:37.230"
+          },
+          "source": {
+            "fromMs": 335790,
+            "toMs": 351450,
+            "from": "00:05:35.790",
+            "to": "00:05:51.450",
+            "plannedFromMs": 335910,
+            "plannedToMs": 351400
+          },
+          "aired": {
+            "from": "2026-10-27T16:40:35.790000",
+            "to": "2026-10-27T16:40:51.450000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.2417
+              },
+              {
+                "t": 0.5,
+                "x": 0.2417
+              },
+              {
+                "t": 1.0,
+                "x": 0.2417
+              },
+              {
+                "t": 1.5,
+                "x": 0.2417
+              },
+              {
+                "t": 2.0,
+                "x": 0.2417
+              },
+              {
+                "t": 2.5,
+                "x": 0.2417
+              },
+              {
+                "t": 3.0,
+                "x": 0.2417
+              },
+              {
+                "t": 3.5,
+                "x": 0.2417
+              },
+              {
+                "t": 4.0,
+                "x": 0.2417
+              },
+              {
+                "t": 4.5,
+                "x": 0.2417
+              },
+              {
+                "t": 5.0,
+                "x": 0.2417
+              },
+              {
+                "t": 5.5,
+                "x": 0.2417
+              },
+              {
+                "t": 6.0,
+                "x": 0.2417
+              },
+              {
+                "t": 6.5,
+                "x": 0.2417
+              },
+              {
+                "t": 7.0,
+                "x": 0.2417
+              },
+              {
+                "t": 7.5,
+                "x": 0.2417
+              },
+              {
+                "t": 8.0,
+                "x": 0.2417
+              },
+              {
+                "t": 8.5,
+                "x": 0.2417
+              },
+              {
+                "t": 9.0,
+                "x": 0.2417
+              },
+              {
+                "t": 9.5,
+                "x": 0.3418
+              },
+              {
+                "t": 10.0,
+                "x": 0.3418
+              },
+              {
+                "t": 10.5,
+                "x": 0.3418
+              },
+              {
+                "t": 11.0,
+                "x": 0.3418
+              },
+              {
+                "t": 11.5,
+                "x": 0.3418
+              },
+              {
+                "t": 12.0,
+                "x": 0.3418
+              },
+              {
+                "t": 12.5,
+                "x": 0.3418
+              },
+              {
+                "t": 13.0,
+                "x": 0.3418
+              },
+              {
+                "t": 13.5,
+                "x": 0.3418
+              },
+              {
+                "t": 14.0,
+                "x": 0.3418
+              },
+              {
+                "t": 14.5,
+                "x": 0.3418
+              },
+              {
+                "t": 15.0,
+                "x": 0.3418
+              },
+              {
+                "t": 15.5,
+                "x": 0.3418
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.2417,
+                "toX": 0.2417,
+                "kind": "cut"
+              },
+              {
+                "startSec": 9.5,
+                "endSec": 9.5,
+                "fromX": 0.2417,
+                "toX": 0.3418,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "시연",
+              "strength": 4,
+              "claim": "직접 먹어 본 진행자들이 일반적인 김치와 달리 시원하고 많이 맵지 않다고 평가합니다.",
+              "evidence": [
+                {
+                  "fromMs": 340000,
+                  "toMs": 343000,
+                  "text": "네, 좀 시원합니다. 시원하고 그렇게 맵지 않고."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "여러분, 워낙 이제 박준면 님 김치는",
+          "output": {
+            "fromMs": 0,
+            "toMs": 1990,
+            "from": "00:00:00.000",
+            "to": "00:00:01.990"
+          },
+          "source": {
+            "fromMs": 186600,
+            "toMs": 188590
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "사실은 우리 시청자분들뿐만이",
+          "output": {
+            "fromMs": 2350,
+            "toMs": 3860,
+            "from": "00:00:02.350",
+            "to": "00:00:03.860"
+          },
+          "source": {
+            "fromMs": 188950,
+            "toMs": 190460
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "아니라 수많은 연예인분들이,",
+          "output": {
+            "fromMs": 3910,
+            "toMs": 5480,
+            "from": "00:00:03.910",
+            "to": "00:00:05.480"
+          },
+          "source": {
+            "fromMs": 190510,
+            "toMs": 192080
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "또 배우분들이 인정하는 김치 아니겠어요.",
+          "output": {
+            "fromMs": 5530,
+            "toMs": 7930,
+            "from": "00:00:05.530",
+            "to": "00:00:07.930"
+          },
+          "source": {
+            "fromMs": 192130,
+            "toMs": 194530
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "네, 주변에 지인들하고 김치를 나눠",
+          "output": {
+            "fromMs": 8530,
+            "toMs": 10750,
+            "from": "00:00:08.530",
+            "to": "00:00:10.750"
+          },
+          "source": {
+            "fromMs": 195130,
+            "toMs": 197350
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "먹다가 이렇게 김치, 이렇게",
+          "output": {
+            "fromMs": 10870,
+            "toMs": 13030,
+            "from": "00:00:10.870",
+            "to": "00:00:13.030"
+          },
+          "source": {
+            "fromMs": 197470,
+            "toMs": 199630
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "사업까지 이어지게 된 거라서",
+          "output": {
+            "fromMs": 13270,
+            "toMs": 15070,
+            "from": "00:00:13.270",
+            "to": "00:00:15.070"
+          },
+          "source": {
+            "fromMs": 199870,
+            "toMs": 201670
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "맛만큼은 정말 저를 한번",
+          "output": {
+            "fromMs": 15910,
+            "toMs": 18250,
+            "from": "00:00:15.910",
+            "to": "00:00:18.250"
+          },
+          "source": {
+            "fromMs": 202510,
+            "toMs": 204850
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "믿어보셔도 괜찮을 것 같습니다.",
+          "output": {
+            "fromMs": 18370,
+            "toMs": 19940,
+            "from": "00:00:18.370",
+            "to": "00:00:19.940"
+          },
+          "source": {
+            "fromMs": 204970,
+            "toMs": 206540
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "맞습니다. 자, 드셔보시면 아세요.",
+          "output": {
+            "fromMs": 19990,
+            "toMs": 21300,
+            "from": "00:00:19.990",
+            "to": "00:00:21.300"
+          },
+          "source": {
+            "fromMs": 206590,
+            "toMs": 207900
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "아니, 달라요. 진짜 달라요.",
+          "output": {
+            "fromMs": 21300,
+            "toMs": 23220,
+            "from": "00:00:21.300",
+            "to": "00:00:23.220"
+          },
+          "source": {
+            "fromMs": 207900,
+            "toMs": 209820
+          }
+        },
+        {
+          "index": 12,
+          "part": 2,
+          "text": "우리가 알고 있는 김치 맛과 달라요.",
+          "output": {
+            "fromMs": 23280,
+            "toMs": 24970,
+            "from": "00:00:23.280",
+            "to": "00:00:24.970"
+          },
+          "source": {
+            "fromMs": 337500,
+            "toMs": 339190
+          }
+        },
+        {
+          "index": 13,
+          "part": 2,
+          "text": "네, 좀 시원합니다.",
+          "output": {
+            "fromMs": 25020,
+            "toMs": 26290,
+            "from": "00:00:25.020",
+            "to": "00:00:26.290"
+          },
+          "source": {
+            "fromMs": 339240,
+            "toMs": 340510
+          }
+        },
+        {
+          "index": 14,
+          "part": 2,
+          "text": "시원하고 그렇게 맵지 않고.",
+          "output": {
+            "fromMs": 26340,
+            "toMs": 28380,
+            "from": "00:00:26.340",
+            "to": "00:00:28.380"
+          },
+          "source": {
+            "fromMs": 340560,
+            "toMs": 342600
+          }
+        },
+        {
+          "index": 15,
+          "part": 2,
+          "text": "맞아요. 직접 한번 보여드릴게요.",
+          "output": {
+            "fromMs": 28500,
+            "toMs": 29580,
+            "from": "00:00:28.500",
+            "to": "00:00:29.580"
+          },
+          "source": {
+            "fromMs": 342720,
+            "toMs": 343800
+          }
+        },
+        {
+          "index": 16,
+          "part": 2,
+          "text": "해볼게요. 다 보세요, 여러분.",
+          "output": {
+            "fromMs": 29580,
+            "toMs": 30550,
+            "from": "00:00:29.580",
+            "to": "00:00:30.550"
+          },
+          "source": {
+            "fromMs": 343800,
+            "toMs": 344770
+          }
+        },
+        {
+          "index": 17,
+          "part": 2,
+          "text": "정말 드셔보신 분들이, 저희 어머니도 그래요.",
+          "output": {
+            "fromMs": 30600,
+            "toMs": 32520,
+            "from": "00:00:30.600",
+            "to": "00:00:32.520"
+          },
+          "source": {
+            "fromMs": 344820,
+            "toMs": 346740
+          }
+        },
+        {
+          "index": 18,
+          "part": 2,
+          "text": "'박준면 김치만 먹을래, 성보야.'",
+          "output": {
+            "fromMs": 32520,
+            "toMs": 34860,
+            "from": "00:00:32.520",
+            "to": "00:00:34.860"
+          },
+          "source": {
+            "fromMs": 346740,
+            "toMs": 349080
+          }
+        },
+        {
+          "index": 19,
+          "part": 2,
+          "text": "어르신들이 너무 좋아하시더라고요.",
+          "output": {
+            "fromMs": 35220,
+            "toMs": 36790,
+            "from": "00:00:35.220",
+            "to": "00:00:36.790"
+          },
+          "source": {
+            "fromMs": 349440,
+            "toMs": 351010
+          }
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "renderIndex": 2,
+      "title": "이 섞박지, 파 비주얼부터 다르다",
+      "description": "시원하고 많이 맵지 않은 김치 맛을 먼저 만나봐요. 이어서 큼직하고 달콤한 대파가 들어간 섞박지의 비주얼과 풍미를 보여줍니다.",
+      "hashtags": [
+        "#김치",
+        "#섞박지",
+        "#대파김치",
+        "#김치추천"
+      ],
+      "theme": {
+        "angle": "큼직하고 달콤한 대파가 들어간 섞박지의 시원한 맛과 많이 맵지 않은 김치의 풍미를 선호하는 분들을 위한 숏폼입니다.",
+        "title": "시원하고 덜 매운 김치 맛"
+      },
+      "review": {
+        "total": 27,
+        "reason": "큼직하고 달큰한 파의 비주얼에서 시원하고 덜 매운 섞박지 맛과 국물 음식 이야기가 매끄럽게 이어집니다.",
+        "rubric": {
+          "flow": 5,
+          "hook": 4,
+          "variety": 4,
+          "freshness": 4,
+          "theme_fit": 5,
+          "self_contained": 5
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 37800,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/2.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/2.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/kimchi-4.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 37856,
+          "sizeBytes": 8790871,
+          "bitrateKbps": 1858,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.056,
+            "bottom": 0.28,
+            "centerX": 0.5,
+            "width": 0.88,
+            "align": "center",
+            "color": "#FDCC3A",
+            "strokeColor": "#0D0F11",
+            "boxColor": null
+          },
+          "box": {
+            "widthPx": 634,
+            "centerXPx": 360,
+            "bottomPx": 358,
+            "fontSizePx": 40
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/2.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/2.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/2.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/2.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/2.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/2.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/2.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/2.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/2.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "이렇게 큰 파가 이렇게 달 수 있나",
+          "score": 0.767,
+          "output": {
+            "fromMs": 0,
+            "toMs": 25050,
+            "from": "00:00:00.000",
+            "to": "00:00:25.050"
+          },
+          "source": {
+            "fromMs": 409200,
+            "toMs": 434250,
+            "from": "00:06:49.200",
+            "to": "00:07:14.250",
+            "plannedFromMs": 409350,
+            "plannedToMs": 434200
+          },
+          "aired": {
+            "from": "2026-10-27T16:41:49.200000",
+            "to": "2026-10-27T16:42:14.250000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.3418
+              },
+              {
+                "t": 0.5,
+                "x": 0.3418
+              },
+              {
+                "t": 1.0,
+                "x": 0.3418
+              },
+              {
+                "t": 1.5,
+                "x": 0.3418
+              },
+              {
+                "t": 2.0,
+                "x": 0.3418
+              },
+              {
+                "t": 2.5,
+                "x": 0.3418
+              },
+              {
+                "t": 3.0,
+                "x": 0.3418
+              },
+              {
+                "t": 3.5,
+                "x": 0.3418
+              },
+              {
+                "t": 4.0,
+                "x": 0.3418
+              },
+              {
+                "t": 4.5,
+                "x": 0.3418
+              },
+              {
+                "t": 5.0,
+                "x": 0.3418
+              },
+              {
+                "t": 5.5,
+                "x": 0.3418
+              },
+              {
+                "t": 6.0,
+                "x": 0.3418
+              },
+              {
+                "t": 6.5,
+                "x": 0.3418
+              },
+              {
+                "t": 7.0,
+                "x": 0.3418
+              },
+              {
+                "t": 7.5,
+                "x": 0.3418
+              },
+              {
+                "t": 8.0,
+                "x": 0.3418
+              },
+              {
+                "t": 8.5,
+                "x": 0.3418
+              },
+              {
+                "t": 9.0,
+                "x": 0.3418
+              },
+              {
+                "t": 9.5,
+                "x": 0.3418
+              },
+              {
+                "t": 10.0,
+                "x": 0.3418
+              },
+              {
+                "t": 10.5,
+                "x": 0.161
+              },
+              {
+                "t": 11.0,
+                "x": 0.161
+              },
+              {
+                "t": 11.5,
+                "x": 0.161
+              },
+              {
+                "t": 12.0,
+                "x": 0.1486
+              },
+              {
+                "t": 12.5,
+                "x": 0.0587
+              },
+              {
+                "t": 13.0,
+                "x": 0.0
+              },
+              {
+                "t": 13.5,
+                "x": 0.0
+              },
+              {
+                "t": 14.0,
+                "x": 0.0
+              },
+              {
+                "t": 14.5,
+                "x": 0.0
+              },
+              {
+                "t": 15.0,
+                "x": 0.0
+              },
+              {
+                "t": 15.5,
+                "x": 0.0
+              },
+              {
+                "t": 16.0,
+                "x": 0.0
+              },
+              {
+                "t": 16.5,
+                "x": 0.0
+              },
+              {
+                "t": 17.0,
+                "x": 0.0
+              },
+              {
+                "t": 17.5,
+                "x": 0.0
+              },
+              {
+                "t": 18.0,
+                "x": 0.0
+              },
+              {
+                "t": 18.5,
+                "x": 0.0159
+              },
+              {
+                "t": 19.0,
+                "x": 0.1536
+              },
+              {
+                "t": 19.5,
+                "x": 0.2222
+              },
+              {
+                "t": 20.0,
+                "x": 0.3482
+              },
+              {
+                "t": 20.5,
+                "x": 0.22
+              },
+              {
+                "t": 21.0,
+                "x": 0.22
+              },
+              {
+                "t": 21.5,
+                "x": 0.22
+              },
+              {
+                "t": 22.0,
+                "x": 0.22
+              },
+              {
+                "t": 22.5,
+                "x": 0.22
+              },
+              {
+                "t": 23.0,
+                "x": 0.22
+              },
+              {
+                "t": 23.5,
+                "x": 0.22
+              },
+              {
+                "t": 24.0,
+                "x": 0.22
+              },
+              {
+                "t": 24.5,
+                "x": 0.22
+              },
+              {
+                "t": 25.0,
+                "x": 0.22
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 2.0,
+                "endSec": 2.0,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 5.5,
+                "endSec": 5.5,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 8.25,
+                "endSec": 8.25,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 10.25,
+                "endSec": 10.25,
+                "fromX": 0.3418,
+                "toX": 0.161,
+                "kind": "cut"
+              },
+              {
+                "startSec": 11.82,
+                "endSec": 12.62,
+                "fromX": 0.161,
+                "toX": 0.0523,
+                "kind": "pan"
+              },
+              {
+                "startSec": 12.75,
+                "endSec": 12.75,
+                "fromX": 0.0523,
+                "toX": 0.0,
+                "kind": "cut"
+              },
+              {
+                "startSec": 18.31,
+                "endSec": 19.38,
+                "fromX": 0.0,
+                "toX": 0.2125,
+                "kind": "pan"
+              },
+              {
+                "startSec": 19.38,
+                "endSec": 20.12,
+                "fromX": 0.2125,
+                "toX": 0.3579,
+                "kind": "pan"
+              },
+              {
+                "startSec": 20.25,
+                "endSec": 20.25,
+                "fromX": 0.3579,
+                "toX": 0.22,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "제품 특징",
+              "strength": 4,
+              "claim": "섞박지에 큼직한 대파를 듬뿍 넣어 보기 좋은 비주얼을 만들고, 대파가 달고 맛있다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 412000,
+                  "toMs": 423000,
+                  "text": "아니, 사이즈가 이러다 보니까, 아니, 섞박지도 먹음직스럽게 갈 거예요. 이건 여러분, 우리 뭐 갈비탕이나 도가니탕이나 전문점에서 보셨던 그 큼직한 비주얼, 이렇게 갈 거니까."
+                }
+              ]
+            },
+            {
+              "category": "제품 특징",
+              "strength": 4,
+              "claim": "진행자들이 섞박지를 먹어 보고 시원하며 텁텁한 맛이 없다고 평가합니다.",
+              "evidence": [
+                {
+                  "fromMs": 429000,
+                  "toMs": 431000,
+                  "text": "시원하고 텁텁한 맛이 없어요."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "세상에 이렇게 맛있는 섞박지 없어요",
+          "score": 0.933,
+          "output": {
+            "fromMs": 25050,
+            "toMs": 37800,
+            "from": "00:00:25.050",
+            "to": "00:00:37.800"
+          },
+          "source": {
+            "fromMs": 621660,
+            "toMs": 634410,
+            "from": "00:10:21.660",
+            "to": "00:10:34.410",
+            "plannedFromMs": 621810,
+            "plannedToMs": 634350
+          },
+          "aired": {
+            "from": "2026-10-27T16:45:21.660000",
+            "to": "2026-10-27T16:45:34.410000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.4272
+              },
+              {
+                "t": 0.5,
+                "x": 0.4272
+              },
+              {
+                "t": 1.0,
+                "x": 0.4272
+              },
+              {
+                "t": 1.5,
+                "x": 0.4272
+              },
+              {
+                "t": 2.0,
+                "x": 0.4272
+              },
+              {
+                "t": 2.5,
+                "x": 0.4272
+              },
+              {
+                "t": 3.0,
+                "x": 0.4272
+              },
+              {
+                "t": 3.5,
+                "x": 0.4272
+              },
+              {
+                "t": 4.0,
+                "x": 0.4272
+              },
+              {
+                "t": 4.5,
+                "x": 0.4272
+              },
+              {
+                "t": 5.0,
+                "x": 0.4272
+              },
+              {
+                "t": 5.5,
+                "x": 0.4272
+              },
+              {
+                "t": 6.0,
+                "x": 0.4272
+              },
+              {
+                "t": 6.5,
+                "x": 0.4272
+              },
+              {
+                "t": 7.0,
+                "x": 0.4272
+              },
+              {
+                "t": 7.5,
+                "x": 0.4272
+              },
+              {
+                "t": 8.0,
+                "x": 0.4272
+              },
+              {
+                "t": 8.5,
+                "x": 0.4684
+              },
+              {
+                "t": 9.0,
+                "x": 0.5022
+              },
+              {
+                "t": 9.5,
+                "x": 0.5022
+              },
+              {
+                "t": 10.0,
+                "x": 0.5022
+              },
+              {
+                "t": 10.5,
+                "x": 0.5022
+              },
+              {
+                "t": 11.0,
+                "x": 0.5022
+              },
+              {
+                "t": 11.5,
+                "x": 0.4879
+              },
+              {
+                "t": 12.0,
+                "x": 0.3838
+              },
+              {
+                "t": 12.5,
+                "x": 0.3764
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.4272,
+                "toX": 0.4272,
+                "kind": "cut"
+              },
+              {
+                "startSec": 8.07,
+                "endSec": 8.88,
+                "fromX": 0.4272,
+                "toX": 0.5022,
+                "kind": "pan"
+              },
+              {
+                "startSec": 11.32,
+                "endSec": 12.12,
+                "fromX": 0.5022,
+                "toX": 0.3764,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": []
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "사이즈 보세요, 사이즈.",
+          "output": {
+            "fromMs": 0,
+            "toMs": 850,
+            "from": "00:00:00.000",
+            "to": "00:00:00.850"
+          },
+          "source": {
+            "fromMs": 409200,
+            "toMs": 410050
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "파가 맛있어요, 파가.",
+          "output": {
+            "fromMs": 900,
+            "toMs": 1750,
+            "from": "00:00:00.900",
+            "to": "00:00:01.750"
+          },
+          "source": {
+            "fromMs": 410100,
+            "toMs": 410950
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "아니, 사이즈가 이러다 보니까, 아니,",
+          "output": {
+            "fromMs": 1800,
+            "toMs": 3550,
+            "from": "00:00:01.800",
+            "to": "00:00:03.550"
+          },
+          "source": {
+            "fromMs": 411000,
+            "toMs": 412750
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "섞박지도 먹음직스럽게 갈 거예요.",
+          "output": {
+            "fromMs": 3600,
+            "toMs": 6060,
+            "from": "00:00:03.600",
+            "to": "00:00:06.060"
+          },
+          "source": {
+            "fromMs": 412800,
+            "toMs": 415260
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "이건 여러분, 우리 뭐 갈비탕이나",
+          "output": {
+            "fromMs": 6180,
+            "toMs": 7980,
+            "from": "00:00:06.180",
+            "to": "00:00:07.980"
+          },
+          "source": {
+            "fromMs": 415380,
+            "toMs": 417180
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "도가니탕이나 전문점에서 보셨던 그 큼직한",
+          "output": {
+            "fromMs": 8100,
+            "toMs": 10920,
+            "from": "00:00:08.100",
+            "to": "00:00:10.920"
+          },
+          "source": {
+            "fromMs": 417300,
+            "toMs": 420120
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "비주얼, 이렇게 갈 거니까.",
+          "output": {
+            "fromMs": 10980,
+            "toMs": 12780,
+            "from": "00:00:10.980",
+            "to": "00:00:12.780"
+          },
+          "source": {
+            "fromMs": 420180,
+            "toMs": 421980
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "아, 이 파 왜 이렇게 맛있어? 음.",
+          "output": {
+            "fromMs": 12960,
+            "toMs": 16090,
+            "from": "00:00:12.960",
+            "to": "00:00:16.090"
+          },
+          "source": {
+            "fromMs": 422160,
+            "toMs": 425290
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "파 너무 맛있어. 파도 달고.",
+          "output": {
+            "fromMs": 16140,
+            "toMs": 17890,
+            "from": "00:00:16.140",
+            "to": "00:00:17.890"
+          },
+          "source": {
+            "fromMs": 425340,
+            "toMs": 427090
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "근데 섞박지가. 어때요, 어때요?",
+          "output": {
+            "fromMs": 17940,
+            "toMs": 19450,
+            "from": "00:00:17.940",
+            "to": "00:00:19.450"
+          },
+          "source": {
+            "fromMs": 427140,
+            "toMs": 428650
+          }
+        },
+        {
+          "index": 11,
+          "part": 1,
+          "text": "시원하고 텁텁한 맛이 없어요.",
+          "output": {
+            "fromMs": 19500,
+            "toMs": 21130,
+            "from": "00:00:19.500",
+            "to": "00:00:21.130"
+          },
+          "source": {
+            "fromMs": 428700,
+            "toMs": 430330
+          }
+        },
+        {
+          "index": 12,
+          "part": 1,
+          "text": "아니, 지금이 완전 배추와",
+          "output": {
+            "fromMs": 21180,
+            "toMs": 23400,
+            "from": "00:00:21.180",
+            "to": "00:00:23.400"
+          },
+          "source": {
+            "fromMs": 430380,
+            "toMs": 432600
+          }
+        },
+        {
+          "index": 13,
+          "part": 1,
+          "text": "이 무가 맛있을 때잖아요.",
+          "output": {
+            "fromMs": 23460,
+            "toMs": 24850,
+            "from": "00:00:23.460",
+            "to": "00:00:24.850"
+          },
+          "source": {
+            "fromMs": 432660,
+            "toMs": 434050
+          }
+        },
+        {
+          "index": 14,
+          "part": 1,
+          "text": "세상에 이렇게 맛있는 섞박지 없어요.",
+          "output": {
+            "fromMs": 24850,
+            "toMs": 26470,
+            "from": "00:00:24.850",
+            "to": "00:00:26.470"
+          },
+          "source": {
+            "fromMs": 434050,
+            "toMs": 435670
+          }
+        },
+        {
+          "index": 15,
+          "part": 2,
+          "text": "요즘 뭐 국도 많이 끓여 드시죠.",
+          "output": {
+            "fromMs": 26470,
+            "toMs": 27800,
+            "from": "00:00:26.470",
+            "to": "00:00:27.800"
+          },
+          "source": {
+            "fromMs": 623080,
+            "toMs": 624410
+          }
+        },
+        {
+          "index": 16,
+          "part": 2,
+          "text": "곰탕이나 설렁탕, 아니면 뭇국.",
+          "output": {
+            "fromMs": 27850,
+            "toMs": 29710,
+            "from": "00:00:27.850",
+            "to": "00:00:29.710"
+          },
+          "source": {
+            "fromMs": 624460,
+            "toMs": 626320
+          }
+        },
+        {
+          "index": 17,
+          "part": 2,
+          "text": "음.",
+          "output": {
+            "fromMs": 29830,
+            "toMs": 31630,
+            "from": "00:00:29.830",
+            "to": "00:00:31.630"
+          },
+          "source": {
+            "fromMs": 626440,
+            "toMs": 628240
+          }
+        },
+        {
+          "index": 18,
+          "part": 2,
+          "text": "음. 와, 시원하다.",
+          "output": {
+            "fromMs": 32770,
+            "toMs": 35290,
+            "from": "00:00:32.770",
+            "to": "00:00:35.290"
+          },
+          "source": {
+            "fromMs": 629380,
+            "toMs": 631900
+          }
+        },
+        {
+          "index": 19,
+          "part": 2,
+          "text": "무가 달아.",
+          "output": {
+            "fromMs": 35590,
+            "toMs": 37390,
+            "from": "00:00:35.590",
+            "to": "00:00:37.390"
+          },
+          "source": {
+            "fromMs": 632200,
+            "toMs": 634000
+          }
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "renderIndex": 1,
+      "title": "햇배추 무김치, 밥에 싸면 더 맛있어",
+      "description": "배추와 무가 가장 맛있는 때의 김치를 소개해요. 밥에 싸 먹으면 더 맛있는 아삭한 맛까지 바로 이어집니다.",
+      "hashtags": [
+        "#김치",
+        "#햇배추",
+        "#섞박지",
+        "#아삭한김치"
+      ],
+      "theme": {
+        "angle": "햇배추와 제철 무로 담근 김치를 밥에 싸 먹으며 신선하고 아삭한 맛을 즐기고 싶은 분들을 위한 숏폼입니다.",
+        "title": "햇배추와 제철 무의 아삭한 맛"
+      },
+      "review": {
+        "total": 23,
+        "reason": "햇배추와 제철 무의 특징을 소개한 뒤 밥에 김치를 싸 먹는 장면으로 이어지지만 시점 표현이 조금 강합니다.",
+        "rubric": {
+          "flow": 4,
+          "hook": 3,
+          "variety": 4,
+          "freshness": 3,
+          "theme_fit": 5,
+          "self_contained": 4
+        },
+        "maxTotal": 30
+      },
+      "durationMs": 34530,
+      "files": {
+        "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/1.mp4",
+        "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/1.jpg",
+        "srt": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/result/kimchi-5.srt",
+        "spec": {
+          "container": "mp4",
+          "durationMs": 34589,
+          "sizeBytes": 8295068,
+          "bitrateKbps": 1919,
+          "video": {
+            "codec": "h264",
+            "profile": "High",
+            "width": 720,
+            "height": 1280,
+            "fps": 30.0,
+            "pixelFormat": "yuv420p"
+          },
+          "audio": {
+            "codec": "aac",
+            "sampleRate": 44100,
+            "channels": 2
+          }
+        }
+      },
+      "screen": {
+        "canvas": {
+          "aspectRatio": "9:16",
+          "width": 720,
+          "height": 1280,
+          "fps": 30
+        },
+        "framing": {
+          "selected": "tracking",
+          "fit": "cover",
+          "reframe": "face",
+          "note": "진행자 얼굴을 따라 9:16으로 잘라냄"
+        },
+        "subtitle": {
+          "burnedIn": true,
+          "font": "Noto Sans CJK KR Bold",
+          "maxLines": 2,
+          "style": {
+            "fontSize": 0.056,
+            "bottom": 0.28,
+            "centerX": 0.5,
+            "width": 0.88,
+            "align": "center",
+            "color": "#FDCC3A",
+            "strokeColor": "#0D0F11",
+            "boxColor": null
+          },
+          "box": {
+            "widthPx": 634,
+            "centerXPx": 360,
+            "bottomPx": 358,
+            "fontSizePx": 40
+          }
+        },
+        "variants": [
+          {
+            "key": "tracking",
+            "layout": "crop",
+            "reframe": "face",
+            "note": "진행자 얼굴을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "face",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/tracking/1.jpg"
+          },
+          {
+            "key": "product",
+            "layout": "crop",
+            "reframe": "product",
+            "note": "설명 중인 상품을 따라 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "product",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/product/1.jpg"
+          },
+          {
+            "key": "both",
+            "layout": "crop",
+            "reframe": "both",
+            "note": "진행자와 상품을 함께 담도록 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/both/1.jpg"
+          },
+          {
+            "key": "center",
+            "layout": "crop",
+            "reframe": "center",
+            "note": "가운데를 9:16으로 잘라냄",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "cover",
+              "reframe": "center",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/center/1.jpg"
+          },
+          {
+            "key": "blur",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흐린 원본 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "blur"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/blur/1.jpg"
+          },
+          {
+            "key": "white",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 흰 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "white"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/white/1.jpg"
+          },
+          {
+            "key": "black",
+            "layout": "letterbox",
+            "reframe": null,
+            "note": "원본 전체 + 검정 배경",
+            "options": {
+              "aspectRatio": "9:16",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/black/1.jpg"
+          },
+          {
+            "key": "original",
+            "layout": "original",
+            "reframe": null,
+            "note": "원본 16:9 그대로",
+            "options": {
+              "aspectRatio": "16:9",
+              "fit": "contain",
+              "reframe": "both",
+              "background": "black"
+            },
+            "video": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/1.mp4",
+            "thumbnail": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/shorts/kimchi/original/1.jpg"
+          }
+        ]
+      },
+      "timeline": [
+        {
+          "index": 1,
+          "label": "지금 배추랑 무가 제일 맛있을 때래",
+          "score": 0.8,
+          "output": {
+            "fromMs": 0,
+            "toMs": 17460,
+            "from": "00:00:00.000",
+            "to": "00:00:17.460"
+          },
+          "source": {
+            "fromMs": 210210,
+            "toMs": 227670,
+            "from": "00:03:30.210",
+            "to": "00:03:47.670",
+            "plannedFromMs": 211000,
+            "plannedToMs": 227620
+          },
+          "aired": {
+            "from": "2026-10-27T16:38:30.210000",
+            "to": "2026-10-27T16:38:47.670000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "cut"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.252
+              },
+              {
+                "t": 0.5,
+                "x": 0.252
+              },
+              {
+                "t": 1.0,
+                "x": 0.252
+              },
+              {
+                "t": 1.5,
+                "x": 0.252
+              },
+              {
+                "t": 2.0,
+                "x": 0.252
+              },
+              {
+                "t": 2.5,
+                "x": 0.252
+              },
+              {
+                "t": 3.0,
+                "x": 0.252
+              },
+              {
+                "t": 3.5,
+                "x": 0.252
+              },
+              {
+                "t": 4.0,
+                "x": 0.3418
+              },
+              {
+                "t": 4.5,
+                "x": 0.3418
+              },
+              {
+                "t": 5.0,
+                "x": 0.3418
+              },
+              {
+                "t": 5.5,
+                "x": 0.3418
+              },
+              {
+                "t": 6.0,
+                "x": 0.3418
+              },
+              {
+                "t": 6.5,
+                "x": 0.3418
+              },
+              {
+                "t": 7.0,
+                "x": 0.3418
+              },
+              {
+                "t": 7.5,
+                "x": 0.3418
+              },
+              {
+                "t": 8.0,
+                "x": 0.3418
+              },
+              {
+                "t": 8.5,
+                "x": 0.3418
+              },
+              {
+                "t": 9.0,
+                "x": 0.4369
+              },
+              {
+                "t": 9.5,
+                "x": 0.4369
+              },
+              {
+                "t": 10.0,
+                "x": 0.4369
+              },
+              {
+                "t": 10.5,
+                "x": 0.4369
+              },
+              {
+                "t": 11.0,
+                "x": 0.4369
+              },
+              {
+                "t": 11.5,
+                "x": 0.4369
+              },
+              {
+                "t": 12.0,
+                "x": 0.4369
+              },
+              {
+                "t": 12.5,
+                "x": 0.4369
+              },
+              {
+                "t": 13.0,
+                "x": 0.4369
+              },
+              {
+                "t": 13.5,
+                "x": 0.4369
+              },
+              {
+                "t": 14.0,
+                "x": 0.4369
+              },
+              {
+                "t": 14.5,
+                "x": 0.4369
+              },
+              {
+                "t": 15.0,
+                "x": 0.4369
+              },
+              {
+                "t": 15.5,
+                "x": 0.4369
+              },
+              {
+                "t": 16.0,
+                "x": 0.4369
+              },
+              {
+                "t": 16.5,
+                "x": 0.4369
+              },
+              {
+                "t": 17.0,
+                "x": 0.4369
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 0.0,
+                "endSec": 0.0,
+                "fromX": 0.252,
+                "toX": 0.252,
+                "kind": "cut"
+              },
+              {
+                "startSec": 3.75,
+                "endSec": 3.75,
+                "fromX": 0.252,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 9.0,
+                "endSec": 9.0,
+                "fromX": 0.3418,
+                "toX": 0.4369,
+                "kind": "cut"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "제품 특징",
+              "strength": 4,
+              "claim": "10월에 수매한 햇배추와 지금 맛이 좋은 제철 무를 사용해 신선하고 맛있는 시기의 풍미를 담았다고 설명합니다.",
+              "evidence": [
+                {
+                  "fromMs": 211000,
+                  "toMs": 214000,
+                  "text": "배추도 10월 달에 수매한 또 배추예요."
+                },
+                {
+                  "fromMs": 214000,
+                  "toMs": 216000,
+                  "text": "네, 지금 배추랑 무가 너무 맛있어요."
+                },
+                {
+                  "fromMs": 221000,
+                  "toMs": 228000,
+                  "text": "네, 무도 진짜 지금, 지금부터 슬슬 맛있거든요. 그래서 무 섞박지도 한번 기대해 보셔도 좋을 것 같습니다."
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "index": 2,
+          "label": "밥에 싸 먹으니까 오늘따라 더 맛있네",
+          "score": 0.7,
+          "output": {
+            "fromMs": 17460,
+            "toMs": 34530,
+            "from": "00:00:17.460",
+            "to": "00:00:34.530"
+          },
+          "source": {
+            "fromMs": 362680,
+            "toMs": 379750,
+            "from": "00:06:02.680",
+            "to": "00:06:19.750",
+            "plannedFromMs": 363000,
+            "plannedToMs": 380000
+          },
+          "aired": {
+            "from": "2026-10-27T16:41:02.680000",
+            "to": "2026-10-27T16:41:19.750000"
+          },
+          "transition": {
+            "in": "cut",
+            "out": "end"
+          },
+          "crop": {
+            "sourceWidth": 1280,
+            "sourceHeight": 720,
+            "widthRatio": 0.3164,
+            "widthPx": 405,
+            "heightPx": 720,
+            "y": 0,
+            "xMeaning": "crop window left edge / source width",
+            "mode": "face",
+            "found": true,
+            "keyframes": [
+              {
+                "t": 0.0,
+                "x": 0.3418
+              },
+              {
+                "t": 0.5,
+                "x": 0.3418
+              },
+              {
+                "t": 1.0,
+                "x": 0.3418
+              },
+              {
+                "t": 1.5,
+                "x": 0.3418
+              },
+              {
+                "t": 2.0,
+                "x": 0.3418
+              },
+              {
+                "t": 2.5,
+                "x": 0.3418
+              },
+              {
+                "t": 3.0,
+                "x": 0.3418
+              },
+              {
+                "t": 3.5,
+                "x": 0.3418
+              },
+              {
+                "t": 4.0,
+                "x": 0.3418
+              },
+              {
+                "t": 4.5,
+                "x": 0.3418
+              },
+              {
+                "t": 5.0,
+                "x": 0.3418
+              },
+              {
+                "t": 5.5,
+                "x": 0.3418
+              },
+              {
+                "t": 6.0,
+                "x": 0.3418
+              },
+              {
+                "t": 6.5,
+                "x": 0.3499
+              },
+              {
+                "t": 7.0,
+                "x": 0.3499
+              },
+              {
+                "t": 7.5,
+                "x": 0.3499
+              },
+              {
+                "t": 8.0,
+                "x": 0.3499
+              },
+              {
+                "t": 8.5,
+                "x": 0.3499
+              },
+              {
+                "t": 9.0,
+                "x": 0.3499
+              },
+              {
+                "t": 9.5,
+                "x": 0.3669
+              },
+              {
+                "t": 10.0,
+                "x": 0.4909
+              },
+              {
+                "t": 10.5,
+                "x": 0.4998
+              },
+              {
+                "t": 11.0,
+                "x": 0.4998
+              },
+              {
+                "t": 11.5,
+                "x": 0.4998
+              },
+              {
+                "t": 12.0,
+                "x": 0.4998
+              },
+              {
+                "t": 12.5,
+                "x": 0.4998
+              },
+              {
+                "t": 13.0,
+                "x": 0.4998
+              },
+              {
+                "t": 13.5,
+                "x": 0.4998
+              },
+              {
+                "t": 14.0,
+                "x": 0.4998
+              },
+              {
+                "t": 14.5,
+                "x": 0.4998
+              },
+              {
+                "t": 15.0,
+                "x": 0.4998
+              },
+              {
+                "t": 15.5,
+                "x": 0.4998
+              },
+              {
+                "t": 16.0,
+                "x": 0.4998
+              },
+              {
+                "t": 16.5,
+                "x": 0.4998
+              },
+              {
+                "t": 17.0,
+                "x": 0.4998
+              }
+            ],
+            "moves": [
+              {
+                "startSec": 1.5,
+                "endSec": 1.5,
+                "fromX": 0.3418,
+                "toX": 0.3418,
+                "kind": "cut"
+              },
+              {
+                "startSec": 6.25,
+                "endSec": 6.25,
+                "fromX": 0.3418,
+                "toX": 0.3499,
+                "kind": "cut"
+              },
+              {
+                "startSec": 9.32,
+                "endSec": 10.12,
+                "fromX": 0.3499,
+                "toX": 0.4998,
+                "kind": "pan"
+              }
+            ]
+          },
+          "appealPoints": [
+            {
+              "category": "시연",
+              "strength": 4,
+              "claim": "진행자가 김치를 밥에 올려 싸 먹은 뒤 맛있다고 감탄하며 밥과 함께 먹는 모습을 보여줍니다.",
+              "evidence": [
+                {
+                  "fromMs": 363000,
+                  "toMs": 371000,
+                  "text": "어, 딱 올려주시면 여러분, 진짜 김치 많죠. 하지만 박준면 김치는 드셔보셔야 이 진정한 맛을 느낄 수가 있거든요."
+                },
+                {
+                  "fromMs": 371000,
+                  "toMs": 377000,
+                  "text": "여러분, 밥에 올려가지고 그냥 어, 이렇게 그냥 그냥 이렇게 싸서 먹, 싸서 먹을게요. 이렇게."
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "subtitles": [
+        {
+          "index": 1,
+          "part": 1,
+          "text": "배추도 10월 달에 수매한 또 배추예요.",
+          "output": {
+            "fromMs": 0,
+            "toMs": 2090,
+            "from": "00:00:00.000",
+            "to": "00:00:02.090"
+          },
+          "source": {
+            "fromMs": 210210,
+            "toMs": 212300
+          }
+        },
+        {
+          "index": 2,
+          "part": 1,
+          "text": "네, 지금 배추랑 무가 너무 맛있어요.",
+          "output": {
+            "fromMs": 2270,
+            "toMs": 4790,
+            "from": "00:00:02.270",
+            "to": "00:00:04.790"
+          },
+          "source": {
+            "fromMs": 212480,
+            "toMs": 215000
+          }
+        },
+        {
+          "index": 3,
+          "part": 1,
+          "text": "너무 맛있을 때죠. 햇배추.",
+          "output": {
+            "fromMs": 4790,
+            "toMs": 6180,
+            "from": "00:00:04.790",
+            "to": "00:00:06.180"
+          },
+          "source": {
+            "fromMs": 215000,
+            "toMs": 216390
+          }
+        },
+        {
+          "index": 4,
+          "part": 1,
+          "text": "와, 햇배추. 이때만 드시면 좋은데, 이 무도",
+          "output": {
+            "fromMs": 6230,
+            "toMs": 8210,
+            "from": "00:00:06.230",
+            "to": "00:00:08.210"
+          },
+          "source": {
+            "fromMs": 216440,
+            "toMs": 218420
+          }
+        },
+        {
+          "index": 5,
+          "part": 1,
+          "text": "이게 또 기가 막히잖아요.",
+          "output": {
+            "fromMs": 8270,
+            "toMs": 9660,
+            "from": "00:00:08.270",
+            "to": "00:00:09.660"
+          },
+          "source": {
+            "fromMs": 218480,
+            "toMs": 219870
+          }
+        },
+        {
+          "index": 6,
+          "part": 1,
+          "text": "네, 무도 진짜 지금,",
+          "output": {
+            "fromMs": 9710,
+            "toMs": 11810,
+            "from": "00:00:09.710",
+            "to": "00:00:11.810"
+          },
+          "source": {
+            "fromMs": 219920,
+            "toMs": 222020
+          }
+        },
+        {
+          "index": 7,
+          "part": 1,
+          "text": "지금부터 슬슬 맛있거든요.",
+          "output": {
+            "fromMs": 11870,
+            "toMs": 13320,
+            "from": "00:00:11.870",
+            "to": "00:00:13.320"
+          },
+          "source": {
+            "fromMs": 222080,
+            "toMs": 223530
+          }
+        },
+        {
+          "index": 8,
+          "part": 1,
+          "text": "그래서 무 섞박지도 한번 기대해",
+          "output": {
+            "fromMs": 13370,
+            "toMs": 15650,
+            "from": "00:00:13.370",
+            "to": "00:00:15.650"
+          },
+          "source": {
+            "fromMs": 223580,
+            "toMs": 225860
+          }
+        },
+        {
+          "index": 9,
+          "part": 1,
+          "text": "보셔도 좋을 것 같습니다.",
+          "output": {
+            "fromMs": 15770,
+            "toMs": 16620,
+            "from": "00:00:15.770",
+            "to": "00:00:16.620"
+          },
+          "source": {
+            "fromMs": 225980,
+            "toMs": 226830
+          }
+        },
+        {
+          "index": 10,
+          "part": 1,
+          "text": "어, 딱 올려주시면 여러분,",
+          "output": {
+            "fromMs": 16620,
+            "toMs": 17920,
+            "from": "00:00:16.620",
+            "to": "00:00:17.920"
+          },
+          "source": {
+            "fromMs": 226830,
+            "toMs": 228130
+          }
+        },
+        {
+          "index": 11,
+          "part": 2,
+          "text": "진짜 김치 많죠.",
+          "output": {
+            "fromMs": 17970,
+            "toMs": 19770,
+            "from": "00:00:17.970",
+            "to": "00:00:19.770"
+          },
+          "source": {
+            "fromMs": 363190,
+            "toMs": 364990
+          }
+        },
+        {
+          "index": 12,
+          "part": 2,
+          "text": "하지만 박준면 김치는 드셔보셔야 이",
+          "output": {
+            "fromMs": 19890,
+            "toMs": 21990,
+            "from": "00:00:19.890",
+            "to": "00:00:21.990"
+          },
+          "source": {
+            "fromMs": 365110,
+            "toMs": 367210
+          }
+        },
+        {
+          "index": 13,
+          "part": 2,
+          "text": "진정한 맛을 느낄 수가 있거든요.",
+          "output": {
+            "fromMs": 22110,
+            "toMs": 23910,
+            "from": "00:00:22.110",
+            "to": "00:00:23.910"
+          },
+          "source": {
+            "fromMs": 367330,
+            "toMs": 369130
+          }
+        },
+        {
+          "index": 14,
+          "part": 2,
+          "text": "여러분, 밥에 올려가지고 그냥",
+          "output": {
+            "fromMs": 24030,
+            "toMs": 25830,
+            "from": "00:00:24.030",
+            "to": "00:00:25.830"
+          },
+          "source": {
+            "fromMs": 369250,
+            "toMs": 371050
+          }
+        },
+        {
+          "index": 15,
+          "part": 2,
+          "text": "어, 이렇게 그냥 그냥 이렇게",
+          "output": {
+            "fromMs": 26670,
+            "toMs": 28710,
+            "from": "00:00:26.670",
+            "to": "00:00:28.710"
+          },
+          "source": {
+            "fromMs": 371890,
+            "toMs": 373930
+          }
+        },
+        {
+          "index": 16,
+          "part": 2,
+          "text": "싸서 먹, 싸서 먹을게요. 이렇게.",
+          "output": {
+            "fromMs": 28770,
+            "toMs": 30570,
+            "from": "00:00:28.770",
+            "to": "00:00:30.570"
+          },
+          "source": {
+            "fromMs": 373990,
+            "toMs": 375790
+          }
+        },
+        {
+          "index": 17,
+          "part": 2,
+          "text": "아.",
+          "output": {
+            "fromMs": 30870,
+            "toMs": 31960,
+            "from": "00:00:30.870",
+            "to": "00:00:31.960"
+          },
+          "source": {
+            "fromMs": 376090,
+            "toMs": 377180
+          }
+        },
+        {
+          "index": 18,
+          "part": 2,
+          "text": "좋아요. 맛있어요.",
+          "output": {
+            "fromMs": 32010,
+            "toMs": 33620,
+            "from": "00:00:32.010",
+            "to": "00:00:33.620"
+          },
+          "source": {
+            "fromMs": 377230,
+            "toMs": 378840
+          }
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "span": "5:35–5:49 + 6:49–7:10",
+      "category": "신선도 낮음",
+      "title": "이 섞박지, 파 비주얼부터 다르다 (이전 버전)",
+      "reason": "AI 심사 신선도 1/5로, 가격을 내세운 구간에서 잘라낸 장면이 들어 있어 방송이 끝나면 맞지 않는 내용이 섞입니다. 앞 장면도 섞박지가 아니라 배추김치 시식이라 제목과 어긋나 제외했습니다. 섞박지 장면만 다시 묶은 버전은 다음 순위 후보에 있습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/kimchi-old3.mp4"
+    },
+    {
+      "span": "2:14–2:32",
+      "category": "가격",
+      "title": "포기김치 6kg + 섞박지 1kg 구성가",
+      "reason": "'방송에서만 55,900원 · 섞박지 21,900원' 등 가격과 할인 안내가 중심인 구간이라 제외했습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/kimchi-price.mp4"
+    },
+    {
+      "span": "2:50–3:07",
+      "category": "판매 수량",
+      "title": "런칭 때 1시간 7,000세트",
+      "reason": "'1시간 동안 약 7,000세트 판매'처럼 판매 수량과 특정 날짜에 기대는 내용이라, 시간이 지나면 사실과 달라질 수 있어 제외했습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/kimchi-sales.mp4"
+    },
+    {
+      "span": "3:50–4:21",
+      "category": "판넬",
+      "title": "박준면 김치만의 특별함",
+      "reason": "국내산 사과 · 배 착즙, 젓갈 4종 등 내용은 좋지만 설명 판넬이 화면 대부분을 덮습니다. 세로로 자르면 판넬 일부만 남아 제외했습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/kimchi-panel.mp4"
+    },
+    {
+      "span": "7:20–7:40",
+      "category": "가격",
+      "title": "오늘 구성 역대 최저가",
+      "reason": "시식 반응 사이에 '오늘 구성 역대 최저가' 안내가 들어가 있어, 앞뒤 시식 장면만 다른 숏폼에 쓰고 이 구간은 뺐습니다.",
+      "preview": "https://dev-shortform.shoplive.show/share/7949649aea0c4d5d9303ef48a9905f0c/excluded/kimchi-lowest.mp4"
+    }
+  ]
+}
