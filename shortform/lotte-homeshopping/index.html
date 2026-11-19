@@ -108,6 +108,8 @@ h3{font-size:16px;line-height:1.6;margin:0 0 6px;font-weight:600;color:var(--tex
 .pending{width:100%;height:100%;display:grid;place-items:center;color:var(--n400);font-size:13px;background:var(--n800)}
 .excl-wrap{margin-top:20px;padding:20px;display:flex;flex-direction:column;gap:16px}
 .excl-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}
+.excl[id]{scroll-margin-top:96px;border-radius:var(--r);transition:background .6s}
+.excl:target{background:#FEFBF0;box-shadow:0 0 0 8px #FEFBF0}
 .excl{display:grid;grid-template-columns:minmax(0,280px) 1fr;gap:20px;align-items:center;padding-top:16px;border-top:1px solid var(--line)}
 .excl-vid.tall{max-width:200px}
 .excl-vid.tall video{aspect-ratio:9/16;object-fit:contain}
@@ -289,7 +291,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <nav id="toc">
       <a href="#samples">샘플 6편</a>
       <a href="#framing">화면 구성</a>
-      <a href="#subtitles">자막 · STT</a>
+      <a href="#subtitles">자막 스타일</a>
+      <a href="#stt">자막 정확성</a>
       <a href="#editor">PD 편집</a>
       <a href="#integration">시스템 연동</a>
       <a href="#quality">품질 · 심의</a>
@@ -328,7 +331,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <div class="card"><h3>스쳐 가는 화면에는 반응하지 않게</h3><p>2초가 안 되는 전환 효과·그래픽 화면에서는 크롭 위치를 바꾸지 않습니다.</p></div>
       <div class="card"><h3>스테디캠처럼 차분하게</h3><p>대상이 0.75초 넘게 잘릴 때만 부드럽게 따라가고, 장면이 바뀌면 바로 자릅니다.</p></div>
     </div>
-    <p class="note">흰 · 검정 배경은 예시입니다. 배경색은 컬러 팔레트에서 원하는 색으로 고를 수 있고, 자막 글자색과 자막 박스 색도 함께 정합니다 (<a href="#subtitles">자막 · STT</a>).</p>
+    <p class="note">흰 · 검정 배경은 예시입니다. 배경색은 컬러 팔레트에서 원하는 색으로 고를 수 있고, 자막 글자색과 자막 박스 색도 함께 정합니다 (<a href="#subtitles">자막 스타일</a>).</p>
     <p class="note" style="margin-top:6px">상품 설명 판넬이나 가격 그래픽이 화면 가장자리에 있는 방송은 원본 전체를 담는 블러 · 단색 배경 구성으로 만들면 잘리지 않습니다. 방송 유형별로 기본 구성을 다르게 둘 수 있습니다.</p>
   </div>
 </section>
@@ -336,19 +339,36 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="subtitles">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">03 — SUBTITLES · STT</div><h2>자막 스타일은 방송마다 다르게, 고유명사는 정확하게</h2>
-      <p>같은 엔진으로 방송마다 다른 자막 스타일을 입힐 수 있습니다. 상품명·브랜드명·출연자 이름은 STT vocabulary로 등록해 음성 인식 단계에서부터 정확히 받아 적습니다.</p></div>
+      <div><div class="sec-no">03 — SUBTITLE STYLE</div><h2>방송마다 다양한 자막 스타일 제공</h2>
+      <p>같은 엔진으로 방송 분위기에 맞춰 서로 다른 자막 스타일을 입힐 수 있습니다. 고객사 기본값으로 저장해 두고 요청마다 바꿀 수 있습니다.</p></div>
     </div>
-    <div class="why-head" style="margin-top:0"><h3>방송마다 다른 자막 스타일</h3><span>샘플 2편에 서로 다른 스타일을 적용했습니다. 고객사 기본값으로 저장해 두고 요청마다 바꿀 수 있습니다.</span></div>
+    <div class="why-head" style="margin-top:0"><h3>방송마다 다른 자막 스타일</h3><span>샘플 2편에 서로 다른 스타일을 적용했습니다.</span></div>
     <div class="two" id="subDemos" style="margin-top:14px"></div>
-    <div class="two" style="margin-top:20px">
+    <div class="card" style="padding:22px;margin-top:20px">
+      <h3>다양한 스타일 제공</h3>
+      <div class="chips" style="margin-top:12px">
+        <span class="pill">글자 크기</span><span class="pill">자막 위치</span><span class="pill">줄바꿈 폭</span><span class="pill">정렬</span><span class="pill">글자 색</span><span class="pill">외곽선</span><span class="pill">배경 박스 · 투명도</span>
+      </div>
+      <p class="note">자막은 발화 단위 SRT 파일로도 함께 전달합니다.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="stt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div><div class="sec-no">04 — SUBTITLE ACCURACY · STT</div><h2>상품명 · 브랜드명까지 정확한 자막</h2>
+      <p>자막은 방송 발화를 그대로 받아 적습니다. 상품명 · 브랜드명 · 출연자 이름은 STT vocabulary로 등록해 음성 인식 단계에서부터 정확히 받아 적습니다.</p></div>
+    </div>
+    <div class="two">
       <div class="card" style="padding:22px">
-        <h3>바꿀 수 있는 것</h3>
-        <div class="chips" style="margin-top:12px">
-          <span class="pill">글자 크기</span><span class="pill">자막 위치</span><span class="pill">줄바꿈 폭</span><span class="pill">정렬</span><span class="pill">글자 색</span><span class="pill">외곽선</span><span class="pill">배경 박스 · 투명도</span>
-        </div>
-        <p class="note">자막은 방송 발화를 받아 적은 것입니다. 생성하는 문구는 제목·설명·해시태그뿐이고, 원본 발언에 없는 내용은 자막에 넣지 않습니다. 인식이 애매한 단어는 다른 STT 엔진과 교차 확인해 바로잡고, 끝내 확인되지 않는 단어는 자막에서 뺍니다.</p>
-        <p class="note">자막은 발화 단위 SRT 파일로도 함께 전달합니다.</p>
+        <h3>발화 그대로, 확인된 단어만</h3>
+        <ul class="note" style="margin:12px 0 0;padding-left:18px;line-height:1.7">
+          <li>자막은 방송 발화를 받아 적은 것입니다. 원본 발언에 없는 내용은 자막에 넣지 않고, 새로 생성하는 문구는 제목 · 설명 · 해시태그뿐입니다.</li>
+          <li>인식이 애매한 단어는 다른 STT 엔진과 교차 확인해 바로잡습니다.</li>
+          <li>끝내 확인되지 않는 단어는 자막에서 뺍니다.</li>
+          <li>자막 문구는 Clip Maker 에디터에서 직접 고칠 수도 있습니다 (<a href="#editor">PD 편집</a>).</li>
+        </ul>
       </div>
       <div class="card vocab" id="vocabCard"></div>
     </div>
@@ -358,7 +378,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="editor">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">04 — EDITOR</div><h2>자동 생성 결과는 Clip Maker로 수정할 수 있습니다</h2>
+      <div><div class="sec-no">05 — EDITOR</div><h2>자동 생성 결과는 Clip Maker로 수정할 수 있습니다</h2>
       <p>자동 생성 결과를 그대로 쓰지 않고 다듬고 싶을 때는 Shoplive 어드민의 <b>Clip Maker 에디터</b>에서 구간 · 자막 · 화면 구성을 수정할 수 있습니다. 별도 편집 프로그램 없이 브라우저에서 미세 조정을 하고 다시 렌더합니다.</p></div>
     </div>
     <a class="demo-cta" href="https://dev-shortform.shoplive.show/clip-maker-demo/682ab287dced339f063fbb03/index.html" target="_blank" rel="noopener">
@@ -385,7 +405,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="integration">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">05 — INTEGRATION</div><h2>현행 S3 · SNS 연동을 그대로 유지</h2>
+      <div><div class="sec-no">06 — INTEGRATION</div><h2>현행 S3 · SNS 연동을 그대로 유지</h2>
       <p>롯데홈쇼핑의 현재 송수신 절차를 바꾸지 않고 연동합니다. 아래 연동부(SQS 수신 · S3 저장 · SNS 발행)는 계약 후 구축합니다. 원본과 request.json을 받는 쪽, 결과와 메타데이터를 돌려주는 쪽 모두 지금과 같은 S3 저장 + SNS 메시지 방식입니다. 결과를 저장할 버킷은 현행 방식에 맞춥니다. 롯데홈쇼핑 버킷에 직접 쓰는 방식(교차 계정 쓰기 권한)과 Shoplive 버킷에서 가져가는 방식 모두 지원합니다.</p></div>
     </div>
     <div class="flow">
@@ -428,8 +448,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <section class="block" id="quality">
   <div class="wrap">
     <div class="sec-head">
-      <div><div class="sec-no">06 — QUALITY · COMPLIANCE</div><h2>품질 검증과 방송 심의</h2>
-      <p>숏폼마다 AI 평가를 붙여 기준 미달을 걸러내고, 방송이 끝나면 의미가 없어지는 정보는 AI 심사에서 감점해 걸러냅니다. <span class="pill ok">제공 중</span> 은 지금 자동 생성 API에 들어 있는 기능, <span class="pill plan">구축 가능</span> 은 롯데홈쇼핑 심의 기준을 받아 구축할 항목입니다.</p></div>
+      <div><div class="sec-no">07 — QUALITY · COMPLIANCE</div><h2>품질 검증과 방송 심의</h2>
+      <p>숏폼마다 AI 평가를 붙여 기준 미달을 걸러내고, 방송이 끝나면 의미가 없어지는 정보는 AI 심사에서 감점해 걸러냅니다. <span class="pill ok">제공 중</span> 은 지금 자동 생성 API에 들어 있는 기능, <span class="pill plan">구축 가능</span> 은 롯데홈쇼핑 심의 기준을 받아 구축할 항목입니다. 두 가지가 섞인 카드는 항목마다 표시했습니다.</p></div>
     </div>
     <div class="grid3">
       <div class="card"><div class="status"><span class="pill ok">제공 중</span></div><h3>구간 선정</h3><ul>
@@ -444,11 +464,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
         <li>완성된 숏폼은 별도 루브릭으로 다시 채점해 점수와 이유를 결과에 담습니다.</li>
         <li>시작 · 끝은 문장 경계에 맞추고, 크롭은 2초가 안 되는 화면 전환에는 따라가지 않습니다.</li>
       </ul></div>
-      <div class="card"><div class="status"><span class="pill plan">구축 가능</span></div><h3>롯데홈쇼핑 심의 기준</h3><ul>
-        <li>롯데홈쇼핑의 심의 기준(금지 문구 사전 등)을 받아 아래 검사를 구축합니다.</li>
-        <li>심의 위반 문구 사전(과장 · 효능 단정 · 비교 광고 등)으로 발화와 자막을 검사해 해당 구간을 제외합니다.</li>
-        <li>VCR 등 삽입 자료 영상 구간을 화면 특징으로 검출해 생성 대상에서 뺍니다.</li>
-        <li>화질 · 음량 · 자막 겹침 자동 점검 후 미달 숏폼은 다시 생성합니다.</li>
+      <div class="card"><div class="status"><span class="pill ok">제공 중</span><span class="pill plan">구축 가능</span></div><h3>롯데홈쇼핑 심의 기준</h3><ul>
+        <li><span class="pill ok">제공 중</span> VCR 등 삽입 자료 영상 구간을 화면 특징으로 검출해 생성 대상에서 뺍니다. <a href="#excl-aromatica-0">실제 제외 사례 보기 →</a></li>
+        <li><span class="pill plan">구축 가능</span> 롯데홈쇼핑의 심의 기준(금지 문구 사전 등)을 받아 아래 검사를 구축합니다.</li>
+        <li><span class="pill plan">구축 가능</span> 심의 위반 문구 사전(과장 · 효능 단정 · 비교 광고 등)으로 발화와 자막을 검사해 해당 구간을 제외합니다.</li>
+        <li><span class="pill plan">구축 가능</span> 화질 · 음량 · 자막 겹침 자동 점검 후 미달 숏폼은 다시 생성합니다.</li>
       </ul></div>
     </div>
   </div>
@@ -495,7 +515,7 @@ function highlight(text, vocab) {
 
 function candidates(b) {
   const more = (b.more || []).map(s => `<div class="excl"><div class="excl-vid">${s.videos.original ? `<video src="${s.videos.original}" poster="${s.thumbs.original}" controls muted playsinline preload="metadata"></video>` : `<div class="pending" style="aspect-ratio:16/9;border-radius:var(--r)">렌더 중</div>`}</div><div class="excl-body"><div class="excl-tags"><span class="pill acc">${s.rank}위 후보</span><span class="mono" style="color:var(--muted);font-size:12px">${(s.durationMs / 1000).toFixed(0)}s · ${s.parts.map(p => `${tc(p.fromMs)}–${tc(p.toMs)}`).join(" + ")}</span>${s.review ? `<span class="pill">AI 심사 ${s.review.total}/${s.review.maxTotal}</span>` : ""}</div><b>${esc(s.title)}</b><p class="desc">${esc(s.description)}</p>${s.review ? `<p class="desc" style="font-size:13px">${esc(s.review.reason)}</p>` : ""}</div></div>`).join("");
-  const out = (b.excluded || []).map(x => `<div class="excl"><div class="excl-vid">${x.video ? `<video src="${x.video}" poster="${x.poster}" controls muted playsinline preload="metadata"></video>` : `<img src="${x.poster}" alt="" loading="lazy">`}</div><div class="excl-body"><div class="excl-tags"><span class="pill">제외 · ${esc(x.tag)}</span><span class="mono" style="color:var(--muted);font-size:12px">${esc(x.span)}</span></div><b>${esc(x.title)}</b><p class="desc">${esc(x.reason)}</p></div></div>`).join("");
+  const out = (b.excluded || []).map((x, k) => `<div class="excl" id="excl-${b.key}-${k}"><div class="excl-vid">${x.video ? `<video src="${x.video}" poster="${x.poster}" controls muted playsinline preload="metadata"></video>` : `<img src="${x.poster}" alt="" loading="lazy">`}</div><div class="excl-body"><div class="excl-tags"><span class="pill">제외 · ${esc(x.tag)}</span><span class="mono" style="color:var(--muted);font-size:12px">${esc(x.span)}</span></div><b>${esc(x.title)}</b><p class="desc">${esc(x.reason)}</p></div></div>`).join("");
   const group = (title, note, body) => `<div class="card excl-wrap"><div class="excl-head"><h3 style="margin:0">${title}</h3><span class="note" style="margin:0">${note}</span></div>${body}</div>`;
   return (more ? group(`다음 순위 후보 ${b.more.length}편`, "상위 3편 다음으로 점수가 높은 숏폼입니다.", more) : "")
     + (out ? group(`제외한 후보 ${b.excluded.length}건`, "숏폼으로 쓰지 않는 구간 기준에 걸려 뺀 구간입니다.", out) : "");
