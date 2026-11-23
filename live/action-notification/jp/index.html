@@ -48,11 +48,6 @@ a{color:#0A62E6}a:hover{color:#0551C2}
 .lead strong{color:#22262A;font-weight:600}
 .caption{margin:10px 0 0;font-size:12px;color:#6F7985}
 
-/* draft banner */
-.draft{background:#FFF8E1;border-bottom:1px solid #F2DFA0;font-size:13px;line-height:1.6;color:#6B5310}
-.draft .in{max-width:1060px;margin:0 auto;padding:10px 20px;display:flex;gap:10px;align-items:flex-start}
-.draft b{color:#4A3A0A}
-.todo{display:inline-block;margin-left:6px;padding:1px 7px;border-radius:4px;background:#FFF1C2;border:1px solid #F2DFA0;font-size:11px;font-weight:600;color:#7A5D00;vertical-align:2px;white-space:nowrap}
 
 /* nav */
 nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:#FFFFFF;border-bottom:1px solid #E0E5EB}
@@ -260,7 +255,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 #action-notification .wrap-action-notification{display:flex;align-items:center;position:absolute;bottom:0;width:fit-content;cursor:pointer;
   margin-left:4.444cqw;margin-right:22.222cqw;
   font-size:3.889cqw;font-weight:700;line-height:120%;color:#FFFFFF;background-color:#292922;border-radius:999px;padding:1.111cqw 2.778cqw 1.111cqw 1.111cqw;
-  text-shadow:0 1px 0 rgba(0,0,0,0.05);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);will-change:transform,opacity;word-break:keep-all}
+  text-shadow:0 1px 0 rgba(0,0,0,0.05);backdrop-filter:blur(3px);-webkit-backdrop-filter:blur(3px);will-change:transform,opacity}
 #action-notification .action-icon{display:inline-block;flex-shrink:0;width:5.556cqw;height:5.556cqw;margin-right:1.389cqw;border-radius:50%;
   background-color:#FFFFFF;background-repeat:no-repeat;background-position:center;background-size:3.333cqw;background-image:var(--icon-cart)}
 #action-notification.purchased .action-icon{background-image:var(--icon-purchased)}
@@ -306,14 +301,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 @media (max-width:768px){.dm-fire{grid-template-columns:minmax(0,1fr)}.demo{gap:32px}}
 @media (prefers-reduced-motion: reduce){.dm-chat.new{animation:none}}
 </style>
-<style>:root{color-scheme:light} body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:#FFF8E1}</style>
-
-
-<!-- 검토용 초안 배너: 확정 후 이 블록과 .todo 표시를 지운다 -->
-<div class="draft"><div class="in">
-<span aria-hidden="true">📝</span>
-<span><b>レビュー用ドラフト (JP v1)</b> · 画面はデモデータです。公開前の確認：① 導入企業の実名事例 ② 名前のマスキング</span>
-</div></div>
+<style>:root{color-scheme:light}</style>
 
 <nav aria-label="セクション移動">
 <div class="nav-in">
@@ -557,7 +545,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <div class="ck">購入ガイド</div>
 <div class="indent"><div><span class="hint" style="margin-right:10px">表示方式</span><span class="radio on">トースト</span><span class="radio">チャット</span></div></div>
 <div class="ck">入室通知</div>
-<div class="indent"><div class="row"><span class="num" style="width:44px">10</span><span>毎秒、新しく入室した視聴者数を集計します。</span></div><div class="hint">5〜60秒。集計期間内の入室者が本人を含めて2人未満の場合は表示されません。</div></div>
+<div class="indent"><div class="row"><span class="num" style="width:44px">10</span><span>秒ごとに、新しく入室した視聴者数を集計します。</span></div><div class="hint">5〜60秒。集計期間内の入室者が本人を含めて2人未満の場合は表示されません。</div></div>
 </div>
 </div>
 </div>
@@ -595,7 +583,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <details open><summary>コンバージョン計測を使っていなくても利用できますか？</summary><p>はい。入室通知は計測なしで、申し込むだけですぐに使えます。カート追加・購入の通知は、コンバージョン計測を連携したあとにオンにできます。</p></details>
 <details open><summary>追加費用はかかりますか？</summary><p>かかりません。担当者にお申し込みいただければ、追加費用なしでご利用いただけます。</p></details>
 <details><summary>通知が画面の邪魔になりませんか？</summary><p>通知が多いときはまとめて表示し、1〜5秒で消えます。</p></details>
-<details><summary>視聴者の名前はどう表示されますか？</summary><p>顧客名がない場合は「N人が購入しました。」のように人数だけ表示されます。<span class="todo">要確認：マスキングポリシー</span></p></details>
+<details><summary>視聴者の名前はどう表示されますか？</summary><p>顧客名がない場合は「N人が購入しました。」のように人数だけ表示されます。</p></details>
 <details><summary>どの言語で表示されますか？</summary><p>視聴者のプレーヤー言語に合わせて、日本語・韓国語・英語などで表示されます。</p></details>
 </div>
 </div>
