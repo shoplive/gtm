@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<title>Shoplive ユーザーアクティビティ通知ガイド</title>
-<link rel="canonical" href="https://gtm.shoplive.cloud/live/action-notification/v1/jp/">
-<link rel="alternate" hreflang="ko" href="https://gtm.shoplive.cloud/live/action-notification/v1/kr/">
-<link rel="alternate" hreflang="ja" href="https://gtm.shoplive.cloud/live/action-notification/v1/jp/">
-<link rel="alternate" hreflang="en" href="https://gtm.shoplive.cloud/live/action-notification/v1/us/">
+<title>Shoplive User Activity Notifications Guide</title>
+<link rel="canonical" href="https://gtm.shoplive.cloud/live/action-notification/us/">
+<link rel="alternate" hreflang="ko" href="https://gtm.shoplive.cloud/live/action-notification/kr/">
+<link rel="alternate" hreflang="ja" href="https://gtm.shoplive.cloud/live/action-notification/jp/">
+<link rel="alternate" hreflang="en" href="https://gtm.shoplive.cloud/live/action-notification/us/">
 <script>
 // 옛 주소(shoplive.github.io/gtm/*)로 들어오면 정규 주소로 보낸다 (clip_maker 와 동일 규칙).
 (function () {
@@ -16,30 +16,28 @@
   location.replace("https://gtm.shoplive.cloud" + path + location.search + location.hash);
 })();
 </script>
-<meta name="description" content="視聴者の入室・カート追加・購入をライブ配信画面にリアルタイムで表示し、購買ムードをつくる Shoplive ユーザーアクティビティ通知ガイド。追加費用なし、コンバージョン計測がなくても入室通知から始められます。">
-<link rel="icon" href="../../../../favicon.svg" type="image/svg+xml">
+<meta name="description" content="Show viewers joining, adding to cart, and buying right on your Shoplive live stream. No extra cost, and Entry Notification works even without conversion tracking.">
+<link rel="icon" href="../../../favicon.svg" type="image/svg+xml">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Shoplive">
-<meta property="og:title" content="Shoplive ユーザーアクティビティ通知ガイド">
-<meta property="og:description" content="視聴者の入室・カート追加・購入をライブ配信画面にリアルタイムで表示し、購買ムードをつくる Shoplive ユーザーアクティビティ通知ガイド。追加費用なし、コンバージョン計測がなくても入室通知から始められます。">
-<meta property="og:url" content="https://gtm.shoplive.cloud/live/action-notification/v1/jp/">
+<meta property="og:title" content="Shoplive User Activity Notifications Guide">
+<meta property="og:description" content="Show viewers joining, adding to cart, and buying right on your Shoplive live stream. No extra cost, and Entry Notification works even without conversion tracking.">
+<meta property="og:url" content="https://gtm.shoplive.cloud/live/action-notification/us/">
 <meta property="og:image" content="https://gtm.shoplive.cloud/video_editor/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:locale" content="ja_JP">
+<meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Shoplive ユーザーアクティビティ通知ガイド">
+<meta name="twitter:title" content="Shoplive User Activity Notifications Guide">
 <meta name="twitter:image" content="https://gtm.shoplive.cloud/video_editor/assets/og.png">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap">
 </head>
 <body>
 <style>
 html{scroll-behavior:smooth}
 section[id]{scroll-margin-top:52px}
 *{box-sizing:border-box}
-body{margin:0;background:#F3F5F7;word-break:keep-all;-webkit-font-smoothing:antialiased;font-family:'Pretendard','Noto Sans JP','Hiragino Sans','Hiragino Kaku Gothic ProN','Yu Gothic','Meiryo',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#343A42}
+body{margin:0;background:#F3F5F7;word-break:keep-all;-webkit-font-smoothing:antialiased;font-family:'Pretendard','Inter',-apple-system,BlinkMacSystemFont,'Apple SD Gothic Neo','Malgun Gothic',sans-serif;color:#343A42}
 a{color:#0A62E6}a:hover{color:#0551C2}
 .wrap{max-width:980px;margin:0 auto;padding:72px 40px}
 .eyebrow{display:inline-block;font-size:12px;font-weight:600;color:#FFFFFF;background:#C52628;padding:4px 12px;border-radius:4px;margin-bottom:16px;letter-spacing:0.2px}
@@ -244,8 +242,6 @@ footer .wrap{padding:24px 16px}
 .case .k .tag{margin-left:6px;letter-spacing:0;vertical-align:1px}
 .tip-line{font-size:14px !important;color:#525B66;background:#F3F5F7;border-radius:8px;padding:10px 12px}
 .case h3{margin-bottom:12px}
-body,#action-notification .wrap-action-notification{word-break:normal;line-break:strict;overflow-wrap:anywhere}
-@supports (word-break:auto-phrase){body,#action-notification .wrap-action-notification{word-break:auto-phrase}}
 </style>
 <style>
 /* ── 화면 예시 (실제 플레이어 알림 재현) ──
@@ -312,25 +308,25 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <!-- 검토용 초안 배너: 확정 후 이 블록과 .todo 표시를 지운다 -->
 <div class="draft"><div class="in">
 <span aria-hidden="true">📝</span>
-<span><b>レビュー用ドラフト (JP v1)</b> · 画面はデモデータです。公開前の確認：① 導入企業の実名事例 ② 名前のマスキング</span>
+<span><b>Review draft (US v1)</b> · Screens use demo data. Check before publishing: ① named customer cases ② name masking</span>
 </div></div>
 
-<nav aria-label="セクション移動">
+<nav aria-label="Sections">
 <div class="nav-in">
 <div class="nav-brand">
 <a href="https://www.shoplive.cloud/" target="_blank" rel="noopener" aria-label="shoplive" style="display:flex;align-items:center;text-decoration:none;font-size:19px;font-weight:800;letter-spacing:-0.6px;color:#18181B">shoplive</a>
 <span class="nav-sep"></span>
-<span class="nav-title">ユーザーアクティビティ通知ガイド</span>
+<span class="nav-title">User Activity Notifications Guide</span>
 </div>
 <div class="navtabs">
-<a class="navtab" href="#intro">概要</a>
-<a class="navtab" href="#types">通知の種類</a>
-<a class="navtab" href="#cases">活用例</a>
-<a class="navtab" href="#demo">画面例</a>
-<a class="navtab" href="#how">使い方</a>
+<a class="navtab" href="#intro">Overview</a>
+<a class="navtab" href="#types">Types</a>
+<a class="navtab" href="#cases">Use cases</a>
+<a class="navtab" href="#demo">Demo</a>
+<a class="navtab" href="#how">How to use</a>
 <a class="navtab" href="#faq">FAQ</a>
 </div>
-<details class="lang-sw"><summary aria-label="現在の言語: 日本語"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></svg>日本語</summary><div class="lang-menu"><a href="../kr/" hreflang="ko" lang="ko">한국어</a><a href="../jp/" hreflang="ja" lang="ja" aria-current="page">日本語</a><a href="../us/" hreflang="en" lang="en">English</a></div></details>
+<details class="lang-sw"><summary aria-label="Current language: English"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#525B66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18"></path><path d="M12 3a14 14 0 0 1 0 18a14 14 0 0 1 0-18z"></path></svg>English</summary><div class="lang-menu"><a href="../kr/" hreflang="ko" lang="ko">한국어</a><a href="../jp/" hreflang="ja" lang="ja">日本語</a><a href="../us/" hreflang="en" lang="en" aria-current="page">English</a></div></details>
 </div>
 </nav>
 
@@ -339,33 +335,33 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <div class="wrap" style="padding-top:72px;max-width:1100px">
 <div class="hero">
 <div class="hero-txt">
-<span class="eyebrow" style="font-size:13px">SHOPLIVE ユーザーアクティビティ通知</span>
-<h1>カート追加・購入・入室を<br>配信画面にすぐ表示します</h1>
-<p class="lead">ほかの視聴者の購入が<strong>「私も買ってみようかな」</strong>のきっかけになります。</p>
-<div class="badges"><span class="badge">追加費用なし</span><span class="badge">コンバージョン計測なしでも始められる</span></div>
-<div style="margin-top:28px"><a class="btn" href="#how">使い方を見る</a></div>
+<span class="eyebrow" style="font-size:13px">SHOPLIVE USER ACTIVITY NOTIFICATIONS</span>
+<h1>Show who’s adding, buying,<br>and joining, live on stream</h1>
+<p class="lead">Other viewers’ purchases become the nudge that says <strong>“maybe I should buy one too.”</strong></p>
+<div class="badges"><span class="badge">No extra cost</span><span class="badge">Start without conversion tracking</span></div>
+<div style="margin-top:28px"><a class="btn" href="#how">See how it works</a></div>
 </div>
 
 <div class="hero-vis">
-<div class="phone" role="img" aria-label="ライブプレーヤーの画面例：入室・カート追加・購入完了の通知が順に表示される">
+<div class="phone" role="img" aria-label="Live player example: entry, add-to-cart, and purchase notifications appear in turn">
 <div class="pl-bg"></div><div class="pl-host"></div><div class="pl-body"></div><div class="pl-shade"></div>
 <div class="pl-top"><span class="pl-live">LIVE</span><span class="pl-view"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg>1,284</span><span class="pl-x"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span></div>
 <div class="toasts">
-<div class="toast join"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></i>たった今、佐*木さん他、12人が入室しました。</div>
-<div class="toast t-cart"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></i>高*橋さん他、3人がカートに追加しました。</div>
-<div class="toast t-buy"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>鈴*木さんが購入しました。</div>
+<div class="toast join"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></i>Em*** and 12 others just joined.</div>
+<div class="toast t-cart"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></i>Ja***, along with 3 others, just added this to their cart.</div>
+<div class="toast t-buy"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>Ol*** just completed their purchase.</div>
 </div>
 <div class="pl-chat">
-<div><b>soo_22</b>ほかの色も見せてください！</div>
-<div><b>miya</b>今注文したらいつ届きますか？</div>
-<div><b>jjun</b>今カートに入れました〜</div>
+<div><b>soo_22</b>Can you show more colors?</div>
+<div><b>miya</b>If I order now, when will it arrive?</div>
+<div><b>jjun</b>Just added it to my cart!</div>
 </div>
 <div class="pl-side"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7-4.4-9.3-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg></span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></span></div>
-<div class="pl-prod"><span class="pl-thumb"></span><span class="pl-ptxt">カシミヤ ラウンドネックニット<span>¥4,290</span></span><span class="pl-buy">購入する</span></div>
+<div class="pl-prod"><span class="pl-thumb"></span><span class="pl-ptxt">Cashmere Crew-Neck Knit<span>$29.00</span></span><span class="pl-buy">Buy now</span></div>
 </div>
-<div class="chip" style="top:70px;left:-8px">入室・カート追加・購入の3種類</div>
-<div class="chip" style="bottom:110px;right:-8px">複数件は「他、N人」にまとめて</div>
-<p class="caption">画面例 · デモデータ</p>
+<div class="chip" style="top:70px;left:-8px">3 types: entry, cart, purchase</div>
+<div class="chip" style="bottom:110px;right:-8px">Grouped as “and N others”</div>
+<p class="caption">Example screen · Demo data</p>
 </div>
 </div>
 </div>
@@ -374,44 +370,44 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <!-- ── 02 TYPES + IMPACT ── -->
 <section id="types" style="background:#FFFFFF;border-top:1px solid #E0E5EB;border-bottom:1px solid #E0E5EB">
 <div class="wrap">
-<span class="eyebrow">通知の種類</span>
-<h2 class="h2">通知は3種類です</h2>
-<p class="lead">複数の通知が同時に発生すると「○○さん他、N人」にまとめて表示します。</p>
+<span class="eyebrow">Types</span>
+<h2 class="h2">Three types of notifications</h2>
+<p class="lead">When several happen at once, they’re grouped as “○○ and N others.”</p>
 
 <div class="types">
 <div class="card pick">
-<div class="sample"><div class="toast join"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></i>たった今、佐*木さん他、12人が入室しました。</div></div>
-<h3>入室通知</h3>
-<p>5〜60秒ごとに入室した人数をまとめて知らせます。</p>
-<div class="meta"><span class="tag ok">計測連携なしですぐ使える</span></div>
+<div class="sample"><div class="toast join"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></i>Em*** and 12 others just joined.</div></div>
+<h3>Entry Notification</h3>
+<p>Counts new viewers every 5–60 seconds and announces them together.</p>
+<div class="meta"><span class="tag ok">Works without tracking</span></div>
 </div>
 <div class="card">
-<div class="sample"><div class="toast t-cart"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></i>高*橋さん他、3人がカートに追加しました。</div></div>
-<h3>カート追加通知</h3>
-<p>商品がカートに追加されると知らせます。</p>
-<div class="meta"><span class="tag need">コンバージョン計測の連携が必要</span></div>
+<div class="sample"><div class="toast t-cart"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></i>Ja***, along with 3 others, just added this to their cart.</div></div>
+<h3>Add to Cart Notification</h3>
+<p>Announces when a viewer adds a product to their cart.</p>
+<div class="meta"><span class="tag need">Requires conversion tracking</span></div>
 </div>
 <div class="card">
-<div class="sample"><div class="toast t-buy"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>鈴*木さんが購入しました。</div></div>
-<h3>購入通知</h3>
-<p>購入が完了すると知らせます。チャットに残すこともできます。</p>
-<div class="meta"><span class="tag need">コンバージョン計測の連携が必要</span></div>
+<div class="sample"><div class="toast t-buy"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>Ol*** just completed their purchase.</div></div>
+<h3>Purchase Notification</h3>
+<p>Announces completed purchases. Can also be posted in chat.</p>
+<div class="meta"><span class="tag need">Requires conversion tracking</span></div>
 </div>
 </div>
 
 <div class="callout">
 <div class="callout-txt">
-<h3>コンバージョン計測を使っていなくても大丈夫。入室通知から始めましょう</h3>
-<p>連携作業は不要で、申し込むだけですぐにオンにできます。あとから計測を連携すれば、カート追加・購入の通知も使えます。</p>
+<h3>Not using conversion tracking? Start with Entry Notification</h3>
+<p>No integration work: just request it and turn it on. Connect tracking later to add cart and purchase notifications.</p>
 </div>
-<a class="btn" href="#how">申し込み方法を見る</a>
+<a class="btn" href="#how">How to request</a>
 </div>
 
-<p class="lead" style="margin-top:32px">通知を使うと、次のような効果が期待できます。</p>
+<p class="lead" style="margin-top:32px">What notifications do for your stream:</p>
 <div class="gains">
-<div class="gain"><b>購買ムード</b>今まさに売れていることを伝えます</div>
-<div class="gain"><b>購入の後押し</b>迷っている視聴者の背中を押します</div>
-<div class="gain"><b>配信の盛り上がり</b>人が集まる配信に見えます</div>
+<div class="gain"><b>Buying mood</b>Shows that things are selling right now</div>
+<div class="gain"><b>Purchase decisions</b>Nudges hesitant viewers to act</div>
+<div class="gain"><b>Live energy</b>Makes the stream feel busy</div>
 </div>
 </div>
 </section>
@@ -419,38 +415,38 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <!-- ── 03 CASES ── -->
 <section id="cases">
 <div class="wrap">
-<span class="eyebrow">活用例</span>
-<h2 class="h2">こんなときにオンにしましょう</h2>
+<span class="eyebrow">Use cases</span>
+<h2 class="h2">When to turn it on</h2>
 
 <div class="cases">
 <div class="case">
 <div class="case-txt">
-<div class="k">配信のオープニング<span class="tag ok">計測連携なしでOK</span></div>
-<h3>配信の序盤から視聴者の参加を促したいなら</h3>
-<div class="try"><strong>入室通知</strong>の集計間隔を短く（例：10秒）設定しましょう。</div>
+<div class="k">Stream opening<span class="tag ok">No tracking needed</span></div>
+<h3>Want viewers engaged from the very start?</h3>
+<div class="try">Set a short counting interval for <strong>Entry Notification</strong> (e.g., 10 seconds).</div>
 </div>
-<div class="case-vis"><div class="sample"><div class="toast join"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></i>たった今、山*本さん他、27人が入室しました。</div></div></div>
-</div>
-
-<div class="case">
-<div class="case-txt">
-<div class="k">タイムセール・数量限定</div>
-<h3>購入を特定の時間帯に集中させたいなら</h3>
-<div class="try"><strong>カート追加・購入の通知</strong>をオンにすると、売り切れ間近のムードをつくれます。</div>
-</div>
-<div class="case-vis"><div class="sample" style="flex-direction:column;align-items:flex-start;gap:8px"><div class="toast t-cart"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></i>中*村さん他、18人がカートに追加しました。</div><div class="toast t-buy"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>小*林さん他、9人が購入しました。</div></div></div>
+<div class="case-vis"><div class="sample"><div class="toast join"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></i>Li*** and 27 others just joined.</div></div></div>
 </div>
 
 <div class="case">
 <div class="case-txt">
-<div class="k">人気商品をアピール</div>
-<h3>リアルタイムの人気商品を強調したいなら</h3>
-<div class="try"><strong>購入通知</strong>を「チャット」表示にすると、注文が商品名とともにチャットに残ります。</div>
+<div class="k">Time deals · Limited stock</div>
+<h3>Want purchases concentrated in a short window?</h3>
+<div class="try">Turn on <strong>cart and purchase notifications</strong> to build a “selling out fast” feel.</div>
 </div>
-<div class="case-vis"><div class="chatbox" role="img" aria-label="チャット表示の購入通知の例">
-<div><b>yuna</b>ベージュ、サイズはゆったりめですか？</div>
-<div class="buy">鈴*木さんがカシミヤ ラウンドネックニットを購入しました。</div>
-<div><b>hj_lee</b>私も今買いました！</div>
+<div class="case-vis"><div class="sample" style="flex-direction:column;align-items:flex-start;gap:8px"><div class="toast t-cart"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 4h2l2.4 11h11l2-8H6.2"/><circle cx="9" cy="20" r="1.4"/><circle cx="18" cy="20" r="1.4"/></svg></i>No***, along with 18 others, just added this to their cart.</div><div class="toast t-buy"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 13H6L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg></i>Mi***, along with 9 others, have completed their purchase.</div></div></div>
+</div>
+
+<div class="case">
+<div class="case-txt">
+<div class="k">Spotlight best sellers</div>
+<h3>Want to highlight what’s hot right now?</h3>
+<div class="try">Switch <strong>Purchase Notification</strong> to chat mode and each order stays in chat with the product name.</div>
+</div>
+<div class="case-vis"><div class="chatbox" role="img" aria-label="Example of a purchase notification in chat mode">
+<div><b>yuna</b>Does the beige run large?</div>
+<div class="buy">Ol*** just purchased Cashmere Crew-Neck Knit.</div>
+<div><b>hj_lee</b>I just bought one too!</div>
 </div></div>
 </div>
 </div>
@@ -460,13 +456,13 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <!-- ── 03-1 DEMO ── -->
 <section id="demo" style="background:#FFFFFF;border-top:1px solid #E0E5EB;border-bottom:1px solid #E0E5EB">
 <div class="wrap">
-<span class="eyebrow">画面例</span>
-<h2 class="h2">実際のプレーヤーではこう表示されます</h2>
-<p class="lead">通知の見た目・表示位置・アニメーション・文言を<strong>実際のプレーヤーと同じ形で確認できます。</strong>ボタンを押して試してみてください。</p>
+<span class="eyebrow">Demo</span>
+<h2 class="h2">How it looks in the real player</h2>
+<p class="lead">See the notification’s look, position, animation, and wording <strong>as they appear in the real player.</strong> Press the buttons to try it.</p>
 
 <div class="demo">
 <div class="demo-vis">
-<div class="phone dm-phone" aria-label="ライブプレーヤーの画面例：チャット一覧のすぐ上にユーザーアクティビティ通知が表示される">
+<div class="phone dm-phone" aria-label="Live player example: notifications appear just above the chat list">
 <canvas class="dm-scene" id="dm-scene" aria-hidden="true"></canvas><div class="pl-shade"></div>
 <div class="pl-top"><span class="pl-live">LIVE</span><span class="pl-view"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"/><circle cx="12" cy="12" r="3"/></svg><span id="dm-viewers">1,284</span></span><span class="pl-x"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span></div>
 <div class="dm-stack">
@@ -474,32 +470,32 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <div id="chatting-list"></div>
 </div>
 <div class="pl-side"><span><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff"><path d="M12 21s-7-4.4-9.3-9A5.3 5.3 0 0 1 12 6a5.3 5.3 0 0 1 9.3 6c-2.3 4.6-9.3 9-9.3 9z"/></svg></span><span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v7a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-7"/><path d="M16 6l-4-4-4 4"/><path d="M12 2v13"/></svg></span></div>
-<div class="pl-prod"><span class="pl-thumb"></span><span class="pl-ptxt">カシミヤ ラウンドネックニット<span>¥4,290</span></span><span class="pl-buy">購入する</span></div>
+<div class="pl-prod"><span class="pl-thumb"></span><span class="pl-ptxt">Cashmere Crew-Neck Knit<span>$29.00</span></span><span class="pl-buy">Buy now</span></div>
 </div>
-<p class="caption">画面例 · デモデータ · 通知をタップするとすぐ閉じます</p>
+<p class="caption">Example screen · Demo data · Tap a notification to close it</p>
 </div>
 
 <div class="demo-ctl">
 <div class="win">
-<div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">通知を送ってみる</span></div>
+<div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">Send a notification</span></div>
 <div class="form">
 <div class="dm-fire">
-<button class="dm-btn" type="button" data-fire="join">入室通知<span>佐*木さん他、12人</span></button>
-<button class="dm-btn" type="button" data-fire="cartIn">カート追加<span>高*橋さん他、3人</span></button>
-<button class="dm-btn" type="button" data-fire="purchased">購入<span>鈴*木さん</span></button>
-<button class="dm-btn wide" type="button" data-fire="burst">一度に集中したとき<span>1秒以内にカート追加3件・購入2件・入室2件が届いたときの表示を確認できます</span></button>
+<button class="dm-btn" type="button" data-fire="join">Entry<span>Em*** and 12 others</span></button>
+<button class="dm-btn" type="button" data-fire="cartIn">Add to cart<span>Ja*** and 3 others</span></button>
+<button class="dm-btn" type="button" data-fire="purchased">Purchase<span>Ol***</span></button>
+<button class="dm-btn wide" type="button" data-fire="burst">When it gets busy<span>See how 3 cart adds, 2 purchases, and 2 entry updates within 1 second are shown</span></button>
 </div>
-<div class="row"><span class="lbl">表示時間</span><span class="dm-step"><button type="button" id="dm-minus" aria-label="1秒減らす">−</button><output id="dm-stay" aria-live="polite">3</output><button type="button" id="dm-plus" aria-label="1秒増やす">+</button></span><span>秒</span><span class="hint">1〜5秒</span></div>
-<div class="row" role="radiogroup" aria-label="購入通知の表示方式"><span class="lbl">購入通知の表示</span><button class="dm-radio" type="button" role="radio" aria-checked="true" data-mode="toast">トースト</button><button class="dm-radio" type="button" role="radio" aria-checked="false" data-mode="chat">チャット</button></div>
-<div class="row"><span class="lbl">顧客名の表示</span><button class="dm-sw" type="button" role="switch" aria-checked="true" id="dm-name" aria-label="顧客名の表示"></button><span class="hint">オフにすると「N人が…」のように人数だけ表示されます</span></div>
-<div class="row"><span class="lbl">自動再生</span><button class="dm-sw" type="button" role="switch" aria-checked="true" id="dm-auto" aria-label="自動再生"></button><span class="hint">配信中のように数秒ごとに通知が届きます</span></div>
+<div class="row"><span class="lbl">Duration</span><span class="dm-step"><button type="button" id="dm-minus" aria-label="Decrease by 1 second">−</button><output id="dm-stay" aria-live="polite">3</output><button type="button" id="dm-plus" aria-label="Increase by 1 second">+</button></span><span>sec</span><span class="hint">1–5 sec</span></div>
+<div class="row" role="radiogroup" aria-label="Purchase notification display type"><span class="lbl">Purchase display</span><button class="dm-radio" type="button" role="radio" aria-checked="true" data-mode="toast">Toast</button><button class="dm-radio" type="button" role="radio" aria-checked="false" data-mode="chat">Chat</button></div>
+<div class="row"><span class="lbl">Show names</span><button class="dm-sw" type="button" role="switch" aria-checked="true" id="dm-name" aria-label="Show names"></button><span class="hint">When off, only the count is shown</span></div>
+<div class="row"><span class="lbl">Autoplay</span><button class="dm-sw" type="button" role="switch" aria-checked="true" id="dm-auto" aria-label="Autoplay"></button><span class="hint">Notifications arrive every few seconds, like a live stream</span></div>
 </div>
 </div>
 
 <div class="win">
-<div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">通知ログ</span></div>
+<div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">Notification log</span></div>
 <div class="form" style="gap:12px">
-<div class="dm-state"><span class="tag" id="dm-st-show">表示なし</span><span class="tag" id="dm-st-queue">待機 0件</span></div>
+<div class="dm-state"><span class="tag" id="dm-st-show">None showing</span><span class="tag" id="dm-st-queue">Queued 0</span></div>
 <ol class="dm-log" id="dm-log" aria-live="polite"></ol>
 </div>
 </div>
@@ -507,10 +503,10 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 </div>
 
 <div class="gains">
-<div class="gain"><b>位置</b>チャットのすぐ上、左側に表示</div>
-<div class="gain"><b>見た目</b>入室は淡く、カート追加・購入は濃く</div>
-<div class="gain"><b>動き</b>左から入り、同じ方向へ消えます</div>
-<div class="gain"><b>通知が多いとき</b>種類ごとにまとめて1件ずつ表示</div>
+<div class="gain"><b>Position</b>Just above the chat, on the left</div>
+<div class="gain"><b>Style</b>Entry is subtle; cart and purchase stand out</div>
+<div class="gain"><b>Motion</b>Slides in from the left and exits the same way</div>
+<div class="gain"><b>When busy</b>Merged by type and shown one at a time</div>
 </div>
 </div>
 </section>
@@ -518,20 +514,20 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <!-- ── 04 HOW ── -->
 <section id="how">
 <div class="wrap">
-<span class="eyebrow">使い方</span>
-<h2 class="h2">3ステップで完了</h2>
+<span class="eyebrow">How to use</span>
+<h2 class="h2">Three steps</h2>
 
 <div class="step">
 <div class="step-txt">
 <div class="no">STEP 01</div>
-<h3>利用を申し込む</h3>
-<p>Shoplive の担当者にお申し込みください。<strong>追加費用はかかりません。</strong></p>
+<h3>Request access</h3>
+<p>Ask your Shoplive contact to enable it. <strong>There’s no extra cost.</strong></p>
 </div>
 <div class="step-vis">
 <div class="check">
-<div class="check-row"><span class="ic ok">✓</span><span><b>費用</b>追加費用なしで使えます。</span></div>
-<div class="check-row"><span class="ic ok">✓</span><span><b>入室通知</b>コンバージョン計測がなくても、申し込むだけですぐ使えます。</span></div>
-<div class="check-row"><span class="ic need">!</span><span><b>カート追加・購入の通知</b>コンバージョン計測の連携が必要です。</span></div>
+<div class="check-row"><span class="ic ok">✓</span><span><b>Cost</b>Included at no extra cost.</span></div>
+<div class="check-row"><span class="ic ok">✓</span><span><b>Entry Notification</b>Works right away, even without conversion tracking.</span></div>
+<div class="check-row"><span class="ic need">!</span><span><b>Cart and purchase notifications</b>Require conversion tracking.</span></div>
 </div>
 </div>
 </div>
@@ -539,48 +535,48 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <div class="step">
 <div class="step-txt">
 <div class="no">STEP 02</div>
-<h3>配信でオンにする</h3>
-<p><strong>配信管理 &gt; アクション通知</strong>タブでオンにし、使う通知を選びます。</p>
-<p class="tip-line">💡 <strong>設定 &gt; UI</strong>タブにデフォルト値を保存すると、新しい配信に自動で適用されます。</p>
+<h3>Turn it on for a campaign</h3>
+<p>In the <strong>Campaign management &gt; Action Notify</strong> tab, turn it on and pick the notifications to use.</p>
+<p class="tip-line">💡 Save defaults in <strong>Settings &gt; UI</strong> and they apply to new campaigns automatically.</p>
 </div>
 <div class="step-vis">
-<div class="win" role="img" aria-label="配信管理画面のアクション通知設定の例">
-<div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">Shoplive 管理画面 · 配信管理 · アクション通知</span></div>
+<div class="win" role="img" aria-label="Example of Action Notify settings in Campaign management">
+<div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">Shoplive Admin · Campaign management · Action Notify</span></div>
 <div class="form">
-<h4>アクション通知</h4>
-<div class="row"><span class="lbl">ユーザーアクティビティ通知の設定</span><span class="sw"></span></div>
-<div class="row"><span class="num" style="width:44px">3</span><span>秒間メッセージを表示します。</span></div>
-<div class="hint" style="margin-top:-8px">1秒～5秒まで入力可能です。</div>
-<div class="hint" style="font-weight:600;color:#22262A;font-size:13px">ユーザーアクティビティによる通知設定</div>
+<h4>Action Notification</h4>
+<div class="row"><span class="lbl">Action Notification Controls</span><span class="sw"></span></div>
+<div class="row"><span class="num" style="width:44px">3</span><span>seconds, the message will be displayed.</span></div>
+<div class="hint" style="margin-top:-8px">You can set input duration from 1 second to 5 seconds</div>
+<div class="hint" style="font-weight:600;color:#22262A;font-size:13px">Manage Action Notification by User Action</div>
 <div class="sub">
-<div class="ck">カートに入れるガイド</div>
-<div class="ck">購入ガイド</div>
-<div class="indent"><div><span class="hint" style="margin-right:10px">表示方式</span><span class="radio on">トースト</span><span class="radio">チャット</span></div></div>
-<div class="ck">入室通知</div>
-<div class="indent"><div class="row"><span class="num" style="width:44px">10</span><span>毎秒、新しく入室した視聴者数を集計します。</span></div><div class="hint">5〜60秒。集計期間内の入室者が本人を含めて2人未満の場合は表示されません。</div></div>
+<div class="ck">Add to Cart Notification</div>
+<div class="ck">Purchase Notification</div>
+<div class="indent"><div><span class="hint" style="margin-right:10px">Display type</span><span class="radio on">Toast</span><span class="radio">Chat</span></div></div>
+<div class="ck">Entry Notification</div>
+<div class="indent"><div class="row"><span class="num" style="width:44px">10</span><span>Counts the number of new viewers who joined every second.</span></div><div class="hint">5–60 seconds. Not shown if fewer than 2 viewers (including yourself) join during the period.</div></div>
 </div>
 </div>
 </div>
-<p class="caption">画面例 · 項目名は実際の管理画面に合わせていますが、配置は異なる場合があります · コンバージョン計測を連携していない場合は入室通知のみ表示されます</p>
+<p class="caption">Example screen · Labels match the actual admin; layout may differ · Without conversion tracking, only Entry Notification is shown</p>
 </div>
 </div>
 
 <div class="step">
 <div class="step-txt">
 <div class="no">STEP 03</div>
-<h3>配信中に確認する</h3>
-<p><strong>コンソール</strong>で表示された通知を確認し、その場でオン/オフできます。</p>
+<h3>Monitor during the stream</h3>
+<p>In the <strong>Console</strong>, see notifications as they go out and toggle them instantly.</p>
 </div>
 <div class="step-vis">
-<div class="win"><div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">コンソール · チャット管理</span></div>
-<div style="display:flex;border-bottom:1px solid #EAEDF1;font-size:13px;font-weight:500"><span style="padding:10px 16px;color:#6F7985">チャット</span><span style="padding:10px 16px;color:#22262A;border-bottom:2px solid #22262A">アクション通知</span></div>
+<div class="win"><div class="win-bar"><span class="d"></span><span class="d"></span><span class="d"></span><span class="t">Console · Manage Chat Settings</span></div>
+<div style="display:flex;border-bottom:1px solid #EAEDF1;font-size:13px;font-weight:500"><span style="padding:10px 16px;color:#6F7985">Chat</span><span style="padding:10px 16px;color:#22262A;border-bottom:2px solid #22262A">Action Notify</span></div>
 <div class="form" style="gap:10px">
-<div class="row" style="gap:14px;padding-bottom:10px;border-bottom:1px solid #EAEDF1"><span class="hint">通知オン</span><span class="row" style="gap:6px">カート追加 <span class="sw"></span></span><span class="row" style="gap:6px">購入完了 <span class="sw"></span></span></div>
-<div style="display:flex;justify-content:space-between;gap:8px"><span>たった今、佐*木さん他、12人が入室しました。</span><span class="hint">20:01</span></div>
-<div style="display:flex;justify-content:space-between;gap:8px"><span>高*橋さん他、3人がカートに追加しました。</span><span class="hint">20:03</span></div>
-<div style="display:flex;justify-content:space-between;gap:8px"><span>鈴*木さんがカシミヤ ラウンドネックニットを購入しました。</span><span class="hint">20:04</span></div>
+<div class="row" style="gap:14px;padding-bottom:10px;border-bottom:1px solid #EAEDF1"><span class="hint">Turn on</span><span class="row" style="gap:6px">Add to cart <span class="sw"></span></span><span class="row" style="gap:6px">Purchase <span class="sw"></span></span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span>Em*** and 12 others just joined.</span><span class="hint">20:01</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span>Ja***, along with 3 others, just added this to their cart.</span><span class="hint">20:03</span></div>
+<div style="display:flex;justify-content:space-between;gap:8px"><span>Ol*** just purchased Cashmere Crew-Neck Knit.</span><span class="hint">20:04</span></div>
 </div></div>
-<p class="caption">画面例 · デモデータ</p>
+<p class="caption">Example screen · Demo data</p>
 </div>
 </div>
 </div>
@@ -590,18 +586,18 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 <section id="faq" style="background:#FFFFFF;border-top:1px solid #E0E5EB">
 <div class="wrap">
 <span class="eyebrow">FAQ</span>
-<h2 class="h2">よくある質問</h2>
+<h2 class="h2">Frequently asked questions</h2>
 <div class="faq">
-<details open><summary>コンバージョン計測を使っていなくても利用できますか？</summary><p>はい。入室通知は計測なしで、申し込むだけですぐに使えます。カート追加・購入の通知は、コンバージョン計測を連携したあとにオンにできます。</p></details>
-<details open><summary>追加費用はかかりますか？</summary><p>かかりません。担当者にお申し込みいただければ、追加費用なしでご利用いただけます。</p></details>
-<details><summary>通知が画面の邪魔になりませんか？</summary><p>通知が多いときはまとめて表示し、1〜5秒で消えます。</p></details>
-<details><summary>視聴者の名前はどう表示されますか？</summary><p>顧客名がない場合は「N人が購入しました。」のように人数だけ表示されます。<span class="todo">要確認：マスキングポリシー</span></p></details>
-<details><summary>どの言語で表示されますか？</summary><p>視聴者のプレーヤー言語に合わせて、日本語・韓国語・英語などで表示されます。</p></details>
+<details open><summary>Do I need conversion tracking?</summary><p>No. Entry Notification works as soon as it’s enabled, without tracking. Cart and purchase notifications can be turned on once conversion tracking is connected.</p></details>
+<details open><summary>Is there an extra cost?</summary><p>No. Ask your Shoplive contact and it’s enabled at no extra cost.</p></details>
+<details><summary>Will notifications cover the stream?</summary><p>When there are many, they’re grouped into one, and each disappears after 1–5 seconds.</p></details>
+<details><summary>How are viewer names shown?</summary><p>If there’s no customer name, only the count is shown, e.g. “N shopper(s) completed their purchase.” <span class="todo">To confirm: masking policy</span></p></details>
+<details><summary>Which languages are supported?</summary><p>Notifications follow the viewer’s player language, including English, Japanese, and Korean.</p></details>
 </div>
 </div>
 </section>
 
-<footer><div class="wrap"><span>© 2026 Shoplive Pte. Ltd.</span><span>最終更新：2026年11月20日</span></div></footer>
+<footer><div class="wrap"><span>© 2026 Shoplive Pte. Ltd.</span><span>Last updated: November 20, 2026</span></div></footer>
 <script>
 (() => {
   // 아이콘: 플레이어 public/images/*.svg 원본
@@ -616,17 +612,17 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
 
   // 문구: 플레이어 src/lang/{ko,ja,en}.json 원문
   const MESSAGES = {
-    ja: {
-      join: { singleName: "たった今、{}さんが入室しました！", singleCount: "たった今、{}人が入室しました。", sub: "たった今、{}さん他、{}人が入室しました。" },
-      cartIn: { singleName: "{}さんがカートに追加しました！", singleCount: "{}人がカートに追加しました。", sub: "{}さん他、{}人がカートに追加しました。" },
-      purchased: { singleName: "{}さんが購入しました。", singleCount: "{}人が購入しました。", sub: "{}さん他、{}人が購入しました。" },
-      chatPurchase: { name: "{}さんが{}を購入しました。", count: "{}人が{}を購入しました。" }, countUnit: (n) => `${n}人`, product: "カシミヤ ラウンドネックニット",
+    en: {
+      join: { singleName: "{} just joined.", singleCount: "{} viewer(s) just joined.", sub: "{} and {} others just joined." },
+      cartIn: { singleName: "{} just added it to your cart.", singleCount: "{} shopper(s) just added this to their cart.", sub: "{}, along with {} others, just added this to their cart." },
+      purchased: { singleName: "{} just completed their purchase.", singleCount: "{} shopper(s) completed their purchase.", sub: "{}, along with {} others, have completed their purchase." },
+      chatPurchase: { name: "{} just purchased {}.", count: "{} shopper(s) purchased {}." }, countUnit: (n) => `${n} shopper(s)`, product: "Cashmere Crew-Neck Knit",
     },
   };
-  const LABEL = { join: "入室", cartIn: "カート", purchased: "購入" };
+  const LABEL = { join: "Entry", cartIn: "Cart", purchased: "Purchase" };
   const TYPES = ["cartIn", "purchased", "join"];
   const SNAPSHOT_TYPES = ["join"];
-  const state = { lang: "ja", mode: "toast", withName: true, stay: 3 };
+  const state = { lang: "en", mode: "toast", withName: true, stay: 3 };
 
   const esc = (v) => String(v).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const wrap = (v, cls = "username") => `<span class="${cls}">${esc(v)}</span>`;
@@ -649,7 +645,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
   let dismissTimer = null, outro = null, queue = [], currentType = "";
   const hasType = (m) => m && TYPES.some((t) => m[t]);
   const pushQueue = (m) => { if (hasType(m)) queue.push(m); };
-  const summarize = (d) => TYPES.filter((t) => d[t]).map((t) => `${LABEL[t]} ${d[t].count}人`).join(", ");
+  const summarize = (d) => TYPES.filter((t) => d[t]).map((t) => `${LABEL[t]} ${d[t].count}`).join(", ");
 
   const mergeQueued = (extra) => {
     const pending = queue.splice(0);
@@ -674,7 +670,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
     { duration: DURATION, easing: EASE, direction: out ? "reverse" : "normal", fill: "both" });
 
   const receive = (detail) => {
-    if (dismissTimer) { pushQueue(detail); log(`待機 · ${summarize(detail)}`, true); status(); return; }
+    if (dismissTimer) { pushQueue(detail); log(`Queued · ${summarize(detail)}`, true); status(); return; }
     if (outro) { outro.onfinish = null; outro.cancel(); outro = null; }
     if (queue.length) { const m = mergeQueued(detail); detail = { ...m.ext, stay: m.stay || detail.stay }; }
     const type = Object.keys(detail).find((k) => TYPES.includes(k) && detail[k]);
@@ -718,15 +714,15 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
     chatList.appendChild(p);
     while (chatList.children.length > 12) chatList.firstChild.remove();
   };
-  [["soo_22", "ほかの色も見せてください！"], ["miya", "今注文したらいつ届きますか？"], ["jjun", "今カートに入れました〜"]].forEach(([n, t]) => addChat(n, esc(t)));
-  const CHATS = [["yuna", "ベージュ、サイズはゆったりめですか？"], ["hj_lee", "私も今買いました！"], ["mint0302", "オートミール色も見たいです"], ["momo_mama", "洗濯機で洗えますか？"],
-    ["cozy_k", "MとLはどのくらい違いますか？"], ["hana", "首回りは伸びませんか？"], ["J.Park", "グレーの再入荷はいつですか"]];
+  [["soo_22", "Can you show more colors?"], ["miya", "If I order now, when will it arrive?"], ["jjun", "Just added it to my cart!"]].forEach(([n, t]) => addChat(n, esc(t)));
+  const CHATS = [["yuna", "Does the beige run large?"], ["hj_lee", "I just bought one too!"], ["mint0302", "Show the oatmeal color too"], ["daon_mom", "Is it machine washable?"],
+    ["cozy_k", "How different are M and L?"], ["hana", "Does the neckline stretch out?"], ["J.Park", "When is gray restocking?"]];
 
   const SAMPLES = {
-    join: () => ({ join: { userName: "佐*木", count: 13 } }),
-    cartIn: () => ({ cartIn: { userName: "高*橋", count: 4 } }),
-    purchased: () => ({ purchased: { userName: "鈴*木", count: 1 } }),
-    cartIn2: () => ({ cartIn: { userName: "中*村", count: 2 } }),
+    join: () => ({ join: { userName: "Em***", count: 13 } }),
+    cartIn: () => ({ cartIn: { userName: "Ja***", count: 4 } }),
+    purchased: () => ({ purchased: { userName: "Ol***", count: 1 } }),
+    cartIn2: () => ({ cartIn: { userName: "No***", count: 2 } }),
   };
 
   const fire = (detail) => {
@@ -736,7 +732,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
       const named = !!(state.withName && d.userName);
       const who = named ? d.userName : String(Number(d.count) || 0);
       addChat("", L.chatPurchase[named ? "name" : "count"].replace("{}", () => `<b>${esc(who)}</b>`).replace("{}", () => esc(L.product)), "notice");
-      log(`チャットに表示 · 購入 ${named ? who : L.countUnit(who)}`);
+      log(`Posted to chat · Purchase ${named ? who : L.countUnit(who)}`);
       const { purchased, ...rest } = detail;
       if (!hasType(rest)) return;
       detail = rest;
@@ -747,9 +743,9 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
   document.querySelectorAll("[data-fire]").forEach((b) => b.addEventListener("click", () => {
     const k = b.dataset.fire;
     if (k !== "burst") return fire(SAMPLES[k]());
-    [{ cartIn: { userName: "高*橋", count: 1 } }, { cartIn: { userName: "中*村", count: 1 } }, { join: { userName: "山*本", count: 9 } },
-     { purchased: { userName: "鈴*木", count: 1 } }, { cartIn: { userName: "", count: 1 } }, { purchased: { userName: "小*林", count: 1 } },
-     { join: { userName: "山*本", count: 28 } }].forEach((d, i) => setTimeout(() => fire(d), i * 140));
+    [{ cartIn: { userName: "Ja***", count: 1 } }, { cartIn: { userName: "No***", count: 1 } }, { join: { userName: "Li***", count: 9 } },
+     { purchased: { userName: "Ol***", count: 1 } }, { cartIn: { userName: "", count: 1 } }, { purchased: { userName: "Mi***", count: 1 } },
+     { join: { userName: "Li***", count: 28 } }].forEach((d, i) => setTimeout(() => fire(d), i * 140));
   }));
 
   // 설정
@@ -769,9 +765,9 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
   const stShow = document.getElementById("dm-st-show"), stQueue = document.getElementById("dm-st-queue"), logEl = document.getElementById("dm-log");
   function status(leaving) {
     const showing = !anRoot.hidden && currentType;
-    stShow.textContent = showing ? `${leaving ? "消えています" : "表示中"} · ${LABEL[currentType]}` : "表示なし";
+    stShow.textContent = showing ? `${leaving ? "Leaving" : "Showing"} · ${LABEL[currentType]}` : "None showing";
     stShow.classList.toggle("on", !!showing && !leaving);
-    stQueue.textContent = queue.length ? `待機 ${queue.length}件 · ${queue.map(summarize).join(" / ")}` : "待機 0件";
+    stQueue.textContent = queue.length ? `Queued ${queue.length} · ${queue.map(summarize).join(" / ")}` : "Queued 0";
     stQueue.classList.toggle("on", queue.length > 0);
   }
   function log(text, queued) {
@@ -880,7 +876,7 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
     ctx.font = `600 ${3.3 * u}px Georgia, "Times New Roman", serif`;
     if ("letterSpacing" in ctx) ctx.letterSpacing = `${0.9 * u}px`;
     ctx.fillText("WINTER KNIT", W * 0.5, H * 0.135);
-    ctx.font = `500 ${2.2 * u}px "Noto Sans JP", sans-serif`;
+    ctx.font = `500 ${2.2 * u}px "Pretendard", sans-serif`;
     if ("letterSpacing" in ctx) ctx.letterSpacing = `${0.4 * u}px`;
     ctx.fillText("LIVE SPECIAL · ~30%", W * 0.5, H * 0.168);
     if ("letterSpacing" in ctx) ctx.letterSpacing = "0px";
@@ -916,8 +912,8 @@ body,#action-notification .wrap-action-notification{word-break:normal;line-break
     ["#6B4E3D", "#D8C7B1", "#3E4A5A"].forEach((c, i) => folded(shx + u * 1.5, H * 0.5 - fh * (i + 1), shw * 0.8, fh * 0.95, c));
     // 선반 가격 태그
     rr(shx + shw * 0.18, H * 0.51 + u * 1.4, shw * 0.6, u * 4.2, u * 0.8); ctx.fillStyle = "#FFFFFF"; ctx.fill();
-    ctx.fillStyle = "#C52628"; ctx.font = `700 ${2.3 * u}px "Noto Sans JP", sans-serif`; ctx.textAlign = "center";
-    ctx.fillText("¥4,290", shx + shw * 0.48, H * 0.51 + u * 3.5);
+    ctx.fillStyle = "#C52628"; ctx.font = `700 ${2.3 * u}px "Pretendard", sans-serif`; ctx.textAlign = "center";
+    ctx.fillText("$29.00", shx + shw * 0.48, H * 0.51 + u * 3.5);
 
     // 앞쪽 테이블
     ctx.fillStyle = "#B08A6C";
